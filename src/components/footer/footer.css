@@ -1,6 +1,6 @@
 .footer-container {
     width: 100%;
-    background-color: #000000;
+    background-color: var(--clr-dark);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,9 +28,9 @@
 }
 
 .footer-link {
-    color: #FFFFFF;
+    color: var(--clr-light);
     text-decoration: none;
-    font-size: 24px;
+    font-size: var(--fs-h3);
     padding: 12px;
     transition: all .3s ease-in-out
 }
