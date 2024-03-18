@@ -1,0 +1,91 @@
+.contact-section {
+    background-color: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
+.contact-grid-item {
+    background-color: var(--clr-dark);
+    overflow: hidden;
+}
+
+.contact-grid-item-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.contact-grid-item-image:hover {
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+.contact-grid {
+    flex-grow: 2;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    'one two'
+    'three four'
+    'five six'
+    'seven eight';
+    width: 100%;
+    margin-inline: auto;
+}
+
+@media (min-width: 535px) {
+    .contact-grid {
+        grid-template-areas: 
+        'one two'
+        'three four'
+        'five six';
+    }
+     /* need to fix from 535px to 800px for some reason, it becomes scrollable but I want everything to fit on the page */
+    .contact-grid-item:nth-child(7), .contact-grid-item:nth-child(8) {
+        display: none;
+    }
+}
+
+@media (min-width: 720px) {
+    .contact-grid {
+        grid-template-areas: 
+        'one two three four'
+        'five six seven eight';
+    }
+    .contact-grid-item:nth-child(7), .contact-grid-item:nth-child(8) {
+        display: block;
+    }
+}
+
+.contact-grid-item:nth-child(1) {
+    grid-area: one;
+}
+
+.contact-grid-item:nth-child(2) {
+    grid-area: two;
+}
+
+.contact-grid-item:nth-child(3) {
+    grid-area: three;
+}
+
+.contact-grid-item:nth-child(4) {
+    grid-area: four;
+}
+
+.contact-grid-item:nth-child(5) {
+    grid-area: five;
+}
+
+.contact-grid-item:nth-child(6) {
+    grid-area: six;
+}
+
+.contact-grid-item:nth-child(7) {
+    grid-area: seven;
+}
+
+.contact-grid-item:nth-child(8) {
+    grid-area: eight;
+}
