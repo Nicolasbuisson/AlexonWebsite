@@ -4,10 +4,19 @@ import "./home.css";
 
 export const Home = () => {
   return (
-    <section>
+    <section className="home-hero-container">
       <Navigation></Navigation>
-      <h1>Home</h1>
-      <div className="home-container"></div>
+      <div className="home-hero-bg">
+        <div className="home-hero-text-container">
+          <h1>Alexon</h1>
+          <div className="animated-text-container">
+            <h3 className="animated-text">Artist</h3>
+            <h3 className="animated-text">Videographer</h3>
+            <h3 className="animated-text">Photographer</h3>
+            <h3 className="animated-text">Athlete</h3>
+          </div>
+        </div>
+      </div>
       <Footer></Footer>
     </section>
   );
