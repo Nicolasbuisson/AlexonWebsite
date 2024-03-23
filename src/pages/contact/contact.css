@@ -26,12 +26,8 @@
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-areas:
-    /* 'one two'
-    'three four'
-    'five six'
-    'seven eight'; */
     'one two three four'
-        'five six seven eight';
+    'five six seven eight';
     width: 100%;
     margin-inline: auto;
 }
@@ -39,12 +35,21 @@
 @media (width <= 820px) {
     .contact-grid {
         grid-template-areas: 
-        'one two'
-        'three four'
-        'five six';
+        'one two three'
+        'four five six';
     }
-     /* need to fix from 535px to 800px for some reason, it becomes scrollable but I want everything to fit on the page */
-    .contact-grid-item:nth-child(7), .contact-grid-item:nth-child(8) {
+     .contact-grid-item:nth-child(7), .contact-grid-item:nth-child(8) {
+        display: none;
+    }
+}
+
+@media (width <= 420px) {
+    .contact-grid {
+        grid-template-areas: 
+        'one two'
+        'three four';
+    }
+    .contact-grid-item:nth-child(5), .contact-grid-item:nth-child(6), .contact-grid-item:nth-child(7), .contact-grid-item:nth-child(8) {
         display: none;
     }
 }

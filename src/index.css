@@ -24,7 +24,7 @@
   --fs-body: 1.0rem;
 }
 
-@media (min-width: 800px) {
+@media (width > 820px) {
   :root {
       --fs-h1: 4.5rem;
       --fs-h2: 3.1rem;
