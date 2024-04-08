@@ -5,7 +5,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     padding: 1em;
-    position: relative;
+    position: absolute;
     z-index: 100;
 }
 
