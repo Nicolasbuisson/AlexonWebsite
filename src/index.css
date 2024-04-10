@@ -1,5 +1,8 @@
 * {
+  /* Reset */
   margin: 0;
+  border: 0;
+  padding: 0;
   box-sizing: border-box;
   /* TODO add a font family you like here */
   font-family: 'Source Sans Pro', sans-serif
