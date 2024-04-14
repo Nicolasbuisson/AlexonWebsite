@@ -10,7 +10,7 @@
 /* HERO */
 
 .story-hero-image {
-    max-width: 80%;
+    max-width: 84%;
     max-height: 70%;
     margin-top: 5rem;
     margin-bottom: 2rem;
@@ -23,79 +23,20 @@
     font-size: var(--fs-h3);
 }
 
-/* TIMELINE */
-
-/* layout grid? 
-Mobile: 3 rows and 6 col
-- text 1 row, 5 col
-- images 2 row, 5 col
-- timeline 3 row, 1 col
-
-Desktop 1 row and 6 col
-- all on same row
-- text 2 col
-- images 3 col
-- timeline 1 col
-
-OR JUST DO EVERYTHING IN MOBILE WAY, text on top and images underneath with timeline off to right side
-But I think it would be a better layout on desktop
-
-add ::after element on story-timeline-circle. Make it a long line that goes under, might have to play with Z-index
-and make circle fill white if it goes inside circle :/
-*/
-
-.story-timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*TIMELINE */
+.story-timeline-section {
+    /* reset section height to match content
+    hide any potential timeline y overflow */
+    height: 100%;
+    overflow-y: hidden;
 }
 
-.story-timeline-paragraph {
-    max-width: 70%;
-    margin-block: 1rem;
-    text-align: center;
-    font-size: var(--fs-body);
-}
-
-.story-section-timeline-cirlce-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.story-timeline-circle {
-    border-color: var(--clr-light);
-    border-radius: 50%;
-    border: 3px solid;
-    width: 4rem;
-    height: 4rem;
-    /* z-index + background color to hide white lines from going inside circle*/
-    position: relative;
-    z-index: 2;
-    background-color: var(--clr-dark);
-    margin-block: 20px;
-    margin-inline: 10px;
-}
-
-.story-timeline-circle::after {
-    display: block;
-    content: '';
-    background-color: var(--clr-light);
-    width: 0.25rem;
-    height: 400%;
-    position: relative;
-    z-index: 1;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%)   
-}
+/* specific styles for timeline images */
 
 .story-timeline-image {
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 100%;
     border-radius: 20px;
     border-color: hsl(var(--clr-light) 240 60% 70%);
     border: 3px solid;
-    transform: rotate(-5deg);
-    z-index: 3;
+    transform: rotate(-2deg);
 }

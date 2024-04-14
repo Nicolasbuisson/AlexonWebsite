@@ -1,0 +1,79 @@
+/* TIMELINE */
+
+.story-timeline-item {
+    width: 100%;
+    padding-inline: 2rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: 'text text text text timeline'
+    'images images images images images';
+}
+
+.story-timeline-paragraph {
+    margin-block: 1rem;
+    text-align: center;
+    font-size: var(--fs-body);
+    grid-area: text;
+    position: relative;
+    top: 3rem;
+}
+
+.story-section-timeline-circle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: timeline;
+    align-self: start;
+}
+
+.story-timeline-circle {
+    border-color: var(--clr-light);
+    border-radius: 50%;
+    border: 3px solid;
+    width: 4rem;
+    height: 4rem;
+    /* z-index + background color to hide white lines from going inside circle*/
+    position: relative;
+    z-index: 2;
+    background-color: var(--clr-dark);
+    margin-block: 20px;
+    margin-left: 8px;
+}
+
+@media (width < 580px) {
+    .story-timeline-item {
+        width: 100%;
+        padding-inline: 1rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-areas: 
+        'empty empty empty empty timeline'
+        'text text text text empty'
+        'images images images images images';
+    }
+}
+
+.story-timeline-circle::after {
+    display: block;
+    content: '';
+    background-color: var(--clr-light);
+    width: 0.25rem;
+    height: 40rem; /* need to play with height here */
+    /* should use a last child selector and finish height of smoothly instead of making it keep going*/
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%)   
+}
+
+.last-timeline-item::after {
+    height: 25rem;
+}
+
+.story-timeline-item-images-container {
+    grid-area: images;
+    z-index: 3;
+    justify-self: center;
+    margin-block: 1rem;
+}
