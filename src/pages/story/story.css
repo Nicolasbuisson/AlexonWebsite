@@ -36,12 +36,89 @@
     overflow-y: hidden;
 }
 
-/* specific styles for timeline images */
+/* specific styles for timeline images and containers */
 
 .story-timeline-image {
     max-width: 100%;
     border-radius: 20px;
     border-color: hsl(var(--clr-light) 240 60% 70%);
     border: 3px solid;
+    
+}
+
+.story-timeline-two-image-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.story-timeline-two-image-first-image {
+    position: relative;
+    right: -0.5rem;
+    top: -1.4rem;
+    transform: rotate(-2.4deg);
+}
+
+.story-timeline-two-image-second-image {
+    position: relative;
+    right: 1rem;
+    transform: rotate(3deg);
+}
+
+.story-timeline-three-image-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.story-timeline-three-image-first-image {
+    grid-row: 1;
+    align-self: start;
+    position: relative;
+    right: -2.3rem;
+    top: 1.5rem;
     transform: rotate(-2deg);
+}
+
+.story-timeline-three-image-second-image {
+    grid-row: 1;
+    position: relative;
+    transform: rotate(3deg);
+}
+
+.story-timeline-three-image-third-image {
+    grid-row: 1;
+    align-self: end;
+    position: relative;
+    top: -1rem;
+    right: 2.4rem;
+    transform: rotate(-3deg);
+}
+
+/* utility classes */
+
+.rotate-2-deg-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-3-deg-right {
+    transform: rotate(3deg);
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-3 {
+    z-index: 3;
 }

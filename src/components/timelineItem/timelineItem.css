@@ -58,7 +58,7 @@
     content: '';
     background-color: var(--clr-light);
     width: 0.25rem;
-    height: 40rem; /* need to play with height here */
+    height: 60rem; /* need to play with height here */
     /* should use a last child selector and finish height of smoothly instead of making it keep going*/
     position: relative;
     z-index: 1;
@@ -68,7 +68,7 @@
 }
 
 .last-timeline-item::after {
-    height: 25rem;
+    background: linear-gradient(var(--clr-light) 0%, var(--clr-dark));
 }
 
 .story-timeline-item-images-container {
