@@ -1,6 +1,5 @@
-.story-container {
-        /* css variables */
-        --timeline-circle-width: 4rem;
+html {
+    scroll-snap-type: y proximity;
 }
 
 .story-section-container {
@@ -10,6 +9,15 @@
     flex-direction: column;
     align-items: center;
     color: var(--clr-light);
+}
+
+.timeline-container {
+    /* reset height to match content */
+    height: 100%;
+    /* overflow: hidden;
+    setting overflow to hidden makes the scroll snap type not work anymore
+    so need to fix ::before element height */
+    
 }
 
 /* HERO */
@@ -29,13 +37,6 @@
 }
 
 /*TIMELINE */
-.story-timeline-section {
-    /* reset section height to match content
-    hide any potential timeline y overflow */
-    height: 100%;
-    overflow-y: hidden;
-}
-
 /* specific styles for timeline images and containers */
 
 .story-timeline-image {
@@ -43,7 +44,6 @@
     border-radius: 20px;
     border-color: hsl(var(--clr-light) 240 60% 70%);
     border: 3px solid;
-    
 }
 
 .story-timeline-two-image-container {
@@ -78,7 +78,7 @@
 }
 
 .story-timeline-three-image-first-image {
-    grid-row: 1;
+    grid-column: 1;
     align-self: start;
     position: relative;
     right: -2.3rem;
@@ -87,13 +87,13 @@
 }
 
 .story-timeline-three-image-second-image {
-    grid-row: 1;
+    grid-column: 2;
     position: relative;
     transform: rotate(3deg);
 }
 
 .story-timeline-three-image-third-image {
-    grid-row: 1;
+    grid-column: 3;
     align-self: end;
     position: relative;
     top: -1rem;

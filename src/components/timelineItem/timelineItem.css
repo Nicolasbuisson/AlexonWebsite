@@ -1,12 +1,33 @@
 /* TIMELINE */
 
 .story-timeline-item {
+    scroll-snap-align: start;
+    position: relative;
     width: 100%;
+    height: 100%;
+    /* setting height to 100vh messes with the actual height
+     and causes the grid to overflow from the parent, hiding the footer on last one
+     but I think it looks better if we dont do 100vh */
     padding-inline: 2rem;
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     grid-template-areas: 'text text text text timeline'
     'images images images images images';
+
+    --timeline-circle-width: 4rem;
+}
+
+@media (width < 580px) {
+    .story-timeline-item {
+        width: 100%;
+        height: 100%;
+        padding-inline: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-areas: 
+        'text text text text timeline'
+        'images images images images images';
+    }
 }
 
 .story-timeline-paragraph {
@@ -30,35 +51,44 @@
     border-color: var(--clr-light);
     border-radius: 50%;
     border: 3px solid;
-    width: 4rem;
-    height: 4rem;
+    width: var(--timeline-circle-width);
+    height: var(--timeline-circle-width);
     /* z-index + background color to hide white lines from going inside circle*/
     position: relative;
-    z-index: 2;
+    z-index: 30;
     background-color: var(--clr-dark);
     margin-block: 20px;
     margin-left: 8px;
 }
 
-@media (width < 580px) {
-    .story-timeline-item {
-        width: 100%;
-        padding-inline: 1rem;
-        display: grid;
-        gap: 2rem;
-        grid-template-areas: 
-        'empty empty empty empty timeline'
-        'text text text text empty'
-        'images images images images images';
-    }
+.story-timeline-item-images-container {
+    grid-area: images;
+    z-index: 3;
+    justify-self: center;
+    margin-block: 1rem;
 }
 
-.story-timeline-circle::after {
+/* before/after elements */
+/* .story-timeline-item::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 4%;
+    left: calc(100% - var(--timeline-circle-width));
+    width: 0.25rem;
+    height: 105%;
+    background-color: var(--clr-light);
+    z-index: 1;
+     transform: translateX(-50%) 
+} */
+
+.story-timeline-circle::before {
     display: block;
     content: '';
     background-color: var(--clr-light);
     width: 0.25rem;
-    height: 60rem; /* need to play with height here */
+    height: 60rem; /* need to play with height here,
+    find a better way instead of setting a damn manual height */
     /* should use a last child selector and finish height of smoothly instead of making it keep going*/
     position: relative;
     z-index: 1;
@@ -67,13 +97,6 @@
     transform: translateX(-50%)   
 }
 
-.last-timeline-item::after {
+.last-timeline-item::before {
     background: linear-gradient(var(--clr-light) 0%, var(--clr-dark));
-}
-
-.story-timeline-item-images-container {
-    grid-area: images;
-    z-index: 3;
-    justify-self: center;
-    margin-block: 1rem;
 }

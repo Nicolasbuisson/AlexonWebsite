@@ -11,7 +11,9 @@ interface TimelineItemProps {
 export const TimelineItem = (props: TimelineItemProps) => {
   const { title, text, images, isLast = false } = props;
   return (
-    <div className="story-timeline-item">
+    <div
+      className={`story-timeline-item ${isLast ? "last-timeline-item" : ""}`}
+    >
       <p className="story-timeline-paragraph">{text}</p>
       <div className="story-section-timeline-circle-container">
         <h4>{title}</h4>
