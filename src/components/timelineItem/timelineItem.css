@@ -14,6 +14,10 @@
     grid-template-areas: 'text text text text timeline'
     'images images images images images';
 
+    /* maybe an explicit grid would be better, especially if we set the parent height 
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr; */
+
     --timeline-circle-width: 4rem;
 }
 
