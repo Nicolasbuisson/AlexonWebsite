@@ -1,6 +1,11 @@
 /* TIMELINE */
 
 .story-timeline-item {
+    /* variables */
+    --timeline-circle-width: 4rem;
+    --padding-inline: 2rem;
+    --gap: 2rem;
+
     scroll-snap-align: start;
     position: relative;
     width: 100%;
@@ -8,9 +13,9 @@
     /* setting height to 100vh messes with the actual height
      and causes the grid to overflow from the parent, hiding the footer on last one
      but I think it looks better if we dont do 100vh */
-    padding-inline: 2rem;
+    padding-inline: var(--padding-inline);
     display: grid;
-    gap: 2rem;
+    gap: var(--gap);
     grid-template-areas: 'text text text text timeline'
     'images images images images images';
 
@@ -18,19 +23,26 @@
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 4fr; */
 
-    --timeline-circle-width: 4rem;
+
 }
 
 @media (width < 580px) {
     .story-timeline-item {
+        --padding-inline: 1rem;
         width: 100%;
         height: 100%;
-        padding-inline: 2rem;
         display: grid;
-        gap: 2rem;
         grid-template-areas: 
         'text text text text timeline'
         'images images images images images';
+        /* REDO THIS FUCKING LAYOUT 
+         WANT TIMELINE AND DATE ON TOP ROW
+         TEXT ON SECOND ROW BY ITSELF
+         IMAGES ON THIRD ROW
+        
+         currently wasting a lot of space and bad on small screen sizes
+         get x-overflow on width < 370 pixels
+        */
     }
 }
 
@@ -63,6 +75,8 @@
     background-color: var(--clr-dark);
     margin-block: 20px;
     margin-left: 8px;
+    flex-shrink: 0;
+
 }
 
 .story-timeline-item-images-container {
@@ -73,34 +87,21 @@
 }
 
 /* before/after elements */
-/* .story-timeline-item::before {
+
+.story-timeline-item::before {
     display: block;
     content: '';
     position: absolute;
     top: 4%;
-    left: calc(100% - var(--timeline-circle-width));
+    left: calc(100% - (var(--padding-inline) + (var(--timeline-circle-width) / 2)));
     width: 0.25rem;
     height: 105%;
     background-color: var(--clr-light);
     z-index: 1;
      transform: translateX(-50%) 
-} */
-
-.story-timeline-circle::before {
-    display: block;
-    content: '';
-    background-color: var(--clr-light);
-    width: 0.25rem;
-    height: 60rem; /* need to play with height here,
-    find a better way instead of setting a damn manual height */
-    /* should use a last child selector and finish height of smoothly instead of making it keep going*/
-    position: relative;
-    z-index: 1;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%)   
 }
 
 .last-timeline-item::before {
     background: linear-gradient(var(--clr-light) 0%, var(--clr-dark));
+    height: 70%;
 }
