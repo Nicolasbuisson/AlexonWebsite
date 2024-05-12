@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import "./timelineItem.css";
+import { useInView } from "react-intersection-observer";
 
 interface TimelineItemProps {
   title: string;
@@ -10,9 +11,16 @@ interface TimelineItemProps {
 
 export const TimelineItem = (props: TimelineItemProps) => {
   const { title, text, images, isLast = false } = props;
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "-200px 0px",
+  });
   return (
     <div
-      className={`story-timeline-item ${isLast ? "last-timeline-item" : ""}`}
+      ref={ref}
+      className={`story-timeline-item ${isLast ? "last-timeline-item" : ""} ${
+        inView ? "show" : "hidden"
+      }`}
     >
       <p className="story-timeline-paragraph">{text}</p>
       <div className="story-section-timeline-circle-container">

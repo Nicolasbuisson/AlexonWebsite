@@ -1,7 +1,3 @@
-html {
-    scroll-snap-type: y proximity;
-}
-
 .story-section-container {
     background-color: var(--clr-dark);
     height: 100vh;
