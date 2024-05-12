@@ -18,32 +18,6 @@
     gap: var(--gap);
     grid-template-areas: 'text text text text timeline'
     'images images images images images';
-
-    /* maybe an explicit grid would be better, especially if we set the parent height 
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 4fr; */
-
-
-}
-
-@media (width < 580px) {
-    .story-timeline-item {
-        --padding-inline: 1rem;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        'text text text text timeline'
-        'images images images images images';
-        /* REDO THIS FUCKING LAYOUT 
-         WANT TIMELINE AND DATE ON TOP ROW
-         TEXT ON SECOND ROW BY ITSELF
-         IMAGES ON THIRD ROW
-        
-         currently wasting a lot of space and bad on small screen sizes
-         get x-overflow on width < 370 pixels
-        */
-    }
 }
 
 .story-timeline-paragraph {
@@ -54,6 +28,27 @@
     position: relative;
     top: 3rem;
 }
+
+@media (width < 580px) {
+    .story-timeline-item {
+        --padding-inline: 1rem;
+        --gap: 0.5rem;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        'empty empty empty empty timeline'
+        'text text text text text'
+        'images images images images images';
+    }
+
+    .story-timeline-paragraph {
+        top: 0rem;
+        margin-right: var(--timeline-circle-width);
+    }
+}
+
+
 
 .story-section-timeline-circle-container {
     display: flex;
