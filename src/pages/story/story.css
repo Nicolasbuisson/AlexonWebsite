@@ -9,11 +9,7 @@
 
 .timeline-container {
     /* reset height to match content */
-    height: 100%;
-    /* overflow: hidden;
-    setting overflow to hidden makes the scroll snap type not work anymore
-    so need to fix ::before element height */
-    
+    height: 100%;   
 }
 
 /* HERO */
@@ -54,7 +50,7 @@
 .story-timeline-two-image-first-image {
     position: relative;
     right: -0.5rem;
-    top: -1.4rem;
+    top: -1rem;
     transform: rotate(-2.4deg);
 }
 

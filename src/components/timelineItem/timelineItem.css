@@ -4,7 +4,7 @@
     /* variables */
     --timeline-circle-width: 4rem;
     --padding-inline: 2rem;
-    --gap: 2rem;
+    --gap: 0.5rem;
 
     position: relative;
     width: 100%;
@@ -15,38 +15,23 @@
     padding-inline: var(--padding-inline);
     display: grid;
     gap: var(--gap);
-    grid-template-areas: 'text text text text timeline'
+    grid-template-areas: 'empty empty empty empty timeline'
+    'text text text text text'
     'images images images images images';
-    transition: 420ms;
+    transition: 1000ms;
 }
 
 .story-timeline-paragraph {
-    margin-block: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
     font-size: var(--fs-body);
     grid-area: text;
-    /* dont use position relative to play around with this
-    just do the grid correctly in the first place lmao */
-    position: relative;
-    top: 3rem;
+    margin-right: var(--timeline-circle-width);
 }
 
 @media (width < 580px) {
     .story-timeline-item {
         --padding-inline: 1rem;
-        --gap: 0.5rem;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        'empty empty empty empty timeline'
-        'text text text text text'
-        'images images images images images';
-    }
-
-    .story-timeline-paragraph {
-        top: 0rem;
-        margin-right: var(--timeline-circle-width);
     }
 }
 
@@ -68,7 +53,7 @@
     position: relative;
     z-index: 30;
     background-color: var(--clr-dark);
-    margin-block: 20px;
+    margin-block: 8px;
     margin-left: 8px;
     flex-shrink: 0;
 
