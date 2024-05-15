@@ -30,6 +30,12 @@
     }
 }
 
+@media (width < 330px) {
+    .footer-container {
+        --icon-size: 2.8rem;
+    }
+}
+
 
 .footer-icon:hover {
     transform: scale(1.2);

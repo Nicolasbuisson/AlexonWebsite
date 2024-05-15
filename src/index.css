@@ -24,14 +24,16 @@
   --fs-h1: 3rem;
   --fs-h2: 2.5rem;
   --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
   --fs-body: 1.0rem;
 }
 
-@media (width > 820px) {
+@media (width > 880px) {
   :root {
       --fs-h1: 4.5rem;
       --fs-h2: 3.1rem;
       --fs-h3: 1.75rem;
+      --fs-h4: 1.4rem;
       --fs-body: 1.0rem;
   }
 }
@@ -44,6 +46,9 @@ h2 {
 }
 h3 {
   font-size: var(--fs-h3);
+}
+h4 {
+  font-size: var(--fs-h4);
 }
 body {
   font-size: var(--fs-body);
