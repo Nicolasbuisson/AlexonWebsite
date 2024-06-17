@@ -58,11 +58,13 @@ nav {
     padding: 20px;
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
+    filter: brightness(.5);
     transition: all .3s ease-in-out
 }
 
 .link:hover {
-    transform: scale(1.2)
+    transform: scale(1.2);
+    filter: brightness(1);
 }
 
 
