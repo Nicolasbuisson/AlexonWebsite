@@ -2,7 +2,12 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./navigation.css";
 
-export const Navigation = () => {
+interface NavigationProps {
+  transparent?: boolean;
+}
+
+export const Navigation = (props: NavigationProps) => {
+  const { transparent = false } = props;
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -22,7 +27,7 @@ export const Navigation = () => {
 
   return (
     <div>
-      <nav>
+      <nav className={transparent ? "transparent" : ""}>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
