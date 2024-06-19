@@ -1,6 +1,10 @@
 nav {
+    --menu-height: 5em;
+    --bar-height: 0.5rem;
+    --bar-width: 4rem;
+
     width: 100%;
-    height: 5em;
+    height: var(--menu-height);
     background-color: var(--clr-dark);
     display: flex;
     justify-content: flex-end;
@@ -15,7 +19,7 @@ nav {
 
 .burger-menu {
     height: 100%;
-    width: 4em;
+    width: var(--bar-width);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -24,8 +28,8 @@ nav {
 }
 
 .burger-bar {
-    width: 4em;
-    height: 0.5em;
+    width: var(--bar-width);
+    height: var(--bar-height);
     background-color: var(--clr-light);
     border-radius: 0.5em;
 }
@@ -93,4 +97,22 @@ nav {
 .burger-bar.unclicked {
     transform: rotate(0) translate(0);
     transition: ease-out 0.5s;
+}
+
+/* Responsiveness */
+
+@media (width < 600px) {
+    nav {
+        --menu-height: 3.5em;
+        --bar-height: 0.25rem;
+        --bar-width: 2rem;
+    }
+
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(45deg) translate(0.375em, 0.625em);
+    }
+    
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(135deg) translate(-0.25em, 0.5em);
+    }
 }
