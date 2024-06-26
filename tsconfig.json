@@ -3,7 +3,8 @@
       "lib": ["dom", "dom.iterable", "esnext"],
       "module": "esnext",
       "moduleResolution": "bundler",
-      "target": "es2015",
+      "target": "ESNext",
+      "types": ["vite/client"],
   
       "allowJs": true,
       "allowSyntheticDefaultImports": true,
