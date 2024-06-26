@@ -1,5 +1,6 @@
 .footer-container {
     --icon-size: 4rem;
+    --icon-spacing: 12px;
     width: 100%;
     background-color: var(--clr-dark);
     display: flex;
@@ -21,18 +22,20 @@
     width: var(--icon-size);
     height: var(--icon-size);
     transition: all .3s ease-in-out;
-    margin: 0px 12px
+    margin: 0px var(--icon-spacing);
 }
 
-@media (width < 580px) {
+@media (width < 880px) {
     .footer-container {
-        --icon-size: 3.2rem;
+        --icon-size: 3.4rem;
+        --icon-spacing: 8px;
     }
 }
 
 @media (width < 330px) {
     .footer-container {
         --icon-size: 2.8rem;
+        --icon-spacing: 4px;
     }
 }
 
@@ -44,7 +47,7 @@
 .footer-link {
     color: var(--clr-light);
     text-decoration: none;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
     margin: 12px;
     transition: all .3s ease-in-out
 }
