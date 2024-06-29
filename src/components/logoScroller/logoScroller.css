@@ -1,0 +1,31 @@
+.scroller {
+    max-width: 70%;
+    margin: auto;
+    --logo-spacing: 2rem;
+}
+
+.scroller[data-animated=true] {
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller-inner {
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 1rem;
+    gap: var(--logo-spacing);
+}
+
+.scroller[data-animated=true] .scroller-inner {
+    flex-wrap: nowrap;
+    animation: scrollX 40s linear infinite;
+}
+
+@keyframes scrollX {
+    to {
+        transform: translate(calc(-50% - (var(--logo-spacing) / 2)))
+    }
+}
+
