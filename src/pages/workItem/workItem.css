@@ -75,4 +75,13 @@
 
 .stills-grid {
     display: grid;
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 2rem;
+
+    & img {
+        max-width: 80%;
+        object-fit: cover;
+        filter: drop-shadow(0px 0px 0.25rem rgba(255, 255, 255, 0.7));
+    }
 }

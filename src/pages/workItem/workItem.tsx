@@ -40,7 +40,20 @@ export const WorkItem = (props: WorkItemProps) => {
             </p>
           </div>
         </div>
-        <div className="stills-grid"></div>
+        <div className="stills-grid">
+          <img
+            src={require("../../assets/images/sunset-purple-tree.jpg")}
+            alt="stills grid picture"
+          ></img>
+          <img
+            src={require("../../assets/images/lake.jpg")}
+            alt="stills grid picture"
+          ></img>
+          <img
+            src={require("../../assets/images/road.jpg")}
+            alt="stills grid picture"
+          ></img>
+        </div>
       </section>
       <Footer></Footer>
     </div>
