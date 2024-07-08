@@ -3,34 +3,34 @@ import { Footer } from "../../components/footer/footer";
 import { Navigation } from "../../components/navigation/navigation";
 import "./work.css";
 import { LogoScroller } from "../../components/logoScroller/logoScroller";
+import { WorkItemProps } from "../../types/work";
 
-/* TODO
-will have to dynamically create routes!
-read from a json file?
-video, stills (picture grid), project, text, more than one picture, boolean template type: reel, vimeo video...?
-design template for individual project work page, inspire yourself from toast productions
-*/
-export const Work = () => {
-  const cards = Array(12).fill(0);
+interface WorkProps {
+  projects: WorkItemProps[];
+}
+
+export const Work = (props: WorkProps) => {
+  const { projects } = props;
+
   return (
     <div className="work-container">
       <Navigation></Navigation>
       <section className="work-section-container">
         <h2>Our Projects</h2>
         <div className="projects-grid">
-          {cards.map((x, i) => {
+          {projects.map((project) => {
             return (
               <Link
-                to="/work/item"
+                to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
                 className="card"
-                key={"work-grid-card-" + i}
+                key={"work-grid-card-" + project.title}
               >
                 <div className="stacked">
                   <img
-                    src={require("../../assets/images/sunset-purple-tree.jpg")}
+                    src={`/assets/images/${project.gridImage}`}
                     alt="project card"
                   ></img>
-                  <h4>{`Project ${i}`}</h4>
+                  <h4>{project.title}</h4>
                 </div>
               </Link>
             );

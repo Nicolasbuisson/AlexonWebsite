@@ -1,0 +1,148 @@
+{
+    "projects" : [
+    {
+        "title": "Project 1",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 2",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "lake.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 3",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "road.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 4",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "plain.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 5",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 6",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 7",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 8",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 9",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 10",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 11",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    },
+    {
+        "title": "Project 12",
+        "client": "Corona",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "stills": [
+            {"imageUrl": "/src/assets/images/sunset-purple-tree.jpg"},
+            {"imageUrl": "/src/assets/images/lake.jpg"},
+            {"imageUrl": "/src/assets/images/road.jpg"}
+        ] 
+    }
+]
+}
