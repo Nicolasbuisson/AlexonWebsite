@@ -27,32 +27,32 @@ export const LogoScroller = () => {
     <div className="scroller">
       <div className="scroller-inner">
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>
         <img
-          src={require("../../assets/logos/corona.png")}
+          src={require("/assets/logos/corona.png")}
           alt="logo"
           height="100px"
         ></img>

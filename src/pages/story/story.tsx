@@ -9,7 +9,7 @@ export const Story = () => {
       <Navigation></Navigation>
       <section className="story-section-container">
         <img
-          src={require("../../assets/images/plain.jpeg")}
+          src={require("/assets/images/plain.jpg")}
           alt=""
           className="story-hero-image"
         ></img>
@@ -29,7 +29,7 @@ export const Story = () => {
         lorem ipsum dolor sit amet consectetur adipiscing elit."
           images={
             <img
-              src={require("../../assets/images/lake.jpg")}
+              src={require("/assets/images/lake.jpg")}
               alt=""
               className="story-timeline-image rotate-2-deg-left"
             ></img>
@@ -44,12 +44,12 @@ export const Story = () => {
           images={
             <div className="story-timeline-two-image-container">
               <img
-                src={require("../../assets/images/lake.jpg")}
+                src={require("/assets/images/lake.jpg")}
                 alt=""
                 className="story-timeline-image story-timeline-two-image-first-image"
               ></img>
               <img
-                src={require("../../assets/images/rice-hills.jpg")}
+                src={require("/assets/images/rice-hills.jpg")}
                 alt=""
                 className="story-timeline-image story-timeline-two-image-second-image"
               ></img>
@@ -65,17 +65,17 @@ export const Story = () => {
           images={
             <div className="story-timeline-three-image-container">
               <img
-                src={require("../../assets/images/lake.jpg")}
+                src={require("/assets/images/lake.jpg")}
                 alt=""
                 className="story-timeline-image story-timeline-three-image-first-image z-index-2"
               ></img>
               <img
-                src={require("../../assets/images/road.jpg")}
+                src={require("/assets/images/road.jpg")}
                 alt=""
                 className="story-timeline-image story-timeline-three-image-second-image z-index-1"
               ></img>
               <img
-                src={require("../../assets/images/rice-hills.jpg")}
+                src={require("/assets/images/rice-hills.jpg")}
                 alt=""
                 className="story-timeline-image story-timeline-three-image-third-image z-index-2"
               ></img>
