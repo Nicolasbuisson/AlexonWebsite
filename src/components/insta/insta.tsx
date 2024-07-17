@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { InstaItem } from "../../types/home";
+import { config } from "../../config/config";
 import "./insta.css";
 
 export const Insta = () => {
   const [instaItems, setInstaItems] = useState<InstaItem[]>([]);
 
-  const userId = process.env.REACT_APP_INSTA_USER_ID;
-  const accessToken = process.env.REACT_APP_INSTA_ACCESS_TOKEN;
+  const userId = config.INSTA_USER_ID;
+  const accessToken = config.INSTA_ACCESS_TOKEN;
 
   useEffect(() => {
     const fetchInstaItem = async (itemId: string): Promise<InstaItem> => {
@@ -30,13 +31,13 @@ export const Insta = () => {
 
       const res = await fetch(instaItemListURL);
       const { data } = await res.json();
-      console.log(data);
 
       const items: InstaItem[] = [];
 
       for (let i = 0; i < 6; i++) {
         const itemId = data[i].id;
         const instaItem = await fetchInstaItem(itemId);
+        console.log(instaItem);
         items.push(instaItem);
       }
       setInstaItems(items);
@@ -50,7 +51,14 @@ export const Insta = () => {
   return (
     <div className="insta-grid">
       {instaItems.map((item) => {
-        return <img src={item.mediaURL} className="insta-grid-item"></img>;
+        // need to handle if rendering a video!!!
+        return (
+          <img
+            key={item.mediaURL}
+            src={item.mediaURL}
+            className="insta-grid-item"
+          ></img>
+        );
       })}
     </div>
   );

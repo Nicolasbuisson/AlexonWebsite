@@ -1,4 +1,5 @@
 import { Footer } from "../../components/footer/footer";
+import { Insta } from "../../components/insta/insta";
 import { Navigation } from "../../components/navigation/navigation";
 import "./home.css";
 
@@ -20,7 +21,9 @@ export const Home = () => {
         </div>
         <Footer></Footer>
       </section>
-      <section className="home-section-container home-insta-section"></section>
+      <section className="home-section-container home-insta-section">
+        <Insta></Insta>
+      </section>
     </div>
   );
 };
