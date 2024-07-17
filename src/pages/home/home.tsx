@@ -5,8 +5,8 @@ import "./home.css";
 
 export const Home = () => {
   return (
-    <div>
-      <section className="home-section-container home-hero-section">
+    <div className="home-section-container">
+      <section className="home-hero-section">
         <Navigation></Navigation>
         <div className="home-hero-bg">
           <div className="home-hero-text-container">
@@ -19,11 +19,11 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <Footer></Footer>
       </section>
-      <section className="home-section-container home-insta-section">
+      <section>
         <Insta></Insta>
       </section>
+      <Footer></Footer>
     </div>
   );
 };

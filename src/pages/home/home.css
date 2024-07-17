@@ -1,8 +1,11 @@
 .home-section-container {
+    background-color: var(--clr-dark);
+}
+
+.home-hero-section {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: var(--clr-dark);
 }
 
 .home-hero-bg {
