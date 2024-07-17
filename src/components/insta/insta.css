@@ -1,12 +1,23 @@
 .insta-grid {
-    width: '100%';
+    --grid-columns: 3;
+
+    background-color: var(--clr-dark);
     display: grid;
-    gap: 1em;
-    grid-auto-columns: 1fr;
-    grid-template-areas: 
-    'one two three'
-    'four five six';
-    margin-inline: auto;
+    gap: 1rem;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    margin: 1rem;
+}
+
+@media (440px < width <=820px) {
+    .insta-grid {
+        --grid-columns: 2;
+    }
+}
+
+@media (width <= 440px) {
+    .insta-grid {
+        --grid-columns: 1;
+    }
 }
 
 .insta-grid-item { 
@@ -14,29 +25,5 @@
     height: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
-}
-
-.insta-grid-item:nth-child(1) {
-    grid-area: one;
-}
-
-.insta-grid-item:nth-child(2) {
-    grid-area: two;
-}
-
-.insta-grid-item:nth-child(3) {
-    grid-area: three;
-}
-
-.insta-grid-item:nth-child(4) {
-    grid-area: four;
-}
-
-.insta-grid-item:nth-child(5) {
-    grid-area: five;
-}
-
-.insta-grid-item:nth-child(6) {
-    grid-area: six;
 }
 
