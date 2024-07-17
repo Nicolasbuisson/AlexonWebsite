@@ -20,7 +20,7 @@
 
 .scroller[data-animated=true] .scroller-inner {
     flex-wrap: nowrap;
-    animation: scrollX 40s linear infinite;
+    animation: scrollX 100s linear infinite;
 }
 
 @keyframes scrollX {

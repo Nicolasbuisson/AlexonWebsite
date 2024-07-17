@@ -10,56 +10,56 @@ export const Contact = () => {
       <div className="contact-grid">
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
         </div>
         <div className="contact-grid-item">
           <img
-            src={require("/assets/images/sunset-purple-tree.jpg")}
+            src={"/assets/images/sunset-purple-tree.jpg"}
             alt=""
             className="contact-grid-item-image"
           ></img>
