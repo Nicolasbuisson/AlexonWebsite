@@ -25,7 +25,6 @@
 }
 
 .workItem-title-background {
-    background-image: url(/src/assets/images/plain.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
