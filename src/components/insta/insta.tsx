@@ -48,11 +48,19 @@ export const Insta = () => {
 
   // should think about conditional rendering here
   // TODO create your own skeleton, gray background with pulse animation from WebDevSimplified
+  // cause right now it renders weird af
+  // or might have to specify a height so that page doesn't grow once items are loaded in...
   return (
     <div className="insta-grid">
       {instaItems.map((item) => {
-        // need to handle if rendering a video!!!
-        return (
+        return item.permaLink.match("/reel/") ? (
+          <video
+            key={item.mediaURL}
+            src={item.mediaURL}
+            controls
+            className="insta-grid-item"
+          ></video>
+        ) : (
           <img
             key={item.mediaURL}
             src={item.mediaURL}
