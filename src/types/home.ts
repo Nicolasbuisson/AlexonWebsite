@@ -1,4 +1,4 @@
-export interface InstaItem {
+export interface InstaItemResponse {
     permaLink: string;
     mediaURL: string;
 }

@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
-import { InstaItem } from "../../types/home";
+import { InstaItemResponse } from "../../types/home";
 import { config } from "../../config/config";
 import "./insta.css";
+import { InstaItem } from "./instaItem";
 
 export const Insta = () => {
-  const [instaItems, setInstaItems] = useState<InstaItem[]>([]);
+  const [instaItems, setInstaItems] = useState<InstaItemResponse[]>([]);
 
   const userId = config.INSTA_USER_ID;
   const accessToken = config.INSTA_ACCESS_TOKEN;
 
   useEffect(() => {
-    const fetchInstaItem = async (itemId: string): Promise<InstaItem> => {
+    const fetchInstaItem = async (
+      itemId: string
+    ): Promise<InstaItemResponse> => {
       const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink`;
 
       const res = await fetch(instaItemURL);
       const json = await res.json();
 
-      const instaItem: InstaItem = {
+      const instaItem: InstaItemResponse = {
         permaLink: json.permalink,
         mediaURL: json.media_url,
       };
@@ -32,7 +35,7 @@ export const Insta = () => {
       const res = await fetch(instaItemListURL);
       const { data } = await res.json();
 
-      const items: InstaItem[] = [];
+      const items: InstaItemResponse[] = [];
 
       for (let i = 0; i < 6; i++) {
         const itemId = data[i].id;
@@ -53,19 +56,12 @@ export const Insta = () => {
   return (
     <div className="insta-grid">
       {instaItems.map((item) => {
-        return item.permaLink.match("/reel/") ? (
-          <video
+        return (
+          <InstaItem
+            permaLink={item.permaLink}
+            mediaURL={item.mediaURL}
             key={item.mediaURL}
-            src={item.mediaURL}
-            controls
-            className="insta-grid-item"
-          ></video>
-        ) : (
-          <img
-            key={item.mediaURL}
-            src={item.mediaURL}
-            className="insta-grid-item"
-          ></img>
+          ></InstaItem>
         );
       })}
     </div>
