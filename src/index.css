@@ -8,6 +8,11 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* element styling */
+a {
+  text-decoration: none;
+}
+
 /* Design system */
 
 :root {
@@ -18,8 +23,9 @@
   --fw-bold: 600;
 
   --clr-light: #fff;
+  --clr-grey: #c5c5c5;
   --clr-dark: #000;
-  --clr-accent: #5d16e0;
+  --clr-accent: #636DB5;
 
   --fs-h1: 3rem;
   --fs-h2: 2.5rem;

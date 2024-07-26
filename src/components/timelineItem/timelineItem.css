@@ -78,7 +78,7 @@
     height: 105%;
     background-color: var(--clr-light);
     z-index: 1;
-     transform: translateX(-50%) 
+    transform: translateX(-50%) 
 }
 
 .last-timeline-item::before {

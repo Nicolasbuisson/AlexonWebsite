@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InstaItemResponse } from "../../types/home";
+import { InstaItemResponse } from "../../types/insta";
 import { config } from "../../config/config";
 import "./insta.css";
 import { InstaItem } from "./instaItem";
@@ -14,7 +14,7 @@ export const Insta = () => {
     const fetchInstaItem = async (
       itemId: string
     ): Promise<InstaItemResponse> => {
-      const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink`;
+      const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink,caption,media_type`;
 
       const res = await fetch(instaItemURL);
       const json = await res.json();
@@ -22,6 +22,8 @@ export const Insta = () => {
       const instaItem: InstaItemResponse = {
         permaLink: json.permalink,
         mediaURL: json.media_url,
+        mediaType: json.media_type,
+        caption: json.caption,
       };
       return instaItem;
     };
@@ -58,9 +60,11 @@ export const Insta = () => {
       {instaItems.map((item) => {
         return (
           <InstaItem
+            key={item.mediaURL}
             permaLink={item.permaLink}
             mediaURL={item.mediaURL}
-            key={item.mediaURL}
+            mediaType={item.mediaType}
+            caption={item.caption}
           ></InstaItem>
         );
       })}

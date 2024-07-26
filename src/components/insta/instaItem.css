@@ -3,4 +3,42 @@
     height: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
+    display: grid;
 }
+
+.caption {
+    color: var(--clr-light);
+    justify-self: center;
+    align-content: center;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+    opacity: 0;
+}
+
+.insta-grid-item > * {
+    grid-column: 1;
+    grid-row: 1;
+    transition: opacity 200ms ease-out;
+}
+
+.insta-grid-item:hover *:not(:is(.caption)) {
+    opacity: 0.4;
+}
+
+.insta-grid-item:hover *:is(.caption) {
+    opacity: 1;
+    filter: brightness(1.5);
+}
+
+.insta-svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: var(--clr-grey);
+    margin: 8px;
+    justify-self: end;
+}
+
