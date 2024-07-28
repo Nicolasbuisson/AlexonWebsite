@@ -17,9 +17,9 @@ export const InstaItem = (props: InstaItem) => {
     <a href={permaLink} target="_blank" rel="noopener noreferrer">
       <div className="insta-grid-item">
         {permaLink.match("/reel/") ? (
-          <video src={mediaURL} controls className="insta-grid-item"></video>
+          <video src={mediaURL} controls></video>
         ) : (
-          <img src={mediaURL} className="insta-grid-item"></img>
+          <img src={mediaURL}></img>
         )}
         <p className="caption">{caption}</p>
         {mediaType === "CAROUSEL_ALBUM" ? (

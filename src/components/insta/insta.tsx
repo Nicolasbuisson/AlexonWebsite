@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { InstaItemResponse } from "../../types/insta";
 import { config } from "../../config/config";
 import "./insta.css";
 import { InstaItem } from "./instaItem";
 
 export const Insta = () => {
-  const [instaItems, setInstaItems] = useState<InstaItemResponse[]>([]);
+  const [instaItems, setInstaItems] = useState<InstaItemResponse[]>(
+    Array(6).fill(undefined)
+  );
+  const [instaItemsLoaded, setInstaItemsLoaded] = useState<boolean>(false);
 
   const userId = config.INSTA_USER_ID;
   const accessToken = config.INSTA_ACCESS_TOKEN;
@@ -42,23 +45,44 @@ export const Insta = () => {
       for (let i = 0; i < 6; i++) {
         const itemId = data[i].id;
         const instaItem = await fetchInstaItem(itemId);
-        console.log(instaItem);
         items.push(instaItem);
       }
       setInstaItems(items);
+      setInstaItemsLoaded(true);
     };
 
     fetchInstaItemList();
   }, []);
 
-  // should think about conditional rendering here
-  // TODO create your own skeleton, gray background with pulse animation from WebDevSimplified
-  // cause right now it renders weird af
-  // or might have to specify a height so that page doesn't grow once items are loaded in...
+  useLayoutEffect(() => {
+    // use for lazy loading effect
+    // render skeleton until image or video is fully loaded
+    // once fully loaded, add the "loaded" class to fade in
+    const instaGridItems = document.querySelectorAll(".insta-grid-item");
+    instaGridItems.forEach((instaGridItem) => {
+      const mediaItemImage = instaGridItem.querySelector("img");
+      const mediaItemVideo = instaGridItem.querySelector("video");
+      const loaded = () => {
+        mediaItemImage?.classList.add("loaded");
+        mediaItemVideo?.classList.add("loaded");
+      };
+      if (mediaItemVideo) {
+        mediaItemVideo.onloadeddata = (event) => {
+          loaded();
+        };
+      }
+      if (mediaItemImage?.complete) {
+        loaded();
+      } else {
+        mediaItemImage?.addEventListener("load", loaded);
+      }
+    });
+  }, [instaItems]);
+
   return (
     <div className="insta-grid">
-      {instaItems.map((item) => {
-        return (
+      {instaItems.map((item, index) => {
+        return item ? (
           <InstaItem
             key={item.mediaURL}
             permaLink={item.permaLink}
@@ -66,6 +90,8 @@ export const Insta = () => {
             mediaType={item.mediaType}
             caption={item.caption}
           ></InstaItem>
+        ) : (
+          <div className="insta-skeleton" key={"skeleton-" + index}></div>
         );
       })}
     </div>
