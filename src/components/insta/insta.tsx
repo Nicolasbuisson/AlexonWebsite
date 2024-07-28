@@ -8,7 +8,6 @@ export const Insta = () => {
   const [instaItems, setInstaItems] = useState<InstaItemResponse[]>(
     Array(6).fill(undefined)
   );
-  const [instaItemsLoaded, setInstaItemsLoaded] = useState<boolean>(false);
 
   const userId = config.INSTA_USER_ID;
   const accessToken = config.INSTA_ACCESS_TOKEN;
@@ -48,7 +47,6 @@ export const Insta = () => {
         items.push(instaItem);
       }
       setInstaItems(items);
-      setInstaItemsLoaded(true);
     };
 
     fetchInstaItemList();
