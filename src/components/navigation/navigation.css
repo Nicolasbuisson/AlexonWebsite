@@ -12,20 +12,38 @@ nav {
     width: 100%;
     height: var(--menu-height);
     background-color: var(--clr-dark);
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-rows: calc(var(--menu-height) - 2rem);
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 1em;
     position: absolute;
     z-index: 100;
 }
 
-.transparent {
-    background-color: transparent;
+nav > * {
+    grid-row: 1;
+}
+
+.nav-title {
+    grid-column: 2;
+    display: inline-block;
+    color: var(--clr-light);
+    text-shadow: 2px 2px var(--clr-accent);
+    justify-self: center;
+    align-self: center;
+    transform: translateY(calc(33.3vh - 1vh * min(var(--scroll), 33.3)));
+    font-size: max(1rem * calc(6 - (min(var(--scroll), 33.3) * (1.5 / 33.3))), var(--fs-h1));
+    /*
+    (oldVal - oldMin) * newRange / oldRange + newMin
+    Start at 6rem then decrease linearly as we scroll until with a min value of var(--fs-h1)
+    */
 }
 
 .burger-menu {
+    grid-column: 3;
     height: 100%;
     width: var(--bar-width);
+    justify-self: end;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -121,4 +139,13 @@ nav {
     .burger-bar.clicked:nth-child(3) {
         transform: rotate(135deg) translate(-0.25em, 0.5em);
     }
+}
+
+/* Utility */
+.transparent {
+    background-color: transparent;
+}
+
+.hide {
+    display: none;
 }

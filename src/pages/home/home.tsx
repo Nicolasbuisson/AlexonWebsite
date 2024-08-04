@@ -6,11 +6,10 @@ import "./home.css";
 export const Home = () => {
   return (
     <div className="home-section-container">
-      <Navigation sticky></Navigation>
+      <Navigation sticky title="Alexon"></Navigation>
       <section className="home-hero-section">
         <div className="home-hero-bg">
           <div className="home-hero-text-container">
-            <h1>Alexon</h1>
             <div className="animated-text-container">
               <h3 className="animated-text">Artist</h3>
               <h3 className="animated-text">Videographer</h3>
