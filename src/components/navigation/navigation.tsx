@@ -4,10 +4,11 @@ import "./navigation.css";
 
 interface NavigationProps {
   transparent?: boolean;
+  sticky?: boolean;
 }
 
 export const Navigation = (props: NavigationProps) => {
-  const { transparent = false } = props;
+  const { transparent = false, sticky = false } = props;
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -26,7 +27,7 @@ export const Navigation = (props: NavigationProps) => {
   };
 
   return (
-    <div>
+    <div className={sticky ? "sticky-navigation-container" : ""}>
       <nav className={transparent ? "transparent" : ""}>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>

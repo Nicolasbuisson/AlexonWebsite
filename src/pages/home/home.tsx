@@ -6,8 +6,8 @@ import "./home.css";
 export const Home = () => {
   return (
     <div className="home-section-container">
+      <Navigation sticky></Navigation>
       <section className="home-hero-section">
-        <Navigation></Navigation>
         <div className="home-hero-bg">
           <div className="home-hero-text-container">
             <h1>Alexon</h1>

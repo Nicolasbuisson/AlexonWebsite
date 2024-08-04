@@ -1,3 +1,9 @@
+.sticky-navigation-container {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 nav {
     --menu-height: 5em;
     --bar-height: 0.5rem;
