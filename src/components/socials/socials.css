@@ -1,0 +1,44 @@
+.socials-icon-container {
+    --icon-size: 44px;
+    --icon-spacing: 2px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socials-link {
+    transition: all .3s ease-in-out;
+    border-radius: 100%;
+    padding: 0px;
+    margin: 0px var(--icon-spacing);
+}
+
+.socials-icon {
+    padding: 12px;
+    filter: invert(90%) sepia(28%) saturate(2%) hue-rotate(257deg) brightness(107%) contrast(100%);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transition: all .3s ease-in-out;
+}
+
+/* hover effects */
+.socials-link:hover {
+    background-color: var(--clr-light);
+    transform: scale(0.8);
+}
+
+.socials-link:hover > svg {
+    /* make icons black on hover */
+    filter: invert(0%) sepia(6%) saturate(26%) hue-rotate(224deg) brightness(97%) contrast(107%);
+}
+
+.socials-icon:hover {
+    transform: scale(0.8);
+}
+
+@media (width < 330px) {
+    .socials-icon-container {
+        --icon-spacing: 4px;
+    }
+}
