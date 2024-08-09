@@ -2,13 +2,15 @@
     position: sticky;
     top: 0;
     z-index: 2;
-}
 
-nav {
     --menu-height: 5em;
     --bar-height: 0.5rem;
     --bar-width: 4rem;
+    --max-h1-size: 6;
+    --max-h1-difference: 1.5;
+}
 
+nav {
     width: 100%;
     height: var(--menu-height);
     background-color: var(--clr-dark);
@@ -36,7 +38,7 @@ nav > * {
     justify-self: center;
     align-self: center;
     transform: translateY(calc(33.3vh - 1vh * min(var(--scroll), 33.3)));
-    font-size: max(1rem * calc(6 - (min(var(--scroll), 33.3) * (1.5 / 33.3))), var(--fs-h1));
+    font-size: max(1rem * calc(var(--max-h1-size) - (min(var(--scroll), 33.3) * (var(--max-h1-difference) / 33.3))), var(--fs-h1));
     /*
     (oldVal - oldMin) * newRange / oldRange + newMin
     Start at 6rem then decrease linearly as we scroll until with a min value of var(--fs-h1)
@@ -129,11 +131,12 @@ nav > * {
 
 /* Responsiveness */
 
-@media (width < 700px) {
-    nav {
+@media (width < 880px) {
+    .sticky-navigation-container {
         --menu-height: 3.5em;
         --bar-height: 0.25rem;
         --bar-width: 2rem;
+        --max-h1-size: 4.5;
     }
 
     .nav-socials {
