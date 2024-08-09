@@ -1,0 +1,22 @@
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px 40px auto;
+    justify-items: center;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    border: 2px var(--clr-light) dotted;
+    text-align: center;
+    margin-inline: 8px;
+}
+
+.service-icon {
+    align-self: end;
+    height: 100px;
+}
+
+.service-description {
+    margin-inline: 4px;
+    margin-bottom: 4px;
+}

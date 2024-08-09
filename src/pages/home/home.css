@@ -1,11 +1,12 @@
 .home-section-container {
     background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 .home-hero-section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .home-hero-bg {
@@ -36,6 +37,21 @@
     animation: rotating 10s infinite ease;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.home-services-container {
+    --services-grid-columns: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--services-grid-columns), 1fr);
+    justify-items: center;
+    gap: 8px;
+    margin-inline: 12px;
+}
+
+@media (width < 880px) {
+    .home-services-container {
+        --services-grid-columns: 1;
+    }
 }
 
 @keyframes rotating {
