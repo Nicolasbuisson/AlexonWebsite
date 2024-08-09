@@ -139,16 +139,18 @@ nav > * {
         --max-h1-size: 4.5;
     }
 
-    .nav-socials {
-        display: none;
-    }
-
     .burger-bar.clicked:nth-child(1) {
         transform: rotate(45deg) translate(0.375em, 0.625em);
     }
     
     .burger-bar.clicked:nth-child(3) {
         transform: rotate(135deg) translate(-0.25em, 0.5em);
+    }
+}
+
+@media (width < 660px) {
+    .nav-socials {
+        display: none;
     }
 }
 
