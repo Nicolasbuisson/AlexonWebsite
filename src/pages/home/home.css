@@ -70,6 +70,12 @@
     }
 }
 
+.home-work-section {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 3rem;
+}
+
 .home-insta-section {
     width: 90%;
     margin-inline: auto;

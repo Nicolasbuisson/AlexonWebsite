@@ -1,10 +1,17 @@
 import { Footer } from "../../components/footer/footer";
 import { Insta } from "../../components/insta/insta";
 import { Navigation } from "../../components/navigation/navigation";
+import { Projects } from "../../components/projects/projects";
 import { Service } from "../../components/service/service";
+import { WorkItemProps } from "../../types/work";
 import "./home.css";
 
-export const Home = () => {
+interface HomeProps {
+  projects: WorkItemProps[];
+}
+
+export const Home = (props: HomeProps) => {
+  const { projects } = props;
   return (
     <div className="home-section-container">
       <Navigation sticky title="Alexon" showIcons></Navigation>
@@ -128,7 +135,10 @@ export const Home = () => {
           ></Service>
         </div>
       </section>
-      <section className="home-work-section"></section>
+      <section className="home-work-section">
+        <h3>See some of our work</h3>
+        <Projects projects={projects} max={9}></Projects>
+      </section>
       <section className="home-insta-section">
         <h3>Stay up to date with our Instagram</h3>
         <Insta></Insta>
