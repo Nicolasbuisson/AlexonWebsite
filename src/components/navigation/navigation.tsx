@@ -43,7 +43,13 @@ export const Navigation = (props: NavigationProps) => {
   const {} = useScrollPercentage();
 
   return (
-    <div className={sticky ? "sticky-navigation-container" : ""}>
+    <div
+      className={
+        sticky
+          ? "navigation-container sticky-navigation-container"
+          : "navigation-container"
+      }
+    >
       <nav className={transparent ? "transparent" : ""}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
         {title ? (

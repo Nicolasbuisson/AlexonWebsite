@@ -1,13 +1,15 @@
-.sticky-navigation-container {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-
+.navigation-container {
     --menu-height: 5em;
     --bar-height: 0.5rem;
     --bar-width: 4rem;
     --max-h1-size: 6;
     --max-h1-difference: 1.5;
+}
+
+.sticky-navigation-container {
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 nav {
