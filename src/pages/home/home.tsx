@@ -21,6 +21,11 @@ export const Home = () => {
         </div>
       </section>
       <section className="home-services-section">
+        <h2 className="home-pitch">
+          Alexon Media is a pioneering creative and production house offering
+          commercials, branded, and short-form content to some of your favourite
+          brands inspired by the pursuit of dreams, passion, and nature
+        </h2>
         <h3>Our Services</h3>
         <div className="home-services-container">
           <Service
@@ -123,6 +128,7 @@ export const Home = () => {
           ></Service>
         </div>
       </section>
+      <section className="home-work-section"></section>
       <section className="home-insta-section">
         <h3>Stay up to date with our Instagram</h3>
         <Insta></Insta>

@@ -39,7 +39,23 @@
     margin-bottom: 0.5rem;
 }
 
+.home-services-section {
+    padding-top: 10vh;
+    width: 90%;
+    margin: auto;
+}
+
+.home-pitch {
+    width: 80%;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
 .home-services-container {
+    margin-top: 0.5rem;
     --services-grid-columns: 3;
     display: grid;
     grid-template-columns: repeat(var(--services-grid-columns), 1fr);
@@ -52,6 +68,12 @@
     .home-services-container {
         --services-grid-columns: 1;
     }
+}
+
+.home-insta-section {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 3rem;
 }
 
 @keyframes rotating {
