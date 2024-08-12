@@ -9,7 +9,6 @@ interface IProps {
 
 export const Projects = (props: IProps) => {
   const { projects, max = undefined } = props;
-  console.log("max: ", max);
   return (
     <div className="projects-grid">
       {projects.map((project, i) => {

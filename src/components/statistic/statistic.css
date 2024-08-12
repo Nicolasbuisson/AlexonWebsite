@@ -1,0 +1,25 @@
+.stats-container {
+    --stat-font-size: 4rem;
+    margin-block: 2rem;
+    margin-inline: auto;
+    text-align: center;
+    width: 35%;
+
+
+    & h3 {
+        font-size: var(--stat-font-size);
+        line-height: 1.3;
+        font-weight: 800;
+    }
+
+    & h4 {
+        line-height: 1.2;
+    }
+}
+
+@media (width < 880px) {
+    .stats-container {
+        --stat-font-size: 2.5rem;
+        width: 70%;
+    }
+}

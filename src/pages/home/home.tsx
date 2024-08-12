@@ -3,6 +3,7 @@ import { Insta } from "../../components/insta/insta";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { Service } from "../../components/service/service";
+import { Statistic } from "../../components/statistic/statistic";
 import { WorkItemProps } from "../../types/work";
 import "./home.css";
 
@@ -29,9 +30,10 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-services-section">
         <h2 className="home-pitch">
-          Alexon Media is a pioneering creative and production house offering
-          commercials, branded, and short-form content to some of your favourite
-          brands inspired by the pursuit of dreams, passion, and nature
+          <h2 className="home-pitch-brand-name">Alexon Media</h2> is a
+          pioneering creative and production house offering commercials,
+          branded, and short-form content to some of your favourite brands
+          inspired by the pursuit of dreams, passion, and nature
         </h2>
         <h3>Our Services</h3>
         <div className="home-services-container">
@@ -138,6 +140,23 @@ export const Home = (props: HomeProps) => {
       <section className="home-work-section">
         <h3>See some of our work</h3>
         <Projects projects={projects} max={9}></Projects>
+      </section>
+      <section className="home-stats-section">
+        <h3>Some compelling statistics to share:</h3>
+        <div className="home-stats-container">
+          <Statistic
+            stat="73%"
+            description="of consumers prefer to watch a short-form video to learn about a product or service"
+          ></Statistic>
+          <Statistic
+            stat="48"
+            description="minutes devoted daily daily to watching short form content on average"
+          ></Statistic>
+          <Statistic
+            stat="#1"
+            description="highest ROI out of any social media marketing strategy"
+          ></Statistic>
+        </div>
       </section>
       <section className="home-insta-section">
         <h3>Stay up to date with our Instagram</h3>
