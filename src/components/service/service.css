@@ -6,7 +6,7 @@
     align-items: center;
     gap: 4px;
     width: 100%;
-    border: 2px var(--clr-light) dotted;
+    border: 2px var(--clr-dark) dotted;
     text-align: center;
     margin-inline: 8px;
 }
