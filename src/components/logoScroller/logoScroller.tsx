@@ -26,12 +26,36 @@ export const LogoScroller = () => {
   return (
     <div className="scroller">
       <div className="scroller-inner">
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
-        <img src={"/assets/logos/corona.png"} alt="logo" height="100px"></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
+        <img
+          src={"/assets/clientLogos/corona.png"}
+          alt="logo"
+          height="100px"
+        ></img>
       </div>
     </div>
   );
