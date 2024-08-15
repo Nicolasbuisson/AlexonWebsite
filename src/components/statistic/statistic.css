@@ -22,7 +22,6 @@
     margin-block: 2rem;
     margin-inline: auto;
     text-align: center;
-    width: 35%;
     transition: opacity var(--animation-duration) ease-out;
 
     & h3 {
@@ -35,6 +34,7 @@
 
     & h4 {
         line-height: 1.2;
+        padding-inline: 2.4rem;
     }
 }
 
