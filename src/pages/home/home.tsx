@@ -145,15 +145,19 @@ export const Home = (props: HomeProps) => {
         <h3>Some compelling statistics to share:</h3>
         <div className="home-stats-container">
           <Statistic
-            stat="73%"
+            statNumber={73}
+            statString="%"
             description="of consumers prefer to watch a short-form video to learn about a product or service"
           ></Statistic>
           <Statistic
-            stat="48"
+            statNumber={48}
+            statString=""
             description="minutes devoted daily daily to watching short form content on average"
           ></Statistic>
           <Statistic
-            stat="#1"
+            statNumber={1}
+            statString="#"
+            statStringBeforeNumber
             description="highest ROI out of any social media marketing strategy"
           ></Statistic>
         </div>
