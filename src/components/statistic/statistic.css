@@ -23,7 +23,7 @@
     margin-inline: auto;
     text-align: center;
     width: 35%;
-    transition: var(--animation-duration) ease-out;
+    transition: opacity var(--animation-duration) ease-out;
 
     & h3 {
         font-size: var(--stat-font-size);
@@ -55,11 +55,9 @@
 
 /* scroll interceptor animations */
 .hidden {
-    transform: translateY(200px);
     opacity: 0;
 }
 
 .show {
-    transform: translateY(0px);
     opacity: 1;
 }
