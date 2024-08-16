@@ -10,7 +10,7 @@
 }
 
 .home-hero-bg {
-    background-image: url("/src/assets/images/sunset-purple-tree.jpg");
+    background-image: url("/assets/images/sunset-purple-tree.jpg");
     background-color: var(--clr-dark); /* Used if the image is unavailable */
     width: 100%;
     height: 500px; 
