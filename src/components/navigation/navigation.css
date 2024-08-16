@@ -1,9 +1,9 @@
 .navigation-container {
-    --menu-height: 5em;
-    --bar-height: 0.5rem;
-    --bar-width: 4rem;
-    --max-h1-size: 6;
-    --max-h1-difference: 1.5;
+    --menu-height: 6em;
+    --bar-height: 0.25rem;
+    --bar-width: 2rem;
+    --max-logo-height: 4;
+    --max-logo-difference: 2;
 }
 
 .sticky-navigation-container {
@@ -18,6 +18,7 @@ nav {
     /* background starts transparent and becomes opacity 1 when --scroll reaches 33.3vh */
     background-color: rgb(0, 0, 0, calc((min(var(--scroll), 33.3)/ 33.3)));
     display: grid;
+    align-items: center;
     grid-template-rows: calc(var(--menu-height) - 2rem);
     grid-template-columns: 1fr 1fr 1fr;
     padding: 1em;
@@ -48,15 +49,27 @@ nav > * {
     */
 }
 
+.nav-logo {
+    grid-column: 2;
+    justify-self: center;
+    align-self: center;
+    max-width: fit-content;
+    transform: translateY(calc(33.3vh - 1vh * min(var(--scroll), 33.3)));
+    height: min(1rem * calc(var(--max-logo-height) - (min(var(--scroll), 33.3) * (var(--max-logo-difference) / 33.3))), 1rem * var(--max-logo-height));
+    /*
+    (oldVal - oldMin) * newRange / oldRange + newMin
+    Start at max size then decrease linearly as we scroll, pick the minimal value between the 2
+    */
+}
+
 .burger-menu {
     grid-column: 3;
-    height: 100%;
     width: var(--bar-width);
     justify-self: end;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    gap: 0.5rem;
     cursor: pointer;
 }
 
@@ -112,18 +125,18 @@ nav > * {
 /*----- animations----*/
 /* clicked */
 .burger-bar.clicked:nth-child(1) {
-    transform: rotate(45deg) translate(0.75em, 1.25em);
-    transition: ease-out 0.5s
+    transform: rotate(45deg) translate(0.325em, 0.625em);
+    transition: ease-out 0.5s;
 }
 
 .burger-bar.clicked:nth-child(2) {
-    transform: scale(0.1);
-    transition: ease-out 0.5s
+    transform: scale(0.01);
+    transition: ease-out 0.5s;
 }
 
 .burger-bar.clicked:nth-child(3) {
-    transform: rotate(135deg) translate(-0.5em, 1em);
-    transition: ease-out 0.5s
+    transform: rotate(135deg) translate(-0.325em, 0.75em);
+    transition: ease-out 0.5s;
 }
 
 /* unclicked */
@@ -133,27 +146,20 @@ nav > * {
 }
 
 /* Responsiveness */
-
 @media (width < 880px) {
-    .sticky-navigation-container {
-        --menu-height: 3.5em;
-        --bar-height: 0.25rem;
-        --bar-width: 2rem;
-        --max-h1-size: 4.5;
+    .navigation-container {
+        --max-logo-height: 3;
+        --max-logo-difference: 1;
     }
-
-    .burger-bar.clicked:nth-child(1) {
-        transform: rotate(45deg) translate(0.375em, 0.625em);
-    }
-    
-    .burger-bar.clicked:nth-child(3) {
-        transform: rotate(135deg) translate(-0.25em, 0.5em);
+    .nav-socials {
+        display: none;
     }
 }
 
-@media (width < 660px) {
-    .nav-socials {
-        display: none;
+@media (width < 440px) {
+    .navigation-container {
+        --max-logo-height: 1.5;
+        --max-logo-difference: 0.5;
     }
 }
 

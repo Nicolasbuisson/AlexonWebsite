@@ -30,12 +30,12 @@ export const Navigation = (props: NavigationProps) => {
       // might be nicer to transition on the opacity then just display none that shit...
       // or also could be nice to keep it if it's at the top...
       // I think playing with the Z-index could fix this?
-      document.getElementById("nav-title-id")?.classList.add("hide");
+      document.getElementById("nav-logo")?.classList.add("hide");
     } else {
       setBurgerClass("burger-bar unclicked");
       document.getElementById("menu-container")!.style.right = "-100%";
       document.getElementById("menu")!.style.opacity = "0%";
-      document.getElementById("nav-title-id")?.classList.remove("hide");
+      document.getElementById("nav-logo")?.classList.remove("hide");
     }
     setIsMenuClicked(!isMenuClicked);
   };
@@ -53,9 +53,11 @@ export const Navigation = (props: NavigationProps) => {
       <nav className={transparent ? "transparent" : ""}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
         {title ? (
-          <h1 className="nav-title" id="nav-title-id">
-            {title}
-          </h1>
+          <img
+            src="/assets/logos/Full-white.png"
+            id="nav-logo"
+            className="nav-logo"
+          ></img>
         ) : (
           <></>
         )}
