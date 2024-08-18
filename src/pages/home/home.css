@@ -6,6 +6,7 @@
 .home-hero-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 90vh;
 }
 
@@ -19,13 +20,23 @@
     flex-grow: 2;
 }
 
-.home-hero-text-container {
+.home-hero-text {
+    --home-pitch-top: 38%;
+    --home-pitch-fs: 1.75rem;
     position: absolute;
-    left: 50%;
-    top: 44%;
-    transform: translate(-50%, -50%);
+    top: var(--home-pitch-top);
     color: var(--clr-light);
     text-align: center;
+    max-width: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-pitch {
+    line-height: 1.2;
+    font-size: var(--home-pitch-fs);
 }
 
 .animated-text-container {
@@ -42,41 +53,26 @@
 .home-services-section {
     padding-top: 10vh;
     background-color: var(--clr-light);
+    color: var(--clr-dark);
     width: 100%;
     margin: auto;
 }
 
-.home-pitch {
-    color: var(--clr-dark);
-    width: 80%;
-    margin-inline: auto;
-    margin-bottom: 2rem;
-    text-align: center;
-    line-height: 1.2;
-    font-weight: 300;
-}
 
-.home-pitch-brand-name {
-    display: inline;
-    font-weight: 800;
+.home-services-title {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .home-services-container {
-    color: var(--clr-dark);
-    margin-top: 0.5rem;
     --services-grid-columns: 3;
     display: grid;
     grid-template-columns: repeat(var(--services-grid-columns), 1fr);
     justify-items: center;
     gap: 8px;
-    margin-inline: 12px;
+    margin-inline: auto;
+    width: 90%;
     padding-bottom: 1rem;
-}
-
-@media (width < 880px) {
-    .home-services-container {
-        --services-grid-columns: 1;
-    }
 }
 
 .home-work-section {
@@ -101,16 +97,30 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.home-insta-section {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 3rem;
+}
+
 @media (width < 880px) {
+    .home-hero-text {
+        --home-pitch-top: 35%;
+        --home-pitch-fs: 1.5rem;
+    }
+    .home-services-container {
+        --services-grid-columns: 1;
+    }
     .home-stats-container {
         grid-template-columns: 1fr;
     }
 }
 
-.home-insta-section {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 3rem;
+@media (width < 550px) {
+    .home-hero-text {
+        --home-pitch-top: 33%;
+        --home-pitch-fs: 0.8rem;
+    }
 }
 
 @keyframes rotating {

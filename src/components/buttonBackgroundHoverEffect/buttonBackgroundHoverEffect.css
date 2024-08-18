@@ -1,0 +1,15 @@
+.button-background-effect {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    width:fit-content;
+    margin-top: 1.5rem;
+    padding-block: 16px;
+    padding-inline: 24px;
+    border-radius: 20px;
+    font-size: 1.25rem;
+}
+
+.button-background-effect:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}

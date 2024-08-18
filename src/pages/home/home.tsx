@@ -1,3 +1,4 @@
+import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { Footer } from "../../components/footer/footer";
 import { Insta } from "../../components/insta/insta";
 import { Navigation } from "../../components/navigation/navigation";
@@ -17,25 +18,19 @@ export const Home = (props: HomeProps) => {
     <div className="home-section-container">
       <Navigation sticky title="Alexon" showIcons></Navigation>
       <section className="home-hero-section">
-        <div className="home-hero-bg">
-          {/* <div className="home-hero-text-container">
-            <div className="animated-text-container">
-              <h3 className="animated-text">Artist</h3>
-              <h3 className="animated-text">Videographer</h3>
-              <h3 className="animated-text">Photographer</h3>
-              <h3 className="animated-text">Athlete</h3>
-            </div>
-          </div> */}
+        <div className="home-hero-bg"></div>
+        <div className="home-hero-text">
+          <h3 className="home-pitch">
+            Pioneering creative and production house offering commercials,
+            branded, and short-form content to your favourite brands
+          </h3>
+          <ButtonBackgroundHoverEffect text="Let's Work Together"></ButtonBackgroundHoverEffect>
         </div>
       </section>
       <section className="home-services-section">
-        <h2 className="home-pitch">
-          <h2 className="home-pitch-brand-name">Alexon Media</h2> is a
-          pioneering creative and production house offering commercials,
-          branded, and short-form content to some of your favourite brands
-          inspired by the pursuit of dreams, passion, and nature
-        </h2>
-        <h3>Our Services</h3>
+        <h3 className="home-services-title">
+          Our highly expert services offerings
+        </h3>
         <div className="home-services-container">
           <Service
             title="Storytelling"
@@ -142,7 +137,7 @@ export const Home = (props: HomeProps) => {
         <Projects projects={projects} max={9}></Projects>
       </section>
       <section className="home-stats-section">
-        <h3>Some compelling statistics to share:</h3>
+        <h3>Some compelling statistics to share</h3>
         <div className="home-stats-container">
           <Statistic
             statNumber={73}
