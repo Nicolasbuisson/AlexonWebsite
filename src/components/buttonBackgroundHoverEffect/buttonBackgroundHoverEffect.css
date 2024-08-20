@@ -1,15 +1,50 @@
+.button-background-effect-container {
+    position: relative;
+    margin-block: 1.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    height: 55px;
+}
+
 .button-background-effect {
-    background-color: var(--clr-light);
+    position: relative;
+    z-index: 2;
     color: var(--clr-dark);
-    width:fit-content;
-    margin-top: 1.5rem;
-    padding-block: 16px;
-    padding-inline: 24px;
+    background-color: var(--clr-light);
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
     border-radius: 20px;
     font-size: 1.25rem;
 }
 
-.button-background-effect:hover {
+.button-background-effect-text {
+    position: relative;
+    font-size: 1.25rem;
+    color: inherit;
+    z-index: 4;
+}
+
+.black-background {
+    height: 200%;
+    width: 104%;
+    border-radius: 80%;
+    position: relative;
+    z-index: 3;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    transition: all ease-out 200ms;
+}
+
+/* hover effect */
+.button-background-effect:hover {
+    color: var(--clr-light);
+}
+
+.button-background-effect:hover + .black-background,
+.black-background:hover {
+    transform: translateY(-75%);
 }
