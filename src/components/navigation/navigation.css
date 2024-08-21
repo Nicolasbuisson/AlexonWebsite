@@ -10,7 +10,7 @@
 .sticky-navigation-container {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 20;
 }
 
 nav {

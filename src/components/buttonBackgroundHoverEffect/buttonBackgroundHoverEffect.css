@@ -1,11 +1,16 @@
 .button-background-effect-container {
+    --button-background-effect-height: 55px;
+    --button-background-effect-padding-block: 1rem;
+    --button-background-effect-padding-inline: 1.5rem;
+    --button-background-effect-font-size: 1.25rem;
+
     position: relative;
     margin-block: 1.5rem;
     border-radius: 20px;
     overflow: hidden;
     display: grid;
     justify-items: center;
-    height: 55px;
+    height: var(--button-background-effect-height);
 }
 
 .button-background-effect {
@@ -13,17 +18,11 @@
     z-index: 2;
     color: var(--clr-dark);
     background-color: var(--clr-light);
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
+    padding-block: var(--button-background-effect-padding-block);
+    padding-inline: var(--button-background-effect-padding-inline);
     border-radius: 20px;
-    font-size: 1.25rem;
-}
-
-.button-background-effect-text {
-    position: relative;
-    font-size: 1.25rem;
-    color: inherit;
-    z-index: 4;
+    font-size: var(--button-background-effect-font-size);
+    font-weight: 700;
 }
 
 .black-background {
@@ -32,8 +31,10 @@
     border-radius: 80%;
     position: relative;
     z-index: 3;
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
+    padding-block: var(--button-background-effect-padding-block);
+    padding-inline: var(--button-background-effect-padding-inline);
+    font-size: var(--button-background-effect-font-size);
+    font-weight: 700;
     background-color: var(--clr-dark);
     color: var(--clr-light);
     transition: all ease-out 200ms;
@@ -47,4 +48,13 @@
 .button-background-effect:hover + .black-background,
 .black-background:hover {
     transform: translateY(-75%);
+}
+
+@media (width < 550px) {
+    .button-background-effect-container {
+        --button-background-effect-height: 39px;
+        --button-background-effect-padding-block: 0.75rem;
+        --button-background-effect-padding-inline: 1.25rem;
+        --button-background-effect-font-size: 0.8rem;
+    }
 }
