@@ -11,6 +11,7 @@
 /* element styling */
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Design system */
@@ -23,7 +24,8 @@ a {
   --fw-bold: 600;
 
   --clr-light: #fff;
-  --clr-grey: #c5c5c5;
+  --clr-light-grey: #e0e0e0;
+  --clr-grey: #8b8b8b;
   --clr-dark: #000;
   --clr-accent: #636DB5;
 

@@ -29,7 +29,7 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-services-section">
         <h3 className="home-services-title">
-          Our highly expert services offerings
+          Highly expert <h3 className="grey">services offerings</h3>
         </h3>
         <div className="home-services-container">
           <Service

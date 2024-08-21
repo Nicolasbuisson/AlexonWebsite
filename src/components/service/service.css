@@ -1,23 +1,46 @@
 .service-container {
+    width: 100%;
+    margin-inline: 8px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px 40px auto;
+    grid-template-rows: 110px 40px auto 60px;
     justify-items: center;
     align-items: center;
     gap: 4px;
-    width: 100%;
     border: 2px var(--clr-dark) dotted;
     border-radius: 12px;
     text-align: center;
-    margin-inline: 8px;
 }
 
 .service-icon {
-    align-self: end;
     height: 100px;
+    align-self: end; 
 }
 
 .service-description {
-    margin-inline: 4px;
-    margin-bottom: 4px;
+    max-width: 80%;
+}
+
+.service-learn-more-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-block: 1rem;
+}
+
+.service-learn-more-text {
+    margin-inline: 0.25rem;
+}
+
+.service-learn-more-icon {
+    height: 16px;
+    width: 16px;
+    fill: var(--clr-dark);
+    stroke: var(--clr-dark);
+    stroke-width: 2;
+    transition: all ease-in-out 200ms;
+}
+
+.service-learn-more-container:hover > svg {
+    transform: translateX(40%);
 }
