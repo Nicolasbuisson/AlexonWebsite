@@ -89,7 +89,7 @@ h3 .grey {
 .home-stats-section {
     width: 100%;
     padding-inline: 5%;
-    padding-top: 2rem;
+    padding-top: 4rem;
     background-color: var(--clr-light);
     color: var(--clr-dark);
     margin-inline: auto;

@@ -147,7 +147,7 @@ export const Home = (props: HomeProps) => {
           <Statistic
             statNumber={48}
             statString=""
-            description="minutes devoted daily daily to watching short form content on average"
+            description="minutes devoted daily to watching short form content on average"
           ></Statistic>
           <Statistic
             statNumber={1}
