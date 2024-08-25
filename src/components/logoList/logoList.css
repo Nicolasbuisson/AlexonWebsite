@@ -1,0 +1,17 @@
+.clients-logos-container {
+    --logo-gap: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--logo-gap);
+    row-gap: 0rem;
+}
+
+@media (width < 440px) {
+    .clients-logos-container {
+        --logo-gap: 1rem;
+        flex-direction: column;
+    }
+}

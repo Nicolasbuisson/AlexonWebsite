@@ -1,6 +1,7 @@
 import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { Footer } from "../../components/footer/footer";
 import { Insta } from "../../components/insta/insta";
+import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { Service } from "../../components/service/service";
@@ -156,6 +157,33 @@ export const Home = (props: HomeProps) => {
             description="highest ROI out of any social media marketing strategy"
           ></Statistic>
         </div>
+      </section>
+      <section className="home-customer-experience-section">
+        {/*
+        revamp logoScroller component to accept React Nodes as props
+        will work with images or cards, anything you want
+        */}
+      </section>
+      <section className="home-faq-section">
+        <h3>
+          Get the answers you need about Alexon Media's{" "}
+          <h3>digital services</h3>
+        </h3>
+        {/*
+        component where you can transition height auto on this by clicking a button
+        */}
+      </section>
+      <section className="home-clients-section">
+        <h3>Join the ranks of clients like:</h3>
+        <LogoList
+          logos={[
+            "/assets/clientLogos/corona-black.png",
+            "/assets/clientLogos/corona-black.png",
+            "/assets/clientLogos/corona-black.png",
+            "/assets/clientLogos/corona-black.png",
+            "/assets/clientLogos/corona-black.png",
+          ]}
+        ></LogoList>
       </section>
       <section className="home-insta-section">
         <h3>Stay up to date with our Instagram</h3>

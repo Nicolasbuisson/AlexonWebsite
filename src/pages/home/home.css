@@ -102,6 +102,44 @@ h3 .grey {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.home-customer-experiences-section {
+    padding-top: 2rem;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    text-align: center;
+
+    & h3 {
+        margin-block: 1.5rem;
+    }
+}
+
+.home-faq-section {
+    padding-block: 2rem;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    text-align: center;
+
+    & h3 {
+        margin-block: 1.5rem;
+    }
+
+    & h3 h3 {
+        display: inline;
+        color: var(--clr-grey);
+    }
+}
+
+.home-clients-section {
+    padding-top: 2rem;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    text-align: center;
+
+    & h3 {
+        margin-block: 1.5rem;
+    }
+}
+
 .home-insta-section {
     width: 90%;
     margin-inline: auto;
