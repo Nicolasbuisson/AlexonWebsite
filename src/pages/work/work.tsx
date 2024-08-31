@@ -1,7 +1,7 @@
 import { Footer } from "../../components/footer/footer";
 import { Navigation } from "../../components/navigation/navigation";
 import "./work.css";
-import { LogoScroller } from "../../components/logoScroller/logoScroller";
+import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import { WorkItemProps } from "../../types/work";
 import { Projects } from "../../components/projects/projects";
 
@@ -21,7 +21,38 @@ export const Work = (props: WorkProps) => {
       </section>
       <section className="work-section-container">
         <h2>Our Clients</h2>
-        <LogoScroller></LogoScroller>
+        <HorizontalScroller>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+          <img
+            src={"/assets/clientLogos/corona.png"}
+            alt="logo"
+            height="100px"
+          ></img>
+        </HorizontalScroller>
       </section>
       <Footer></Footer>
     </div>
