@@ -4,6 +4,7 @@
 
     background-color: var(--clr-dark);
     height: 100vh;
+    height: 100svh;
 }
 
 .contact-grid-item-image {

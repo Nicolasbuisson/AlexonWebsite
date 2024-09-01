@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     height: 90vh;
+    height: 90svh;
 }
 
 .home-hero-bg {
@@ -53,6 +54,7 @@
 
 .home-services-section {
     padding-top: 10vh;
+    padding-top: 10svh;
     background-color: var(--clr-light);
     color: var(--clr-dark);
     width: 100%;
