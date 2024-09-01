@@ -5,13 +5,22 @@ import { WorkItem } from "./pages/workItem/workItem";
 import { Story } from "./pages/story/story";
 import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
+import { customerExperiences } from "./resources/customerExperiences.json";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route index element={<Home projects={projects}></Home>}></Route>
+          <Route
+            index
+            element={
+              <Home
+                projects={projects}
+                customerExperiences={customerExperiences}
+              ></Home>
+            }
+          ></Route>
           <Route
             path="work"
             element={<Work projects={projects}></Work>}

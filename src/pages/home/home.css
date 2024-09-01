@@ -103,7 +103,7 @@ h3 .grey {
 }
 
 .home-customer-experiences-section {
-    padding-top: 2rem;
+    padding-block: 2rem;
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;

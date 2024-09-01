@@ -1,0 +1,22 @@
+{
+    "customerExperiences" : [
+        {
+            "rating": 4.5,
+            "quote" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ducimus nisi nam ea dolor ipsa omnis odit aliquam quasi in. Excepturi deleniti dicta similique distinctio atque expedita, voluptatibus veritatis esse.",
+            "name": "Brandon",
+            "job": "Marketing Director"
+        },
+        {
+            "rating": 5,
+            "quote" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ducimus nisi nam ea dolor ipsa omnis odit aliquam quasi in. Excepturi deleniti dicta similique distinctio atque expedita, voluptatibus veritatis esse.",
+            "name": "Nicole",
+            "job": "UI Designer"
+        },
+        {
+            "rating": 5,
+            "quote" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ducimus nisi nam ea dolor ipsa omnis odit aliquam quasi in. Excepturi deleniti dicta similique distinctio atque expedita, voluptatibus veritatis esse.",
+            "name": "Caligula",
+            "job": "Roman Emperor"
+        }
+    ]
+}

@@ -1,7 +1,6 @@
 .scroller {
-    max-width: 70%;
     margin: auto;
-    --logo-spacing: 2rem;
+    --spacing: 2rem;
 }
 
 .scroller[data-animated=true] {
@@ -15,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-block: 1rem;
-    gap: var(--logo-spacing);
+    gap: var(--spacing);
 }
 
 .scroller[data-animated=true] .scroller-inner {
@@ -25,7 +24,7 @@
 
 @keyframes scrollX {
     to {
-        transform: translate(calc(-50% - (var(--logo-spacing) / 2)))
+        transform: translate(calc(-50% - (var(--spacing) / 2)))
     }
 }
 

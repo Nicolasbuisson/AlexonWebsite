@@ -1,20 +1,24 @@
 import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
+import { CustomerExperience } from "../../components/customerExperience/customerExperience";
 import { Footer } from "../../components/footer/footer";
+import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import { Insta } from "../../components/insta/insta";
 import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { Service } from "../../components/service/service";
 import { Statistic } from "../../components/statistic/statistic";
+import { CustomerExperienceProps } from "../../types/customerExperience";
 import { WorkItemProps } from "../../types/work";
 import "./home.css";
 
 interface HomeProps {
   projects: WorkItemProps[];
+  customerExperiences: CustomerExperienceProps[];
 }
 
 export const Home = (props: HomeProps) => {
-  const { projects } = props;
+  const { projects, customerExperiences } = props;
   return (
     <div className="home-section-container">
       <Navigation sticky title="Alexon" showIcons></Navigation>
@@ -158,11 +162,20 @@ export const Home = (props: HomeProps) => {
           ></Statistic>
         </div>
       </section>
-      <section className="home-customer-experience-section">
-        {/*
-        revamp logoScroller component to accept React Nodes as props
-        will work with images or cards, anything you want
-        */}
+      <section className="home-customer-experiences-section">
+        <h3>Customer Experiences</h3>
+        <HorizontalScroller>
+          {customerExperiences.map((experience) => {
+            return (
+              <CustomerExperience
+                rating={experience.rating}
+                quote={experience.quote}
+                name={experience.name}
+                job={experience.job}
+              ></CustomerExperience>
+            );
+          })}
+        </HorizontalScroller>
       </section>
       <section className="home-faq-section">
         <h3>

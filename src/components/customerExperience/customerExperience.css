@@ -1,0 +1,30 @@
+.customer-experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--clr-light);
+    width: 40ch;
+    margin: auto;
+    padding: 1rem;
+    border: 2px solid var(--clr-accent);
+    border-radius: 24px;
+    text-align: left;
+}
+
+.customer-experience-rating-svg {
+    height: 32px;
+    fill: var(--clr-accent);
+}
+
+.customer-experience-quote {
+    color: var(--clr-dark);
+}
+
+.customer-experience-name {
+    color: var(--clr-dark);
+}
+
+.customer-experience-job {
+    display: inline;
+    color: var(--clr-grey);
+}
