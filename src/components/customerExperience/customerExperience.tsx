@@ -9,9 +9,10 @@ export const CustomerExperience = (props: CustomerExperienceProps) => {
       <div className="customer-experience-rating">
         {Array(Math.floor(rating))
           .fill(null)
-          .map(() => {
+          .map((value, index) => {
             return (
               <svg
+                key={"csx-svg-" + index}
                 className="customer-experience-rating-svg"
                 fill="#000000"
                 viewBox="0 0 56.00 56.00"

@@ -1,0 +1,62 @@
+.accordion {
+    --accordion-animation-duration: 400ms;
+}
+
+.accordion-panel {
+  padding: 1rem;
+}
+
+.accordion-panel h4 {
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    margin-inline: 0.5rem;
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--accordion-animation-duration);
+}
+
+.accordion-content[aria-hidden='false'] {
+    grid-template-rows: 1fr;
+}
+
+.accordion-content > div {
+    overflow: hidden;
+}
+
+.accordion-trigger {
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.accordion-trigger::before,
+.accordion-trigger::after {
+  position: absolute;
+  right: -1.5rem;
+  content: "";
+  display: block;
+  width: 1em;
+  height: 4px;
+  background: currentcolor;
+  transition: transform var(--accordion-animation-duration);
+}
+
+.accordion-trigger::after {
+  rotate: 90deg;
+  translate: 0 -.75em;
+}
+
+.accordion-trigger::before {
+  translate: 0 .5em;
+}
+
+.accordion-trigger[aria-expanded="true"]::before,
+.accordion-trigger[aria-expanded="true"]::after {
+  transform: rotate(45deg);
+}
+

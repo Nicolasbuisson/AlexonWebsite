@@ -1,6 +1,7 @@
 .home-section-container {
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    --section-padding: 3rem;
 }
 
 .home-hero-section {
@@ -56,7 +57,6 @@
     color: var(--clr-dark);
     width: 100%;
     margin: auto;
-    padding-bottom: 3rem;
 }
 
 .home-services-title {
@@ -77,23 +77,20 @@ h3 .grey {
     gap: 2rem;
     margin-inline: auto;
     width: 90%;
-    padding-bottom: 1rem;
+    padding-bottom: var(--section-padding);
 }
 
 .home-work-section {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 2rem;
+    padding: var(--section-padding);
 }
 
 .home-stats-section {
     width: 100%;
     padding-inline: 5%;
-    padding-top: 4rem;
+    padding-top: var(--section-padding);
     background-color: var(--clr-light);
     color: var(--clr-dark);
     margin-inline: auto;
-    margin-top: 3rem;
     text-align: center;
 }
 
@@ -103,7 +100,7 @@ h3 .grey {
 }
 
 .home-customer-experiences-section {
-    padding-block: 2rem;
+    padding-block: var(--section-padding);
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;
@@ -114,13 +111,13 @@ h3 .grey {
 }
 
 .home-faq-section {
-    padding-block: 2rem;
+    padding-block: var(--section-padding);
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;
 
     & h3 {
-        margin-block: 1.5rem;
+        margin-block: 3rem;
     }
 
     & h3 h3 {
@@ -129,8 +126,39 @@ h3 .grey {
     }
 }
 
+.home-faq-container {
+    margin: auto;
+    padding-inline: 3rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+}
+
+.home-faq-container > img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    box-shadow: 2px 2px 2px var(--clr-dark);
+}
+
+@media (width < 880px) {
+    .home-faq-container {
+        grid-template-columns: 1fr;
+        padding-inline: 2rem;
+    }
+    .home-faq-container > img {
+        display: none;
+    }
+}
+
+@media (width < 440px) {
+    .home-faq-container {
+        padding-inline: 0.5rem;
+    }
+}
+
 .home-clients-section {
-    padding-top: 2rem;
+    padding-block: var(--section-padding);
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;
@@ -141,9 +169,7 @@ h3 .grey {
 }
 
 .home-insta-section {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 3rem;
+    padding: var(--section-padding);
 }
 
 @media (width < 880px) {

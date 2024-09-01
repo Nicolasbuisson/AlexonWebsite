@@ -1,3 +1,4 @@
+import { Accordion } from "../../components/accordion/accordion";
 import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { CustomerExperience } from "../../components/customerExperience/customerExperience";
 import { Footer } from "../../components/footer/footer";
@@ -9,16 +10,18 @@ import { Projects } from "../../components/projects/projects";
 import { Service } from "../../components/service/service";
 import { Statistic } from "../../components/statistic/statistic";
 import { CustomerExperienceProps } from "../../types/customerExperience";
+import { FaqProps } from "../../types/faq";
 import { WorkItemProps } from "../../types/work";
 import "./home.css";
 
 interface HomeProps {
   projects: WorkItemProps[];
   customerExperiences: CustomerExperienceProps[];
+  faqs: FaqProps[];
 }
 
 export const Home = (props: HomeProps) => {
-  const { projects, customerExperiences } = props;
+  const { projects, customerExperiences, faqs } = props;
   return (
     <div className="home-section-container">
       <Navigation sticky title="Alexon" showIcons></Navigation>
@@ -182,9 +185,10 @@ export const Home = (props: HomeProps) => {
           Get the answers you need about Alexon Media's{" "}
           <h3>digital services</h3>
         </h3>
-        {/*
-        component where you can transition height auto on this by clicking a button
-        */}
+        <div className="home-faq-container">
+          <Accordion faqs={faqs}></Accordion>
+          <img src="assets/images/lake.jpg"></img>
+        </div>
       </section>
       <section className="home-clients-section">
         <h3>Join the ranks of clients like:</h3>

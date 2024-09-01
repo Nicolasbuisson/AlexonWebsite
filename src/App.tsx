@@ -6,6 +6,7 @@ import { Story } from "./pages/story/story";
 import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
 import { customerExperiences } from "./resources/customerExperiences.json";
+import { faqs } from "./resources/faq.json";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Home
                 projects={projects}
                 customerExperiences={customerExperiences}
+                faqs={faqs}
               ></Home>
             }
           ></Route>
