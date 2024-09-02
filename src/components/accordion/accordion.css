@@ -12,6 +12,7 @@
     padding: 1rem;
     margin-inline: 0.5rem;
     display: grid;
+    justify-content: center;
 }
 
 .accordion-panel h4 > * {
@@ -38,6 +39,7 @@
   font: inherit;
   color: inherit;
   text-wrap: pretty;
+  text-align: center;
 }
 
 .accordion-x {

@@ -24,8 +24,8 @@ export const Footer = () => {
           >
             @Alexon
           </a>
-          <a href="mailto:alexon@gmail.com" className="footer-link">
-            alexon@gmail.com
+          <a href="mailto:contact@alexonmedia.com" className="footer-link">
+            contact@alexonmedia.com
           </a>
           <Socials></Socials>
         </div>

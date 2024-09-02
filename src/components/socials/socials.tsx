@@ -46,7 +46,7 @@ export const Socials = (props: IProps) => {
         </svg>
       </a>
 
-      <a href="mailto:alexon@gmail.com" className="socials-link">
+      <a href="mailto:contact@alexonmedia.com" className="socials-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
