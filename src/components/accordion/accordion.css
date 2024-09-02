@@ -11,6 +11,11 @@
     cursor: pointer;
     padding: 1rem;
     margin-inline: 0.5rem;
+    display: grid;
+}
+
+.accordion-panel h4 > * {
+  grid-row: 1/1
 }
 
 .accordion-content {
@@ -32,12 +37,19 @@
   border: 0;
   font: inherit;
   color: inherit;
+  text-wrap: pretty;
 }
 
-.accordion-trigger::before,
-.accordion-trigger::after {
+.accordion-x {
+  align-self: center;
+  justify-self: end;
+  margin-inline: 0.5rem;
+}
+
+.accordion-x::before,
+.accordion-x::after {
   position: absolute;
-  right: -1.5rem;
+  right: -1rem;
   content: "";
   display: block;
   width: 1em;
@@ -46,17 +58,12 @@
   transition: transform var(--accordion-animation-duration);
 }
 
-.accordion-trigger::after {
+.accordion-x::after {
   rotate: 90deg;
-  translate: 0 -.75em;
 }
 
-.accordion-trigger::before {
-  translate: 0 .5em;
-}
-
-.accordion-trigger[aria-expanded="true"]::before,
-.accordion-trigger[aria-expanded="true"]::after {
+.accordion-x[aria-expanded="true"]::before,
+.accordion-x[aria-expanded="true"]::after {
   transform: rotate(45deg);
 }
 

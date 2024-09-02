@@ -9,12 +9,12 @@ export const Accordion = (props: IProps) => {
   const { faqs } = props;
 
   const toggleAccordion = (panelToActivate: Element) => {
-    const activeButton = panelToActivate.querySelector("button");
+    const activeButton = panelToActivate.querySelector(".accordion-x");
     const activePanelIsOpened = activeButton?.getAttribute("aria-expanded");
 
     if (activePanelIsOpened === "true") {
       panelToActivate
-        ?.querySelector("button")
+        ?.querySelector(".accordion-x")
         ?.setAttribute("aria-expanded", "false");
 
       panelToActivate
@@ -22,7 +22,7 @@ export const Accordion = (props: IProps) => {
         ?.setAttribute("aria-hidden", "true");
     } else {
       panelToActivate
-        ?.querySelector("button")
+        ?.querySelector(".accordion-x")
         ?.setAttribute("aria-expanded", "true");
 
       panelToActivate
@@ -47,6 +47,7 @@ export const Accordion = (props: IProps) => {
               <button className="accordion-trigger" aria-expanded="false">
                 {faq.title}
               </button>
+              <div className="accordion-x" aria-expanded="false"></div>
             </h4>
             <div className="accordion-content" aria-hidden="true">
               <div>
