@@ -13,6 +13,11 @@
     height: var(--button-background-effect-height);
 }
 
+.button-background-effect-container > * {
+    text-transform: uppercase;
+    font-family: 'Made Outer Sans';
+}
+
 .button-background-effect {
     position: relative;
     z-index: 2;
@@ -27,7 +32,7 @@
 
 .black-background {
     height: 200%;
-    width: 104%;
+    width: 108%;
     border-radius: 80%;
     position: relative;
     z-index: 3;
