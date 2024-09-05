@@ -39,13 +39,14 @@ export const Insta = () => {
       const res = await fetch(instaItemListURL);
       const { data } = await res.json();
 
-      const items: InstaItemResponse[] = [];
+      const itemPromises: Promise<InstaItemResponse>[] = [];
 
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 25; i++) {
         const itemId = data[i].id;
-        const instaItem = await fetchInstaItem(itemId);
-        items.push(instaItem);
+        const instaItemPromise = fetchInstaItem(itemId);
+        itemPromises.push(instaItemPromise);
       }
+      const items = await Promise.all(itemPromises);
       setInstaItems(items);
     };
 
