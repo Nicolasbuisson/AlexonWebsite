@@ -4,7 +4,7 @@ import "./footer.css";
 
 export const Footer = () => {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <h1 className="footer-header">Let's work together</h1>
       <ButtonBackgroundHoverEffect
         text="Contact us"
@@ -30,6 +30,6 @@ export const Footer = () => {
           <Socials></Socials>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

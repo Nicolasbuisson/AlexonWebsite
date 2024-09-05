@@ -43,7 +43,7 @@ export const Navigation = (props: NavigationProps) => {
   const {} = useScrollPercentage();
 
   return (
-    <div
+    <header
       className={
         sticky
           ? "navigation-container sticky-navigation-container"
@@ -93,6 +93,6 @@ export const Navigation = (props: NavigationProps) => {
       </div>
 
       <Outlet />
-    </div>
+    </header>
   );
 };
