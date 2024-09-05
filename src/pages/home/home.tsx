@@ -26,7 +26,14 @@ export const Home = (props: HomeProps) => {
     <div className="home-section-container">
       <Navigation sticky title="Alexon" showIcons></Navigation>
       <section className="home-hero-section">
-        <div className="home-hero-bg"></div>
+        <div className="home-hero-bg">
+          <video
+            src="/assets/videos/VisualizerAlexonMedia-v1.mov"
+            muted
+            autoPlay
+            loop
+          ></video>
+        </div>
         <div className="home-hero-text">
           <h3 className="home-pitch">
             Pioneering creative and production house offering commercials,
@@ -36,6 +43,10 @@ export const Home = (props: HomeProps) => {
         </div>
       </section>
       <section className="home-services-section">
+        <h3 className="home-pitch-long">
+          Pioneering creative and production house offering commercials,
+          branded, and short-form content to your favourite brands
+        </h3>
         <h3 className="home-services-title">
           Highly expert <h3 className="grey">services offerings</h3>
         </h3>
@@ -203,7 +214,7 @@ export const Home = (props: HomeProps) => {
         ></LogoList>
       </section>
       <section className="home-insta-section">
-        <h3>Stay up to date with our Instagram</h3>
+        <h3>@Alexon</h3>
         <Insta></Insta>
       </section>
       <Footer></Footer>
