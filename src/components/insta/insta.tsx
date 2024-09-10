@@ -1,14 +1,17 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { InstaItemResponse } from "../../types/insta";
 import { config } from "../../config/config";
 import "./insta.css";
 import { InstaItem } from "./instaItem";
+import { Carousel } from "../carousel/carousel";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 export const Insta = () => {
   const [instaItems, setInstaItems] = useState<InstaItemResponse[]>(
     Array(6).fill(undefined)
   );
 
+  const TOTAL_INSTA_ITEMS = 25;
   const userId = config.INSTA_USER_ID;
   const accessToken = config.INSTA_ACCESS_TOKEN;
 
@@ -41,7 +44,7 @@ export const Insta = () => {
 
       const itemPromises: Promise<InstaItemResponse>[] = [];
 
-      for (let i = 0; i < 25; i++) {
+      for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
         const itemId = data[i].id;
         const instaItemPromise = fetchInstaItem(itemId);
         itemPromises.push(instaItemPromise);
@@ -78,8 +81,23 @@ export const Insta = () => {
     });
   }, [instaItems]);
 
+  const windowWidth = useWindowSize();
+
+  const getPageSize = useCallback((): number => {
+    if (windowWidth <= 440) {
+      return 2;
+    } else if (440 < windowWidth && windowWidth < 880) {
+      return 4;
+    } else {
+      return 5;
+    }
+  }, [windowWidth]);
+
   return (
-    <div className="insta-grid">
+    <Carousel
+      pageSize={getPageSize()}
+      totalPages={Math.floor(TOTAL_INSTA_ITEMS / getPageSize())}
+    >
       {instaItems.map((item, index) => {
         return item ? (
           <InstaItem
@@ -93,6 +111,6 @@ export const Insta = () => {
           <div className="insta-skeleton" key={"skeleton-" + index}></div>
         );
       })}
-    </div>
+    </Carousel>
   );
 };

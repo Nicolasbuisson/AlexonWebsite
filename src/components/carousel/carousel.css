@@ -1,0 +1,55 @@
+.carousel-container {
+    --carousel-offset: 0;
+    --carousel-item-width: clamp(100px, 14vw + 2rem , 312px);
+    --carousel-items-per-page: 5;
+    --carousel-svg-height: 24px;
+
+    width: calc(var(--carousel-items-per-page) * var(--carousel-item-width));
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-mover {
+    display: flex;
+    flex-direction: row;
+    transition: transform 400ms ease-in-out;
+    transform: translate(calc(var(--carousel-offset) * -100%), 0);
+}
+
+.carousel-container > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--clr-dark);
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carousel-previous-button {
+    left: 0;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px 4px 0px 0px;
+}
+
+.carousel-next-button {
+    right: 0;
+    border-radius: 20px 0px 0px 20px;
+    padding: 0px 0px 0px 4px;
+}
+
+.carousel-previous-button > svg, .carousel-next-button > svg {
+    height: var(--carousel-svg-height);
+    padding: 4px;
+}
+
+@media (width < 880px) {
+    .carousel-container {
+        --carousel-svg-height: 20px;
+    }
+}
+
+@media (width < 440px) {
+    .carousel-container {
+        --carousel-svg-height: 16px;
+    }
+}

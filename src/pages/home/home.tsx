@@ -214,8 +214,17 @@ export const Home = (props: HomeProps) => {
         ></LogoList>
       </section>
       <section className="home-insta-section">
-        <h3>@Alexon</h3>
-        <Insta></Insta>
+        <div>
+          <a
+            href="https://www.instagram.com/alexoonnn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3 className="home-insta-title">@Alexon</h3>
+          </a>
+
+          <Insta></Insta>
+        </div>
       </section>
       <Footer></Footer>
     </div>

@@ -186,6 +186,32 @@ h3 .grey {
 
 .home-insta-section {
     padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & a {
+        display: block;
+        width: fit-content;
+    }
+}
+
+.home-insta-title {
+    width: fit-content;
+    margin-bottom: 0.25rem;
+}
+
+.home-insta-title::after, .home-insta-title::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: var(--clr-light);
+    transition: 300ms ease-in-out;
+}
+
+.home-insta-title:hover::after {
+    width: 100%;
 }
 
 @media (width < 880px) {

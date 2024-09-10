@@ -1,5 +1,7 @@
 .insta-grid-item { 
     display: grid;
+    width: var(--carousel-item-width);
+    height: 100%;
 }
 
 .caption {
@@ -10,7 +12,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 20ch;
+    max-width: 60%;
     opacity: 0;
 }
 
@@ -45,10 +47,9 @@
 
 .insta-svg {
     display: block;
-    width: 24px;
     height: 24px;
-    fill: var(--clr-grey);
-    margin: 8px;
+    fill: var(--clr-light-grey);
+    margin: 4px;
     justify-self: end;
 }
 
