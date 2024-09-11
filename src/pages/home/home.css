@@ -52,7 +52,12 @@
     margin-bottom: 4rem;
     text-align: center;
     text-wrap: balance;
-    font-weight: 600;
+    text-transform: capitalize;
+    font-weight: 400;
+
+    & h3 {
+        font-weight: 800;
+    }
 }
 
 .animated-text-container {

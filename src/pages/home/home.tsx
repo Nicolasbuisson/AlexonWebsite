@@ -44,8 +44,10 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-services-section">
         <h3 className="home-pitch-long">
-          Pioneering creative and production house offering commercials,
-          branded, and short-form content to your favourite brands
+          Alexon media is a pioneering <br />{" "}
+          <h3>creative and production house</h3> Offering commercials, branded,
+          and short-form content to your favourite brands <br /> Inspired by the
+          pursuit of dreams, passion, and nature
         </h3>
         <h3 className="home-services-title">
           Highly expert <h3 className="grey">services offerings</h3>
