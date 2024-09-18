@@ -4,7 +4,8 @@ import { WorkItemProps } from "../../types/work";
 import "./workItem.css";
 
 export const WorkItem = (props: WorkItemProps) => {
-  const { title, client, description, videoUrl, gridImage, stills } = props;
+  const { title, client, description, videoUrl, gridImage, services, stills } =
+    props;
 
   return (
     <div className="workItem-container">
@@ -29,6 +30,8 @@ export const WorkItem = (props: WorkItemProps) => {
               Client: <h4>{client}</h4>
             </h4>
             <p>{description}</p>
+            <h4>Services:</h4>
+            <p>{services}</p>
           </div>
         </div>
         <div className="stills-grid">

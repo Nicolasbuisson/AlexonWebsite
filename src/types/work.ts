@@ -9,5 +9,6 @@ export interface WorkItemProps {
     videoUrl: string;
     gridImage: string;
     logoImage: string;
+    services: string;
     stills: StillImage[];
 }

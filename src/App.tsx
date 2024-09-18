@@ -41,6 +41,7 @@ function App() {
                     videoUrl={project.videoUrl}
                     gridImage={project.gridImage}
                     logoImage={project.logoImage}
+                    services={project.services}
                     stills={project.stills}
                   ></WorkItem>
                 }

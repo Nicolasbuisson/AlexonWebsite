@@ -8,57 +8,33 @@ interface IProps {
 }
 
 export const Projects = (props: IProps) => {
-  const { projects, max = undefined } = props;
+  const { projects, max = projects.length } = props;
   return (
     <div className="projects-grid">
       {projects.map((project, i) => {
-        if (max) {
-          return i < max ? (
-            <Link
-              to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
-              className="card"
-              key={"work-grid-card-" + project.title}
-            >
-              <div className="stacked">
-                <img
-                  src={`/assets/images/${project.gridImage}`}
-                  alt={`project thumbnail for ${project.description}`}
-                  className="project-thumbnail"
-                ></img>
-                <img
-                  src={`/assets/clientLogos/${project.logoImage}`}
-                  alt={`client logo for ${project.client}`}
-                  className="project-logo"
-                ></img>
-                <h4>{project.title}</h4>
-              </div>
-            </Link>
-          ) : (
-            <></>
-          );
-        } else {
-          return (
-            <Link
-              to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
-              className="card"
-              key={"work-grid-card-" + project.title}
-            >
-              <div className="stacked">
-                <img
-                  src={`/assets/images/${project.gridImage}`}
-                  alt={`project thumbnail for ${project.description}`}
-                  className="project-thumbnail"
-                ></img>
-                <img
-                  src={`/assets/clientLogos/${project.logoImage}`}
-                  alt={`client logo for ${project.client}`}
-                  className="project-logo"
-                ></img>
-                <h4>{project.title}</h4>
-              </div>
-            </Link>
-          );
-        }
+        return i < max ? (
+          <Link
+            to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
+            className="card"
+            key={"work-grid-card-" + project.title}
+          >
+            <div className="stacked">
+              <img
+                src={`/assets/images/${project.gridImage}`}
+                alt={`project thumbnail for ${project.description}`}
+                className="project-thumbnail"
+              ></img>
+              <img
+                src={`/assets/clientLogos/${project.logoImage}`}
+                alt={`client logo for ${project.client}`}
+                className="project-logo"
+              ></img>
+              <h4>{project.title}</h4>
+            </div>
+          </Link>
+        ) : (
+          <></>
+        );
       })}
     </div>
   );
