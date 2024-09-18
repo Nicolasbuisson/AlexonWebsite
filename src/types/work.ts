@@ -8,5 +8,6 @@ export interface WorkItemProps {
     description: string;
     videoUrl: string;
     gridImage: string;
+    logoImage: string;
     stills: StillImage[];
 }

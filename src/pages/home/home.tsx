@@ -154,7 +154,7 @@ export const Home = (props: HomeProps) => {
         </div>
       </section>
       <section className="home-work-section">
-        <h3>See some of our work</h3>
+        <h3>Our Work</h3>
         <Projects projects={projects} max={9}></Projects>
       </section>
       <section className="home-stats-section">

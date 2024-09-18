@@ -1,11 +1,12 @@
 {
     "projects" : [
     {
-        "title": "Project 1",
-        "client": "Corona",
+        "title": "Four Seasons",
+        "client": "Four Seasons Hotel",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -13,11 +14,12 @@
         ] 
     },
     {
-        "title": "Project 2",
+        "title": "Corona",
         "client": "Corona",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "lake.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -25,11 +27,12 @@
         ] 
     },
     {
-        "title": "Project 3",
-        "client": "Corona",
+        "title": "ELLE Luxembourg",
+        "client": "ELLE",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "road.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -37,11 +40,12 @@
         ] 
     },
     {
-        "title": "Project 4",
-        "client": "Corona",
+        "title": "Chris Lake",
+        "client": "Chris Lake",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "plain.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -49,11 +53,12 @@
         ] 
     },
     {
-        "title": "Project 5",
-        "client": "Corona",
+        "title": "Claptone",
+        "client": "Claptone",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -61,11 +66,12 @@
         ] 
     },
     {
-        "title": "Project 6",
-        "client": "Corona",
+        "title": "Haras de Prepinson",
+        "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -73,11 +79,12 @@
         ] 
     },
     {
-        "title": "Project 7",
-        "client": "Corona",
+        "title": "Maison de Prepinson",
+        "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -85,11 +92,12 @@
         ] 
     },
     {
-        "title": "Project 8",
-        "client": "Corona",
+        "title": "Business Club France Luxembourg",
+        "client": "Business Club France Luxembourg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -97,11 +105,12 @@
         ] 
     },
     {
-        "title": "Project 9",
-        "client": "Corona",
+        "title": "The Vision Board",
+        "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -109,11 +118,12 @@
         ] 
     },
     {
-        "title": "Project 10",
-        "client": "Corona",
+        "title": "Will I ever make it?",
+        "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -121,11 +131,12 @@
         ] 
     },
     {
-        "title": "Project 11",
-        "client": "Corona",
+        "title": "Chamber of Commerce",
+        "client": "Chamber of Commerce",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -133,11 +144,77 @@
         ] 
     },
     {
-        "title": "Project 12",
-        "client": "Corona",
+        "title": "Elewana Collection",
+        "client": "Elewana",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ] 
+    },
+    {
+        "title": "LHOFT: Bangkok + Togo",
+        "client": "LHOFT",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ] 
+    },
+    {
+        "title": "Monolink",
+        "client": "Monolink",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ] 
+    },
+    {
+        "title": "L'Equilibre",
+        "client": "L'Equilibre",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ] 
+    },
+    {
+        "title": "Parc Oméga",
+        "client": "Parc Oméga",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ] 
+    },
+    {
+        "title": "Ponente",
+        "client": "Ponente",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "sunset-purple-tree.jpg",
+        "logoImage": "corona.png",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},

@@ -22,7 +22,13 @@ export const Projects = (props: IProps) => {
               <div className="stacked">
                 <img
                   src={`/assets/images/${project.gridImage}`}
-                  alt="project card"
+                  alt={`project thumbnail for ${project.description}`}
+                  className="project-thumbnail"
+                ></img>
+                <img
+                  src={`/assets/clientLogos/${project.logoImage}`}
+                  alt={`client logo for ${project.client}`}
+                  className="project-logo"
                 ></img>
                 <h4>{project.title}</h4>
               </div>
@@ -40,7 +46,13 @@ export const Projects = (props: IProps) => {
               <div className="stacked">
                 <img
                   src={`/assets/images/${project.gridImage}`}
-                  alt="project card"
+                  alt={`project thumbnail for ${project.description}`}
+                  className="project-thumbnail"
+                ></img>
+                <img
+                  src={`/assets/clientLogos/${project.logoImage}`}
+                  alt={`client logo for ${project.client}`}
+                  className="project-logo"
                 ></img>
                 <h4>{project.title}</h4>
               </div>
