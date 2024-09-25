@@ -2,6 +2,9 @@
     --menu-height: 6em;
     --bar-height: 0.25rem;
     --bar-width: 2rem;
+    --burger-bar-translateX: 0.325em;
+    --burger-bar-first-translateY: 0.65em;
+    --burger-bar-third-translateY: 0.775em;
     --max-logo-height: 6;
     --max-logo-difference: 4;
     --logo-starting-height: 25;
@@ -64,6 +67,7 @@ nav > * {
 }
 
 .burger-menu {
+    margin-right: 0.5rem;
     grid-column: 3;
     width: var(--bar-width);
     justify-self: end;
@@ -126,7 +130,7 @@ nav > * {
 /*----- animations----*/
 /* clicked */
 .burger-bar.clicked:nth-child(1) {
-    transform: rotate(45deg) translate(0.325em, 0.625em);
+    transform: rotate(45deg) translate(var(--burger-bar-translateX), var(--burger-bar-first-translateY));
     transition: ease-out 0.5s;
 }
 
@@ -136,7 +140,7 @@ nav > * {
 }
 
 .burger-bar.clicked:nth-child(3) {
-    transform: rotate(135deg) translate(-0.325em, 0.75em);
+    transform: rotate(135deg) translate(calc(-1 * var(--burger-bar-translateX)), var(--burger-bar-third-translateY));
     transition: ease-out 0.5s;
 }
 
@@ -166,8 +170,14 @@ nav > * {
 
 @media (width < 550px) {
     .navigation-container {
+        --menu-height: 4em;
         --max-logo-height: 1.5;
         --max-logo-difference: 0.5;
+        --bar-height: 0.125rem;
+        --bar-width: 2rem;
+        --burger-bar-translateX: 0.175em;
+        --burger-bar-first-translateY: 0.65em;
+        --burger-bar-third-translateY: 0.775em;
     }
 }
 
