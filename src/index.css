@@ -219,18 +219,23 @@ a {
 
 h1 {
   font-size: var(--fs-h1);
+  font-family: var(--ff-secondary);
 }
 h2 {
   font-size: var(--fs-h2);
+  font-family: var(--ff-secondary);
 }
 h3 {
   font-size: var(--fs-h3);
+  font-family: var(--ff-secondary);
 }
 h4 {
   font-size: var(--fs-h4);
+  font-family: var(--ff-secondary);
 }
 body {
   font-size: var(--fs-body);
+  font-family: var(--ff-primary);
 }
 
 
