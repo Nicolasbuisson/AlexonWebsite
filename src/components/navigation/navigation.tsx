@@ -80,8 +80,8 @@ export const Navigation = (props: NavigationProps) => {
             </Link>
           </li>
           <li>
-            <Link to="/story" className="link">
-              Story
+            <Link to="/about" className="link">
+              About
             </Link>
           </li>
           <li>

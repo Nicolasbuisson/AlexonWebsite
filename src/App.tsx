@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home/home";
 import { Work } from "./pages/work/work";
 import { WorkItem } from "./pages/workItem/workItem";
-import { Story } from "./pages/story/story";
+import { About } from "./pages/about/about";
 import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
 import { customerExperiences } from "./resources/customerExperiences.json";
@@ -48,7 +48,7 @@ function App() {
               ></Route>
             );
           })}
-          <Route path="story" element={<Story></Story>}></Route>
+          <Route path="about" element={<About></About>}></Route>
           <Route path="contact" element={<Contact></Contact>}></Route>
         </Route>
       </Routes>
