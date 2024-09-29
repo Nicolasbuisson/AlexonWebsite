@@ -23,32 +23,32 @@ export const Work = (props: WorkProps) => {
         <h2>Our Clients</h2>
         <HorizontalScroller>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>
           <img
-            src={"/assets/clientLogos/corona.png"}
+            src={"/assets/clientLogos/Corona.png"}
             alt="logo"
             height="100px"
           ></img>

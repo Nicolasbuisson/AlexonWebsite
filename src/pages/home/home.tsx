@@ -153,6 +153,18 @@ export const Home = (props: HomeProps) => {
           ></Service>
         </div>
       </section>
+      <section className="home-clients-section">
+        <h3>Join the ranks of clients like:</h3>
+        <LogoList
+          logos={[
+            "/assets/clientLogos/Corona.png",
+            "/assets/clientLogos/AirCanada.png",
+            "/assets/clientLogos/Monolink.png",
+            "/assets/clientLogos/FourSeasons.png",
+            "/assets/clientLogos/Claptone.png",
+          ]}
+        ></LogoList>
+      </section>
       <section className="home-work-section">
         <h3>Our Work</h3>
         <Projects projects={projects} max={9} />
@@ -202,18 +214,6 @@ export const Home = (props: HomeProps) => {
           <Accordion faqs={faqs}></Accordion>
           <img src="assets/images/lake.jpg"></img>
         </div>
-      </section>
-      <section className="home-clients-section">
-        <h3>Join the ranks of clients like:</h3>
-        <LogoList
-          logos={[
-            "/assets/clientLogos/corona-black.png",
-            "/assets/clientLogos/corona-black.png",
-            "/assets/clientLogos/corona-black.png",
-            "/assets/clientLogos/corona-black.png",
-            "/assets/clientLogos/corona-black.png",
-          ]}
-        ></LogoList>
       </section>
       <section className="home-insta-section">
         <div>
