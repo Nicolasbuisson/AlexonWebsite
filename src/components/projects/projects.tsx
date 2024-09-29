@@ -24,11 +24,15 @@ export const Projects = (props: IProps) => {
                 alt={`project thumbnail for ${project.description}`}
                 className="project-thumbnail"
               ></img>
-              <img
-                src={`/assets/clientLogos/${project.logoImage}`}
-                alt={`client logo for ${project.client}`}
-                className="project-logo"
-              ></img>
+              {project.logoImage ? (
+                <img
+                  src={`/assets/clientLogos/${project.logoImage}`}
+                  alt={`client logo for ${project.client}`}
+                  className="project-logo"
+                ></img>
+              ) : (
+                <></>
+              )}
               <h4>{project.title}</h4>
             </div>
           </Link>
