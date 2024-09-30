@@ -180,8 +180,8 @@ h3 .grey {
 
 .home-clients-section {
     padding-block: var(--section-padding);
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
     text-align: center;
 
     & h3 {
