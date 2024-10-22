@@ -80,27 +80,6 @@
     margin: auto;
 }
 
-.home-services-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-h3 .grey {
-    display: inline;
-    color: var(--clr-grey);
-}
-
-.home-services-container {
-    --services-grid-columns: 3;
-    display: grid;
-    grid-template-columns: repeat(var(--services-grid-columns), 1fr);
-    justify-items: center;
-    gap: 2rem;
-    margin-inline: auto;
-    width: 90%;
-    padding-bottom: var(--section-padding);
-}
-
 .home-work-section {
     padding: var(--section-padding);
 }
@@ -193,9 +172,6 @@ h3 .grey {
     .home-hero-text {
         --home-pitch-top: 35%;
         --home-pitch-fs: 1.5rem;
-    }
-    .home-services-container {
-        --services-grid-columns: 1;
     }
     .home-stats-container {
         grid-template-columns: 1fr;
