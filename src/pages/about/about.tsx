@@ -1,4 +1,5 @@
 import { Footer } from "../../components/footer/footer";
+import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Service } from "../../components/service/service";
 import "./about.css";
@@ -131,6 +132,12 @@ export const About = () => {
             className="about-story-logo"
             src="/assets/logos/Signature-white.png"
           />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
+            tempore reprehenderit reiciendis sint minima soluta earum dolore
+            corporis, quod harum, labore molestiae dolorem alias cupiditate
+            repudiandae. Consequatur possimus odit quibusdam.
+          </p>
         </div>
         <div className="about-story-image-grid">
           <img src="/assets/images/road.jpg" />
@@ -139,6 +146,7 @@ export const About = () => {
           <img src="/assets/images/road.jpg" />
         </div>
       </section>
+      <InstaSection />
       <Footer></Footer>
     </div>
   );

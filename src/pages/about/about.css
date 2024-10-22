@@ -142,6 +142,5 @@ h3 .grey {
     }
     .about-story-section {
         --about-story-columns: 1fr;
-        grid-template-rows: 1fr 2fr;
     }
 }
