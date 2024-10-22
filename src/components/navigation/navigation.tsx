@@ -7,7 +7,7 @@ import { Socials } from "../socials/socials";
 interface NavigationProps {
   transparent?: boolean;
   sticky?: boolean;
-  title?: string;
+  titleScroll?: boolean; //differentiate between scroll effect title and just static title
   showIcons?: boolean;
 }
 
@@ -15,7 +15,7 @@ export const Navigation = (props: NavigationProps) => {
   const {
     transparent = false,
     sticky = false,
-    title,
+    titleScroll = false,
     showIcons = false,
   } = props;
   // to change burger classes
@@ -42,6 +42,11 @@ export const Navigation = (props: NavigationProps) => {
 
   const {} = useScrollPercentage();
 
+  const navClasses: string = [
+    transparent ? "transparent" : "",
+    titleScroll ? "nav-scroll" : "",
+  ].join(" ");
+
   return (
     <header
       className={
@@ -50,17 +55,13 @@ export const Navigation = (props: NavigationProps) => {
           : "navigation-container"
       }
     >
-      <nav className={transparent ? "transparent" : ""}>
+      <nav className={navClasses}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
-        {title ? (
-          <img
-            src="/assets/logos/Full-white.png"
-            id="nav-logo"
-            className="nav-logo"
-          ></img>
-        ) : (
-          <></>
-        )}
+        <img
+          src="/assets/logos/Full-white.png"
+          id="nav-logo"
+          className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
+        ></img>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>

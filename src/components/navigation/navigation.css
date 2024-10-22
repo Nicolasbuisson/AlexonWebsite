@@ -19,8 +19,6 @@
 nav {
     width: 100%;
     height: var(--menu-height);
-    /* background starts transparent and becomes opacity 1 when --scroll reaches 33.3vh */
-    background-color: rgb(0, 0, 0, calc((min(var(--scroll), var(--logo-starting-height))/ var(--logo-starting-height))));
     display: grid;
     align-items: center;
     grid-template-rows: calc(var(--menu-height) - 2rem);
@@ -28,6 +26,11 @@ nav {
     padding: 1em;
     position: absolute;
     z-index: 100;
+}
+
+.nav-scroll {
+    /* background starts transparent and becomes opacity 1 when --scroll reaches 33.3vh */
+    background-color: rgb(0, 0, 0, calc((min(var(--scroll), var(--logo-starting-height))/ var(--logo-starting-height))));
 }
 
 nav > * {
@@ -38,26 +41,15 @@ nav > * {
     grid-column: 1;
 }
 
-.nav-title {
-    grid-column: 2;
-    display: inline-block;
-    color: var(--clr-light);
-    text-shadow: 2px 2px var(--clr-accent);
-    justify-self: center;
-    align-self: center;
-    transform: translateY(calc(1vh * var(--logo-starting-height) - 1vh * min(var(--scroll), var(--logo-starting-height))));
-    font-size: max(1rem * calc(var(--max-h1-size) - (min(var(--scroll), var(--logo-starting-height)) * (var(--max-h1-difference) / var(--logo-starting-height)))), var(--fs-h1));
-    /*
-    (oldVal - oldMin) * newRange / oldRange + newMin
-    Start at 6rem then decrease linearly as we scroll until with a min value of var(--fs-h1)
-    */
-}
-
 .nav-logo {
     grid-column: 2;
     justify-self: center;
     align-self: center;
     max-width: fit-content;
+    height: calc((var(--max-logo-height) - var(--max-logo-difference)) * 1rem);
+}
+
+.logo-scroll {
     transform: translateY(calc(1vh * var(--logo-starting-height) - 1vh * min(var(--scroll), var(--logo-starting-height))));
     height: min(1rem * calc(var(--max-logo-height) - (min(var(--scroll), var(--logo-starting-height)) * (var(--max-logo-difference) / var(--logo-starting-height)))), 1rem * var(--max-logo-height));
     /*

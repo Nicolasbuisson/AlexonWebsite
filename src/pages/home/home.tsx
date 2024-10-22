@@ -24,7 +24,7 @@ export const Home = (props: HomeProps) => {
   const { projects, customerExperiences, faqs } = props;
   return (
     <div className="home-section-container">
-      <Navigation sticky title="Alexon" showIcons></Navigation>
+      <Navigation sticky titleScroll showIcons></Navigation>
       <section className="home-hero-section">
         <div className="home-hero-bg">
           <video
