@@ -8,7 +8,7 @@ import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import { Projects } from "../../components/projects/projects";
-import { Statistic } from "../../components/statistic/statistic";
+import { StatisticSection } from "../../components/statistic/statisticSection";
 import { CustomerExperienceProps } from "../../types/customerExperience";
 import { FaqProps } from "../../types/faq";
 import { WorkItemProps } from "../../types/work";
@@ -67,27 +67,7 @@ export const Home = (props: HomeProps) => {
         <h3>Our Work</h3>
         <Projects projects={projects} max={9} />
       </section>
-      <section className="home-stats-section">
-        <h3>Some compelling statistics to share</h3>
-        <div className="home-stats-container">
-          <Statistic
-            statNumber={73}
-            statString="%"
-            description="of consumers prefer to watch a short-form video to learn about a product or service"
-          ></Statistic>
-          <Statistic
-            statNumber={48}
-            statString=""
-            description="minutes devoted daily to watching short form content on average"
-          ></Statistic>
-          <Statistic
-            statNumber={1}
-            statString="#"
-            statStringBeforeNumber
-            description="highest ROI out of any social media marketing strategy"
-          ></Statistic>
-        </div>
-      </section>
+      <StatisticSection />
       <section className="home-customer-experiences-section">
         <h3>Customer Experiences</h3>
         <HorizontalScroller>

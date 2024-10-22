@@ -20,7 +20,7 @@ export const Statistic = (props: IProps) => {
     rootMargin: "0px 0px",
   });
   return (
-    <div className={`stats-container ${inView ? "show" : "hidden"}`} ref={ref}>
+    <div className={`stat-container ${inView ? "show" : "hidden"}`} ref={ref}>
       <h3
         data-stat={statNumber}
         className={`${

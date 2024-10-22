@@ -16,10 +16,10 @@
     --stat: 1;
 }
 
-.stats-container {
+.stat-container {
     --stat-font-size: 4rem;
     --animation-duration: 1500ms;
-    margin-block: 2rem;
+    padding-block: 2rem;
     margin-inline: auto;
     text-align: center;
     transition: opacity var(--animation-duration) ease-out;
@@ -49,7 +49,7 @@
 }
 
 @media (width < 880px) {
-    .stats-container {
+    .stat-container {
         --stat-font-size: 2.5rem;
         width: 70%;
     }
