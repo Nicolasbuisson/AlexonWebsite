@@ -3,7 +3,7 @@ import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHo
 import { CustomerExperience } from "../../components/customerExperience/customerExperience";
 import { Footer } from "../../components/footer/footer";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
-import { Insta } from "../../components/insta/insta";
+import { InstaSection } from "../../components/insta/instaSection";
 import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
@@ -215,19 +215,7 @@ export const Home = (props: HomeProps) => {
           <img src="assets/images/lake.jpg"></img>
         </div>
       </section>
-      <section className="home-insta-section">
-        <div>
-          <a
-            href="https://www.instagram.com/alexoonnn/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3 className="home-insta-title">@Alexon</h3>
-          </a>
-
-          <Insta></Insta>
-        </div>
-      </section>
+      <InstaSection />
       <Footer></Footer>
     </div>
   );
