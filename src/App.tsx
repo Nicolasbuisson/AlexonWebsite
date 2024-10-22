@@ -7,6 +7,7 @@ import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
 import { customerExperiences } from "./resources/customerExperiences.json";
 import { faqs } from "./resources/faq.json";
+import { Services } from "./pages/services/services";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             );
           })}
           <Route path="about" element={<About></About>}></Route>
+          <Route path="services" element={<Services></Services>}></Route>
           <Route path="contact" element={<Contact></Contact>}></Route>
         </Route>
       </Routes>

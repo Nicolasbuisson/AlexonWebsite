@@ -86,6 +86,11 @@ export const Navigation = (props: NavigationProps) => {
             </Link>
           </li>
           <li>
+            <Link to="/services" className="link">
+              Services
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" className="link">
               Contact
             </Link>
