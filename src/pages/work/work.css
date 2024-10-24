@@ -3,30 +3,22 @@
     color: var(--clr-light);
 }
 
-.work-section-container {
-    & h2 {
-        margin-inline: 2rem;
-        margin-block: 1rem;
-    }
+.work-title {
+    text-wrap: balance;
+    font-weight: 700; 
+    text-align: center;
+    margin-inline: 2rem;
+    margin-block: 1rem;
 }
 
 .work-section-container:first-of-type {
     padding-top: 5rem;
 }
 
-
-
-/* TODO 
-
-Check Toast-studios: https://www.toast-studios.com/our-productions
-- add text appearing on hover effect
-- add brand to each grid item
-- perhaps do 2 seperate grids:
- -- one for proper work clients
- -- another for artistic/personal projects
-- then need to create template for each individual work item page
-- same template with video sneak peek + pictures at bottom and paragraph
-- or different templates with just pics
-- I think if I put the video, it will have to be all the same template...
-- nah mate can put in the extra stills and shit
-*/
+.work-clients-title {
+    text-wrap: balance;
+    text-align: center;
+    margin-inline: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}

@@ -14,13 +14,13 @@ export const Work = (props: WorkProps) => {
 
   return (
     <div className="work-container">
-      <Navigation></Navigation>
+      <Navigation showIcons></Navigation>
       <section className="work-section-container">
-        <h2>Our Projects</h2>
+        <h2 className="work-title">Our Projects</h2>
         <Projects projects={projects}></Projects>
       </section>
       <section className="work-section-container">
-        <h2>Our Clients</h2>
+        <h2 className="work-clients-title">Our Clients</h2>
         <HorizontalScroller>
           <img
             src={"/assets/clientLogos/Corona.png"}
