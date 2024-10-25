@@ -26,6 +26,7 @@
     padding-inline: var(--button-background-effect-padding-inline);
     border-radius: 20px;
     font-size: var(--button-background-effect-font-size);
+    text-transform: capitalize;
 }
 
 .black-background {
@@ -40,6 +41,7 @@
     background-color: var(--clr-dark);
     color: var(--clr-light);
     transition: all ease-out 200ms;
+    text-transform: capitalize;
 }
 
 /* hover effect */
