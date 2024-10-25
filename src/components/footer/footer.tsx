@@ -5,7 +5,7 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer className="footer-container">
-      <h1 className="footer-header">Let's work together</h1>
+      <h2 className="footer-header">Let's work together</h2>
       <ButtonBackgroundHoverEffect
         text="Contact us"
         className="footer-button"
@@ -13,7 +13,8 @@ export const Footer = () => {
       <div className="footer-items-container">
         <div className="footer-newsletter-container">
           <h4>Join our newsletter</h4>
-          <input placeholder="enter your email"></input>
+          <input placeholder="enter your email" type="email" />{" "}
+          {/* TODO add validation and submit action, do I need a button lmao */}
           <p>Stay up to date with our latest offers and projects!</p>
         </div>
         <div className="footer-socials-container">
