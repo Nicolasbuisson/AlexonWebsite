@@ -14,7 +14,6 @@
 }
 
 .button-background-effect-container > * {
-    text-transform: uppercase;
     font-family: 'Made Outer Sans';
 }
 
@@ -27,7 +26,6 @@
     padding-inline: var(--button-background-effect-padding-inline);
     border-radius: 20px;
     font-size: var(--button-background-effect-font-size);
-    font-weight: 700;
 }
 
 .black-background {
@@ -39,7 +37,6 @@
     padding-block: var(--button-background-effect-padding-block);
     padding-inline: var(--button-background-effect-padding-inline);
     font-size: var(--button-background-effect-font-size);
-    font-weight: 700;
     background-color: var(--clr-dark);
     color: var(--clr-light);
     transition: all ease-out 200ms;

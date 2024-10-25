@@ -10,7 +10,7 @@ export const About = () => {
       <Navigation showIcons></Navigation>
       <section className="about-section-hero-container">
         <div className="about-hero">
-          <h1 className="about-hero-header">About me</h1>
+          <h1 className="about-hero-header">About Us</h1>
           <div className="about-hero-picture"></div>
           <p className="about-hero-paragraph">
             A born artist hailing from the picturesque landscapes of the UK.

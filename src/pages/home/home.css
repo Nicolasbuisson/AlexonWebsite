@@ -27,7 +27,7 @@
 }
 
 .home-hero-text {
-    --home-pitch-top: 38%;
+    --home-pitch-top: 37%;
     --home-pitch-fs: 1.75rem;
     position: absolute;
     top: var(--home-pitch-top);
@@ -43,6 +43,7 @@
     max-width: 50%;
     line-height: 1.2;
     font-size: var(--home-pitch-fs);
+    font-weight: 800;
 }
 
 .home-pitch-long {
@@ -53,7 +54,6 @@
     text-align: center;
     text-wrap: balance;
     text-transform: capitalize;
-    font-weight: 400;
 
     & h3 {
         font-weight: 800;
@@ -151,7 +151,7 @@
 
 @media (width < 550px) {
     .home-hero-text {
-        --home-pitch-top: 33%;
+        --home-pitch-top: 32%;
         --home-pitch-fs: 0.8rem;
     }
 }
