@@ -10,7 +10,7 @@ export const InstaSection = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="insta-title">@Alexon</h3>
+          <h3 className="insta-title">@Alexoonnn</h3>
         </a>
         <Insta></Insta>
       </div>

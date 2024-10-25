@@ -13,6 +13,8 @@
 }
 
 .insta-title {
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
     width: fit-content;
     margin-bottom: 0.25rem;
 }
