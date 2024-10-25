@@ -36,32 +36,35 @@ export const Home = (props: HomeProps) => {
         </div>
         <div className="home-hero-text">
           <h3 className="home-pitch">
-            Pioneering creative and production house offering commercials,
-            branded, and short-form content to your favourite brands
+            pioneering creative and production house offering branded video
+            content to your favourite brands
           </h3>
           <ButtonBackgroundHoverEffect text="Let's Work Together"></ButtonBackgroundHoverEffect>
         </div>
       </section>
-      <section className="home-services-section">
+      <section className="home-pitch-section">
         <h3 className="home-pitch-long">
           Alexon media is a pioneering <br />{" "}
           <h3>creative and production house</h3> Offering commercials, branded,
-          and short-form content to your favourite brands <br /> Inspired by the
-          pursuit of dreams, passion, and nature
+          and short-form content to your favourite brands worlwide
+          {/* <br />{" "}
+          Inspired by the pursuit of dreams, passion, and nature */}
         </h3>
-        <Offerings />
       </section>
       <section className="home-clients-section">
         <h3>Join the ranks of clients like:</h3>
         <LogoList
           logos={[
-            "/assets/clientLogos/Corona.png",
-            "/assets/clientLogos/AirCanada.png",
-            "/assets/clientLogos/Monolink.png",
-            "/assets/clientLogos/FourSeasons.png",
-            "/assets/clientLogos/Claptone.png",
+            "/assets/clientLogos/CoronaBlack.png",
+            "/assets/clientLogos/FourSeasonsBlack.png",
+            "/assets/clientLogos/ELLEBlack.png",
+            "/assets/clientLogos/JohnSummitBlack.png",
+            "/assets/clientLogos/McGillUniversityBlack.png",
           ]}
         ></LogoList>
+      </section>
+      <section className="home-services-section">
+        <Offerings />
       </section>
       <section className="home-work-section">
         <h3>Our Work</h3>

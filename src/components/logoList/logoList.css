@@ -7,6 +7,12 @@
     justify-content: center;
     gap: var(--logo-gap);
     row-gap: 0rem;
+
+    img {
+        margin-block: calc(var(--logo-gap) / 2);
+        max-height: 100px;
+        max-width: 200px;
+    }
 }
 
 @media (width < 440px) {
