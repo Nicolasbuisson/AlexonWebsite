@@ -69,6 +69,18 @@
     }
 }
 
+.home-clients-section {
+    padding-block: var(--section-padding);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    text-align: center;
+
+    & h3 {
+        margin-block: 1.5rem;
+        padding-inline: 2%;
+    }
+}
+
 .home-services-section {
     padding-top: var(--section-padding);
     background-color: var(--clr-light);
@@ -136,17 +148,6 @@
 @media (width < 440px) {
     .home-faq-container {
         padding-inline: 0.5rem;
-    }
-}
-
-.home-clients-section {
-    padding-block: var(--section-padding);
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
-    text-align: center;
-
-    & h3 {
-        margin-block: 1.5rem;
     }
 }
 

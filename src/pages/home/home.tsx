@@ -2,6 +2,7 @@ import { Accordion } from "../../components/accordion/accordion";
 import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { CustomerExperience } from "../../components/customerExperience/customerExperience";
 import { Footer } from "../../components/footer/footer";
+import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import { InstaSection } from "../../components/insta/instaSection";
 import { LogoList } from "../../components/logoList/logoList";
@@ -44,11 +45,13 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-pitch-section">
         <h3 className="home-pitch-long">
-          Alexon media is a pioneering <br />{" "}
-          <h3>creative and production house</h3> Offering commercials, branded,
-          and short-form content to your favourite brands worlwide
-          {/* <br />{" "}
-          Inspired by the pursuit of dreams, passion, and nature */}
+          <HeroParagraph
+            text={
+              "Alexon media is a pioneering creative and production house Offering commercials, branded, and short-form content to your favourite brands worlwide"
+            }
+            boldStartIndex={36}
+            boldEndIndex={66}
+          />
         </h3>
       </section>
       <section className="home-clients-section">
