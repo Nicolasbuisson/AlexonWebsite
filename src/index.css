@@ -236,6 +236,21 @@ body {
   font-family: var(--ff-primary);
 }
 
+/* custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--clr-dark);
+}
+body::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--clr-light);
+  border-radius: 100vw;
+  border: 2px solid var(--clr-dark);
+}
+
 
 
 
