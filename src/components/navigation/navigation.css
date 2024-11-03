@@ -171,6 +171,10 @@ nav > * {
         --burger-bar-first-translateY: 0.65em;
         --burger-bar-third-translateY: 0.775em;
     }
+
+    .burger-bar.clicked:nth-child(1), .burger-bar.clicked:nth-child(3) {
+        height: 0.175rem;
+    }
 }
 
 /* Utility */
