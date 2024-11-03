@@ -12,6 +12,18 @@ export const Accordion = (props: IProps) => {
     const activeButton = panelToActivate.querySelector(".accordion-x");
     const activePanelIsOpened = activeButton?.getAttribute("aria-expanded");
 
+    // close all currently open accordion panels
+    Array.from(document.querySelectorAll(".accordion-x")).map(
+      (accordionButton: Element) => {
+        accordionButton.setAttribute("aria-expanded", "false");
+      }
+    );
+    Array.from(document.querySelectorAll(".accordion-content")).map(
+      (accordionButton: Element) => {
+        accordionButton.setAttribute("aria-hidden", "true");
+      }
+    );
+
     if (activePanelIsOpened === "true") {
       panelToActivate
         ?.querySelector(".accordion-x")
