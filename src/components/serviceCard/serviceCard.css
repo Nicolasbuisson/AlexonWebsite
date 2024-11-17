@@ -1,0 +1,51 @@
+@property --rotate-angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+.service-card-container {
+    --rotate-angle: 0deg;
+    --c1: rgb(168, 239, 255, 1);
+	--c2: rgb(3, 35, 42);
+    position: relative;
+    margin: 1rem;
+    height: 600px;
+    aspect-ratio: 0.6;
+    background-color: inherit;
+    border-radius: 24px;
+}
+
+.service-card-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px; 
+  padding: 10px; 
+  background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
+  animation: borderRotate 4s linear forwards infinite;
+  /* mask needed because border-image does not allow border-radius
+  Solution: create a 2 masks:
+  - one will cover the whole element
+  - the other will cover only the content-box (excludes the border)
+  use mask-composite: exclude, to exclude the content box from the whole element mask
+  and we are left only with the border.
+  Use a pseudo-element to not mask the actual content of our item
+  */
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude; 
+}
+
+@keyframes borderRotate {
+    0% {
+        --rotate-angle: 0deg;
+    }
+    50% {
+        --rotate-angle: 180deg;
+    }
+    100% {
+        --rotate-angle: 360deg;
+    }
+}
