@@ -7,7 +7,8 @@ import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
 import { customerExperiences } from "./resources/customerExperiences.json";
 import { faqs } from "./resources/faq.json";
-import { Services } from "./pages/services/services";
+import { ShortForm } from "./pages/services/shortForm";
+import { LongForm } from "./pages/services/longForm";
 
 function App() {
   return (
@@ -21,13 +22,10 @@ function App() {
                 projects={projects}
                 customerExperiences={customerExperiences}
                 faqs={faqs}
-              ></Home>
+              />
             }
           ></Route>
-          <Route
-            path="work"
-            element={<Work projects={projects}></Work>}
-          ></Route>
+          <Route path="work" element={<Work projects={projects} />}></Route>
           {projects.map((project) => {
             return (
               <Route
@@ -49,9 +47,10 @@ function App() {
               ></Route>
             );
           })}
-          <Route path="about" element={<About></About>}></Route>
-          <Route path="services" element={<Services></Services>}></Route>
-          <Route path="contact" element={<Contact></Contact>}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="services/shortform" element={<ShortForm />}></Route>
+          <Route path="services/longform" element={<LongForm />}></Route>
+          <Route path="contact" element={<Contact />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

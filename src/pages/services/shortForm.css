@@ -1,8 +1,10 @@
-.services-container {
+.short-form-container {
     --section-padding: 3rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
-.services-hero-section {
+.short-form-hero-section {
     padding-top: 5rem;
     background-color: var(--clr-dark);
     color: var(--clr-light);

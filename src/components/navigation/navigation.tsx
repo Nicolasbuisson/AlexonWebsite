@@ -86,7 +86,7 @@ export const Navigation = (props: NavigationProps) => {
             </Link>
           </li>
           <li>
-            <Link to="/services" className="link">
+            <Link to="/services/shortform" className="link">
               Services
             </Link>
           </li>
