@@ -15,10 +15,15 @@
     padding-top: 5rem;
 }
 
+.work-clients-section {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    padding-block: 1rem;
+}
+
 .work-clients-title {
     text-wrap: balance;
     text-align: center;
     margin-inline: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
 }
