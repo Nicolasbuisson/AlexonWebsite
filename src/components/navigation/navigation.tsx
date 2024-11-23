@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./navigation.css";
-import useScrollPercentage from "../../hooks/useScrollPercentage";
 import { Socials } from "../socials/socials";
 
 interface NavigationProps {
@@ -40,12 +39,18 @@ export const Navigation = (props: NavigationProps) => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const {} = useScrollPercentage();
-
   const navClasses: string = [
     transparent ? "transparent" : "",
     titleScroll ? "nav-scroll" : "",
   ].join(" ");
+
+  const servicesMenuClick = () => {
+    const servicesMenu = document.getElementById("services-menu-content");
+    servicesMenu?.setAttribute(
+      "data-expanded",
+      servicesMenu?.getAttribute("data-expanded") === "true" ? "false" : "true"
+    );
+  };
 
   return (
     <header
@@ -69,7 +74,7 @@ export const Navigation = (props: NavigationProps) => {
         </div>
       </nav>
       <div id="menu-container">
-        <div className="menu" id="menu">
+        <ul className="menu" id="menu">
           <li>
             <Link to="/" className="link">
               Home
@@ -85,17 +90,29 @@ export const Navigation = (props: NavigationProps) => {
               About
             </Link>
           </li>
-          <li>
-            <Link to="/services/shortform" className="link">
+          <li className="services-menu">
+            <h1 className="link" onClick={servicesMenuClick}>
               Services
-            </Link>
+            </h1>
+            <div
+              id="services-menu-content"
+              className="services-menu-content"
+              data-expanded="false"
+            >
+              <Link to="/services/shortform" className="link services-link">
+                Short Form
+              </Link>
+              <Link to="/services/longform" className="link services-link">
+                Long Form
+              </Link>
+            </div>
           </li>
           <li>
             <Link to="/contact" className="link">
               Contact
             </Link>
           </li>
-        </div>
+        </ul>
       </div>
 
       <Outlet />
