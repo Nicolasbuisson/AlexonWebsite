@@ -9,8 +9,11 @@ import { customerExperiences } from "./resources/customerExperiences.json";
 import { faqs } from "./resources/faq.json";
 import { ShortForm } from "./pages/services/shortForm";
 import { LongForm } from "./pages/services/longForm";
+import useScrollPercentage from "./hooks/useScrollPercentage";
 
 function App() {
+  useScrollPercentage(); // initiate css variable --scroll
+
   return (
     <BrowserRouter>
       <Routes>
