@@ -31,7 +31,10 @@ export const Home = (props: HomeProps) => {
       <section className="home-hero-section">
         <div className="home-hero-bg">
           <video
-            src="/assets/videos/VisualizerAlexonMedia-v1.mov"
+            src={
+              import.meta.env.BASE_URL +
+              "/assets/videos/VisualizerAlexonMedia-v1.mov"
+            }
             muted
             autoPlay
             loop
@@ -60,11 +63,14 @@ export const Home = (props: HomeProps) => {
         <h3>Join the ranks of clients like:</h3>
         <LogoList
           logos={[
-            "/assets/clientLogos/CoronaBlack.png",
-            "/assets/clientLogos/FourSeasonsBlack.png",
-            "/assets/clientLogos/ELLEBlack.png",
-            "/assets/clientLogos/JohnSummitBlack.png",
-            "/assets/clientLogos/McGillUniversityBlack.png",
+            import.meta.env.BASE_URL + "/assets/clientLogos/CoronaBlack.png",
+            import.meta.env.BASE_URL +
+              "/assets/clientLogos/FourSeasonsBlack.png",
+            import.meta.env.BASE_URL + "/assets/clientLogos/ELLEBlack.png",
+            import.meta.env.BASE_URL +
+              "/assets/clientLogos/JohnSummitBlack.png",
+            import.meta.env.BASE_URL +
+              "assets/clientLogos/McGillUniversityBlack.png",
           ]}
         ></LogoList>
       </section>
@@ -101,7 +107,7 @@ export const Home = (props: HomeProps) => {
         </h3>
         <div className="home-faq-container">
           <Accordion faqs={faqs}></Accordion>
-          <img src="assets/images/lake.jpg"></img>
+          <img src={import.meta.env.BASE_URL + "assets/images/lake.jpg"}></img>
         </div>
       </section>
       <InstaSection />

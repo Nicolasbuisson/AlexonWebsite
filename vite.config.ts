@@ -5,7 +5,7 @@ import commonjs from 'vite-plugin-commonjs'
 
 export default defineConfig({
     // depending on your application, base can also be "/"
-    base: '/AlexonWebsite',
+    base: '/AlexonWebsite/',
     plugins: [react(), viteTsconfigPaths(), commonjs()],
     server: {    
         // this ensures that the browser opens upon server start

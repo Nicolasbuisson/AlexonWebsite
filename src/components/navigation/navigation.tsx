@@ -63,7 +63,7 @@ export const Navigation = (props: NavigationProps) => {
       <nav className={navClasses}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
         <img
-          src="/assets/logos/Full-white.png"
+          src={import.meta.env.BASE_URL + "/assets/logos/Full-white.png"}
           id="nav-logo"
           className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
         ></img>

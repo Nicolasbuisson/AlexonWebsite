@@ -20,13 +20,19 @@ export const Projects = (props: IProps) => {
           >
             <div className="stacked">
               <img
-                src={`/assets/images/${project.gridImage}`}
+                src={
+                  import.meta.env.BASE_URL +
+                  `/assets/images/${project.gridImage}`
+                }
                 alt={`project thumbnail for ${project.description}`}
                 className="project-thumbnail"
               ></img>
               {project.logoImage ? (
                 <img
-                  src={`/assets/clientLogos/${project.logoImage}`}
+                  src={
+                    import.meta.env.BASE_URL +
+                    `/assets/clientLogos/${project.logoImage}`
+                  }
                   alt={`client logo for ${project.client}`}
                   className="project-logo"
                 ></img>

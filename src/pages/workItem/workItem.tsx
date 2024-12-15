@@ -13,7 +13,11 @@ export const WorkItem = (props: WorkItemProps) => {
       <section className="workItem-section">
         <div
           className="workItem-title-background"
-          style={{ backgroundImage: `url(/assets/images/${gridImage})` }}
+          style={{
+            backgroundImage: `url(${
+              import.meta.env.BASE_URL
+            }/assets/images/${gridImage})`,
+          }}
         >
           <h2>{title}</h2>
         </div>
@@ -39,7 +43,10 @@ export const WorkItem = (props: WorkItemProps) => {
             return (
               <img
                 key={"stills-" + stillImg.imageUrl}
-                src={`/assets/images/${stillImg.imageUrl}`}
+                src={
+                  import.meta.env.BASE_URL +
+                  `/assets/images/${stillImg.imageUrl}`
+                }
                 alt="project stills picture"
               ></img>
             );

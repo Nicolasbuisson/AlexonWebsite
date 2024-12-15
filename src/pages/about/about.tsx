@@ -28,7 +28,7 @@ export const About = () => {
           <h3>Founder's Story</h3>
           <img
             className="about-story-logo"
-            src="/assets/logos/Signature-white.png"
+            src={import.meta.env.BASE_URL + "/assets/logos/Signature-white.png"}
           />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
@@ -38,10 +38,12 @@ export const About = () => {
           </p>
         </div>
         <div className="about-story-image-grid">
-          <img src="/assets/images/road.jpg" />
-          <img src="/assets/images/plain.jpg" />
-          <img src="/assets/images/rice-hills.jpg" />
-          <img src="/assets/images/road.jpg" />
+          <img src={import.meta.env.BASE_URL + "/assets/images/road.jpg"} />
+          <img src={import.meta.env.BASE_URL + "/assets/images/plain.jpg"} />
+          <img
+            src={import.meta.env.BASE_URL + "/assets/images/rice-hills.jpg"}
+          />
+          <img src={import.meta.env.BASE_URL + "/assets/images/road.jpg"} />
         </div>
       </section>
       <InstaSection />

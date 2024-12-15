@@ -15,7 +15,7 @@ function App() {
   useScrollPercentage(); // initiate css variable --scroll
 
   return (
-    <BrowserRouter basename={process.env.PULBIC_URL}>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/">
           <Route
