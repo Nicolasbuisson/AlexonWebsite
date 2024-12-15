@@ -9,6 +9,8 @@ import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import { Projects } from "../../components/projects/projects";
+import { ServiceCard } from "../../components/serviceCard/serviceCard";
+import { ServicesSection } from "../../components/serviceCard/servicesSection";
 import { StatisticSection } from "../../components/statistic/statisticSection";
 import { CustomerExperienceProps } from "../../types/customerExperience";
 import { FaqProps } from "../../types/faq";
@@ -36,10 +38,7 @@ export const Home = (props: HomeProps) => {
           ></video>
         </div>
         <div className="home-hero-text">
-          <h3 className="home-pitch">
-            pioneering creative and production house offering branded video
-            content to your favourite brands
-          </h3>
+          <h3 className="home-pitch">elevate your brand</h3>
           <ButtonBackgroundHoverEffect text="Let's Work Together"></ButtonBackgroundHoverEffect>
         </div>
       </section>
@@ -54,6 +53,9 @@ export const Home = (props: HomeProps) => {
           />
         </h3>
       </section>
+      <section className="home-collage-section">
+        collage section: wait for pictures to see how you want to lay them out
+      </section>
       <section className="home-clients-section">
         <h3>Join the ranks of clients like:</h3>
         <LogoList
@@ -67,14 +69,17 @@ export const Home = (props: HomeProps) => {
         ></LogoList>
       </section>
       <section className="home-services-section">
+        {/*
+        TODO replace Offerings with Services section
+        */}
         <Offerings />
+        <ServicesSection />
       </section>
       <section className="home-work-section">
         <h3>Our Work</h3>
         <Projects projects={projects} max={9} />
       </section>
-      <StatisticSection />
-      <section className="home-customer-experiences-section">
+      {/* <section className="home-customer-experiences-section">
         <h3>Customer Experiences</h3>
         <HorizontalScroller>
           {customerExperiences.map((experience) => {
@@ -88,7 +93,7 @@ export const Home = (props: HomeProps) => {
             );
           })}
         </HorizontalScroller>
-      </section>
+      </section> */}
       <section className="home-faq-section">
         <h3>
           Get the answers you need about Alexon Media's{" "}
