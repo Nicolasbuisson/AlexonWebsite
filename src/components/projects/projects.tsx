@@ -17,6 +17,7 @@ export const Projects = (props: IProps) => {
             to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
             className="card"
             key={"work-grid-card-" + project.title}
+            onClick={() => window.scrollTo(0, 0)}
           >
             <div className="stacked">
               <img

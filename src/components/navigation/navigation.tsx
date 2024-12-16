@@ -76,17 +76,25 @@ export const Navigation = (props: NavigationProps) => {
       <div id="menu-container">
         <ul className="menu" id="menu">
           <li>
-            <Link to="/" className="link">
+            <Link to="/" className="link" onClick={() => window.scrollTo(0, 0)}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/work" className="link">
+            <Link
+              to="/work"
+              className="link"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Work
             </Link>
           </li>
           <li>
-            <Link to="/about" className="link">
+            <Link
+              to="/about"
+              className="link"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               About
             </Link>
           </li>
@@ -99,16 +107,28 @@ export const Navigation = (props: NavigationProps) => {
               className="services-menu-content"
               data-expanded="false"
             >
-              <Link to="/services/shortform" className="link services-link">
+              <Link
+                to="/services/shortform"
+                className="link services-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Short Form
               </Link>
-              <Link to="/services/longform" className="link services-link">
+              <Link
+                to="/services/longform"
+                className="link services-link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Long Form
               </Link>
             </div>
           </li>
           <li>
-            <Link to="/contact" className="link">
+            <Link
+              to="/contact"
+              className="link"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Contact
             </Link>
           </li>
