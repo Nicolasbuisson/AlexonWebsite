@@ -11,12 +11,6 @@ export const Footer = () => {
         className="footer-button"
       ></ButtonBackgroundHoverEffect>
       <div className="footer-items-container">
-        <div className="footer-newsletter-container">
-          <h4>Join our newsletter</h4>
-          <input placeholder="enter your email" type="email" />{" "}
-          {/* TODO add validation and submit action, do I need a button lmao */}
-          <p>Stay up to date with our latest offers and projects!</p>
-        </div>
         <div className="footer-socials-container">
           <h4>Stay in touch</h4>
           <a
