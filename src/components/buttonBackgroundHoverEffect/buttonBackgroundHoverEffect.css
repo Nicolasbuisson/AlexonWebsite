@@ -14,7 +14,8 @@
 }
 
 .button-background-effect-container > * {
-    font-family: 'Made Outer Sans';
+    font-family: var(--ff-primary);
+    font-weight: 700;
 }
 
 .button-background-effect {
