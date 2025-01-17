@@ -5,7 +5,6 @@ import { WorkItem } from "./pages/workItem/workItem";
 import { About } from "./pages/about/about";
 import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
-import { customerExperiences } from "./resources/customerExperiences.json";
 import { faqs } from "./resources/faq.json";
 import { ShortForm } from "./pages/services/shortForm";
 import { LongForm } from "./pages/services/longForm";
@@ -19,16 +18,7 @@ function App() {
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/">
-          <Route
-            index
-            element={
-              <Home
-                projects={projects}
-                customerExperiences={customerExperiences}
-                faqs={faqs}
-              />
-            }
-          ></Route>
+          <Route index element={<Home projects={projects} />}></Route>
           <Route path="work" element={<Work projects={projects} />}></Route>
           {projects.map((project) => {
             return (
@@ -53,7 +43,10 @@ function App() {
           })}
           <Route path="about" element={<About />}></Route>
           <Route path="services/shortform" element={<ShortForm />}></Route>
-          <Route path="services/longform" element={<LongForm />}></Route>
+          <Route
+            path="services/longform"
+            element={<LongForm faqs={faqs} />}
+          ></Route>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="book" element={<Book />}></Route>
         </Route>
