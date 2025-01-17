@@ -8,6 +8,9 @@
     --max-logo-height: 6;
     --max-logo-difference: 4;
     --logo-starting-height: 25;
+
+    background-color: var(--clr-dark);
+    height: var(--menu-height);
 }
 
 .sticky-navigation-container {
@@ -18,7 +21,6 @@
 
 nav {
     width: 100%;
-    height: var(--menu-height);
     display: grid;
     align-items: center;
     grid-template-rows: calc(var(--menu-height) - 2rem);

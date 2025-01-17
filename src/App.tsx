@@ -10,6 +10,7 @@ import { faqs } from "./resources/faq.json";
 import { ShortForm } from "./pages/services/shortForm";
 import { LongForm } from "./pages/services/longForm";
 import useScrollPercentage from "./hooks/useScrollPercentage";
+import { Book } from "./pages/book/book";
 
 function App() {
   useScrollPercentage(); // initiate css variable --scroll
@@ -54,6 +55,7 @@ function App() {
           <Route path="services/shortform" element={<ShortForm />}></Route>
           <Route path="services/longform" element={<LongForm />}></Route>
           <Route path="contact" element={<Contact />}></Route>
+          <Route path="book" element={<Book />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

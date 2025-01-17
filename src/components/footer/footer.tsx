@@ -9,6 +9,12 @@ export const Footer = () => {
       <ButtonBackgroundHoverEffect
         text="Contact us"
         className="footer-button"
+        link="contact"
+      ></ButtonBackgroundHoverEffect>
+      <ButtonBackgroundHoverEffect
+        text="Book a call"
+        className="footer-button"
+        link="book"
       ></ButtonBackgroundHoverEffect>
       <div className="footer-items-container">
         <div className="footer-socials-container">
