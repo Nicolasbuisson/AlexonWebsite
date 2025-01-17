@@ -1,13 +1,20 @@
 import "./socials.css";
 
+type flexDirection = "column" | "row";
+
 interface IProps {
+  flexDirection?: flexDirection;
   className?: string;
 }
 
 export const Socials = (props: IProps) => {
-  const { className = "" } = props;
+  const { flexDirection = "row", className = "" } = props;
   return (
-    <div className={`socials-icon-container ${className}`}>
+    <div
+      className={`socials-icon-container ${className} ${
+        flexDirection === "column" ? "flex-column" : ""
+      }`}
+    >
       <a href="https://www.instagram.com/alexoonnn/" className="socials-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
