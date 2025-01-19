@@ -37,8 +37,11 @@ export const Footer = () => {
           <Link to="/" className="footer-link">
             Home
           </Link>
-          <Link to="/services" className="footer-link">
-            Services
+          <Link to="/services/shortform" className="footer-link">
+            Short Form Services
+          </Link>
+          <Link to="/services/longform" className="footer-link">
+            Long Form Services
           </Link>
           <Link to="/work" className="footer-link">
             Projects
@@ -52,7 +55,7 @@ export const Footer = () => {
         </div>
         <div className="footer-socials-container">
           <h4>Follow Us</h4>
-          <Socials flexDirection="row"></Socials>
+          <Socials flexDirection="row" className="footer-socials"></Socials>
         </div>
       </div>
     </footer>
