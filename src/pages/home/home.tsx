@@ -5,7 +5,7 @@ import { InstaSection } from "../../components/insta/instaSection";
 import { LogoList } from "../../components/logoList/logoList";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
-import { ServicesSection } from "../../components/serviceCard/servicesSection";
+import { ServiceCard } from "../../components/serviceCard/serviceCard";
 import { WorkItemProps } from "../../types/work";
 import "./home.css";
 
@@ -46,8 +46,33 @@ export const Home = (props: HomeProps) => {
           />
         </h3>
       </section>
-      <section className="home-collage-section">
-        collage section: wait for pictures to see how you want to lay them out
+      <section className="home-video-section">
+        <video
+          src={import.meta.env.BASE_URL + "/assets/videos/CORONA-KILINDI.mov"}
+          muted
+          autoPlay
+          loop
+          className="portrait"
+        ></video>
+        <video
+          src={
+            import.meta.env.BASE_URL +
+            "/assets/videos/L'Equilibre-MovingImage.mov"
+          }
+          muted
+          autoPlay
+          loop
+          className="landscape"
+        ></video>
+        <video
+          src={
+            import.meta.env.BASE_URL + "/assets/videos/Xiaomi-WebsiteMedia.mp4"
+          }
+          muted
+          autoPlay
+          loop
+          className="portrait"
+        ></video>
       </section>
       <section className="home-clients-section">
         <h3>Join the ranks of clients like:</h3>
@@ -65,10 +90,20 @@ export const Home = (props: HomeProps) => {
         ></LogoList>
       </section>
       <section className="home-services-section">
-        {/*
-        TODO replace Offerings with Services section
-        */}
-        <ServicesSection />
+        <ServiceCard
+          title={"Short Form Content"}
+          description={"Scale your brand through increased reach"}
+          link={"/services/shortform"}
+          imageSrc={"/assets/images/rice-hills.jpg"}
+        />
+        <ServiceCard
+          title={"Productions"}
+          description={
+            "Brand videos, documentaries, aftermovies to forge brand personality and tell impactful stories"
+          }
+          link={"/services/longform"}
+          imageSrc={"assets/images/lake.jpg"}
+        />
       </section>
       <section className="home-work-section">
         <h3>Our Work</h3>

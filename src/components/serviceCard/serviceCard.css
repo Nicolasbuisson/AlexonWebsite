@@ -1,51 +1,55 @@
-@property --rotate-angle {
-    syntax: '<angle>';
-    initial-value: 90deg;
-    inherits: true;
-}
+.service-card {
+    --service-card-height: 300px;
 
-.service-card-container {
-    --rotate-angle: 0deg;
-    --c1: rgb(168, 239, 255, 1);
-	--c2: rgb(3, 35, 42);
-    position: relative;
-    margin: 1rem;
-    height: 600px;
-    aspect-ratio: 0.6;
-    background-color: inherit;
+    height: var(--service-card-height);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+    color: var(--clr-light);
     border-radius: 24px;
+    transition: filter 500ms;
 }
 
-.service-card-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 24px; 
-  padding: 10px; 
-  background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
-  animation: borderRotate 4s linear forwards infinite;
-  /* mask needed because border-image does not allow border-radius
-  Solution: create a 2 masks:
-  - one will cover the whole element
-  - the other will cover only the content-box (excludes the border)
-  use mask-composite: exclude, to exclude the content box from the whole element mask
-  and we are left only with the border.
-  Use a pseudo-element to not mask the actual content of our item
-  */
-  mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
-  mask-composite: exclude; 
+@media (width > 880px) {
+    .service-card {
+        --service-card-height: 600px;
+    }
 }
 
-@keyframes borderRotate {
-    0% {
-        --rotate-angle: 0deg;
-    }
-    50% {
-        --rotate-angle: 180deg;
-    }
-    100% {
-        --rotate-angle: 360deg;
-    }
+.service-card > * {
+    grid-column: 1;
+}
+
+.service-card img {
+    grid-row: 1 / 3;
+    border-radius: 24px;
+    width: 100%;
+    height: var(--service-card-height);
+    object-fit: cover;
+}
+
+.service-card-text {
+    grid-row: 2 / 3;
+    padding-inline: 1rem;
+}
+
+.service-card-text h3 {
+    font-weight: 500;
+}
+
+.service-card-text p {
+    text-wrap: pretty;
+}
+
+/* hover effect */
+.service-card:hover {
+    filter: brightness(1) saturate(1.5);
+}
+/*
+    next sibling selector +
+    previous sibling selector :has(+ .service-card:hover)
+*/
+.service-card:hover + .service-card,
+.service-card:has(+ .service-card:hover) {
+    filter: brightness(.5) saturate(.75);
 }
