@@ -1,7 +1,4 @@
 import { Navigation } from "../../components/navigation/navigation";
-import { Characters } from "../../components/opacityParagraph/characters";
-import { OpacityParagraph } from "../../components/opacityParagraph/opacityParagraph";
-import { Words } from "../../components/opacityParagraph/words";
 import { StatisticSection } from "../../components/statistic/statisticSection";
 import "./shortForm.css";
 
@@ -20,7 +17,7 @@ export const ShortForm = () => {
       </section>
       <StatisticSection />
       <div style={{ height: "100vh" }}></div>
-      <OpacityParagraph
+      {/* <OpacityParagraph
         text={
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolores molestias pariatur debitis quidem magnam voluptatem eveniet, perferendis architecto, maxime, aut laboriosam obcaecati veritatis quod eius! Facere minima vero voluptas"
         }
@@ -37,7 +34,7 @@ export const ShortForm = () => {
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolores molestias pariatur debitis quidem magnam voluptatem eveniet, perferendis architecto, maxime, aut laboriosam obcaecati veritatis quod eius! Facere minima vero voluptas"
         }
       />
-      <div style={{ height: "100vh" }}></div>
+      <div style={{ height: "100vh" }}></div> */}
     </div>
   );
 };
