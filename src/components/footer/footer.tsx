@@ -14,6 +14,12 @@ export const Footer = () => {
       ></ButtonBackgroundHoverEffect>
       <hr className="footer-hr" />
       <div className="footer-items-container">
+        <Link to="/" className="footer-logo">
+          <img
+            src={import.meta.env.BASE_URL + "/assets/logos/AM-white.png"}
+            alt="Alexon Logo"
+          />
+        </Link>
         <div className="footer-contact-container">
           <h4>Contact</h4>
           <p>Montréal, Canada</p>

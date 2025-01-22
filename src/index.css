@@ -190,6 +190,8 @@
   --fs-body: 1.0rem;
 
   --scroll: 0;
+  --section-padding-block: 2rem;
+  --section-padding-inline: 8rem;
 }
 
 @media (width > 880px) {
@@ -199,6 +201,16 @@
       --fs-h3: 1.75rem;
       --fs-h4: 1.4rem;
       --fs-body: 1.0rem;
+
+      --section-padding-block: 3rem;
+      --section-padding-inline: 10rem;
+  }
+}
+
+@media (width < 580px) {
+  :root {
+      --section-padding-block: 2rem;
+      --section-padding-inline: 4rem;
   }
 }
 
