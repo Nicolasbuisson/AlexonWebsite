@@ -8,10 +8,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: var(--section-padding-block);
+    padding-block: calc(var(--section-padding-block) + 2rem);
 }
 
 .footer-header-wrapper {
+    font-family: var(--ff-primary);
     text-align: center;
     text-wrap: balance;
     font-weight: 600;
@@ -19,16 +20,18 @@
 }
 
 .footer-header {
-    color: var(--clr-grey);
+    color: var(--clr-footer-header);
     display: inline;
     text-align: inherit;
     text-wrap: inherit;
     font-weight: inherit;
     text-transform: inherit;
+    font-family: inherit;
 }
 
 .footer-button {
-    margin-block: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .footer-logo {

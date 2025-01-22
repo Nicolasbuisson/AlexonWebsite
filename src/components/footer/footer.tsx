@@ -6,11 +6,11 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer className="footer-container">
-      <h2 className="footer-header-wrapper">
-        Let's <h2 className="footer-header"> work together</h2>
-      </h2>
+      <h1 className="footer-header-wrapper">
+        Let's <h1 className="footer-header"> work together</h1>
+      </h1>
       <ButtonBackgroundHoverEffect
-        text="Book a call"
+        text="Book a Call"
         className="footer-button"
         link="contact"
       ></ButtonBackgroundHoverEffect>

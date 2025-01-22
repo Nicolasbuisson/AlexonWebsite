@@ -15,7 +15,7 @@
 
 .button-background-effect-container > * {
     font-family: var(--ff-primary);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .button-background-effect {
@@ -27,7 +27,6 @@
     padding-inline: var(--button-background-effect-padding-inline);
     border-radius: 20px;
     font-size: var(--button-background-effect-font-size);
-    text-transform: capitalize;
 }
 
 .black-background {
@@ -42,7 +41,6 @@
     background-color: var(--clr-dark);
     color: var(--clr-light);
     transition: all ease-out 200ms;
-    text-transform: capitalize;
 }
 
 /* hover effect */
