@@ -3,13 +3,12 @@ import { Home } from "./pages/home/home";
 import { Work } from "./pages/work/work";
 import { WorkItem } from "./pages/workItem/workItem";
 import { About } from "./pages/about/about";
-import { Contact } from "./pages/contact/contact";
 import { projects } from "./resources/projects.json";
 import { faqs } from "./resources/faq.json";
 import { ShortForm } from "./pages/services/shortForm";
-import { LongForm } from "./pages/services/longForm";
 import useScrollPercentage from "./hooks/useScrollPercentage";
-import { Book } from "./pages/book/book";
+import { Contact } from "./pages/contact/contact";
+import { Productions } from "./pages/productions/productions";
 
 function App() {
   useScrollPercentage(); // initiate css variable --scroll
@@ -44,11 +43,10 @@ function App() {
           <Route path="about" element={<About />}></Route>
           <Route path="services/shortform" element={<ShortForm />}></Route>
           <Route
-            path="services/longform"
-            element={<LongForm faqs={faqs} />}
+            path="productions"
+            element={<Productions faqs={faqs} />}
           ></Route>
           <Route path="contact" element={<Contact />}></Route>
-          <Route path="book" element={<Book />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

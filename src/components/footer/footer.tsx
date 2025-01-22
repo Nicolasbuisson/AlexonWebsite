@@ -8,14 +8,9 @@ export const Footer = () => {
     <footer className="footer-container">
       <h2 className="footer-header">Let's work together</h2>
       <ButtonBackgroundHoverEffect
-        text="Contact us"
-        className="footer-button"
-        link="contact"
-      ></ButtonBackgroundHoverEffect>
-      <ButtonBackgroundHoverEffect
         text="Book a call"
         className="footer-button"
-        link="book"
+        link="contact"
       ></ButtonBackgroundHoverEffect>
       <hr className="footer-hr" />
       <div className="footer-items-container">
@@ -40,8 +35,8 @@ export const Footer = () => {
           <Link to="/services/shortform" className="footer-link">
             Short Form Services
           </Link>
-          <Link to="/services/longform" className="footer-link">
-            Long Form Services
+          <Link to="/productions" className="footer-link">
+            Productions
           </Link>
           <Link to="/work" className="footer-link">
             Projects

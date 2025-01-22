@@ -74,7 +74,7 @@
 
 .footer-hr {
     background-color: var(--clr-light);
-    height: 0.75rem;
+    height: 1px;
     width: 100%;
 }
 

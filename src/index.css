@@ -179,8 +179,8 @@
   --clr-light: #fff;
   --clr-light-grey: #D9D9D9;
   --clr-grey: #8b8b8b;
-  /* --clr-dark: #000; */
-  --clr-dark: rgba(10, 12, 18, 1);
+  --clr-dark: #000;
+  /* --clr-dark: rgba(10, 12, 18, 1); */
   --clr-accent: #FCD848;
 
   --fs-h1: 3rem;

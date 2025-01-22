@@ -1,87 +1,29 @@
-import { Footer } from "../../components/footer/footer";
+import { InlineWidget } from "react-calendly";
 import { Navigation } from "../../components/navigation/navigation";
 import "./contact.css";
+import { Footer } from "../../components/footer/footer";
 
 export const Contact = () => {
   return (
-    <section className="contact-section">
-      <Navigation></Navigation>
-
-      <div className="contact-grid">
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
+    <div className="contact-container">
+      <Navigation />
+      <section className="contact-section">
+        <h2>contact a free consultation</h2>
+        <div className="calendly-container">
+          <InlineWidget
+            url="https://calendly.com/contact-alexonmedia/freeconsultation"
+            styles={{ height: "100%", width: "100%" }}
+          />
         </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
+        <div className="booking-alternatives">
+          <p>Or you can call us at:</p>
+          <a href="tel:+15145577790">Canada/US: +1 514 557 7790</a>
+          <a href="tel:+33783131299">France: +33 7 83 13 12 99</a>
+          <p>Or you can write to us at:</p>
+          <a href="mailto:contact@alexonmedia.com">contact@alexonmedia.com</a>
         </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-        <div className="contact-grid-item">
-          <img
-            src={
-              import.meta.env.BASE_URL + "/assets/images/sunset-purple-tree.jpg"
-            }
-            alt=""
-            className="contact-grid-item-image"
-          ></img>
-        </div>
-      </div>
-      <Footer></Footer>
-    </section>
+      </section>
+      <Footer />
+    </div>
   );
 };
