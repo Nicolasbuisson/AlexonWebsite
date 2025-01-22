@@ -6,7 +6,9 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <footer className="footer-container">
-      <h2 className="footer-header">Let's work together</h2>
+      <h2 className="footer-header-wrapper">
+        Let's <h2 className="footer-header"> work together</h2>
+      </h2>
       <ButtonBackgroundHoverEffect
         text="Book a call"
         className="footer-button"

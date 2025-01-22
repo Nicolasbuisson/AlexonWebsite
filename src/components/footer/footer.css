@@ -8,14 +8,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 0.5rem;
+    padding-block: var(--section-padding-block);
 }
 
-.footer-header {
+.footer-header-wrapper {
     text-align: center;
     text-wrap: balance;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.footer-header {
+    color: var(--clr-grey);
+    display: inline;
+    text-align: inherit;
+    text-wrap: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
 }
 
 .footer-button {
@@ -37,7 +46,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-block: 2rem;
+    padding-top: 2rem;
 
     & h4 {
         text-transform: uppercase;
