@@ -51,6 +51,11 @@ nav > * {
     height: calc((var(--max-logo-height) - var(--max-logo-difference)) * 1rem);
 }
 
+.nav-logo img {
+    max-width: fit-content;
+    height: 100%;
+}
+
 .logo-scroll {
     transform: translateY(calc(1vh * var(--logo-starting-height) - 1vh * min(var(--scroll), var(--logo-starting-height))));
     height: min(1rem * calc(var(--max-logo-height) - (min(var(--scroll), var(--logo-starting-height)) * (var(--max-logo-difference) / var(--logo-starting-height)))), 1rem * var(--max-logo-height));

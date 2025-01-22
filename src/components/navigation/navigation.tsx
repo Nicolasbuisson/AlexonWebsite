@@ -62,11 +62,11 @@ export const Navigation = (props: NavigationProps) => {
     >
       <nav className={navClasses}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
-        <img
-          src={import.meta.env.BASE_URL + "/assets/logos/Full-white.png"}
-          id="nav-logo"
-          className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
-        ></img>
+        <Link to="/" className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}>
+          <img
+            src={import.meta.env.BASE_URL + "/assets/logos/Full-white.png"}
+          ></img>
+        </Link>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
@@ -115,11 +115,11 @@ export const Navigation = (props: NavigationProps) => {
                 Short Form
               </Link>
               <Link
-                to="/services/longform"
+                to="/productions"
                 className="link services-link"
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Long Form
+                Productions
               </Link>
             </div>
           </li>
