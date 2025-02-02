@@ -101,7 +101,7 @@ export const Home = (props: HomeProps) => {
           description={
             "Brand videos, documentaries, aftermovies to forge brand personality and tell impactful stories"
           }
-          link={"/services/longform"}
+          link={"/productions"}
           imageSrc={"assets/images/lake.jpg"}
         />
       </section>
@@ -110,7 +110,7 @@ export const Home = (props: HomeProps) => {
         <Projects projects={projects} max={9} />
       </section>
       <InstaSection />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

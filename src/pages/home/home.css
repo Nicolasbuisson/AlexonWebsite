@@ -1,7 +1,6 @@
 .home-section-container {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    --section-padding: 3rem;
 }
 
 .home-hero-section {
@@ -71,9 +70,9 @@
     --video-max-height: 500px;
     --video-max-width: 640px;
 
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
     color: var(--clr-light);
-    padding-block: var(--section-padding);
+    padding-block: var(--section-padding-block);
     padding-inline: 2rem;
     display: flex;
     flex-direction: column;
@@ -129,7 +128,7 @@
 }
 
 .home-clients-section {
-    padding-block: var(--section-padding);
+    padding-block: var(--section-padding-block);
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;
@@ -143,8 +142,8 @@
 .home-services-section {
     --services-columns: 1fr;
 
-    padding-block: var(--section-padding);
-    padding-inline: 2rem;
+    padding-block: var(--section-padding-block);
+    padding-inline: var(--section-padding-inline);
     background-color: var(--clr-dark);
     color: var(--clr-light);
     width: 100%;
@@ -157,12 +156,13 @@
 @media (width > 880px) {
     .home-services-section {
         --services-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 4rem;
     }
 }
 
 .home-work-section {
-    padding: var(--section-padding);
+    padding-block: var(--section-padding-block);
+    padding-inline: var(--section-padding-inline);
 }
 
 @media (width < 880px) {

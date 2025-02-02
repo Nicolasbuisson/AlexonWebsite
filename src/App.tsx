@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home/home";
-import { Work } from "./pages/work/work";
 import { WorkItem } from "./pages/workItem/workItem";
 import { About } from "./pages/about/about";
 import { projects } from "./resources/projects.json";
-import { faqs } from "./resources/faq.json";
 import { ShortForm } from "./pages/services/shortForm";
 import useScrollPercentage from "./hooks/useScrollPercentage";
 import { Contact } from "./pages/contact/contact";
@@ -18,7 +16,10 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home projects={projects} />}></Route>
-          <Route path="work" element={<Work projects={projects} />}></Route>
+          <Route
+            path="productions"
+            element={<Productions projects={projects} />}
+          ></Route>
           {projects.map((project) => {
             return (
               <Route
@@ -42,10 +43,6 @@ function App() {
           })}
           <Route path="about" element={<About />}></Route>
           <Route path="services/shortform" element={<ShortForm />}></Route>
-          <Route
-            path="productions"
-            element={<Productions faqs={faqs} />}
-          ></Route>
           <Route path="contact" element={<Contact />}></Route>
         </Route>
       </Routes>

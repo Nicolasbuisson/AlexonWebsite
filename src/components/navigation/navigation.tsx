@@ -82,11 +82,11 @@ export const Navigation = (props: NavigationProps) => {
           </li>
           <li>
             <Link
-              to="/work"
+              to="/productions"
               className="link"
               onClick={() => window.scrollTo(0, 0)}
             >
-              Work
+              Productions
             </Link>
           </li>
           <li>

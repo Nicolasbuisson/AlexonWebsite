@@ -51,7 +51,7 @@
 }
 
 .card {
-    border: 2px solid var(--clr-dark);
+    border: 1px solid transparent;
     transition: filter var(--projects-animation-duration);
 }
 
