@@ -5,7 +5,7 @@
         "client": "Four Seasons Hotel",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "FourSeasons.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -19,7 +19,7 @@
         "client": "Corona",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "lake.jpg",
+        "gridImage": "productionsCovers/CoverPhotoCorona.jpg",
         "logoImage": "Corona.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -33,7 +33,7 @@
         "client": "ELLE",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "road.jpg",
+        "gridImage": "productionsCovers/CoverPhotoELLE.jpg",
         "logoImage": "ELLE.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -47,7 +47,7 @@
         "client": "Chris Lake",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "plain.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "ChrisLake.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -61,7 +61,7 @@
         "client": "Claptone",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoClaptone.jpg",
         "logoImage": "Claptone.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -75,7 +75,7 @@
         "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
         "logoImage": "Prepinson.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -89,7 +89,7 @@
         "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
         "logoImage": "Prepinson.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -103,7 +103,7 @@
         "client": "Business Club France Luxembourg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "CCLuxembourg.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -117,7 +117,7 @@
         "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -131,7 +131,7 @@
         "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -145,7 +145,7 @@
         "client": "Chamber of Commerce",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "CCLuxembourg.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -159,7 +159,7 @@
         "client": "Elewana",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoElewana.jpg",
         "logoImage": "Elewana.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -173,7 +173,7 @@
         "client": "LHOFT",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "corona.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -187,7 +187,7 @@
         "client": "Monolink",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "Monolink.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -201,7 +201,7 @@
         "client": "L'Equilibre",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoL'Equilibre.jpg",
         "logoImage": "corona.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -215,7 +215,7 @@
         "client": "Parc Oméga",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "corona.png",
         "services": "video, photo, social media marketing",
         "stills": [
@@ -229,7 +229,7 @@
         "client": "Ponente",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "sunset-purple-tree.jpg",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "corona.png",
         "services": "video, photo, social media marketing",
         "stills": [

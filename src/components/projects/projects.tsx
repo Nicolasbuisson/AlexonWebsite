@@ -21,10 +21,7 @@ export const Projects = (props: IProps) => {
           >
             <div className="stacked">
               <img
-                src={
-                  import.meta.env.BASE_URL +
-                  `/assets/images/${project.gridImage}`
-                }
+                src={import.meta.env.BASE_URL + `/assets/${project.gridImage}`}
                 alt={`project thumbnail for ${project.description}`}
                 className="project-thumbnail"
               ></img>
