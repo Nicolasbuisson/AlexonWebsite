@@ -46,6 +46,34 @@ export const Productions = (props: ProductionsProps) => {
             `${
               import.meta.env.BASE_URL
             }/assets/clientLogos/McGillUniversityBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/AirCanadaBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/BelcoreBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/BUNTBlack.png`,
+            `${
+              import.meta.env.BASE_URL
+            }/assets/clientLogos/CCLuxembourgBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/ChrisLakeBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/ClaptoneBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/ElewanaBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/IleSoniqBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/KSHMRBlack.png`,
+            `${
+              import.meta.env.BASE_URL
+            }/assets/clientLogos/LequilibreBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/LHOFTBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/MonolinkBlack.png`,
+            `${
+              import.meta.env.BASE_URL
+            }/assets/clientLogos/NewCityGasBlack.png`,
+            `${
+              import.meta.env.BASE_URL
+            }/assets/clientLogos/OnomoHotelsBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/PatschBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/St-PierreBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/VacierBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/VaudeBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/Web3MTLBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/XiaomiBlack.png`,
           ]}
         ></LogoList>
       </section>

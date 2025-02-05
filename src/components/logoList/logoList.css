@@ -17,7 +17,7 @@
 
 @media (width < 440px) {
     .clients-logos-container {
-        --logo-gap: 1rem;
+        --logo-gap: 2rem;
         flex-direction: column;
     }
 }
