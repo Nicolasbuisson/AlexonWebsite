@@ -11,4 +11,5 @@ export interface WorkItemProps {
     logoImage: string;
     services: string;
     stills: StillImage[];
+    displayOnHomePage?: boolean;
 }

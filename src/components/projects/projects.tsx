@@ -4,17 +4,22 @@ import "./projects.css";
 
 interface IProps {
   projects: WorkItemProps[];
-  max?: number;
+  homePageFilter?: boolean;
 }
 
 export const Projects = (props: IProps) => {
-  const { projects, max = projects.length } = props;
+  const { projects, homePageFilter = false } = props;
+  const projectsToRender = homePageFilter
+    ? projects.filter((project) => project.displayOnHomePage)
+    : projects;
   return (
     <div className="projects-grid">
-      {projects.map((project, i) => {
-        return i < max ? (
+      {projectsToRender.map((project) => {
+        return (
           <Link
-            to={`/work/${project.title.replaceAll(" ", "").toLowerCase()}`}
+            to={`/productions/${project.title
+              .replaceAll(" ", "")
+              .toLowerCase()}`}
             className="card"
             key={"work-grid-card-" + project.title}
             onClick={() => window.scrollTo(0, 0)}
@@ -40,8 +45,6 @@ export const Projects = (props: IProps) => {
               <h4>{project.title}</h4>
             </div>
           </Link>
-        ) : (
-          <></>
         );
       })}
     </div>

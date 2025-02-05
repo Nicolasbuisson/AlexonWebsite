@@ -107,7 +107,7 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-work-section">
         <h2>Our Work</h2>
-        <Projects projects={projects} max={9} />
+        <Projects projects={projects} homePageFilter />
       </section>
       <InstaSection />
       <Footer />

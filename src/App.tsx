@@ -24,7 +24,9 @@ function App() {
             return (
               <Route
                 key={`route-${project.stills}`}
-                path={`work/${project.title.replaceAll(" ", "").toLowerCase()}`}
+                path={`productions/${project.title
+                  .replaceAll(" ", "")
+                  .toLowerCase()}`}
                 // remove spaces from title and make all lowercase when creating URL
                 element={
                   <WorkItem
@@ -36,6 +38,7 @@ function App() {
                     logoImage={project.logoImage}
                     services={project.services}
                     stills={project.stills}
+                    displayOnHomePage={project.displayOnHomePage}
                   ></WorkItem>
                 }
               ></Route>

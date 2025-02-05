@@ -12,7 +12,8 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": true
     },
     {
         "title": "Corona",
@@ -26,7 +27,8 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": true
     },
     {
         "title": "ELLE Luxembourg",
@@ -40,119 +42,38 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": true
     },
     {
-        "title": "Chris Lake",
-        "client": "Chris Lake",
+        "title": "Onomo Hotels",
+        "client": "Onomo Hotels",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "ChrisLake.png",
+        "logoImage": "OnomoHotels.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": true
     },
     {
-        "title": "Claptone",
-        "client": "Claptone",
+        "title": "L'Equilibre",
+        "client": "L'Equilibre",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoClaptone.jpg",
-        "logoImage": "Claptone.png",
+        "gridImage": "productionsCovers/CoverPhotoL'Equilibre.jpg",
+        "logoImage": "Lequilibre.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "Haras de Prepinson",
-        "client": "Maison de Prepinson",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
-        "logoImage": "Prepinson.png",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "Maison de Prepinson",
-        "client": "Maison de Prepinson",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
-        "logoImage": "Prepinson.png",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "Business Club France Luxembourg",
-        "client": "Business Club France Luxembourg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "CCLuxembourg.png",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "The Vision Board",
-        "client": "Personal Project",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "Will I ever make it?",
-        "client": "Personal Project",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "Chamber of Commerce",
-        "client": "Chamber of Commerce",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "CCLuxembourg.png",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": true
     },
     {
         "title": "Elewana Collection",
@@ -166,7 +87,38 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Haras de Prepinson",
+        "client": "Maison de Prepinson",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
+        "logoImage": "Prepinson.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false 
+    },
+    {
+        "title": "Maison de Prepinson",
+        "client": "Maison de Prepinson",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
+        "logoImage": "Prepinson.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": true
     },
     {
         "title": "LHOFT: Bangkok + Togo",
@@ -174,13 +126,120 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "corona.png",
+        "logoImage": "LHOFT.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Web3MTL",
+        "client": "Web3MTL",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "Web3MTL.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Chris Lake",
+        "client": "Chris Lake",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "ChrisLake.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Claptone",
+        "client": "Claptone",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoClaptone.jpg",
+        "logoImage": "Claptone.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    
+    {
+        "title": "Business Club France Luxembourg",
+        "client": "Business Club France Luxembourg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "CCLuxembourg.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "The Vision Board",
+        "client": "Personal Project",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Will I ever make it?",
+        "client": "Personal Project",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
+    },
+    {
+        "title": "Chamber of Commerce LUX/MTL",
+        "client": "Chamber of Commerce LUX/MTL",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "logoImage": "CCLuxembourg.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false
     },
     {
         "title": "Monolink",
@@ -194,21 +253,8 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
-    },
-    {
-        "title": "L'Equilibre",
-        "client": "L'Equilibre",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
-        "videoUrl": "https://player.vimeo.com/video/694255333",
-        "gridImage": "productionsCovers/CoverPhotoL'Equilibre.jpg",
-        "logoImage": "corona.png",
-        "services": "video, photo, social media marketing",
-        "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": false
     },
     {
         "title": "Parc Oméga",
@@ -222,7 +268,8 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": false
     },
     {
         "title": "Ponente",
@@ -236,7 +283,53 @@
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
             {"imageUrl": "road.jpg"}
-        ] 
+        ],
+        "displayOnHomePage": false 
+    },
+    {
+        "title": "McGill University",
+        "client": "McGill University",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "logoImage": "McGillUniversity.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": true 
+    },
+    {
+        "title": "John Summit",
+        "client": "John Summit",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "logoImage": "JohnSummit.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": true 
+    },
+    {
+        "title": "New City Gas",
+        "client": "New City Gas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "logoImage": "NewCityGas.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false 
     }
 ]
 }
