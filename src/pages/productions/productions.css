@@ -59,6 +59,12 @@
     }
 }
 
+@media (width > 880px) {
+    .productions-clients-section {
+        padding-inline: 10%;
+    }
+}
+
 .productions-clients-title {
     text-wrap: balance;
     text-align: center;
