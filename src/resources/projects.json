@@ -202,7 +202,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "",
+        "logoImage": "AlexonSignature.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
@@ -217,7 +217,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "",
+        "logoImage": "AlexonSignature.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
@@ -262,7 +262,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "corona.png",
+        "logoImage": "ParcOmega.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
@@ -277,7 +277,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
-        "logoImage": "corona.png",
+        "logoImage": "Ponente.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
@@ -323,6 +323,21 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
         "logoImage": "NewCityGas.png",
+        "services": "video, photo, social media marketing",
+        "stills": [
+            {"imageUrl": "sunset-purple-tree.jpg"},
+            {"imageUrl": "lake.jpg"},
+            {"imageUrl": "road.jpg"}
+        ],
+        "displayOnHomePage": false 
+    },
+    {
+        "title": "Coinbase",
+        "client": "Coinbase",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "videoUrl": "https://player.vimeo.com/video/694255333",
+        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "logoImage": "Coinbase.png",
         "services": "video, photo, social media marketing",
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},

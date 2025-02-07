@@ -77,6 +77,9 @@ export const Productions = (props: ProductionsProps) => {
             `${import.meta.env.BASE_URL}/assets/clientLogos/VaudeBlack.png`,
             `${import.meta.env.BASE_URL}/assets/clientLogos/Web3MTLBlack.png`,
             `${import.meta.env.BASE_URL}/assets/clientLogos/XiaomiBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/PonenteBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/ParcOmegaBlack.png`,
+            `${import.meta.env.BASE_URL}/assets/clientLogos/CoinbaseBlack.png`,
           ]}
         ></LogoList>
       </section>
