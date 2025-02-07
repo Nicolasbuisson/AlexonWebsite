@@ -48,7 +48,16 @@ export const Home = (props: HomeProps) => {
       </section>
       <section className="home-video-section">
         <video
-          src={import.meta.env.BASE_URL + "/assets/videos/CORONA-KILINDI.mov"}
+          src={import.meta.env.BASE_URL + "/assets/videos/CoronaPreview.mov"}
+          muted
+          autoPlay
+          loop
+          className="landscape"
+        ></video>
+        <video
+          src={
+            import.meta.env.BASE_URL + "/assets/videos/Xiaomi-WebsiteMedia.mp4"
+          }
           muted
           autoPlay
           loop
@@ -63,15 +72,6 @@ export const Home = (props: HomeProps) => {
           autoPlay
           loop
           className="landscape"
-        ></video>
-        <video
-          src={
-            import.meta.env.BASE_URL + "/assets/videos/Xiaomi-WebsiteMedia.mp4"
-          }
-          muted
-          autoPlay
-          loop
-          className="portrait"
         ></video>
       </section>
       <section className="home-clients-section">

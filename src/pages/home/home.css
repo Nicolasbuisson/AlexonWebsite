@@ -92,11 +92,11 @@
 
 .portrait {
     max-height: var(--video-max-height);
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .landscape {
-    width: 90%;
+    width: 96%;
     max-width: var(--video-max-width);
 }
 
@@ -105,25 +105,24 @@
         --video-max-height: 100%;
         --video-max-width: 100%;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 0rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
         justify-items: center;
     }
 
     .home-video-section video:first-of-type {
-        grid-row: 1/3;
-        align-self: end;
+        grid-row: 1/2;
+        grid-column: 1/3;
     }
     .home-video-section video:last-of-type {
-        grid-row: 2/4;
-        grid-column: 3/4;
-        align-self: start;
+        grid-row: 2/3;
+        grid-column: 1/3;
     }
 
-    .home-video-section .landscape {
-        grid-row: 2/3;
-        grid-column: 2/3;
+    .home-video-section video:nth-child(2) {
+        grid-row: 1/3;
+        grid-column: 3/4;
     }
 }
 
