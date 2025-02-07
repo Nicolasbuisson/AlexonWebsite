@@ -24,7 +24,10 @@ export const Productions = (props: ProductionsProps) => {
             loop
           ></video>
           <h2 className="productions-title">
-            Crafting Stories, <h2>Inspiring Audiences</h2>
+            Crafting <h2 className="productions-title-reg">Stories</h2>
+            <h2>
+              <h2 className="productions-title-reg">Inspiring</h2> Audiences
+            </h2>
           </h2>
         </div>
         <div className="productions-projects-wrapper">
