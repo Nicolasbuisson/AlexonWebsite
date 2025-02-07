@@ -10,8 +10,9 @@
 
     img {
         margin-block: calc(var(--logo-gap) / 2);
-        max-height: 100px;
-        max-width: 200px;
+        margin-inline: 2rem;
+        max-height: 60px;
+        max-width: 120px;
     }
 }
 
