@@ -5,7 +5,7 @@ export const Offerings = () => {
   return (
     <div>
       <h3 className="offerings-title">
-        Highly expert <h3 className="grey">services offerings</h3>
+        Highly expert <span className="grey">services offerings</span>
       </h3>
       <div className="offerings-container">
         <Service

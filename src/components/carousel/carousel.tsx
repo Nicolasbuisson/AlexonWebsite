@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode, useLayoutEffect, useState } from "react";
 import "./carousel.css";
 

@@ -1,24 +1,25 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ButtonBackgroundHoverEffect } from "../buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { Socials } from "../socials/socials";
 import "./footer.css";
+import nextConfig from "../../../next.config";
 
 export const Footer = () => {
   return (
     <footer className="footer-container">
       <h1 className="footer-header-wrapper">
-        Let's <h1 className="footer-header"> work together</h1>
+        Let's <span className="footer-header"> work together</span>
       </h1>
       <ButtonBackgroundHoverEffect
         text="Book a Call"
         className="footer-button"
-        link="contact"
+        link="/contact"
       ></ButtonBackgroundHoverEffect>
       <hr className="footer-hr" />
       <div className="footer-items-container">
-        <Link to="/" className="footer-logo">
+        <Link href="/" className="footer-logo">
           <img
-            src={import.meta.env.BASE_URL + "/assets/logos/AM-white.png"}
+            src={nextConfig.basePath + "/assets/logos/AM-white.png"}
             alt="Alexon Logo"
           />
         </Link>
@@ -37,22 +38,22 @@ export const Footer = () => {
         </div>
         <div className="footer-navigation-container">
           <h4>Navigation</h4>
-          <Link to="/" className="footer-link">
+          <Link href="/" className="footer-link">
             Home
           </Link>
-          <Link to="/services/shortform" className="footer-link">
+          <Link href="/services/shortform" className="footer-link">
             Short Form Services
           </Link>
-          <Link to="/productions" className="footer-link">
+          <Link href="/productions" className="footer-link">
             Productions
           </Link>
-          <Link to="/work" className="footer-link">
+          <Link href="/work" className="footer-link">
             Projects
           </Link>
-          <Link to="/about" className="footer-link">
+          <Link href="/about" className="footer-link">
             About
           </Link>
-          <Link to="/contact" className="footer-link">
+          <Link href="/contact" className="footer-link">
             Contact
           </Link>
         </div>

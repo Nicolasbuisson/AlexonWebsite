@@ -1,3 +1,4 @@
+"use client";
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { InstaItemResponse } from "../../types/insta";
 import { config } from "../../config/config";
@@ -45,7 +46,8 @@ export const Insta = () => {
       const itemPromises: Promise<InstaItemResponse>[] = [];
 
       for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
-        const itemId = data[i].id;
+        const itemId = data[i]?.id;
+        console.log(itemId);
         const instaItemPromise = fetchInstaItem(itemId);
         itemPromises.push(instaItemPromise);
       }
@@ -69,7 +71,7 @@ export const Insta = () => {
         mediaItemVideo?.classList.add("loaded");
       };
       if (mediaItemVideo) {
-        mediaItemVideo.onloadeddata = (event) => {
+        mediaItemVideo.onloadeddata = () => {
           loaded();
         };
       }

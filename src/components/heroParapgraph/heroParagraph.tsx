@@ -1,3 +1,4 @@
+"use client";
 import "./heroParagraph.css";
 import { useRef } from "react";
 import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
@@ -27,6 +28,7 @@ export const HeroParagraph = (props: IProps) => {
         const end = start + step;
         return (
           <Word
+            key={"hero-word-" + i}
             keyId={"hero-word-" + i}
             start={start}
             end={end}
@@ -75,6 +77,7 @@ const Word = (props: WordProps) => {
         const characterEnd = characterStart + step;
         return (
           <Character
+            key={"hero-character-" + i}
             keyId={"hero-character-" + i}
             start={characterStart}
             end={characterEnd}

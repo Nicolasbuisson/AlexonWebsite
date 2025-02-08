@@ -1,7 +1,8 @@
+"use client";
 import { useEffect, useState } from "react";
 
 export const useWindowSize = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);

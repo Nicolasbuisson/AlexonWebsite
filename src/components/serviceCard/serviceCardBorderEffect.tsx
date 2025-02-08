@@ -1,7 +1,5 @@
 import "./serviceCard.css";
 
-interface IProps {}
-
-export const ServiceCard = (props: IProps) => {
+export const ServiceCard = () => {
   return <div className="service-card"></div>;
 };
