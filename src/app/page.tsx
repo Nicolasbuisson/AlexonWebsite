@@ -81,7 +81,7 @@ export const Home: FC = () => {
             nextConfig.basePath + "/assets/clientLogos/ELLEBlack.png",
             nextConfig.basePath + "/assets/clientLogos/JohnSummitBlack.png",
             nextConfig.basePath +
-              "assets/clientLogos/McGillUniversityBlack.png",
+              "/assets/clientLogos/McGillUniversityBlack.png",
           ]}
         ></LogoList>
       </section>
