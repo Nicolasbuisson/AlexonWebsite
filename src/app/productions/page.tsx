@@ -1,17 +1,14 @@
 import "./productions.css";
 import { Footer } from "../../components/footer/footer";
 import { Navigation } from "../../components/navigation/navigation";
-import { WorkItemProps } from "../../types/work";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
 import nextConfig from "../../../next.config";
+import { FC } from "react";
+import projectsJSON from "../../resources/projects.json";
 
-interface ProductionsProps {
-  projects: WorkItemProps[];
-}
-
-export const Productions = (props: ProductionsProps) => {
-  const { projects } = props;
+export const Productions: FC = () => {
+  const { projects } = projectsJSON;
 
   return (
     <div className="productions-container">
@@ -25,9 +22,9 @@ export const Productions = (props: ProductionsProps) => {
             loop
           ></video>
           <h2 className="productions-title">
-            Crafting <h2 className="productions-title-reg">Stories</h2>
+            Crafting <span className="productions-title-reg">Stories</span>
             <h2>
-              <h2 className="productions-title-reg">Inspiring</h2> Audiences
+              <span className="productions-title-reg">Inspiring</span> Audiences
             </h2>
           </h2>
         </div>
@@ -74,3 +71,5 @@ export const Productions = (props: ProductionsProps) => {
     </div>
   );
 };
+
+export default Productions;

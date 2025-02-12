@@ -19,9 +19,7 @@ export const Projects = (props: IProps) => {
       {projectsToRender.map((project) => {
         return (
           <Link
-            href={`/productions/${project.title
-              .replaceAll(" ", "")
-              .toLowerCase()}`}
+            href={`/productions/${project.route}`}
             className="card"
             key={"work-grid-card-" + project.title}
             onClick={() => window.scrollTo(0, 0)}

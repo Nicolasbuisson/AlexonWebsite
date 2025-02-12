@@ -3,6 +3,7 @@ export interface StillImage {
   }
   
 export interface WorkItemProps {
+    route: string;
     title: string;
     client: string;
     description: string;

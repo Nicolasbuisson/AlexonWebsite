@@ -1,6 +1,7 @@
 {
     "projects" : [
     {
+        "route": "fourseasons",
         "title": "Four Seasons",
         "client": "Four Seasons Hotel",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -16,6 +17,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "corona",
         "title": "Corona",
         "client": "Corona",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -31,6 +33,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "elleluxembourg",
         "title": "ELLE Luxembourg",
         "client": "ELLE",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -46,6 +49,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "onomohotels",
         "title": "Onomo Hotels",
         "client": "Onomo Hotels",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -61,6 +65,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "lequilibre",
         "title": "L'Equilibre",
         "client": "L'Equilibre",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -76,6 +81,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "elewanacollection",
         "title": "Elewana Collection",
         "client": "Elewana",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -91,6 +97,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "harasdeprepinson",
         "title": "Haras de Prepinson",
         "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -106,6 +113,7 @@
         "displayOnHomePage": false 
     },
     {
+        "route": "maisondeprepinson",
         "title": "Maison de Prepinson",
         "client": "Maison de Prepinson",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -121,6 +129,7 @@
         "displayOnHomePage": true
     },
     {
+        "route": "lhoftbangkoktogo",
         "title": "LHOFT: Bangkok + Togo",
         "client": "LHOFT",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -136,6 +145,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "web3mtl",
         "title": "Web3MTL",
         "client": "Web3MTL",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -151,6 +161,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "chrislake",
         "title": "Chris Lake",
         "client": "Chris Lake",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -166,6 +177,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "claptone",
         "title": "Claptone",
         "client": "Claptone",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -182,6 +194,7 @@
     },
     
     {
+        "route": "businessclubfranceluxembourg",
         "title": "Business Club France Luxembourg",
         "client": "Business Club France Luxembourg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -197,6 +210,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "thevisionboard",
         "title": "The Vision Board",
         "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -212,6 +226,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "willievermakeit",
         "title": "Will I ever make it?",
         "client": "Personal Project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -227,6 +242,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "chamberofcommerceluxmtl",
         "title": "Chamber of Commerce LUX/MTL",
         "client": "Chamber of Commerce LUX/MTL",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -242,6 +258,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "monolink",
         "title": "Monolink",
         "client": "Monolink",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -257,6 +274,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "parcomega",
         "title": "Parc Oméga",
         "client": "Parc Oméga",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -272,6 +290,7 @@
         "displayOnHomePage": false
     },
     {
+        "route": "ponente",
         "title": "Ponente",
         "client": "Ponente",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -287,6 +306,7 @@
         "displayOnHomePage": false 
     },
     {
+        "route": "mcgilluniversity",
         "title": "McGill University",
         "client": "McGill University",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -302,6 +322,7 @@
         "displayOnHomePage": true 
     },
     {
+        "route": "johnsummit",
         "title": "John Summit",
         "client": "John Summit",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -317,6 +338,7 @@
         "displayOnHomePage": true 
     },
     {
+        "route": "newcitygas",
         "title": "New City Gas",
         "client": "New City Gas",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
@@ -332,6 +354,7 @@
         "displayOnHomePage": false 
     },
     {
+        "route": "coinbase",
         "title": "Coinbase",
         "client": "Coinbase",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo adiam sollicitudin tempor id. Morbi tempus iaculis urna id volutpat lacus. Est lorem ipsum dolor sit amet consectetur adipiscing elit.",
