@@ -6,8 +6,9 @@ import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import nextConfig from "../../../next.config";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
+import { FC } from "react";
 
-export const About = () => {
+export const About: FC = () => {
   useScrollPercentage(); // initiate css variable --scroll
   return (
     <div className="about-container">
