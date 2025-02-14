@@ -46,14 +46,6 @@ export const Navigation = (props: NavigationProps) => {
     titleScroll ? "nav-scroll" : "",
   ].join(" ");
 
-  const servicesMenuClick = () => {
-    const servicesMenu = document.getElementById("services-menu-content");
-    servicesMenu?.setAttribute(
-      "data-expanded",
-      servicesMenu?.getAttribute("data-expanded") === "true" ? "false" : "true"
-    );
-  };
-
   return (
     <header
       className={
@@ -106,29 +98,13 @@ export const Navigation = (props: NavigationProps) => {
             </Link>
           </li>
           <li className="services-menu">
-            <h1 className="link" onClick={servicesMenuClick}>
-              Services
-            </h1>
-            <div
-              id="services-menu-content"
-              className="services-menu-content"
-              data-expanded="false"
+            <Link
+              href="/shortform"
+              className="link services-link"
+              onClick={() => window.scrollTo(0, 0)}
             >
-              <Link
-                href="/services/shortform"
-                className="link services-link"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Short Form
-              </Link>
-              <Link
-                href="/productions"
-                className="link services-link"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Productions
-              </Link>
-            </div>
+              Short Form
+            </Link>
           </li>
           <li>
             <Link

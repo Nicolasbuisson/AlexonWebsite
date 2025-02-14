@@ -41,7 +41,7 @@ export const Footer = () => {
           <Link href="/" className="footer-link">
             Home
           </Link>
-          <Link href="/services/shortform" className="footer-link">
+          <Link href="/shortform" className="footer-link">
             Short Form Services
           </Link>
           <Link href="/productions" className="footer-link">

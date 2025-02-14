@@ -126,31 +126,6 @@ nav>* {
     filter: brightness(1);
 }
 
-.services-menu {
-    cursor: pointer;
-}
-
-.services-menu-content {
-    display: grid;
-    grid-template-rows: 0fr 0fr;
-    transition: grid-template-rows 300ms ease-in-out;
-}
-
-.services-menu-content[data-expanded='true'] {
-    grid-template-rows: 1fr 1fr;
-}
-
-.services-link {
-    font-size: var(--fs-h2);
-    overflow: hidden;
-    /* need overflow: hidden to make grid template rows transition work properly */
-}
-
-.services-link:hover {
-    transform: scale(1);
-    /* to counter-act link:hover transform rule */
-}
-
 /*----- animations----*/
 /* clicked */
 .burger-bar.clicked:nth-child(1) {

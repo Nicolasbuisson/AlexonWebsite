@@ -88,7 +88,7 @@ function Home() {
         <ServiceCard
           title={"Short Form Content"}
           description={"Scale your brand through increased reach"}
-          link={"/services/shortform"}
+          link={"/shortform"}
           imageSrc={"/assets/images/rice-hills.jpg"}
         />
         <ServiceCard
