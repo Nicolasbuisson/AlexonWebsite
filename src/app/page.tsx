@@ -10,10 +10,9 @@ import { Projects } from "../components/projects/projects";
 import { ServiceCard } from "../components/serviceCard/serviceCard";
 import nextConfig from "../../next.config";
 import { projects } from "../resources/projects.json";
-import { FC } from "react";
 import useScrollPercentage from "../hooks/useScrollPercentage";
 
-export const Home: FC = () => {
+function Home() {
   useScrollPercentage(); // initiate css variable --scroll
 
   return (
@@ -109,6 +108,6 @@ export const Home: FC = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Home;

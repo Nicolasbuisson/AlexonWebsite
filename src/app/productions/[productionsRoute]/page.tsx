@@ -19,13 +19,14 @@ export async function generateStaticParams(): Promise<
   return staticRoutes;
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: productionsStaticParams;
-}): Metadata {
+  params: Promise<productionsStaticParams>;
+}): Promise<Metadata> {
+  const { productionsRoute } = await params;
   const productionItem = projectsJSON.projects.find(
-    (project: WorkItemProps) => project.route === params.productionsRoute
+    (project: WorkItemProps) => project.route === productionsRoute
   )!;
   return {
     title: `Alexon Media - ${productionItem.title}`,

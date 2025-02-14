@@ -6,10 +6,10 @@ import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import nextConfig from "../../../next.config";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
-import { FC } from "react";
 
-export const About: FC = () => {
+function AboutPage() {
   useScrollPercentage(); // initiate css variable --scroll
+
   return (
     <div className="about-container">
       <Navigation showIcons></Navigation>
@@ -53,6 +53,6 @@ export const About: FC = () => {
       <Footer></Footer>
     </div>
   );
-};
+}
 
-export default About;
+export default AboutPage;

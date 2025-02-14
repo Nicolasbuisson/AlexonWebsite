@@ -4,10 +4,9 @@ import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
 import nextConfig from "../../../next.config";
-import { FC } from "react";
 import projectsJSON from "../../resources/projects.json";
 
-export const Productions: FC = () => {
+function Productions() {
   const { projects } = projectsJSON;
 
   return (
@@ -70,6 +69,6 @@ export const Productions: FC = () => {
       <Footer></Footer>
     </div>
   );
-};
+}
 
 export default Productions;

@@ -3,9 +3,8 @@ import "./contact.css";
 import { InlineWidget } from "react-calendly";
 import { Navigation } from "../../components/navigation/navigation";
 import { Footer } from "../../components/footer/footer";
-import { FC } from "react";
 
-export const Contact: FC = () => {
+function Contact() {
   return (
     <div className="contact-container">
       <Navigation />
@@ -28,6 +27,6 @@ export const Contact: FC = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Contact;
