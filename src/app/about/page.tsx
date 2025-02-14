@@ -1,6 +1,5 @@
 "use client";
 import "./about.css";
-import { Footer } from "../../components/footer/footer";
 import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
@@ -50,7 +49,6 @@ function AboutPage() {
         </div>
       </section>
       <InstaSection />
-      <Footer></Footer>
     </div>
   );
 }

@@ -81,7 +81,7 @@
     display: grid;
     gap: 1rem;
     justify-items: center;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 
     & img {
         max-width: 80%;

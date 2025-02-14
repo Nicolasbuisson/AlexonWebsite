@@ -1,7 +1,6 @@
 "use client";
 import "./home.css";
 import { ButtonBackgroundHoverEffect } from "../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
-import { Footer } from "../components/footer/footer";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { InstaSection } from "../components/insta/instaSection";
 import { LogoList } from "../components/logoList/logoList";
@@ -105,7 +104,6 @@ function Home() {
         <Projects projects={projects} homePageFilter />
       </section>
       <InstaSection />
-      <Footer />
     </div>
   );
 }

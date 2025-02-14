@@ -2,7 +2,6 @@
 import "./contact.css";
 import { InlineWidget } from "react-calendly";
 import { Navigation } from "../../components/navigation/navigation";
-import { Footer } from "../../components/footer/footer";
 
 function Contact() {
   return (
@@ -24,7 +23,6 @@ function Contact() {
           <a href="mailto:contact@alexonmedia.com">contact@alexonmedia.com</a>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

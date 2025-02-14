@@ -1,5 +1,4 @@
 import nextConfig from "../../../../next.config";
-import { Footer } from "../../../components/footer/footer";
 import { Navigation } from "../../../components/navigation/navigation";
 import { WorkItemProps } from "../../../types/work";
 import "./productionsItem.css";
@@ -95,7 +94,6 @@ export default async function productionsItem({
           })}
         </div>
       </section>
-      <Footer></Footer>
     </div>
   );
 }

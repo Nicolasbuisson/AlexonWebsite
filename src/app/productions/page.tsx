@@ -1,5 +1,4 @@
 import "./productions.css";
-import { Footer } from "../../components/footer/footer";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
@@ -66,7 +65,6 @@ function Productions() {
           ]}
         ></LogoList>
       </section>
-      <Footer></Footer>
     </div>
   );
 }

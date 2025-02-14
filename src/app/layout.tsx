@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { fontGotham, fontMadeOuterSans } from "../fonts";
 import "./global.css";
+import { Footer } from "../components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Alexon Media",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fontGotham.variable} ${fontMadeOuterSans.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
