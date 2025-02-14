@@ -1,0 +1,96 @@
+/* Design system */
+
+:root {
+  --clr-light: #fff;
+  --clr-light-grey: #D9D9D9;
+  --clr-footer-header: #ffffffa1;
+  --clr-grey: #8b8b8b;
+  --clr-dark: #000;
+  --clr-accent: #FCD848;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
+  --fs-body: 1.0rem;
+
+  --scroll: 0;
+  --section-padding-block: 2rem;
+  --section-padding-inline: 8rem;
+}
+
+@media (width > 880px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.1rem;
+    --fs-h3: 1.75rem;
+    --fs-h4: 1.4rem;
+    --fs-body: 1.0rem;
+
+    --section-padding-block: 3rem;
+    --section-padding-inline: 10rem;
+  }
+}
+
+@media (width < 580px) {
+  :root {
+    --section-padding-block: 2rem;
+    --section-padding-inline: 4rem;
+  }
+}
+
+* {
+  /* Reset */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+}
+
+/* element styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+}
+
+/* custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--clr-dark);
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--clr-light);
+  border-radius: 100vw;
+  border: 2px solid var(--clr-dark);
+}

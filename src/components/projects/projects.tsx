@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
 import { WorkItemProps } from "../../types/work";
 import "./projects.css";
+import nextConfig from "../../../next.config";
 
 interface IProps {
   projects: WorkItemProps[];
@@ -17,23 +19,21 @@ export const Projects = (props: IProps) => {
       {projectsToRender.map((project) => {
         return (
           <Link
-            to={`/productions/${project.title
-              .replaceAll(" ", "")
-              .toLowerCase()}`}
+            href={`/productions/${project.route}`}
             className="card"
             key={"work-grid-card-" + project.title}
             onClick={() => window.scrollTo(0, 0)}
           >
             <div className="stacked">
               <img
-                src={import.meta.env.BASE_URL + `/assets/${project.gridImage}`}
+                src={nextConfig.basePath + `/assets/${project.gridImage}`}
                 alt={`project thumbnail for ${project.description}`}
                 className="project-thumbnail"
               ></img>
               {project.logoImage ? (
                 <img
                   src={
-                    import.meta.env.BASE_URL +
+                    nextConfig.basePath +
                     `/assets/clientLogos/${project.logoImage}`
                   }
                   alt={`client logo for ${project.client}`}

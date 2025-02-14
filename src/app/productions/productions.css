@@ -4,14 +4,15 @@
 }
 
 .productions-video-background {
-    background-color: var(--clr-dark); /* Used if the image is unavailable */
+    background-color: var(--clr-dark);
+    /* Used if the image is unavailable */
     width: 100%;
     height: 50vh;
     height: 50svh;
     position: relative;
 }
 
-.productions-video-background > video {
+.productions-video-background>video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -20,7 +21,7 @@
 .productions-title {
     color: var(--clr-light);
     text-wrap: balance;
-    font-weight: 700; 
+    font-weight: 700;
     font-family: var(--ff-primary);
     text-transform: uppercase;
     text-align: center;
@@ -30,9 +31,10 @@
     transform: translate(-50%, -50%);
 }
 
-.productions-title > h2 {
+.productions-title>h2 {
     color: var(--clr-light-grey);
     font-family: inherit;
+    font-weight: inherit;
 }
 
 .productions-title-reg {

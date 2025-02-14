@@ -1,7 +1,9 @@
+"use client";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
+import nextConfig from "../../../next.config";
 
 interface NavigationProps {
   transparent?: boolean;
@@ -62,10 +64,11 @@ export const Navigation = (props: NavigationProps) => {
     >
       <nav className={navClasses}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
-        <Link to="/" className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}>
-          <img
-            src={import.meta.env.BASE_URL + "/assets/logos/Full-white.png"}
-          ></img>
+        <Link
+          href="/"
+          className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
+        >
+          <img src={nextConfig.basePath + "/assets/logos/Full-white.png"}></img>
         </Link>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
@@ -76,13 +79,17 @@ export const Navigation = (props: NavigationProps) => {
       <div id="menu-container">
         <ul className="menu" id="menu">
           <li>
-            <Link to="/" className="link" onClick={() => window.scrollTo(0, 0)}>
+            <Link
+              href="/"
+              className="link"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Home
             </Link>
           </li>
           <li>
             <Link
-              to="/productions"
+              href="/productions"
               className="link"
               onClick={() => window.scrollTo(0, 0)}
             >
@@ -91,7 +98,7 @@ export const Navigation = (props: NavigationProps) => {
           </li>
           <li>
             <Link
-              to="/about"
+              href="/about"
               className="link"
               onClick={() => window.scrollTo(0, 0)}
             >
@@ -108,14 +115,14 @@ export const Navigation = (props: NavigationProps) => {
               data-expanded="false"
             >
               <Link
-                to="/services/shortform"
+                href="/services/shortform"
                 className="link services-link"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Short Form
               </Link>
               <Link
-                to="/productions"
+                href="/productions"
                 className="link services-link"
                 onClick={() => window.scrollTo(0, 0)}
               >
@@ -125,7 +132,7 @@ export const Navigation = (props: NavigationProps) => {
           </li>
           <li>
             <Link
-              to="/contact"
+              href="/contact"
               className="link"
               onClick={() => window.scrollTo(0, 0)}
             >
@@ -134,8 +141,6 @@ export const Navigation = (props: NavigationProps) => {
           </li>
         </ul>
       </div>
-
-      <Outlet />
     </header>
   );
 };

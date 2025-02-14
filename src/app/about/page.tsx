@@ -1,10 +1,14 @@
+"use client";
+import "./about.css";
 import { Footer } from "../../components/footer/footer";
 import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
-import "./about.css";
+import nextConfig from "../../../next.config";
+import useScrollPercentage from "../../hooks/useScrollPercentage";
 
 export const About = () => {
+  useScrollPercentage(); // initiate css variable --scroll
   return (
     <div className="about-container">
       <Navigation showIcons></Navigation>
@@ -28,7 +32,7 @@ export const About = () => {
           <h3>Founder's Story</h3>
           <img
             className="about-story-logo"
-            src={import.meta.env.BASE_URL + "/assets/logos/Signature-white.png"}
+            src={nextConfig.basePath + "/assets/logos/Signature-white.png"}
           />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
@@ -38,12 +42,10 @@ export const About = () => {
           </p>
         </div>
         <div className="about-story-image-grid">
-          <img src={import.meta.env.BASE_URL + "/assets/images/road.jpg"} />
-          <img src={import.meta.env.BASE_URL + "/assets/images/plain.jpg"} />
-          <img
-            src={import.meta.env.BASE_URL + "/assets/images/rice-hills.jpg"}
-          />
-          <img src={import.meta.env.BASE_URL + "/assets/images/road.jpg"} />
+          <img src={nextConfig.basePath + "/assets/images/road.jpg"} />
+          <img src={nextConfig.basePath + "/assets/images/plain.jpg"} />
+          <img src={nextConfig.basePath + "/assets/images/rice-hills.jpg"} />
+          <img src={nextConfig.basePath + "/assets/images/road.jpg"} />
         </div>
       </section>
       <InstaSection />
@@ -51,3 +53,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;

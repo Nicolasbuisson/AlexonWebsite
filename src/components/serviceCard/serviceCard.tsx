@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./serviceCard.css";
+import nextConfig from "../../../next.config";
 
 interface IServiceCard {
   title: string;
@@ -11,8 +12,8 @@ interface IServiceCard {
 export const ServiceCard = (props: IServiceCard) => {
   const { title, description, link, imageSrc } = props;
   return (
-    <Link className="service-card" to={link}>
-      <img src={import.meta.env.BASE_URL + imageSrc}></img>
+    <Link className="service-card" href={link}>
+      <img src={nextConfig.basePath + imageSrc}></img>
       <div className="service-card-text">
         <h3>{title}</h3>
         <p>{description}</p>

@@ -35,7 +35,7 @@ nav {
     background-color: rgb(0, 0, 0, calc((min(var(--scroll), var(--logo-starting-height))/ var(--logo-starting-height))));
 }
 
-nav > * {
+nav>* {
     grid-row: 1;
 }
 
@@ -115,7 +115,7 @@ nav > * {
     text-decoration: none;
     color: var(--clr-light);
     font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
+    font-weight: 600;
     font-family: var(--ff-primary);
     filter: brightness(.5);
     transition: all .3s ease-in-out
@@ -142,11 +142,13 @@ nav > * {
 
 .services-link {
     font-size: var(--fs-h2);
-    overflow: hidden; /* need overflow: hidden to make grid template rows transition work properly */
+    overflow: hidden;
+    /* need overflow: hidden to make grid template rows transition work properly */
 }
 
 .services-link:hover {
-    transform: scale(1); /* to counter-act link:hover transform rule */
+    transform: scale(1);
+    /* to counter-act link:hover transform rule */
 }
 
 /*----- animations----*/
@@ -185,6 +187,7 @@ nav > * {
         --max-logo-height: 3;
         --max-logo-difference: 1.5;
     }
+
     .nav-socials {
         display: none;
     }
@@ -202,7 +205,8 @@ nav > * {
         --burger-bar-third-translateY: 0.775em;
     }
 
-    .burger-bar.clicked:nth-child(1), .burger-bar.clicked:nth-child(3) {
+    .burger-bar.clicked:nth-child(1),
+    .burger-bar.clicked:nth-child(3) {
         height: 0.175rem;
     }
 }
