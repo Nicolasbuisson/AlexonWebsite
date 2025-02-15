@@ -2,25 +2,40 @@
 import Link from "next/link";
 import "./buttonBackgroundHoverEffect.css";
 
+type buttonSize = "small" | "normal";
+
 interface IProps {
   text: string;
   className?: string;
   link?: string;
   onClick?: () => void;
+  size?: buttonSize;
 }
 
 export const ButtonBackgroundHoverEffect = (props: IProps) => {
-  const { text, className = "", link = "", onClick = () => {} } = props;
+  const {
+    text,
+    className = "",
+    link = "",
+    onClick = () => {},
+    size = "normal",
+  } = props;
   return link ? (
     <Link
       href={link}
-      className={`button-background-effect-container ${className}`}
+      className={`button-background-effect-container ${className} ${
+        size === "small" ? "button-size-small" : ""
+      }`}
     >
       <button className="button-background-effect">{text}</button>
       <button className="black-background">{text}</button>
     </Link>
   ) : (
-    <div className={`button-background-effect-container ${className}`}>
+    <div
+      className={`button-background-effect-container ${className} ${
+        size === "small" ? "button-size-small" : ""
+      }`}
+    >
       <button className="button-background-effect" onClick={onClick}>
         {text}
       </button>
