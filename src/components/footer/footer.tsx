@@ -47,9 +47,6 @@ export const Footer = () => {
           <Link href="/productions" className="footer-link">
             Productions
           </Link>
-          <Link href="/work" className="footer-link">
-            Projects
-          </Link>
           <Link href="/about" className="footer-link">
             About
           </Link>
