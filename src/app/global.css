@@ -7,6 +7,8 @@
   --clr-grey: #8b8b8b;
   --clr-dark: #000;
   --clr-accent: #FCD848;
+  --clr-card-border: rgba(157, 157, 255, .05);
+  --card-background: linear-gradient(140deg, #1b1b26 -41.97%, #09090d 77.06%);
 
   --fs-h1: 3rem;
   --fs-h2: 2.5rem;
@@ -47,6 +49,7 @@
   box-sizing: border-box;
   font-family: var(--ff-primary);
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 /* element styling */

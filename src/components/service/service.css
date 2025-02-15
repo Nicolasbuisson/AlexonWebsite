@@ -7,14 +7,17 @@
     justify-items: center;
     align-items: center;
     gap: 4px;
-    border: 2px var(--clr-dark) dotted;
+    /* border: 2px var(--clr-light) solid; */
+    /* border: 1px var(--clr-card-border) solid; */
+    /* box-shadow: 0px 1px 4px 2px var(--clr-light); */
     border-radius: 12px;
     text-align: center;
+    background: var(--card-background);
 }
 
 .service-icon {
     height: 100px;
-    align-self: end; 
+    align-self: end;
 }
 
 .service-description {
@@ -35,12 +38,12 @@
 .service-learn-more-icon {
     height: 16px;
     width: 16px;
-    fill: var(--clr-dark);
-    stroke: var(--clr-dark);
+    fill: var(--clr-light);
+    stroke: var(--clr-light);
     stroke-width: 2;
     transition: all ease-in-out 200ms;
 }
 
-.service-learn-more-container:hover > svg {
+.service-learn-more-container:hover>svg {
     transform: translateX(40%);
 }

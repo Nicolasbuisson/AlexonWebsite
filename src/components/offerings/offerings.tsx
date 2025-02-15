@@ -5,45 +5,68 @@ export const Offerings = () => {
   return (
     <div>
       <h3 className="offerings-title">
-        Highly expert <span className="grey">services offerings</span>
+        Your dedicated creative team of experts
       </h3>
       <div className="offerings-container">
         <Service
-          title="Storytelling"
-          description="Master storytellers; we are at our core filmmakers with a passion for telling meaningful and impactful stories"
+          title="Digital specialists"
+          description="Your very own Project Manager, Shooter, Video Editor & Social Media Manager at your service. Leave your branding in the hands of a team of experts with 5+ years of experience creating content for the world’s leading brands"
           icon={
             <svg
-              width="100px"
               height="100px"
-              viewBox="0 0 24 24"
-              fill="none"
+              width="100px"
+              version="1.1"
+              id="_x32_"
               xmlns="http://www.w3.org/2000/svg"
-              stroke="#000000"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 512 512"
+              xmlSpace="preserve"
+              fill="#ffffff"
             >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
               <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M12 6.90909C10.8999 5.50893 9.20406 4.10877 5.00119 4.00602C4.72513 3.99928 4.5 4.22351 4.5 4.49965C4.5 6.54813 4.5 14.3034 4.5 16.597C4.5 16.8731 4.72515 17.09 5.00114 17.099C9.20405 17.2364 10.8999 19.0998 12 20.5M12 6.90909C13.1001 5.50893 14.7959 4.10877 18.9988 4.00602C19.2749 3.99928 19.5 4.21847 19.5 4.49461C19.5 6.78447 19.5 14.3064 19.5 16.5963C19.5 16.8724 19.2749 17.09 18.9989 17.099C14.796 17.2364 13.1001 19.0998 12 20.5M12 6.90909L12 20.5"
-                  stroke="#000000"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M19.2353 6H21.5C21.7761 6 22 6.22386 22 6.5V19.539C22 19.9436 21.5233 20.2124 21.1535 20.0481C20.3584 19.6948 19.0315 19.2632 17.2941 19.2632C14.3529 19.2632 12 21 12 21C12 21 9.64706 19.2632 6.70588 19.2632C4.96845 19.2632 3.64156 19.6948 2.84647 20.0481C2.47668 20.2124 2 19.9436 2 19.539V6.5C2 6.22386 2.22386 6 2.5 6H4.76471"
-                  stroke="#000000"
-                  strokeLinejoin="round"
-                />
+                <g>
+                  <path
+                    fill="#FFFFFF"
+                    d="M256.005,0C114.611,0,0,114.611,0,255.996C0,397.39,114.611,512,256.005,512 C397.39,512,512,397.39,512,255.996C512,114.611,397.39,0,256.005,0z M187.066,203.112c0,0.366-0.157,0.689-0.436,0.916 l-72.053,53.582l72.053,53.608c0.279,0.192,0.436,0.541,0.436,0.89v33.07c0,0.41-0.201,0.776-0.532,0.968 c-0.148,0.079-0.296,0.13-0.471,0.13c-0.192,0-0.392-0.07-0.558-0.2L81.734,268.894c-0.27-0.201-0.445-0.541-0.445-0.898v-20.765 c0-0.366,0.174-0.706,0.445-0.907l103.771-77.18c0.166-0.131,0.366-0.192,0.558-0.192c0.174,0,0.323,0.044,0.471,0.13 c0.332,0.183,0.532,0.55,0.532,0.968V203.112z M238.519,360.404c-0.148,0.445-0.514,0.741-0.951,0.741h-29.006 c-0.331,0-0.628-0.175-0.82-0.472c-0.183-0.278-0.236-0.645-0.131-0.976l65.87-208.118c0.131-0.437,0.514-0.724,0.942-0.724h29.014 c0.314,0,0.628,0.166,0.811,0.454c0.183,0.288,0.236,0.654,0.131,0.994L238.519,360.404z M430.694,267.996 c0,0.357-0.156,0.698-0.436,0.898l-103.771,77.181c-0.166,0.13-0.357,0.2-0.558,0.2c-0.166,0-0.322-0.052-0.471-0.13 c-0.331-0.192-0.532-0.558-0.532-0.968v-33.062c0-0.357,0.157-0.706,0.436-0.898l72.053-53.608l-72.053-53.582 c-0.278-0.209-0.436-0.54-0.436-0.906V170.05c0-0.418,0.201-0.785,0.532-0.968c0.148-0.086,0.305-0.13,0.471-0.13 c0.201,0,0.392,0.061,0.558,0.192l103.771,77.18c0.28,0.201,0.436,0.541,0.436,0.907V267.996z"
+                  ></path>
+                </g>
               </g>
             </svg>
           }
         ></Service>
         <Service
-          title="Content Science & Optimization"
-          description="Retention-based editing, performance editing while respecting your brand guidelines"
+          title="Effortless workflow"
+          description="From conception to content creation, all the way to distribution, and performance analysis. We plug into your existing workflow and deliver results all while making your life easier so you can focus on your operations."
+          icon={
+            <svg
+              fill="#ffffff"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24.00 24.00"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M7.5,15.5h-5a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1h5a1,1,0,0,0,1-1V20H12a1,1,0,0,0,0-2H8.5V16.5A1,1,0,0,0,7.5,15.5Zm-1,5h-3v-3h3ZM4,8.858V13a1,1,0,0,0,2,0V8.858a4,4,0,1,0-2,0ZM5,3A2,2,0,1,1,3,5,2,2,0,0,1,5,3ZM20,15.142V12a1,1,0,0,0-2,0v3.142a4,4,0,1,0,2,0ZM19,21a2,2,0,1,1,2-2A2,2,0,0,1,19,21ZM16.5,8.5h5a1,1,0,0,0,1-1v-5a1,1,0,0,0-1-1h-5a1,1,0,0,0-1,1V4H12a1,1,0,0,0,0,2h3.5V7.5A1,1,0,0,0,16.5,8.5Zm1-5h3v3h-3Z"></path>
+              </g>
+            </svg>
+          }
+        ></Service>
+        <Service
+          title="Money-back guarantee"
+          description="The best part? We take all the risk. If we don't 4x your reach, we'll give you your money back - no questions asked"
           icon={
             <svg
               width="100px"
@@ -51,57 +74,20 @@ export const Offerings = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="service-svg"
             >
-              <path
-                d="M5 18H15C16.1046 18 17 17.1046 17 16V8.57143V8C17 6.89543 16.1046 6 15 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z"
-                stroke="#000000"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle
-                cx="6.5"
-                cy="9.5"
-                r="0.5"
-                stroke="#000000"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M17 10L21 7V17L17 14"
-                stroke="#000000"
-                strokeLinejoin="round"
-              />
-            </svg>
-          }
-        ></Service>
-        <Service
-          title="Brand Strategy"
-          description="From conceptualization to ideation to distribution on social media platforms; we have the know how
-          and are entrepreneurs ourselves. We'll save you precious time and ensure that your content is effectively distributed"
-          icon={
-            <svg
-              fill="#000000"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 32 32"
-              xmlSpace="preserve"
-              width="90px"
-              height="90px"
-              stroke="#000000"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-              />
+              ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
-                  id="strategy--play_1_"
-                  d="M27,18.64c-1.302,0-2.36,1.059-2.36,2.36s1.059,2.36,2.36,2.36s2.36-1.059,2.36-2.36 S28.302,18.64,27,18.64z M27,22.64c-0.904,0-1.64-0.735-1.64-1.64s0.735-1.64,1.64-1.64s1.64,0.735,1.64,1.64S27.904,22.64,27,22.64 z M20,18.64c-1.302,0-2.36,1.059-2.36,2.36s1.059,2.36,2.36,2.36s2.36-1.059,2.36-2.36S21.302,18.64,20,18.64z M20,22.64 c-0.904,0-1.64-0.735-1.64-1.64s0.735-1.64,1.64-1.64s1.64,0.735,1.64,1.64S20.904,22.64,20,22.64z M20,25.64 c-1.302,0-2.36,1.059-2.36,2.36s1.059,2.36,2.36,2.36s2.36-1.059,2.36-2.36S21.302,25.64,20,25.64z M20,29.64 c-0.904,0-1.64-0.735-1.64-1.64s0.735-1.64,1.64-1.64s1.64,0.735,1.64,1.64S20.904,29.64,20,29.64z M13,23.36 c1.301,0,2.36-1.059,2.36-2.36s-1.059-2.36-2.36-2.36s-2.36,1.059-2.36,2.36S11.699,23.36,13,23.36z M13,19.36 c0.904,0,1.64,0.735,1.64,1.64s-0.736,1.64-1.64,1.64s-1.64-0.735-1.64-1.64S12.096,19.36,13,19.36z M10.746,5.746L12.491,4 l-1.746-1.746l0.509-0.509L13,3.491l1.746-1.746l0.509,0.509L13.509,4l1.746,1.746l-0.509,0.509L13,4.509l-1.746,1.746L10.746,5.746 z M17.745,15.746L19.491,14l-1.746-1.746l0.51-0.509L20,13.491l1.745-1.745l0.51,0.509L20.509,14l1.746,1.746l-0.51,0.509L20,14.509 l-1.745,1.745L17.745,15.746z M27,10.491l1.745-1.745l0.51,0.509L27.509,11l1.746,1.746l-0.51,0.509L27,11.509l-1.745,1.745 l-0.51-0.509L26.491,11l-1.746-1.746l0.51-0.509L27,10.491z M10,27.64h6v0.721h-6c-0.054,0-5.36-0.062-5.36-5.36V5.868L3.255,7.254 l-0.51-0.509L4.997,4.49l2.257,2.254l-0.509,0.51L5.36,5.87V23C5.36,27.587,9.811,27.64,10,27.64z M24.35,2.859l0.01,2.139 c0,2.66-2.198,3.362-3.36,3.362h-4c-3.584,0-3.64,3.492-3.64,3.641v5h-0.72v-5c0-0.043,0.05-4.36,4.36-4.36h4 c0.106,0,2.64-0.044,2.64-2.64l-0.01-2.12l-1.374,1.374l-0.51-0.509L24,1.491l2.255,2.255l-0.51,0.509L24.35,2.859z"
-                />
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM18.4158 9.70405C18.8055 9.31268 18.8041 8.67952 18.4127 8.28984L17.7041 7.58426C17.3127 7.19458 16.6796 7.19594 16.2899 7.58731L10.5183 13.3838L7.19723 10.1089C6.80398 9.72117 6.17083 9.7256 5.78305 10.1189L5.08092 10.8309C4.69314 11.2241 4.69758 11.8573 5.09083 12.2451L9.82912 16.9174C10.221 17.3039 10.8515 17.301 11.2399 16.911L18.4158 9.70405Z"
+                  fill="#ffffff"
+                ></path>
               </g>
             </svg>
           }
