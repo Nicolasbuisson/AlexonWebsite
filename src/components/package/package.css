@@ -33,14 +33,17 @@
 
 .package-title {
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .package-price {
     color: var(--clr-grey);
+    font-weight: 600;
 }
 
 .package-price span {
     font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .package-divider {
@@ -54,6 +57,7 @@
 .package-description {
     color: var(--clr-light-grey);
     text-wrap: pretty;
+    font-weight: 500;
 }
 
 .package-button {
@@ -62,13 +66,15 @@
 
 .package-inclusion-title {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .package-inclusion-list {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
 .package-inclusion-list-item-wrapper {
@@ -99,4 +105,10 @@
     @starting-style {
         opacity: 0;
     }
+}
+
+.package-inclusion-list-item-asterik {
+    line-height: 1;
+    color: var(--clr-light-grey);
+    font-size: var(--fs-h4);
 }

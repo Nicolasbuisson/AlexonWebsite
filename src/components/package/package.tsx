@@ -41,7 +41,14 @@ export const Package = (props: IPackage) => {
                 key={item.item}
                 className="package-inclusion-list-item-wrapper"
               >
-                <p className="package-inclusion-list-item">{item.item}</p>
+                <p className="package-inclusion-list-item">
+                  {item.item}
+                  {item.hoverText && (
+                    <span className="package-inclusion-list-item-asterik">
+                      *
+                    </span>
+                  )}
+                </p>
                 {item.hoverText && (
                   <p className="package-inclusion-list-item-details">
                     {item.hoverText}

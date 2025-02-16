@@ -56,29 +56,29 @@ function ShortForm() {
                 { item: "10 reels /month" },
                 { item: "2 rounds of revisions/reel included" },
                 {
-                  item: "Stress-free & Optimized Content Distribution*",
+                  item: "Stress-free & Optimized Content Distribution",
                   hoverText:
                     "Our team of digital specialists will post all of the content on your behalf, on all your platforms to ensure efficient content distribution and save you time",
                 },
                 {
-                  item: "Quarterly Branding & Content Strategy Meeting*",
+                  item: "Quarterly Branding & Content Strategy Meeting",
                   hoverText:
                     "Align and elevate your brand with our Quarterly Strategy Meetings—deep dives into performance, trends, and next steps for content that drives results.",
                 },
                 {
-                  item: "Monthly KPI Dashboard*",
+                  item: "Monthly KPI Dashboard",
                   hoverText:
-                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves.",
+                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves",
                 },
                 {
-                  item: "Highly optimized for every platform*",
+                  item: "Highly optimized for every platform",
                   hoverText:
                     "We tailor your content & optimize formats for every social platform to maximize reach (Instagram, Tik Tok, Youtube Shorts, and Facebook)",
                 },
                 {
-                  item: "Your dedicated content team*",
+                  item: "Your dedicated content team",
                   hoverText:
-                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time. ",
+                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time",
                 },
                 { item: "Direct line of contact w/ Project Manager" },
               ]}
@@ -93,29 +93,29 @@ function ShortForm() {
                 { item: "20 reels /month" },
                 { item: "2 rounds of revisions/reel included" },
                 {
-                  item: "Stress-free & Optimized Content Distribution*",
+                  item: "Stress-free & Optimized Content Distribution",
                   hoverText:
                     "Our team of digital specialists will post all of the content on your behalf, on all your platforms to ensure efficient content distribution and save you time",
                 },
                 {
-                  item: "Quarterly Branding & Content Strategy Meeting*",
+                  item: "Quarterly Branding & Content Strategy Meeting",
                   hoverText:
-                    "Align and elevate your brand with our Quarterly Strategy Meetings—deep dives into performance, trends, and next steps for content that drives results.",
+                    "Align and elevate your brand with our Quarterly Strategy Meetings—deep dives into performance, trends, and next steps for content that drives results",
                 },
                 {
-                  item: "Monthly KPI Dashboard*",
+                  item: "Monthly KPI Dashboard",
                   hoverText:
-                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves.",
+                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves",
                 },
                 {
-                  item: "Highly optimized for every platform*",
+                  item: "Highly optimized for every platform",
                   hoverText:
                     "We tailor your content & optimize formats for every social platform to maximize reach (Instagram, Tik Tok, Youtube Shorts, and Facebook)",
                 },
                 {
-                  item: "Your dedicated content team*",
+                  item: "Your dedicated content team",
                   hoverText:
-                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time. ",
+                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time",
                 },
                 { item: "Direct line of contact w/ Project Manager" },
               ]}
@@ -130,29 +130,29 @@ function ShortForm() {
                 { item: "30 reels /month" },
                 { item: "3 rounds of revisions/reel included" },
                 {
-                  item: "Stress-free & Optimized Content Distribution*",
+                  item: "Stress-free & Optimized Content Distribution",
                   hoverText:
                     "Our team of digital specialists will post all of the content on your behalf, on all your platforms to ensure efficient content distribution and save you time",
                 },
                 {
-                  item: "Quarterly Branding & Content Strategy Meeting*",
+                  item: "Quarterly Branding & Content Strategy Meeting",
                   hoverText:
-                    "Align and elevate your brand with our Quarterly Strategy Meetings—deep dives into performance, trends, and next steps for content that drives results.",
+                    "Align and elevate your brand with our Quarterly Strategy Meetings—deep dives into performance, trends, and next steps for content that drives results",
                 },
                 {
-                  item: "Monthly KPI Dashboard*",
+                  item: "Monthly KPI Dashboard",
                   hoverText:
-                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves.",
+                    "Track your success with our Monthly KPI Dashboards—clear, data-driven insights to measure performance and optimize your content strategy as your brand evolves",
                 },
                 {
-                  item: "Highly optimized for every platform*",
+                  item: "Highly optimized for every platform",
                   hoverText:
                     "We tailor your content & optimize formats for every social platform to maximize reach (Instagram, Tik Tok, Youtube Shorts, and Facebook)",
                 },
                 {
-                  item: "Your dedicated content team*",
+                  item: "Your dedicated content team",
                   hoverText:
-                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time. ",
+                    "Get a dedicated team of expert creatives, one filmmaker, one editor and one project manager - crafting content tailored to your brand’s voice, vision, and goals—consistency and quality, every time",
                 },
                 { item: "Direct line of contact w/ Project Manager" },
                 { item: "15 Professional photos/month" },
