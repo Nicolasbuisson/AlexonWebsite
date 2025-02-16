@@ -219,7 +219,53 @@ function ShortForm() {
           </HorizontalScroller>
         </section>
       </div>
-      <section className="shortform-work">our work</section>
+      <section className="shortform-work">
+        <h3 className="shortform-work-title">Our Work</h3>
+        <div className="shortform-work-grid">
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Belcore.mov"}
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Claptone.mov"}
+            controls
+          />
+          <video
+            src={
+              nextConfig.basePath +
+              "/assets/videos/shortform/CoinbasePenrosePartners.mp4"
+            }
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Corona.mov"}
+            controls
+          />
+          <video
+            src={
+              nextConfig.basePath +
+              "/assets/videos/shortform/ElewanaCollection.mov"
+            }
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Prepinson.mov"}
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
+            controls
+          />
+          <video
+            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
+            controls
+          />
+        </div>
+      </section>
       <section className="shortform-results">
         <div className="shortform-results-text">
           <h3>Results you can see</h3>
