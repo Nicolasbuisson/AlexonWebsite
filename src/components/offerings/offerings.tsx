@@ -13,8 +13,8 @@ export const Offerings = () => {
           description="Your very own Project Manager, Shooter, Video Editor & Social Media Manager at your service. Leave your branding in the hands of a team of experts with 5+ years of experience creating content for the world’s leading brands"
           icon={
             <svg
-              height="100px"
-              width="100px"
+              height="80px"
+              width="80px"
               version="1.1"
               id="_x32_"
               xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +46,8 @@ export const Offerings = () => {
           icon={
             <svg
               fill="#ffffff"
-              width="100px"
-              height="100px"
+              width="80px"
+              height="80px"
               viewBox="0 0 24.00 24.00"
               xmlns="http://www.w3.org/2000/svg"
               stroke="#ffffff"
@@ -69,8 +69,8 @@ export const Offerings = () => {
           description="The best part? We take all the risk. If we don't 4x your reach, we'll give you your money back - no questions asked"
           icon={
             <svg
-              width="100px"
-              height="100px"
+              width="80px"
+              height="80px"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

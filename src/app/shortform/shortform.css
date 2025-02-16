@@ -153,6 +153,8 @@
 .shortform-results-text p {
     margin-block: 1rem;
     font-size: var(--fs-h4);
+    font-weight: 500;
+    line-height: 1.1;
 }
 
 .stats-container {

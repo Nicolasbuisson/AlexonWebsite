@@ -16,8 +16,12 @@
 }
 
 .service-icon {
-    height: 100px;
+    height: 80px;
     align-self: end;
+}
+
+.service-title {
+    font-weight: 600;
 }
 
 .service-description {
