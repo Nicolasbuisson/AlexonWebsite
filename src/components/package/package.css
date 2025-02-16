@@ -70,3 +70,33 @@
     flex-direction: column;
     gap: 0.25rem;
 }
+
+.package-inclusion-list-item-wrapper {
+    position: relative;
+}
+
+.package-inclusion-list-item-details {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 12px;
+
+    position: absolute;
+    bottom: 1.5rem;
+    z-index: 3;
+
+    display: none;
+    opacity: 0;
+    transition: display 400ms, opacity 400ms;
+    transition-behavior: allow-discrete;
+}
+
+.package-inclusion-list-item:hover+.package-inclusion-list-item-details {
+    display: inline-block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}

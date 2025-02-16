@@ -36,7 +36,19 @@ export const Package = (props: IPackage) => {
         <p className="package-inclusion-title">Includes</p>
         <div className="package-inclusion-list">
           {itemList.map((item) => {
-            return <p key={item.item}>{item.item}</p>;
+            return (
+              <div
+                key={item.item}
+                className="package-inclusion-list-item-wrapper"
+              >
+                <p className="package-inclusion-list-item">{item.item}</p>
+                {item.hoverText && (
+                  <p className="package-inclusion-list-item-details">
+                    {item.hoverText}
+                  </p>
+                )}
+              </div>
+            );
           })}
         </div>
       </div>

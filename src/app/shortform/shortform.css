@@ -83,7 +83,6 @@
     .packages-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 0.45fr 0.55fr;
         align-items: stretch;
         row-gap: 0.5rem;
     }
