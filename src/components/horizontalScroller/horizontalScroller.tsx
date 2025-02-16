@@ -18,6 +18,9 @@ export const HorizontalScroller = (props: IProps) => {
         const scrollerInnerContent = Array.from(scrollerInner!.children);
         scrollerInnerContent.forEach((item) => {
           const duplicatedItem = item.cloneNode(true);
+          item.classList.forEach((c) => {
+            (duplicatedItem as Element).classList.add(c);
+          });
           (duplicatedItem as Element).setAttribute("aria-hidden", "true");
           scrollerInner?.appendChild(duplicatedItem);
         });

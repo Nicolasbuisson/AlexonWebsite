@@ -1,6 +1,6 @@
 .scroller {
     margin: auto;
-    --spacing: 2rem;
+    --spacing: 4rem;
 }
 
 .scroller[data-animated=true] {
@@ -27,4 +27,3 @@
         transform: translate(calc(-50% - (var(--spacing) / 2)))
     }
 }
-
