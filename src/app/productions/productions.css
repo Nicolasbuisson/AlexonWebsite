@@ -31,8 +31,10 @@
     transform: translate(-50%, -50%);
 }
 
-.productions-title>h2 {
+.productions-title>text {
+    display: inline-block;
     color: var(--clr-light-grey);
+    font-size: inherit;
     font-family: inherit;
     font-weight: inherit;
 }
