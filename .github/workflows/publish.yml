@@ -27,9 +27,8 @@ jobs:
 
       - name: Build with Next.js 🏗️
         run: npx next build
-        # env:
-        #   NEXT_PUBLIC_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
-        #   NEXT_PUBLIC_PLACE_ID: ${{vars.NEXT_PUBLIC_PLACE_ID}}
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{vars.NEXT_PUBLIC_BASE_PATH}}
 
       - name: print directory
         run: ls -a
