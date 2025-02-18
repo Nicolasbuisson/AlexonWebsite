@@ -5,6 +5,7 @@ import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import nextConfig from "../../../next.config";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
+import Image from "next/image";
 
 function AboutPage() {
   useScrollPercentage(); // initiate css variable --scroll
@@ -42,12 +43,37 @@ function AboutPage() {
           </p>
         </div>
         <div className="about-story-image-grid">
-          <img src={nextConfig.basePath + "/assets/images/road.jpg"} />
-          <img src={nextConfig.basePath + "/assets/images/plain.jpg"} />
-          <img src={nextConfig.basePath + "/assets/images/rice-hills.jpg"} />
-          <img src={nextConfig.basePath + "/assets/images/road.jpg"} />
+          <Image
+            src={nextConfig.basePath + "/assets/images/AlexBali.jpg"}
+            width={2832}
+            height={4240}
+            alt={"Alexon in Bali"}
+            layout="responsive"
+          />
+          <Image
+            src={nextConfig.basePath + "/assets/images/AlexParis.jpg"}
+            width={3072}
+            height={4608}
+            alt={"Alexon in Paris"}
+            layout="responsive"
+          />
+          <Image
+            src={nextConfig.basePath + "/assets/images/AlexTanzania.png"}
+            width={3533}
+            height={5300}
+            alt={"Alexon in Tanzania working for Patsch"}
+            layout="responsive"
+          />
+          <Image
+            src={nextConfig.basePath + "/assets/images/Skydive.png"}
+            width={1915}
+            height={2872}
+            alt={"Alexon skydiving"}
+            layout="responsive"
+          />
         </div>
       </section>
+      <h3>Follow the Journey</h3>
       <InstaSection />
     </div>
   );

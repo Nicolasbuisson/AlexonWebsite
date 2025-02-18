@@ -1,9 +1,9 @@
 .about-container {
-    --section-padding: 3rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
-.about-section-hero-container { 
-    padding-top: 5rem;
+.about-section-hero-container {
     background-color: var(--clr-dark);
     color: var(--clr-light);
 }
@@ -20,7 +20,7 @@
     justify-items: center;
 }
 
-.about-hero > * {
+.about-hero>* {
     grid-row: 1;
     grid-column: 1;
 }
@@ -28,7 +28,7 @@
 .about-hero-header {
     margin-top: 5rem;
     text-wrap: balance;
-    font-weight: 700; 
+    font-weight: 700;
     z-index: 2;
     transform: translateY(calc(0.5vh * var(--scroll)));
 }
@@ -58,17 +58,16 @@
 .about-services-section {
     padding-top: 10vh;
     padding-top: 10svh;
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
     width: 100%;
     margin: auto;
+    padding-bottom: var(--section-padding-block);
 }
 
 .about-story-section {
-    --about-story-columns: 1fr 2fr;
+    --about-story-columns: 1fr 1fr;
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    padding: var(--section-padding);
+    padding: var(--section-padding-block);
     text-align: center;
     display: grid;
     grid-template-columns: var(--about-story-columns);
@@ -93,26 +92,34 @@
 
 .about-story-image-grid img {
     position: relative;
+    max-height: 360px;
     object-fit: cover;
-    width: 100%;
-    border: 2px solid var(--clr-dark);
+    border: 2px solid var(--clr-light);
 }
 
-.about-story-image-grid img:nth-child(1)  {
+.about-story-image-grid img:nth-child(1) {
     align-self: end;
+    justify-self: end;
 }
 
 .about-story-image-grid img:nth-child(2) {
+    max-height: 400px;
     align-self: end;
-    justify-self: end;
-    width: 110%;
+    justify-self: start;
+    margin-left: -2rem;
 }
 
 .about-story-image-grid img:nth-child(3) {
-    align-self: baseline;
-    justify-self: baseline;
-    width: 110%;
+    align-self: start;
+    justify-self: end;
+    right: -2rem;
     z-index: 1;
+}
+
+.about-story-image-grid img:nth-child(4) {
+    max-height: 400px;
+    align-self: start;
+    justify-self: start;
 }
 
 @media (width < 880px) {
