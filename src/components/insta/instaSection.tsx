@@ -1,9 +1,17 @@
 import { Insta } from "./insta";
 import "./instaSection.css";
 
-export const InstaSection = () => {
+interface IInstaSection {
+  additionalTitle?: string;
+}
+
+export const InstaSection = (props: IInstaSection) => {
+  const { additionalTitle = "" } = props;
   return (
     <section className="insta-section">
+      {additionalTitle && (
+        <h3 className="insta-section-additional-title">{additionalTitle}</h3>
+      )}
       <div>
         <a
           href="https://www.instagram.com/alexoonnn/"

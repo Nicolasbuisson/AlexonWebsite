@@ -1,7 +1,8 @@
 .insta-section {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    padding: var(--section-padding);
+    padding-block: var(--section-padding-block);
+    padding-inline: var(--section-padding-inline);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +13,11 @@
     }
 }
 
+.insta-section-additional-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
 .insta-title {
     font-family: var(--ff-secondary);
     text-transform: uppercase;
@@ -19,7 +25,8 @@
     margin-bottom: 0.25rem;
 }
 
-.insta-title::after, .insta-title::before {
+.insta-title::after,
+.insta-title::before {
     content: '';
     display: block;
     height: 1px;

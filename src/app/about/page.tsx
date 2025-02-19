@@ -121,8 +121,7 @@ function AboutPage() {
           </div>
         </div>
       </section>
-      <h3>Follow the Journey</h3>
-      <InstaSection />
+      <InstaSection additionalTitle="Follow the Journey" />
     </div>
   );
 }
