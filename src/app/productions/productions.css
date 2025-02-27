@@ -31,7 +31,7 @@
     transform: translate(-50%, -50%);
 }
 
-.productions-title>text {
+.productions-title>p {
     display: inline-block;
     color: var(--clr-light-grey);
     font-size: inherit;
@@ -54,24 +54,12 @@
     background-color: var(--clr-light);
     color: var(--clr-dark);
     padding-block: 4rem;
-    padding-inline: 2rem;
-}
-
-@media (width < 440px) {
-    .productions-clients-section {
-        padding-inline: 0;
-    }
-}
-
-@media (width > 880px) {
-    .productions-clients-section {
-        padding-inline: 10%;
-    }
+    padding-inline: 10%;
 }
 
 .productions-clients-title {
+    text-transform: uppercase;
     text-wrap: balance;
     text-align: center;
-    margin-inline: 2rem;
     margin-block: 1rem;
 }

@@ -76,37 +76,27 @@ function Home() {
           logos={[
             {
               src: nextConfig.basePath + "/assets/clientLogos/CoronaBlack.png",
-              width: 2259,
-              height: 1464,
               alt: "Corona logo",
             },
             {
               src:
                 nextConfig.basePath +
                 "/assets/clientLogos/FourSeasonsBlack.png",
-              width: 713,
-              height: 415,
               alt: "Four Seasons logo",
             },
             {
               src: nextConfig.basePath + "/assets/clientLogos/ELLEBlack.png",
-              width: 2960,
-              height: 1188,
               alt: "ELLE logo",
             },
             {
               src:
                 nextConfig.basePath + "/assets/clientLogos/JohnSummitBlack.png",
-              width: 1648,
-              height: 212,
               alt: "John Summit logo",
             },
             {
               src:
                 nextConfig.basePath +
                 "/assets/clientLogos/McGillUniversityBlack.png",
-              width: 1590,
-              height: 601,
               alt: "McGill University logo",
             },
           ]}

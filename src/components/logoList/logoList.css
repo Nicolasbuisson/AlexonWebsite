@@ -1,5 +1,6 @@
 .clients-logos-container {
     --logo-gap: 3rem;
+    --logo-size: 100px;
 
     display: flex;
     flex-direction: row;
@@ -8,23 +9,21 @@
     justify-content: center;
     gap: var(--logo-gap);
     row-gap: 0rem;
+}
+
+.client-logo-wrapper {
+    position: relative;
+    height: var(--logo-size, 100px);
+    aspect-ratio: 1;
 
     img {
-        margin-block: calc(var(--logo-gap) / 2);
-        margin-inline: 2rem;
-        height: 60px;
-        flex-basis: content;
+        object-fit: contain;
     }
 }
 
 @media (width < 500px) {
     .clients-logos-container {
         --logo-gap: 2rem;
-        flex-direction: column;
-        width: 100%;
-
-        img {
-            max-width: 40%;
-        }
+        --logo-size: 80px;
     }
 }

@@ -3,8 +3,6 @@ import Image from "next/image";
 
 interface ILogo {
   src: string;
-  width: number;
-  height: number;
   alt: string;
 }
 
@@ -17,13 +15,9 @@ export const LogoList = (props: IProps) => {
     <div className="clients-logos-container">
       {logos.map((logo, i) => {
         return (
-          <Image
-            key={logo.alt + i}
-            src={logo.src}
-            width={logo.width}
-            height={logo.height}
-            alt={logo.alt}
-          />
+          <div className="client-logo-wrapper" key={logo.alt + i}>
+            <Image src={logo.src} alt={logo.alt} fill />
+          </div>
         );
       })}
     </div>
