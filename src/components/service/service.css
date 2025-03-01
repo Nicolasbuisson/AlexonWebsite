@@ -27,27 +27,3 @@
 .service-description {
     max-width: 80%;
 }
-
-.service-learn-more-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-block: 1rem;
-}
-
-.service-learn-more-text {
-    margin-inline: 0.25rem;
-}
-
-.service-learn-more-icon {
-    height: 16px;
-    width: 16px;
-    fill: var(--clr-light);
-    stroke: var(--clr-light);
-    stroke-width: 2;
-    transition: all ease-in-out 200ms;
-}
-
-.service-learn-more-container:hover>svg {
-    transform: translateX(40%);
-}
