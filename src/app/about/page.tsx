@@ -34,18 +34,19 @@ function AboutPage() {
         <h3>Founder's Story</h3>
         <div className="about-story-section-grid">
           <div className="about-story-text-grid">
-            <Image
-              src={nextConfig.basePath + "/assets/logos/Signature-white.png"}
-              width={2618}
-              height={1351}
-              alt={"Alexon signature logo"}
-              layout="responsive"
-              className="about-story-logo"
-            />
             <p>
-              Alexon is a french filmmaker, entrepreneur and extreme sports
-              athlete born in France and currently based out of Montréal,
-              Canada.
+              <span className="about-story-logo-wrapper">
+                <Image
+                  src={
+                    nextConfig.basePath + "/assets/logos/Signature-white.png"
+                  }
+                  alt={"Alexon signature logo"}
+                  className="about-story-logo"
+                  fill
+                />
+              </span>
+              is a french filmmaker, entrepreneur and extreme sports athlete
+              born in France and currently based out of Montréal, Canada.
             </p>
             <p>
               From a very young age, Alexon was drawn to video editing and
