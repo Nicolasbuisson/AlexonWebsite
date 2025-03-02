@@ -27,7 +27,6 @@ export const Statistic = (props: IProps) => {
       <p className="stat-title">{title}</p>
       <div className="stat-number-description">
         <p
-          data-stat={statNumber}
           className={`stat-number ${
             statStringBeforeNumber ? "before-number" : "after-number"
           } ${inView ? `stat-initializer-${statNumber}` : ""}`}
