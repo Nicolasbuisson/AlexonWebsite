@@ -152,7 +152,7 @@
 .shortform-results-section {
     padding-block: calc(var(--section-padding-block) + 1rem);
     padding-inline: var(--section-padding-inline);
-    background: var(--card-background);
+    background: linear-gradient(0deg, var(--clr-dark) 8%, var(--clr-card-border) 60%);
 }
 
 .shortform-results-text {
