@@ -16,7 +16,7 @@ interface IPackage {
 export const Package = (props: IPackage) => {
   const { title, price, description, itemList } = props;
   return (
-    <div className="package-container">
+    <div className="package-container package-card-border-effect ">
       <div>
         <h4 className="package-title">{title}</h4>
         <h4 className="package-price">

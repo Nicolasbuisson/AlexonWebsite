@@ -119,3 +119,55 @@
         opacity: 0;
     }
 }
+
+/* Package hover border effect */
+@property --rotate-angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+.package-card-border-effect {
+    --rotate-angle: 0deg;
+    --c1: var(--clr-light);
+    --c2: var(--clr-dark);
+
+    position: relative;
+    border-radius: 24px;
+}
+
+.package-card-border-effect:hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 4px;
+    background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
+    animation: borderRotate 4s linear forwards infinite;
+    /* mask needed because border-image does not allow border-radius
+  Solution: create a 2 masks:
+  - one will cover the whole element
+  - the other will cover only the content-box (excludes the border)
+  use mask-composite: exclude, to exclude the content box from the whole element mask
+  and we are left only with the border.
+  Use a pseudo-element to not mask the actual content of our item
+  */
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+}
+
+@keyframes borderRotate {
+    0% {
+        --rotate-angle: 0deg;
+    }
+
+    50% {
+        --rotate-angle: 180deg;
+    }
+
+    100% {
+        --rotate-angle: 360deg;
+    }
+}
