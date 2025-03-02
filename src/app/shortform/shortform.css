@@ -99,9 +99,20 @@
     }
 }
 
-.shortform-horizontal-scroller-logo {
+.shortform-horizontal-scroller-logo-wrapper {
+    position: relative;
     height: 80px;
-    width: auto;
+    aspect-ratio: 2;
+}
+
+@media (width < 880px) {
+    .shortform-horizontal-scroller-logo-wrapper {
+        height: 60px;
+    }
+}
+
+.shortform-horizontal-scroller-logo {
+    object-fit: contain;
 }
 
 .shortform-work-section {

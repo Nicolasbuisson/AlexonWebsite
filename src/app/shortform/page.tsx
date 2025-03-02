@@ -160,62 +160,70 @@ function ShortForm() {
             />
           </div>
           <HorizontalScroller>
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/Corona.png`}
-              width={2400}
-              height={2400}
-              alt="Corona logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/FourSeasons.png`}
-              width={1000}
-              height={563}
-              alt="Four Seasons logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/McGillUniversity.png`}
-              width={1759}
-              height={756}
-              alt="McGill University logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/Coinbase.png`}
-              width={1556}
-              height={278}
-              alt="Coinbase logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/AirCanada.png`}
-              width={1280}
-              height={166}
-              alt="AirCanada logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/Claptone.png`}
-              width={800}
-              height={300}
-              alt="Claptone logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/ParcOmega.png`}
-              width={1080}
-              height={540}
-              alt="Parc Omega logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-            <Image
-              src={`${nextConfig.basePath}/assets/clientLogos/Monolink.png`}
-              width={1200}
-              height={307}
-              alt="Monolink logo"
-              className="shortform-horizontal-scroller-logo"
-            />
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/Corona.png`}
+                fill
+                alt="Corona logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/FourSeasons.png`}
+                fill
+                alt="Four Seasons logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/McGillUniversity.png`}
+                fill
+                alt="McGill University logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/Coinbase.png`}
+                fill
+                alt="Coinbase logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/AirCanada.png`}
+                fill
+                alt="AirCanada logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/Claptone.png`}
+                fill
+                alt="Claptone logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/ParcOmega.png`}
+                fill
+                alt="Parc Omega logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
+            <div className="shortform-horizontal-scroller-logo-wrapper">
+              <Image
+                src={`${nextConfig.basePath}/assets/clientLogos/Monolink.png`}
+                fill
+                alt="Monolink logo"
+                className="shortform-horizontal-scroller-logo"
+              />
+            </div>
           </HorizontalScroller>
         </section>
       </div>
