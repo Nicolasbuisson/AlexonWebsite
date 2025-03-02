@@ -196,8 +196,10 @@
 
 .stats-container {
     padding-block: 1rem;
+    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     gap: 2rem;
 }
 
@@ -207,7 +209,11 @@
     }
 }
 
-@media (width < 620px) {
+@media (width < 720px) {
+    .shortform-results-section {
+        padding-inline: calc(var(--section-padding-inline) - 2rem);
+    }
+
     .stats-container {
         grid-template-columns: 1fr;
     }
