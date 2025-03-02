@@ -37,11 +37,11 @@ function ShortForm() {
           </div>
         </div>
       </section>
-      <section className="shortform-description">
+      <section className="shortform-offerings-section">
         <Offerings />
       </section>
       <div className="shortform-packages-white-background">
-        <section className="shortform-packages" id="shortform-packages">
+        <section className="shortform-packages-section" id="shortform-packages">
           <h3 className="shortform-packages-title">
             Packages optimized for success
           </h3>
@@ -219,8 +219,8 @@ function ShortForm() {
           </HorizontalScroller>
         </section>
       </div>
-      <section className="shortform-work">
-        <h3 className="shortform-work-title">Our Work</h3>
+      <section className="shortform-work-section">
+        <h2 className="shortform-work-title">Our Work</h2>
         <div className="shortform-work-grid">
           <video
             src={nextConfig.basePath + "/assets/videos/shortform/Belcore.mov"}
@@ -266,15 +266,17 @@ function ShortForm() {
           />
         </div>
       </section>
-      <section className="shortform-results">
+      <section className="shortform-results-section">
         <div className="shortform-results-text">
           <h3>Results you can see</h3>
           <h3 className="grey">And measure</h3>
           <p className="grey">
             Capture attention, tell your story, and drive results with our
-            short-form video packages. Designed for virality and engagement, our
-            videos make your brand stand out in the scroll and ultimately boost
-            your revenues.
+            short-form video packages.
+          </p>
+          <p className="grey">
+            Designed for virality and engagement, our videos make your brand
+            stand out in the scroll and ultimately boost your revenues.
           </p>
         </div>
         <div className="stats-container">
@@ -309,7 +311,6 @@ function ShortForm() {
             title="Conversion Rate"
             statNumber={29}
             statString="%"
-            statStringBeforeNumber
             description=" Increase after investing in your brand presence"
           />
           <Statistic
