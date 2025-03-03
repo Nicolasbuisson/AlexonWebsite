@@ -4,6 +4,7 @@ import { WorkItemProps } from "../../../types/work";
 import "./productionsItem.css";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
+import { ProductionItemDetails } from "../../../components/productionItemDetails/productionItemDetails";
 
 interface productionsStaticParams {
   productionsRoute: string;
@@ -58,7 +59,7 @@ export default async function productionsItem({
         <div
           className="productionsItem-title-background"
           style={{
-            backgroundImage: `url(${nextConfig.basePath}/assets/images/${gridImage})`,
+            backgroundImage: `url(${nextConfig.basePath}/assets/${gridImage})`,
           }}
         >
           <h2>{title}</h2>
@@ -73,26 +74,16 @@ export default async function productionsItem({
           ></iframe>
           <div className="video-details">
             <h4>
-              Client: <h4>{client}</h4>
+              Client: <span>{client}</span>
             </h4>
             <p>{description}</p>
             <h4>Services:</h4>
             <p>{services}</p>
           </div>
         </div>
-        <div className="stills-grid">
-          {stills.map((stillImg) => {
-            return (
-              <img
-                key={"stills-" + stillImg.imageUrl}
-                src={
-                  nextConfig.basePath + `/assets/images/${stillImg.imageUrl}`
-                }
-                alt="project stills picture"
-              ></img>
-            );
-          })}
-        </div>
+      </section>
+      <section className="productions-item-details">
+        <ProductionItemDetails stills={stills} />
       </section>
     </div>
   );
