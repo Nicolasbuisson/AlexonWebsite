@@ -42,24 +42,32 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
           );
         })}
       </div>
-      {tab === "Frame Gallery" && <FrameGallery stills={stills} />}
+      {tab === "Frame Gallery" && (
+        <div className="fade-in">
+          <FrameGallery stills={stills} />
+        </div>
+      )}
       {tab === "Behind the Scenes" && (
-        <BehindTheScenesGallery btsImages={stills} />
+        <div className="fade-in">
+          <BehindTheScenesGallery btsImages={stills} />
+        </div>
       )}
       {tab === "Credits" && (
-        <Credits
-          credits={[
-            { title: "Director", name: "Big Dick Joe" },
-            { title: "Creative Director", name: "Small Titty Nancy" },
-            { title: "Assistant Creative Director", name: "Lil' Timmy" },
-            { title: "Camera Car", name: "Not Tesla lmao" },
-            { title: "Voice Talent", name: "Homegirl Adele" },
-            { title: "Executive Director", name: "Caesar" },
-            { title: "Drone Engineer", name: "Murab Mustafa" },
-            { title: "BTS footage", name: "My Shadow" },
-            { title: "Sound Design", name: "Darude Sandstorm" },
-          ]}
-        />
+        <div className="fade-in">
+          <Credits
+            credits={[
+              { title: "Director", name: "Big Dick Joe" },
+              { title: "Creative Director", name: "Small Titty Nancy" },
+              { title: "Assistant Creative Director", name: "Lil' Timmy" },
+              { title: "Camera Car", name: "Not Tesla lmao" },
+              { title: "Voice Talent", name: "Homegirl Adele" },
+              { title: "Executive Director", name: "Caesar" },
+              { title: "Drone Engineer", name: "Murab Mustafa" },
+              { title: "BTS footage", name: "My Shadow" },
+              { title: "Sound Design", name: "Darude Sandstorm" },
+            ]}
+          />
+        </div>
       )}
     </div>
   );
