@@ -12,11 +12,20 @@
     gap: 3rem;
 }
 
+@media (width < 660px) {
+    .production-item-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
 .production-item-tabs>* {
     color: var(--clr-grey);
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    width: fit-content;
 }
 
 .selected-production-item-tab {
