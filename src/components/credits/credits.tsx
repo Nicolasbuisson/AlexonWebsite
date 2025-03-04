@@ -15,7 +15,7 @@ export const Credits = (props: CreditProps) => {
     <ul className="credits-list">
       {credits.map((credit) => {
         return (
-          <li>
+          <li key={"credit-" + credit.title}>
             <span>{credit.title}</span>
             <span>{credit.name}</span>
           </li>
