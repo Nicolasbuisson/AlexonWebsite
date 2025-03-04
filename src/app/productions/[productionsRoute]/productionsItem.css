@@ -77,3 +77,8 @@
         line-height: 1.3;
     }
 }
+
+.productions-item-details-section {
+    padding-inline: 10%;
+    padding-block: 2rem;
+}

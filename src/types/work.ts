@@ -1,6 +1,6 @@
 export interface StillImage {
     imageUrl: string;
-  }
+}
   
 export interface WorkItemProps {
     route: string;

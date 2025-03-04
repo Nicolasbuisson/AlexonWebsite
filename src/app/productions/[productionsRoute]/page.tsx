@@ -82,7 +82,7 @@ export default async function productionsItem({
           </div>
         </div>
       </section>
-      <section className="productions-item-details">
+      <section className="productions-item-details-section">
         <ProductionItemDetails stills={stills} />
       </section>
     </div>

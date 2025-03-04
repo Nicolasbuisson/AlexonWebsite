@@ -1,0 +1,26 @@
+.credits-list {
+    margin-inline: auto;
+    width: 50%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.credits-list li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.credits-list li span:first-child {
+    font-weight: 500;
+}
+
+@media (width > 880px) {
+    .credits-list {
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+    }
+}

@@ -1,4 +1,4 @@
-.stills-grid {
+.bts-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -6,24 +6,24 @@
 }
 
 @media (width > 880px) {
-    .stills-grid {
+    .bts-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (width > 1280px) {
-    .stills-grid {
+    .bts-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.stills-grid-item-wrapper {
+.bts-grid-item-wrapper {
     position: relative;
     height: 240px;
     width: 100%;
     filter: drop-shadow(0px 0px 0.25rem rgba(255, 255, 255, 0.7));
 }
 
-.stills-grid-item {
+.bts-grid-item {
     object-fit: contain;
 }
