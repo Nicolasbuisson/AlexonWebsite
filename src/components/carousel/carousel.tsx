@@ -6,10 +6,18 @@ interface IProps {
   pageSize: number;
   totalPages: number;
   children: ReactNode;
+  itemWidthMin?: number;
+  itemWidthMax?: number;
 }
 
 export const Carousel = (props: IProps) => {
-  const { pageSize, totalPages, children } = props;
+  const {
+    pageSize,
+    totalPages,
+    children,
+    itemWidthMin = 100,
+    itemWidthMax = 312,
+  } = props;
 
   const [index, setIndex] = useState<number>(0);
 
@@ -27,6 +35,21 @@ export const Carousel = (props: IProps) => {
       document.querySelector(".carousel-container") as HTMLElement
     )?.style.setProperty("--carousel-items-per-page", pageSize.toString());
   }, [pageSize]);
+
+  useLayoutEffect(() => {
+    // I think this causes an issue on the initial render...
+    const carouselContainer = document.querySelector(
+      ".carousel-container"
+    ) as HTMLElement;
+    carouselContainer.style.setProperty(
+      "--carousel-item-width-min",
+      itemWidthMin.toString() + "px"
+    );
+    carouselContainer.style.setProperty(
+      "--carousel-item-width-max",
+      itemWidthMax.toString() + "px"
+    );
+  }, []);
 
   return (
     <div className="carousel-container" id="carousel-container">

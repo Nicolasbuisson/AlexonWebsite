@@ -5,6 +5,7 @@ import "./productionsItem.css";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
 import { ProductionItemDetails } from "../../../components/productionItemDetails/productionItemDetails";
+import { ProductionsCarousel } from "../../../components/productionsCarousel/productionsCarousel";
 
 interface productionsStaticParams {
   productionsRoute: string;
@@ -84,6 +85,9 @@ export default async function productionsItem({
       </section>
       <section className="productions-item-details-section">
         <ProductionItemDetails stills={stills} />
+      </section>
+      <section className="productions-item-carousel-section">
+        <ProductionsCarousel productionToExclude={productionItem.title} />
       </section>
     </div>
   );

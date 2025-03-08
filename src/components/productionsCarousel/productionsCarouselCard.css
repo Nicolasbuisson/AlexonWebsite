@@ -1,0 +1,25 @@
+.production-carousel-card {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 256px;
+    aspect-ratio: 14/9;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.production-carousel-card>* {
+    grid-column: 1/-1;
+}
+
+.production-carousel-card-img {
+    z-index: 1;
+}
+
+.production-carousel-card-title {
+    z-index: 2;
+    color: var(--clr-light);
+    font-weight: 500;
+    align-self: end;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}

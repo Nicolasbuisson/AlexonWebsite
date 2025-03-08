@@ -1,6 +1,8 @@
 .carousel-container {
     --carousel-offset: 0;
-    --carousel-item-width: clamp(100px, 14vw + 2rem , 312px);
+    /* --carousel-item-width-min: 100px;
+    --carousel-item-width-max: 312px; */
+    --carousel-item-width: clamp(var(--carousel-item-width-min, 100px), 14vw + 2rem, var(--carousel-item-width-max, 312px));
     --carousel-items-per-page: 5;
     --carousel-svg-height: 24px;
 
@@ -16,7 +18,7 @@
     transform: translate(calc(var(--carousel-offset) * -100%), 0);
 }
 
-.carousel-container > button {
+.carousel-container>button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,7 +39,8 @@
     padding: 0px 0px 0px 4px;
 }
 
-.carousel-previous-button > svg, .carousel-next-button > svg {
+.carousel-previous-button>svg,
+.carousel-next-button>svg {
     height: var(--carousel-svg-height);
     padding: 4px;
 }
