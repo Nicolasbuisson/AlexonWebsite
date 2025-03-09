@@ -8,10 +8,12 @@
     a {
         text-decoration: none;
     }
+
     h4 {
         width: 100%;
         text-align: center;
         opacity: 0;
+        z-index: 2;
         transition: opacity var(--projects-animation-duration);
         color: var(--clr-light);
         margin-bottom: 1rem;
@@ -19,14 +21,21 @@
     }
 }
 
-.project-thumbnail {
+.projects-grid-card {
+    border: 1px solid transparent;
+    transition: filter var(--projects-animation-duration);
+    position: relative;
     max-width: 100%;
     aspect-ratio: 16 / 9;
+}
+
+.project-thumbnail {
     object-fit: cover;
     transition: filter var(--projects-animation-duration);
 }
 
 .project-logo {
+    object-fit: contain;
     place-self: center;
     max-width: 40%;
     max-height: 40%;
@@ -34,25 +43,21 @@
 }
 
 /* hover effect */
-.projects-grid:hover > .card {
+.projects-grid:hover>.projects-grid-card {
     filter: brightness(.5) saturate(.75)
 }
 
-.projects-grid > .card:hover {
+.projects-grid>.projects-grid-card:hover {
     filter: brightness(1) saturate(1.5)
 }
 
-.projects-grid > .card:hover .project-logo  {
+.projects-grid>.projects-grid-card:hover .project-logo {
     transform: translateY(-1rem);
 }
 
-.projects-grid > .card:hover h4  {
+.projects-grid>.projects-grid-card:hover h4 {
     opacity: 1;
-}
 
-.card {
-    border: 1px solid transparent;
-    transition: filter var(--projects-animation-duration);
 }
 
 .stacked {
@@ -61,7 +66,7 @@
 }
 
 /* all direct children of stacked class stacked on top of each by putting them in same row and column */
-.stacked > * {
+.stacked>* {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -72,7 +77,7 @@
     }
 }
 
-@media ( width <= 580px) {
+@media (width <=580px) {
     .projects-grid {
         --grid-column-count: 1;
     }

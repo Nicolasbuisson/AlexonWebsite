@@ -3,6 +3,7 @@ import Link from "next/link";
 import { WorkItemProps } from "../../types/work";
 import "./projects.css";
 import nextConfig from "../../../next.config";
+import Image from "next/image";
 
 interface IProps {
   projects: WorkItemProps[];
@@ -20,30 +21,30 @@ export const Projects = (props: IProps) => {
         return (
           <Link
             href={`/productions/${project.route}`}
-            className="card"
-            key={"work-grid-card-" + project.title}
+            className="projects-grid-card stacked"
+            key={"projects-grid-card-" + project.title}
             onClick={() => window.scrollTo(0, 0)}
           >
-            <div className="stacked">
-              <img
-                src={nextConfig.basePath + `/assets/${project.gridImage}`}
-                alt={`project thumbnail for ${project.description}`}
-                className="project-thumbnail"
-              ></img>
-              {project.logoImage ? (
-                <img
-                  src={
-                    nextConfig.basePath +
-                    `/assets/clientLogos/${project.logoImage}`
-                  }
-                  alt={`client logo for ${project.client}`}
-                  className="project-logo"
-                ></img>
-              ) : (
-                <></>
-              )}
-              <h4>{project.title}</h4>
-            </div>
+            <Image
+              src={nextConfig.basePath + `/assets/${project.gridImage}`}
+              alt={`project thumbnail for ${project.title}`}
+              className="project-thumbnail"
+              fill
+            />
+            {project.logoImage ? (
+              <Image
+                src={
+                  nextConfig.basePath +
+                  `/assets/clientLogos/${project.logoImage}`
+                }
+                alt={`client logo for ${project.client}`}
+                className="project-logo"
+                fill
+              />
+            ) : (
+              <></>
+            )}
+            <h4>{project.title}</h4>
           </Link>
         );
       })}
