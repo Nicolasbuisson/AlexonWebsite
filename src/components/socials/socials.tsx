@@ -61,7 +61,6 @@ export const Socials = (props: IProps) => {
           </g>
         </svg>
       </a>
-
       <a
         href="https://youtube.com/@alexonn?si=CLzHvXzXp1V9FwXz"
         className="socials-link"
@@ -76,18 +75,6 @@ export const Socials = (props: IProps) => {
           <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
         </svg>
       </a>
-      <a href="https://vimeo.com/user200505520" className="socials-link">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          className="socials-icon"
-        >
-          <path d="M22.875 10.063c-2.442 5.217-8.337 12.319-12.063 12.319-3.672 0-4.203-7.831-6.208-13.043-.987-2.565-1.624-1.976-3.474-.681l-1.128-1.455c2.698-2.372 5.398-5.127 7.057-5.28 1.868-.179 3.018 1.098 3.448 3.832.568 3.593 1.362 9.17 2.748 9.17 1.08 0 3.741-4.424 3.878-6.006.243-2.316-1.703-2.386-3.392-1.663 2.673-8.754 13.793-7.142 9.134 2.807z" />
-        </svg>
-      </a>
-
       <a href="mailto:contact@alexonmedia.com" className="socials-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
