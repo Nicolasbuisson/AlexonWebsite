@@ -15,16 +15,32 @@ function AboutPage() {
       <Navigation showIcons></Navigation>
       <section className="about-section-hero-container">
         <div className="about-hero">
-          <h1 className="about-hero-header">About Us</h1>
-          <div className="about-hero-picture"></div>
-          <p className="about-hero-paragraph">
-            Alexon Media crafts compelling visual narratives that captivate and
-            convert. We are a team of storytellers, innovators, and digital
-            strategists led by Alexon. Nimble, innovative, and always ahead of
-            the curve, we turn ideas into impactful content that resonates
-            across platforms. Let’s tell your story boldly, authentically, and
-            with purpose.
-          </p>
+          <Image
+            src={nextConfig.basePath + "/assets/images/AboutLayerClouds.jpg"}
+            alt="about hero background"
+            width={2016}
+            height={1512}
+            className="about-hero-image about-hero-background"
+          />
+          <Image
+            src={nextConfig.basePath + "/assets/images/AboutLayerAlexon2.png"}
+            alt="about hero foreground"
+            width={2016}
+            height={1512}
+            className="about-hero-image about-hero-foreground"
+          />
+          <div className="about-hero-text">
+            <h1 className="about-hero-header">About Us</h1>
+            <p className="about-hero-paragraph">
+              Alexon Media crafts compelling visual narratives that captivate
+              and convert. We are a team of storytellers, innovators, and
+              digital strategists led by Alexon. Nimble, innovative, and always
+              ahead of the curve, we turn ideas into impactful content that
+              resonates across platforms. Let’s tell your story boldly,
+              authentically, and with purpose.
+            </p>
+          </div>
+          <div className="about-hero-background-layer" />
         </div>
       </section>
       <section className="about-services-section">

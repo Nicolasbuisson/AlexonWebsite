@@ -9,15 +9,18 @@
 }
 
 .about-hero {
+    position: relative;
+    overflow: hidden;
     margin-inline: auto;
     text-align: center;
-    height: 120vh;
-    height: 120svh;
-    background-color: rgb(69, 37, 99);
+    height: 110vh;
+    height: 110svh;
 
     display: grid;
     grid-template-rows: 1fr;
     justify-items: center;
+
+
 }
 
 .about-hero>* {
@@ -25,42 +28,95 @@
     grid-column: 1;
 }
 
-.about-hero-header {
-    margin-top: 5rem;
-    text-wrap: balance;
-    font-weight: 700;
-    z-index: 2;
-    transform: translateY(calc(0.5vh * var(--scroll)));
+.about-hero-image {
+    object-fit: cover;
 }
 
-.about-hero-picture {
-    width: 12%;
-    height: 80%;
-    background-color: red;
-    align-self: end;
+.about-hero-background {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-hero-foreground {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    top: 20%;
+    transform: translateY(calc(-0.2vh * var(--scroll)));
+    z-index: 4;
+}
+
+.about-hero-background-layer {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-image: fill 0 linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 8%);
+}
+
+.about-hero-text {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: balance;
     z-index: 3;
+    transform: translateY(calc(0.4vh * var(--scroll)));
+}
+
+.about-hero-header {
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .about-hero-paragraph {
-    margin-inline: 20%;
-    position: relative;
-    top: -8rem;
-    align-self: center;
-    text-wrap: pretty;
+    color: var(--clr-dark);
+    width: 60%;
     font-weight: 500;
     font-family: var(--ff-primary);
     font-size: var(--fs-h4);
     line-height: 1.4;
-    z-index: 4;
-    transform: translateY(calc(0.5vh * var(--scroll)));
+}
+
+
+
+@media (width < 520px) {
+    .about-hero-text {
+        margin-top: 3rem;
+    }
+
+    .about-hero-header {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (width < 400px) {
+    .about-hero-text {
+        margin-top: 1.5rem;
+    }
+
+    .about-hero-header {
+        margin-bottom: 1rem;
+    }
+
+    .about-hero-paragraph {
+        width: 70%;
+    }
 }
 
 .about-services-section {
-    padding-top: 10vh;
-    padding-top: 10svh;
+    padding-block-end: var(--section-padding-block);
+    padding-block-start: calc(var(--section-padding-block) + 4rem);
     width: 100%;
     margin: auto;
-    padding-bottom: var(--section-padding-block);
     padding-inline: 10%;
 }
 
