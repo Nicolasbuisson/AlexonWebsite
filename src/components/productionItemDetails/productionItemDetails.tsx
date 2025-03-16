@@ -8,6 +8,7 @@ import { useState } from "react";
 
 type ProductionItemDetailsTab =
   | "Frame Gallery"
+  | "Photo Gallery"
   | "Credits"
   | "Behind the Scenes";
 
@@ -17,6 +18,7 @@ interface ProductionItemDetailsProps {
 
 const PRODUCTION_ITEMS_TABS: ProductionItemDetailsTab[] = [
   "Frame Gallery",
+  "Photo Gallery",
   "Behind the Scenes",
   "Credits",
 ];
@@ -43,6 +45,11 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
         })}
       </div>
       {tab === "Frame Gallery" && (
+        <div className="fade-in">
+          <FrameGallery stills={stills} />
+        </div>
+      )}
+      {tab === "Photo Gallery" && (
         <div className="fade-in">
           <FrameGallery stills={stills} />
         </div>
