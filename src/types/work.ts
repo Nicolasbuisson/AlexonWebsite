@@ -8,6 +8,7 @@ export interface WorkItemProps {
     client: string;
     description: string;
     videoUrl: string;
+    gridVideoPreview?: string;
     gridImage: string;
     logoImage: string;
     services: string;
