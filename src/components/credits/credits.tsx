@@ -1,9 +1,5 @@
+import { CreditEntry } from "../../types/work";
 import "./credits.css";
-
-interface CreditEntry {
-  title: string;
-  name: string;
-}
 
 interface CreditProps {
   credits: CreditEntry[];

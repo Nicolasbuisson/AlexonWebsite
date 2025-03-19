@@ -1,5 +1,5 @@
 "use client";
-import { StillImage } from "../../types/work";
+import { CreditEntry, StillImage } from "../../types/work";
 import { BehindTheScenesGallery } from "../behindTheScenesGallery/behindTheScenesGallery";
 import { Credits } from "../credits/credits";
 import { FrameGallery } from "../frameGallery/frameGallery";
@@ -14,6 +14,7 @@ type ProductionItemDetailsTab =
 
 interface ProductionItemDetailsProps {
   stills: StillImage[];
+  credits: CreditEntry[];
 }
 
 const PRODUCTION_ITEMS_TABS: ProductionItemDetailsTab[] = [
@@ -24,7 +25,7 @@ const PRODUCTION_ITEMS_TABS: ProductionItemDetailsTab[] = [
 ];
 
 export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
-  const { stills } = props;
+  const { stills, credits } = props;
   const [tab, setTab] = useState<ProductionItemDetailsTab>("Frame Gallery");
 
   return (
@@ -61,19 +62,7 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
       )}
       {tab === "Credits" && (
         <div className="fade-in">
-          <Credits
-            credits={[
-              { title: "Director", name: "Big Dick Joe" },
-              { title: "Creative Director", name: "Small Titty Nancy" },
-              { title: "Assistant Creative Director", name: "Lil' Timmy" },
-              { title: "Camera Car", name: "Not Tesla lmao" },
-              { title: "Voice Talent", name: "Homegirl Adele" },
-              { title: "Executive Director", name: "Caesar" },
-              { title: "Drone Engineer", name: "Murab Mustafa" },
-              { title: "BTS footage", name: "My Shadow" },
-              { title: "Sound Design", name: "Darude Sandstorm" },
-            ]}
-          />
+          <Credits credits={credits} />
         </div>
       )}
     </div>

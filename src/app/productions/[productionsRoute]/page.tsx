@@ -50,8 +50,16 @@ export default async function productionsItem({
       <div>{`Error 404: content for page productions/${productionsRoute} not found`}</div>
     );
   }
-  const { title, client, description, videoUrl, gridImage, services, stills } =
-    productionItem;
+  const {
+    title,
+    client,
+    description,
+    videoUrl,
+    gridImage,
+    services,
+    stills,
+    credits,
+  } = productionItem;
 
   return (
     <div className="productionsItem-container">
@@ -84,7 +92,7 @@ export default async function productionsItem({
         </div>
       </section>
       <section className="productions-item-details-section">
-        <ProductionItemDetails stills={stills} />
+        <ProductionItemDetails stills={stills} credits={credits} />
       </section>
       <section className="productions-item-carousel-section">
         <ProductionsCarousel productionToExclude={productionItem.title} />

@@ -1,6 +1,11 @@
 export interface StillImage {
     imageUrl: string;
 }
+
+export interface CreditEntry {
+    title: string;
+    name: string;
+  }
   
 export interface WorkItemProps {
     route: string;
@@ -13,5 +18,6 @@ export interface WorkItemProps {
     logoImage: string;
     services: string;
     stills: StillImage[];
+    credits: CreditEntry[];
     displayOnHomePage?: boolean;
 }
