@@ -26,8 +26,7 @@
     margin-bottom: 0.25rem;
 }
 
-.insta-title::after,
-.insta-title::before {
+.insta-title::after {
     content: '';
     display: block;
     height: 1px;
