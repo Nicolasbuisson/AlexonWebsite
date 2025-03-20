@@ -9,7 +9,7 @@
         "gridVideoPreview": "productions/fourSeasons/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "FourSeasons.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -33,7 +33,7 @@
         "gridVideoPreview": "productions/corona/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoCorona.jpg",
         "logoImage": "Corona.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -58,7 +58,7 @@
         "gridImage": "productionsCovers/CoverPhotoELLE.jpg",
         "gridVideoPreview": "productions/elle/preview.mp4",
         "logoImage": "ELLE.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -79,7 +79,7 @@
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "gridVideoPreview": "productions/onomoHotels/preview.mp4",
         "logoImage": "OnomoHotels.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -103,7 +103,7 @@
         "gridVideoPreview": "productions/lequilibre/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoL'Equilibre.jpg",
         "logoImage": "Lequilibre.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -125,7 +125,7 @@
         "gridVideoPreview": "productions/elewana/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoElewana.jpg",
         "logoImage": "Elewana.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -149,7 +149,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
         "logoImage": "Prepinson.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -172,7 +172,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
         "logoImage": "Prepinson.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -196,7 +196,7 @@
         "gridVideoPreview": "productions/lhoft/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "LHOFT.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -217,7 +217,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "Web3MTL.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -237,7 +237,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "ChrisLake.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Concert Videography", "Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -257,7 +257,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoClaptone.jpg",
         "logoImage": "Claptone.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Concert Videography", "Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -279,7 +279,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "CCLuxembourg.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -299,7 +299,7 @@
         "gridVideoPreview": "productions/visionBoard/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "AlexonSignature.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -319,7 +319,7 @@
         "gridVideoPreview": "productions/willIEverMakeIt/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "AlexonSignature.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -338,7 +338,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "CCLuxembourg.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Event Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -357,7 +357,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "Monolink.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Event Photography", "Concert Videography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -377,7 +377,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "ParcOmega.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -399,7 +399,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
         "logoImage": "Ponente.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Commercial Photography", "Video Production"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -420,7 +420,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
         "logoImage": "McGillUniversity.png",
-        "services": "video, photo, social media marketing",
+       "services": ["Video Production"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -441,7 +441,7 @@
         "gridVideoPreview": "productions/johnSummit/preview.mp4",
         "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
         "logoImage": "JohnSummit.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Concert Videography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -463,7 +463,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
         "logoImage": "NewCityGas.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Concert Videography"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},
@@ -483,7 +483,7 @@
         "videoUrl": "https://player.vimeo.com/video/694255333",
         "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
         "logoImage": "Coinbase.png",
-        "services": "video, photo, social media marketing",
+        "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [
             {"imageUrl": "sunset-purple-tree.jpg"},
             {"imageUrl": "lake.jpg"},

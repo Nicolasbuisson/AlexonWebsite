@@ -6,6 +6,7 @@ import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
 import { ProductionItemDetails } from "../../../components/productionItemDetails/productionItemDetails";
 import { ProductionsCarousel } from "../../../components/productionsCarousel/productionsCarousel";
+import { ProductionItemServices } from "../../../components/productionItemServices/productionItemServices";
 
 interface productionsStaticParams {
   productionsRoute: string;
@@ -87,7 +88,7 @@ export default async function productionsItem({
             </h4>
             <p>{description}</p>
             <h4>Services:</h4>
-            <p>{services}</p>
+            <ProductionItemServices services={services} />
           </div>
         </div>
       </section>
