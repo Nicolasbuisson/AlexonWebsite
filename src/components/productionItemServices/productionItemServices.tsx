@@ -18,8 +18,6 @@ const SERVICES_LINKS: Record<ServiceType, string> = {
 export const ProductionItemServices = (props: IProductionItemServicesProps) => {
   const { services } = props;
 
-  SERVICES_LINKS["Short-Form Content"];
-
   return (
     <p>
       {services.map((service, i) => {
