@@ -7,7 +7,7 @@
         "description": "We crafted a visually stunning cinematic reel capturing the elegance and luxury of the Four Seasons experience in Hong Kong. We were tasked with focusing on and showcasing the beautiful and unique Hong Kong skyline light up at night.",
         "videos": [],
         "gridVideoPreview": "productions/fourSeasons/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/fourSeasons/preview.jpg",
         "logoImage": "FourSeasons.png",
         "services": ["Video Production"],
         "stills": [
@@ -31,7 +31,7 @@
         "description": "We produced a soulful, nature-inspired campaign that highlighted the brand’s connection to relaxation and the outdoors, this time by featuring some hidden gems in the beautiful country of Tanzania. The film and content aimed to transport viewers to sunlit beaches and peaceful moments, reinforcing the brand’s association with calm and freedom. Through rich visuals and a laid-back tone, we captured the essence of “living the moment.”",
         "videos": ["https://www.youtube.com/embed/EV4SFvjYch8"],
         "gridVideoPreview": "productions/corona/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoCorona.jpg",
+        "gridImage": "productions/corona/preview.jpg",
         "logoImage": "Corona.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
@@ -55,7 +55,7 @@
         "client": "ELLE",
         "description": "Our team created a chic and captivating editorial-style event recap to capture the launch of ELLE in Luxembourg, all while embodying the magazine’s essence and mission. We highlighted the intersection of fashion, culture, and personal expression. The content reflected ELLE’s commitment to empowering women and setting trends.",
         "videos": ["https://youtube.com/embed/bE8Pa9WE_00"],
-        "gridImage": "productionsCovers/CoverPhotoELLE.jpg",
+        "gridImage": "productions/elle/preview.jpg",
         "gridVideoPreview": "productions/elle/preview.mp4",
         "logoImage": "ELLE.png",
         "services": ["Video Production"],
@@ -76,7 +76,7 @@
         "client": "Onomo Hotels",
         "description": "We told the story of Onomo’s unique African hospitality through vibrant and culturally-rooted visuals along with a dynamic story in order to capture the essence of Onomo’s newest hotel brand: Onomo Allure. The campaign focused on the brand’s mission of offering a chic and modern experience of comfort, all while staying true to its African heritage. By showcasing local art, culture, and warm service, we highlighted Onomo’s distinct character. The result was an authentic and immersive narrative that resonated with audiences.",
         "videos": ["https://youtube.com/embed/ITLSqXL-nGc"],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "gridVideoPreview": "productions/onomoHotels/preview.mp4",
         "logoImage": "OnomoHotels.png",
         "services": ["Video Production", "Commercial Photography"],
@@ -101,7 +101,7 @@
         "description": "Mixing passion and art is always a winning recipe. L'Équilibre is about a lot more than making delightful cakes and breads... It's about a perpetual quest for progress and excellence. Here we tried to really convey the philosophy of the head baker Benjamic Roc - an excellent pastry is the result of achieving a seemingly impossible balance between flavours, textures, and smells. Thus, we really wanted to convey the artistry and intentionality that goes into every pastry. A few years have passed yet this video continues to resonate with audiences and pastry-enthusiasts in the Parisian region.",
         "videos": ["https://www.youtube.com/embed/Nq_xYiUh6vI"],
         "gridVideoPreview": "productions/lequilibre/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoL'Equilibre.jpg",
+        "gridImage": "productions/lequilibre/preview.jpg",
         "logoImage": "Lequilibre.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
@@ -123,7 +123,7 @@
         "description": "We captured the breathtaking beauty of Elewana’s safari lodges and the spirit of African adventure. Our team highlighted the luxury of the accommodations alongside the raw beauty of the wilderness. Our team showcased the emotional connection between guests and nature. Through sweeping landscapes and intimate moments, we brought Elewana’s story to life.",
         "videos": [],
         "gridVideoPreview": "productions/elewana/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoElewana.jpg",
+        "gridImage": "productions/elewana/preview.jpg",
         "logoImage": "Elewana.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
@@ -147,7 +147,8 @@
         "client": "Maison de Prepinson",
         "description": "Haras de Prepinson is a high quality horse breeding farm and horse training facility in the south of Belgium. Through emotional storytelling, we conveyed the dedication behind every detail of horse breeding. The content reflected the farm’s status as a symbol of excellence.",
         "videos": ["https://youtube.com/embed/EUJ684JrVdo", "https://youtube.com/embed/9Aia_hPqXVU", "https://youtube.com/embed/T7-DMx4WmDc", "https://youtube.com/embed/aj0f_PkbRpM"],
-        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
+        "gridVideoPreview": "productions/harasDePrepinson/preview.mp4",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
@@ -170,7 +171,8 @@
         "client": "Maison de Prepinson",
         "description": "Our team created a luxurious and intimate brand film, capturing the history, artistry, and sophistication behind La Maison Prepinson. The film highlighted the brand’s attention to detail and quality craftsmanship. Through rich textures, soft lighting, and elegant music, we conveyed a sense of timeless luxury. The result was a story that elevated the brand’s identity. Our team also choreographed and produced a virtual FPV Drone tour. This allows for potential clients and viewers to get the best possible picture of the home’s layout and features, in a digestible and immersive format.",
         "videos": ["https://youtube.com/embed/TKroMAx3Tqs", "https://youtube.com/embed/FTu9finC3aQ"],
-        "gridImage": "productionsCovers/CoverPhotoPrepinson.jpg",
+        "gridVideoPreview": "productions/maisonPrepinson/preview.mp4",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
@@ -194,7 +196,7 @@
         "description": "We produced engaging and dynamic films to showcase the LHOFT’s global presence and its impact on the fintech landscape. By organizing an on-site editing setup, we also produced and quickly delivered daily video interviews and photo recaps to keep worldwide audiences engaged in real-time. Our film explored the energy and innovation driving the LHOFT’s mission. We really wanted to highlight the human stories behind financial inclusion in order to reinforce the LHOFT’s position as a leader in the fintech and financial inclusion world.",
         "videos": ["https://youtube.com/embed/RyotR5f1E-g", "https://youtube.com/embed/irGHzrw5VUY"],
         "gridVideoPreview": "productions/lhoft/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "LHOFT.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
@@ -215,7 +217,7 @@
         "client": "Web3MTL",
         "description": "We had the pleasure of covering Web3MTL’s one year anniversary. Having been founded as a way to further drive growth in Montreal’s Web3 and crypto ecosystem, this organization was able to gather players from a myriad of firms and backgrounds.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "Web3MTL.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
@@ -235,7 +237,7 @@
         "client": "Chris Lake",
         "description": "Our energetic and immersive concert visuals captured the pulse of Chris Lake’s performances in Montreal. The result was a piece that mirrored the intensity and euphoria of his shows.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "ChrisLake.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [
@@ -255,7 +257,8 @@
         "client": "Claptone",
         "description": "We created mysterious and alluring concert visuals to showcase Claptone’s different performances in Montreal and Québec City. The goal was to showcase his signature songs and the raw energy of these performances through organic concert videography and lifestyle photos. The final product captured the allure and mystique that define Claptone’s signature brand.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoClaptone.jpg",
+        "gridVideoPreview": "productions/claptone/preview.mp4",
+        "gridImage": "productions/claptone/preview.jpg",
         "logoImage": "Claptone.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [
@@ -277,7 +280,7 @@
         "client": "Business Club France Luxembourg",
         "description": "We produced sophisticated and photographs that reflect the club’s role in fostering cross-border business connections and showcase the different general assemblies and events. The content highlights key networking events and the club’s impact on the business community.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [
@@ -297,7 +300,7 @@
         "description": "This film encapsulates key moments from Alexon’s 2023 and explains how manifestation was the driving force that turned Alexon’s life around.",
         "videos": ["https://www.youtube.com/embed/lZCiJBP88Og"],
         "gridVideoPreview": "productions/visionBoard/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
@@ -317,7 +320,7 @@
         "description": "Alexon's life has radically and quickly changed. At 21, he's already been able to accomplish many of his dreams. But as he learns, with all good things there comes many sacrifices and hardships...",
         "videos": ["https://www.youtube.com/embed/4mC7V-_V5Ic"],
         "gridVideoPreview": "productions/willIEverMakeIt/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
@@ -336,7 +339,7 @@
         "client": "Chamber of Commerce LUX/MTL",
         "description": "We captured photographs to highlight the chamber’s role in building business bridges between Luxembourg and Montreal. The content focuses on key events, trade partnerships, member success stories, and the signature of a Memorandum of Agreement between different Chambers of Commerce.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/chamberOfCommerceLux/preview.JPG",
         "logoImage": "CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [
@@ -355,7 +358,7 @@
         "client": "Monolink",
         "description": "Our team captured the emotional intensity of Monolink’s live performance in Montreal, blending sound, light, and emotion into powerful but authentic short-form videos and photos. Through creative camera work and atmospheric lighting, we recreated the hypnotic experience of his performances. The final product immersed viewers in Monolink’s artistic world.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "Monolink.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [
@@ -375,7 +378,8 @@
         "client": "Parc Oméga",
         "description": "We created nature-focused media assets to highlight the beauty and wildlife of Parc Oméga. The content features close-ups of animals in their natural habitats and sweeping landscape shots. We explored the park’s mission to connect people with nature and used innovative tools like FPV Drones to capture the vastness of the property.",
         "videos": ["https://youtube.com/embed/niQZyYJbeN4"],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridVideoPreview": "productions/parcOmega/preview.mp4",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "ParcOmega.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
@@ -397,7 +401,8 @@
         "client": "Ponente",
         "description": "We produced elegant visuals to showcase Ponente’s elegant fleet of private aircrafts. The content focuses on the intricate details and premium service of the brand’s charters.",
         "videos": ["https://youtube.com/embed/zSKykcznOT8"],
-        "gridImage": "productionsCovers/CoverPhotoFourSeasons.jpg",
+        "gridVideoPreview": "productions/ponente/preview.mp4",
+        "gridImage": "productions/harasDePrepinson/preview.jpg",
         "logoImage": "Ponente.png",
         "services": ["Commercial Photography", "Video Production"],
         "stills": [
@@ -418,7 +423,8 @@
         "client": "McGill University",
         "description": "Every September, thousands of freshmen prepare to enter McGill University’s faculty of management. They’re welcomed into their new home with a week-long celebration called “Frosh”. We created an inspiring and dynamic film that reflects what Frosh is about and what it means to the McGill community.",
         "videos": ["https://youtube.com/embed/3Z5nh0JMM0g"],
-        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "gridVideoPreview": "productions/mcgillUniversity/preview.mp4",
+        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "McGillUniversity.png",
        "services": ["Video Production"],
         "stills": [
@@ -439,7 +445,7 @@
         "description": "On a meteoric rise, John Summit is shaping up to be one of the biggest DJs in the electronic music space. One of the driving forces behind his meteoric rise? His focus on social media. John Summit’s team tasked us with capturing the Montreal stop of his Comfort in Chaos tour, one where he would perform in front of the iconic Montreal Olympic Stadium.",
         "videos": [],
         "gridVideoPreview": "productions/johnSummit/preview.mp4",
-        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "JohnSummit.png",
         "services": ["Concert Videography"],
         "stills": [
@@ -461,7 +467,8 @@
         "client": "New City Gas",
         "description": "We had the pleasure of creating authentic and raw short-form videos to convey Dim Mak and Steve Aoki’s return to Montreal. The goal was to convey the raw energy and emotion present at this performance and rapidly deliver the content for immediate social media usage.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "gridVideoPreview": "productions/newCityGas/preview.mp4",
+        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "NewCityGas.png",
         "services": ["Concert Videography"],
         "stills": [
@@ -481,7 +488,8 @@
         "client": "BUNT",
         "description": "We had the pleasure of capturing BUNT’s sold out show and first passage in Montreal. The goal here was to really showcase the “in the round” energy. Sweat, tears, screams - this show had it all. The result was a compelling visual showcase of raw and emotional moments.",
         "videos": [],
-        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "gridVideoPreview": "productions/bunt/preview.mp4",
+        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "BUNT.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [
@@ -501,7 +509,7 @@
         "client": "Coinbase",
         "description": "We had the pleasure of working with Coinbase to create video content for their Stand with Crypto movement across Canada. The goal was to raise awareness and usher policy change in regards to cryptocurrency in Canada. Through a myriad of video interviews we conveyed the multitude of use cases that cryptocurrency has today. The result was a compelling narrative that cemented cryptocurrency as a positive force for change in Canada’s future.",
         "videos": ["https://youtube.com/embed/vu9C_KBagII"],
-        "gridImage": "productionsCovers/CoverPhotoMcGill.jpg",
+        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "Coinbase.png",
         "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [
