@@ -55,7 +55,7 @@ export default async function productionsItem({
     title,
     client,
     description,
-    videoUrl,
+    videos,
     gridImage,
     services,
     stills,
@@ -76,12 +76,18 @@ export default async function productionsItem({
         </div>
 
         <div className="video-container">
-          <iframe
-            src={videoUrl}
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            className="video"
-          ></iframe>
+          {videos.map((vid) => {
+            return (
+              <iframe
+                key={"production-item-video-" + vid}
+                src={vid}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="video"
+              ></iframe>
+            );
+          })}
           <div className="video-details">
             <h4>
               Client: <span>{client}</span>
