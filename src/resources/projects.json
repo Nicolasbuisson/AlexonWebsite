@@ -11,9 +11,18 @@
         "logoImage": "FourSeasons.png",
         "services": ["Video Production"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director", "name": "Alexon"},
@@ -35,9 +44,18 @@
         "logoImage": "Corona.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, BenjyFilms, Charles-Antoine Dumont"},
@@ -60,9 +78,18 @@
         "logoImage": "ELLE.png",
         "services": ["Video Production"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -81,9 +108,18 @@
         "logoImage": "OnomoHotels.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -105,9 +141,18 @@
         "logoImage": "Lequilibre.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -127,9 +172,18 @@
         "logoImage": "Elewana.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, BenjyFilms, Charles-Antoine Dumont"},
@@ -152,9 +206,18 @@
         "logoImage": "Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -176,9 +239,18 @@
         "logoImage": "Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -200,9 +272,18 @@
         "logoImage": "LHOFT.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -221,9 +302,18 @@
         "logoImage": "Web3MTL.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -241,9 +331,18 @@
         "logoImage": "ChrisLake.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, Evan Silverman"},
@@ -262,9 +361,18 @@
         "logoImage": "Claptone.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, Evan Silverman"},
@@ -284,9 +392,18 @@
         "logoImage": "CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Photography", "name": "Alexon"}
@@ -304,9 +421,18 @@
         "logoImage": "AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits":[
             {"title": "Director, Filmmaker, Editor & Main Talent", "name" :"Alexon"}
@@ -324,9 +450,18 @@
         "logoImage": "AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits":[
             {"title": "Director, Filmmaker, Editor & Main Talent", "name" :"Alexon"}
@@ -343,9 +478,18 @@
         "logoImage": "CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits":[
             {"title": "Photography", "name" :"Alexon"}
@@ -362,9 +506,18 @@
         "logoImage": "Monolink.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, Evan Silverman"},
@@ -383,9 +536,18 @@
         "logoImage": "ParcOmega.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -406,9 +568,18 @@
         "logoImage": "Ponente.png",
         "services": ["Commercial Photography", "Video Production"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operator", "name": "Alexon"},
@@ -428,9 +599,18 @@
         "logoImage": "McGillUniversity.png",
        "services": ["Video Production"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
@@ -449,9 +629,18 @@
         "logoImage": "JohnSummit.png",
         "services": ["Concert Videography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operators", "name": "Alexon, Christian Santiago, Noah Shumka"},
@@ -472,9 +661,18 @@
         "logoImage": "NewCityGas.png",
         "services": ["Concert Videography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operator", "name": "Alexon"},
@@ -493,9 +691,18 @@
         "logoImage": "BUNT.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Camera Operator", "name": "Alexon"},
@@ -513,9 +720,18 @@
         "logoImage": "Coinbase.png",
         "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [
-            {"imageUrl": "sunset-purple-tree.jpg"},
-            {"imageUrl": "lake.jpg"},
-            {"imageUrl": "road.jpg"}
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still2.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still3.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still4.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still5.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still6.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still7.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still8.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still9.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still10.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still11.jpeg"},
+            {"imageUrl": "/assets/productions/fourSeasons/stills/still12.jpeg"}
         ],
         "credits": [
             {"title": "Director & Editor", "name": "Alexon"},

@@ -16,7 +16,7 @@ export const BehindTheScenesGallery = (props: BehindTheScenesGalleryProps) => {
           <div key={"bts-" + btsImg.imageUrl} className="bts-grid-item-wrapper">
             <Image
               className="bts-grid-item"
-              src={nextConfig.basePath + `/assets/images/${btsImg.imageUrl}`}
+              src={nextConfig.basePath + btsImg.imageUrl}
               alt="project bts picture"
               fill
             />

@@ -19,7 +19,7 @@ export const FrameGallery = (props: FrameGalleryProps) => {
           >
             <Image
               className="stills-grid-item"
-              src={nextConfig.basePath + `/assets/images/${stillImg.imageUrl}`}
+              src={nextConfig.basePath + stillImg.imageUrl}
               alt="project stills picture"
               fill
             />
