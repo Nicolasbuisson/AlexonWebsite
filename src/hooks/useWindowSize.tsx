@@ -9,6 +9,7 @@ export const useWindowSize = () => {
   };
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth); // set initial value on mount
     window.addEventListener("resize", handleResize);
     window.addEventListener("reset", handleResize);
     return () => {

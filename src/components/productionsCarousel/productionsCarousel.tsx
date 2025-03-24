@@ -4,7 +4,7 @@ import { WorkItemProps } from "../../types/work";
 import projectsJSON from "../../resources/projects.json";
 import { Carousel } from "../carousel/carousel";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ProductionsCarouselCard } from "./productionsCarouselCard";
 
 interface ProductionsCarouselProps {
@@ -13,6 +13,8 @@ interface ProductionsCarouselProps {
 
 export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
   const { productionToExclude } = props;
+
+  const [pageSize, setPageSize] = useState<number>(1);
 
   const windowWidth = useWindowSize();
 
@@ -26,10 +28,20 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     }
   }, [windowWidth]);
 
+  // set state variable correctly on initial load
+  useEffect(() => {
+    setPageSize(getPageSize());
+  }, []);
+
+  // set state variable correctly whenever window width changes
+  useEffect(() => {
+    setPageSize(getPageSize());
+  }, [windowWidth]);
+
   return (
     <Carousel
-      pageSize={getPageSize()}
-      totalPages={Math.floor(projectsJSON.projects.length / getPageSize())}
+      pageSize={pageSize}
+      totalPages={Math.floor(projectsJSON.projects.length / pageSize)}
       itemWidthMin={256}
       itemWidthMax={512}
       dynamicSize
