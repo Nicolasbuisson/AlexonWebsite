@@ -17,9 +17,9 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
   const windowWidth = useWindowSize();
 
   const getPageSize = useCallback((): number => {
-    if (windowWidth <= 440) {
+    if (windowWidth <= 580) {
       return 1;
-    } else if (440 < windowWidth && windowWidth < 880) {
+    } else if (580 < windowWidth && windowWidth < 880) {
       return 2;
     } else {
       return 3;
@@ -32,6 +32,7 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
       totalPages={Math.floor(projectsJSON.projects.length / getPageSize())}
       itemWidthMin={256}
       itemWidthMax={512}
+      dynamicSize
     >
       {projectsJSON.projects
         .filter((project) => project.title !== productionToExclude)

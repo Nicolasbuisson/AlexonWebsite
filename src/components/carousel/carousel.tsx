@@ -8,6 +8,7 @@ interface IProps {
   children: ReactNode;
   itemWidthMin?: number;
   itemWidthMax?: number;
+  dynamicSize?: boolean;
 }
 
 export const Carousel = (props: IProps) => {
@@ -17,6 +18,7 @@ export const Carousel = (props: IProps) => {
     children,
     itemWidthMin = 100,
     itemWidthMax = 312,
+    dynamicSize = false,
   } = props;
 
   const [index, setIndex] = useState<number>(0);
@@ -52,7 +54,12 @@ export const Carousel = (props: IProps) => {
   }, []);
 
   return (
-    <div className="carousel-container" id="carousel-container">
+    <div
+      className={`carousel-container ${
+        dynamicSize ? "dynamic-carousel-container" : ""
+      }`}
+      id="carousel-container"
+    >
       <button
         className="carousel-previous-button"
         onClick={() => {
@@ -103,7 +110,13 @@ export const Carousel = (props: IProps) => {
           </g>
         </svg>
       </button>
-      <div className="carousel-mover">{children}</div>
+      <div
+        className={`carousel-mover ${
+          dynamicSize ? "dynamic-carousel-mover" : ""
+        }`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,5 @@
 .carousel-container {
     --carousel-offset: 0;
-    /* --carousel-item-width-min: 100px;
-    --carousel-item-width-max: 312px; */
     --carousel-item-width: clamp(var(--carousel-item-width-min, 100px), 14vw + 2rem, var(--carousel-item-width-max, 312px));
     --carousel-items-per-page: 5;
     --carousel-svg-height: 24px;
@@ -16,6 +14,14 @@
     flex-direction: row;
     transition: transform 400ms ease-in-out;
     transform: translate(calc(var(--carousel-offset) * -100%), 0);
+}
+
+.dynamic-carousel-container {
+    width: 100%;
+}
+
+.dynamic-carousel-mover>* {
+    width: calc(100% / var(--carousel-items-per-page));
 }
 
 .carousel-container>button {

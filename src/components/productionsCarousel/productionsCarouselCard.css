@@ -1,7 +1,6 @@
 .production-carousel-card {
     display: grid;
     grid-template-rows: 1fr;
-    width: 256px;
     aspect-ratio: 14/9;
     flex-shrink: 0;
     position: relative;
