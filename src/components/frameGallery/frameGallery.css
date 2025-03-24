@@ -19,11 +19,13 @@
 
 .stills-grid-item-wrapper {
     position: relative;
-    height: 240px;
     width: 100%;
+    aspect-ratio: 16/9;
+    /* TODO: WILL PROBABLY HAVE TO CHANGE THIS ASPECT RATIO, OR MAKE IT A VARIABLE */
     filter: drop-shadow(0px 0px 0.25rem rgba(255, 255, 255, 0.7));
 }
 
 .stills-grid-item {
-    object-fit: contain;
+    border-radius: 12px;
+    object-fit: cover;
 }
