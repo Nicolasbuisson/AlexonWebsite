@@ -79,6 +79,15 @@ export const Navigation = (props: NavigationProps) => {
               Home
             </Link>
           </li>
+          <li className="services-menu">
+            <Link
+              href="/shortform"
+              className="link services-link"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Short Form
+            </Link>
+          </li>
           <li>
             <Link
               href="/productions"
@@ -95,15 +104,6 @@ export const Navigation = (props: NavigationProps) => {
               onClick={() => window.scrollTo(0, 0)}
             >
               About
-            </Link>
-          </li>
-          <li className="services-menu">
-            <Link
-              href="/shortform"
-              className="link services-link"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              Short Form
             </Link>
           </li>
           <li>
