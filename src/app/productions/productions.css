@@ -20,6 +20,7 @@
 
 .productions-title {
     color: var(--clr-light);
+    mix-blend-mode: difference;
     text-wrap: balance;
     font-weight: 700;
     font-family: var(--ff-primary);
@@ -33,7 +34,6 @@
 
 .productions-title>p {
     display: inline-block;
-    color: var(--clr-light-grey);
     font-size: inherit;
     font-family: inherit;
     font-weight: inherit;
