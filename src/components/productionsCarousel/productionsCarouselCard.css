@@ -4,6 +4,7 @@
     aspect-ratio: 14/9;
     flex-shrink: 0;
     position: relative;
+    transition: filter var(--production-carousel-animation-duration);
 }
 
 .production-carousel-card>* {
@@ -14,11 +15,20 @@
     z-index: 1;
 }
 
-.production-carousel-card-title {
+.production-carousel-card-video {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.production-carousel-card-logo {
     z-index: 2;
-    color: var(--clr-light);
-    font-weight: 500;
-    align-self: end;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
+    object-fit: contain;
+    place-self: center;
+    max-width: 40%;
+    max-height: 40%;
+    transition: transform var(--production-carousel-animation-duration);
 }

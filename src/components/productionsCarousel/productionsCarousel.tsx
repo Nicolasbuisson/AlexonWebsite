@@ -45,6 +45,7 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
       itemWidthMin={256}
       itemWidthMax={512}
       dynamicSize
+      rootClass="production-carousel"
     >
       {projectsJSON.projects
         .filter((project) => project.title !== productionToExclude)
@@ -55,6 +56,9 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
               title={project.title}
               route={project.route}
               imageSrc={project.gridImage}
+              client={project.client}
+              logoImageSrc={project.logoImage}
+              videoSrc={project.gridVideoPreview}
             />
           );
         })}

@@ -7,25 +7,49 @@ interface ProductionsCarouselCardProps {
   title: string;
   route: string;
   imageSrc: string;
+  logoImageSrc: string;
+  client: string;
+  videoSrc?: string;
 }
 
 export const ProductionsCarouselCard = (
   props: ProductionsCarouselCardProps
 ) => {
-  const { title, route, imageSrc } = props;
+  const { title, route, imageSrc, logoImageSrc, client, videoSrc } = props;
+
   return (
     <Link
       href={`/productions/${route}`}
       className="production-carousel-card"
       onClick={() => window.scrollTo(0, 0)}
     >
-      <Image
-        src={`${nextConfig.basePath}/assets/${imageSrc}`}
-        alt={`${title} production cover`}
-        fill
-        className="production-carousel-card-img"
-      />
-      <p className="production-carousel-card-title">{title}</p>
+      {videoSrc ? (
+        <video
+          src={nextConfig.basePath + `/assets/${videoSrc}`}
+          muted
+          autoPlay
+          loop
+          className="production-carousel-card-video"
+        ></video>
+      ) : (
+        <Image
+          src={`${nextConfig.basePath}/assets/${imageSrc}`}
+          alt={`${title} production cover`}
+          fill
+          className="production-carousel-card-img"
+        />
+      )}
+
+      {logoImageSrc ? (
+        <Image
+          src={nextConfig.basePath + `/assets/clientLogos/${logoImageSrc}`}
+          alt={`client logo for ${client}`}
+          className="production-carousel-card-logo"
+          fill
+        />
+      ) : (
+        <></>
+      )}
     </Link>
   );
 };

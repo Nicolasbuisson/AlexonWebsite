@@ -9,6 +9,7 @@ interface IProps {
   itemWidthMin?: number;
   itemWidthMax?: number;
   dynamicSize?: boolean;
+  rootClass?: string;
 }
 
 export const Carousel = (props: IProps) => {
@@ -19,6 +20,7 @@ export const Carousel = (props: IProps) => {
     itemWidthMin = 100,
     itemWidthMax = 312,
     dynamicSize = false,
+    rootClass,
   } = props;
 
   const [index, setIndex] = useState<number>(0);
@@ -113,7 +115,7 @@ export const Carousel = (props: IProps) => {
       <div
         className={`carousel-mover ${
           dynamicSize ? "dynamic-carousel-mover" : ""
-        }`}
+        } ${rootClass ? rootClass : ""}`}
       >
         {children}
       </div>

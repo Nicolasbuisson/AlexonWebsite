@@ -1,0 +1,16 @@
+.production-carousel {
+    --production-carousel-animation-duration: 500ms;
+}
+
+/* hover effect */
+.production-carousel:hover>.production-carousel-card {
+    filter: brightness(.5) saturate(.75)
+}
+
+.production-carousel>.production-carousel-card:hover {
+    filter: brightness(1) saturate(1.5)
+}
+
+.production-carousel>.production-carousel-card:hover .production-carousel-card-logo {
+    transform: translateY(-1rem);
+}
