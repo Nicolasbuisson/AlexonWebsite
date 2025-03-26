@@ -19,13 +19,6 @@ interface ProductionItemDetailsProps {
   credits: CreditEntry[];
 }
 
-const PRODUCTION_ITEMS_TABS: ProductionItemDetailsTab[] = [
-  "Frame Gallery",
-  "Photo Gallery",
-  "Behind the Scenes",
-  "Credits",
-];
-
 export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
   const { stills, photos, bts, credits } = props;
   const [tab, setTab] = useState<ProductionItemDetailsTab>("Frame Gallery");
@@ -33,20 +26,52 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
   return (
     <div className="production-item-details">
       <div className="production-item-tabs">
-        {PRODUCTION_ITEMS_TABS.map((tabValue) => {
-          // need to conditionaly render only if stills, photos, bts, length is > 0
-          return (
-            <span
-              key={tabValue + "-tab"}
-              onClick={() => {
-                setTab(tabValue);
-              }}
-              className={tabValue === tab ? "selected-production-item-tab" : ""}
-            >
-              {tabValue}
-            </span>
-          );
-        })}
+        {stills.length > 0 && (
+          <span
+            onClick={() => {
+              setTab("Frame Gallery");
+            }}
+            className={
+              tab === "Frame Gallery" ? "selected-production-item-tab" : ""
+            }
+          >
+            Frame Gallery
+          </span>
+        )}
+        {photos.length > 0 && (
+          <span
+            onClick={() => {
+              setTab("Photo Gallery");
+            }}
+            className={
+              tab === "Photo Gallery" ? "selected-production-item-tab" : ""
+            }
+          >
+            Photo Gallery
+          </span>
+        )}
+        {bts.length > 0 && (
+          <span
+            onClick={() => {
+              setTab("Behind the Scenes");
+            }}
+            className={
+              tab === "Behind the Scenes" ? "selected-production-item-tab" : ""
+            }
+          >
+            Behind the Scenes
+          </span>
+        )}
+        {credits.length > 0 && (
+          <span
+            onClick={() => {
+              setTab("Credits");
+            }}
+            className={tab === "Credits" ? "selected-production-item-tab" : ""}
+          >
+            Credits
+          </span>
+        )}
       </div>
       {tab === "Frame Gallery" && (
         <div className="fade-in">
@@ -55,12 +80,12 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
       )}
       {tab === "Photo Gallery" && (
         <div className="fade-in">
-          <FrameGallery stills={stills} />
+          <FrameGallery stills={photos} />
         </div>
       )}
       {tab === "Behind the Scenes" && (
         <div className="fade-in">
-          <BehindTheScenesGallery btsImages={stills} />
+          <BehindTheScenesGallery btsImages={bts} />
         </div>
       )}
       {tab === "Credits" && (
