@@ -20,6 +20,8 @@ export interface WorkItemProps {
     logoImage: string;
     services: string[];
     stills: StillImage[];
+    photos: StillImage[];
+    bts: StillImage[];
     credits: CreditEntry[];
     displayOnHomePage?: boolean;
 }

@@ -14,6 +14,8 @@ type ProductionItemDetailsTab =
 
 interface ProductionItemDetailsProps {
   stills: StillImage[];
+  photos: StillImage[];
+  bts: StillImage[];
   credits: CreditEntry[];
 }
 
@@ -25,13 +27,14 @@ const PRODUCTION_ITEMS_TABS: ProductionItemDetailsTab[] = [
 ];
 
 export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
-  const { stills, credits } = props;
+  const { stills, photos, bts, credits } = props;
   const [tab, setTab] = useState<ProductionItemDetailsTab>("Frame Gallery");
 
   return (
     <div className="production-item-details">
       <div className="production-item-tabs">
         {PRODUCTION_ITEMS_TABS.map((tabValue) => {
+          // need to conditionaly render only if stills, photos, bts, length is > 0
           return (
             <span
               key={tabValue + "-tab"}
