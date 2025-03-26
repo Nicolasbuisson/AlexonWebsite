@@ -59,6 +59,8 @@ export default async function productionsItem({
     gridImage,
     services,
     stills,
+    photos,
+    bts,
     credits,
   } = productionItem;
 
@@ -99,7 +101,12 @@ export default async function productionsItem({
         </div>
       </section>
       <section className="productions-item-details-section">
-        <ProductionItemDetails stills={stills} credits={credits} />
+        <ProductionItemDetails
+          stills={stills}
+          photos={photos}
+          bts={bts}
+          credits={credits}
+        />
       </section>
       <section className="productions-item-carousel-section">
         <ProductionsCarousel productionToExclude={productionItem.title} />
