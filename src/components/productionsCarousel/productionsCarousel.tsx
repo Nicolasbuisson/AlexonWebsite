@@ -14,7 +14,14 @@ interface ProductionsCarouselProps {
 export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
   const { productionToExclude } = props;
 
+  const projectsWithCurrentProjectExcluded = projectsJSON.projects.filter(
+    (project) => project.title !== productionToExclude
+  );
+
   const [pageSize, setPageSize] = useState<number>(1);
+  const [totalProductionsShown, setTotalProductionsShown] = useState<number>(
+    projectsWithCurrentProjectExcluded.length
+  );
 
   const windowWidth = useWindowSize();
 
@@ -28,6 +35,13 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     }
   }, [windowWidth]);
 
+  const getTotalProductionsShown = useCallback((): number => {
+    return (
+      Math.floor(projectsWithCurrentProjectExcluded.length / pageSize) *
+      pageSize
+    );
+  }, [pageSize]);
+
   // set state variable correctly on initial load
   useEffect(() => {
     setPageSize(getPageSize());
@@ -38,17 +52,22 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     setPageSize(getPageSize());
   }, [windowWidth]);
 
+  // set total productions to show in carousel whenever page size changes
+  useEffect(() => {
+    setTotalProductionsShown(getTotalProductionsShown());
+  }, [pageSize]);
+
   return (
     <Carousel
       pageSize={pageSize}
-      totalPages={Math.floor(projectsJSON.projects.length / pageSize)}
+      totalPages={Math.floor(totalProductionsShown / pageSize)}
       itemWidthMin={256}
       itemWidthMax={512}
       dynamicSize
       rootClass="production-carousel"
     >
-      {projectsJSON.projects
-        .filter((project) => project.title !== productionToExclude)
+      {projectsWithCurrentProjectExcluded
+        .slice(0, totalProductionsShown)
         .map((project: WorkItemProps) => {
           return (
             <ProductionsCarouselCard
