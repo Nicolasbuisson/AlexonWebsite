@@ -1,15 +1,3 @@
-.hero-paragraph {
-    font-size: inherit;
-    font-weight: inherit;
-    text-align: center;
-    margin-inline: auto;
-    max-width: 30ch;
-    text-wrap: pretty;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .hero-word {
     margin-right: 12px;
     font-size: inherit;

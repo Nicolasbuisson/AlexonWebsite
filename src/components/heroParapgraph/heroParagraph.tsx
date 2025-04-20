@@ -5,6 +5,8 @@ import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
 
 interface IProps {
   text: string;
+  className?: string;
+  scrollOffset?: any[];
   boldStartIndex?: number;
   boldEndIndex?: number;
   startFromEnd?: boolean;
@@ -13,6 +15,8 @@ interface IProps {
 export const HeroParagraph = (props: IProps) => {
   const {
     text,
+    className = "",
+    scrollOffset = ["start 0.9", "start 0.4"],
     boldEndIndex = 0,
     boldStartIndex = 0,
     startFromEnd = false,
@@ -21,13 +25,13 @@ export const HeroParagraph = (props: IProps) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.9", "start 0.4"],
+    offset: scrollOffset,
   });
 
   const words = text.split(" ");
 
   return (
-    <p ref={element} className="hero-paragraph">
+    <p ref={element} className={className}>
       {words.map((word, i) => {
         const step = 1 / words.length;
         const start = i * step;
@@ -119,7 +123,7 @@ const Character = (props: WordProps) => {
   const characterOpacity = useTransform(
     scrollYProgress,
     startFromEnd ? [1 - end, 1 - start] : [start, end],
-    startFromEnd ? [1, 0.1] : [0.1, 1]
+    startFromEnd ? [1, 0] : [0.1, 1]
   );
 
   return (

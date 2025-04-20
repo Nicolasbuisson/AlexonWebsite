@@ -67,6 +67,18 @@
     }
 }
 
+.home-hero-paragraph {
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 30ch;
+    text-wrap: pretty;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .home-video-section {
     --video-max-height: 500px;
     --video-max-width: 640px;

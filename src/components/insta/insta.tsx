@@ -47,7 +47,6 @@ export const Insta = () => {
 
       for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
         const itemId = data[i]?.id;
-        console.log(itemId);
         const instaItemPromise = fetchInstaItem(itemId);
         itemPromises.push(instaItemPromise);
       }

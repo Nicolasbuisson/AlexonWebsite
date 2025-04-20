@@ -40,6 +40,7 @@ function Home() {
             text={
               "Alexon media is a pioneering creative and production house Offering commercials, branded, and short-form content to your favourite brands worlwide"
             }
+            className="home-hero-paragraph"
             boldStartIndex={36}
             boldEndIndex={66}
           />
