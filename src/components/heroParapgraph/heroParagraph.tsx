@@ -7,10 +7,16 @@ interface IProps {
   text: string;
   boldStartIndex?: number;
   boldEndIndex?: number;
+  startFromEnd?: boolean;
 }
 
 export const HeroParagraph = (props: IProps) => {
-  const { text, boldEndIndex = 0, boldStartIndex = 0 } = props;
+  const {
+    text,
+    boldEndIndex = 0,
+    boldStartIndex = 0,
+    startFromEnd = false,
+  } = props;
 
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -36,6 +42,7 @@ export const HeroParagraph = (props: IProps) => {
             totalCharCount={text.length}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
+            startFromEnd={startFromEnd}
           >
             {word}
           </Word>
@@ -54,6 +61,7 @@ interface WordProps {
   totalCharCount: number;
   boldStartIndex: number;
   boldEndIndex: number;
+  startFromEnd: boolean;
 }
 
 const Word = (props: WordProps) => {
@@ -66,6 +74,7 @@ const Word = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
+    startFromEnd,
   } = props;
   const characters = children.split("");
   const amount = end - start;
@@ -85,6 +94,7 @@ const Word = (props: WordProps) => {
             totalCharCount={totalCharCount}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
+            startFromEnd={startFromEnd}
           >
             {character}
           </Character>
@@ -104,11 +114,12 @@ const Character = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
+    startFromEnd,
   } = props;
   const characterOpacity = useTransform(
     scrollYProgress,
-    [start, end],
-    [0.1, 1]
+    startFromEnd ? [1 - end, 1 - start] : [start, end],
+    startFromEnd ? [1, 0.1] : [0.1, 1]
   );
 
   return (
