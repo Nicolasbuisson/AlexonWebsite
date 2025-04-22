@@ -16,7 +16,7 @@ export interface WorkItemProps {
     description: string;
     videos: string[];
     gridVideoPreview?: string;
-    gridImage: string;
+    gridImage?: string;
     logoImage: string;
     services: string[];
     stills: StillImage[];
