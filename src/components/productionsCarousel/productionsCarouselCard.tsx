@@ -6,7 +6,7 @@ import Link from "next/link";
 interface ProductionsCarouselCardProps {
   title: string;
   route: string;
-  imageSrc: string;
+  imageSrc?: string;
   logoImageSrc: string;
   client: string;
   videoSrc?: string;
@@ -31,13 +31,15 @@ export const ProductionsCarouselCard = (
           loop
           className="production-carousel-card-video"
         ></video>
-      ) : (
+      ) : imageSrc ? (
         <Image
           src={`${nextConfig.basePath}/assets/${imageSrc}`}
           alt={`${title} production cover`}
           fill
           className="production-carousel-card-img"
         />
+      ) : (
+        <></>
       )}
 
       {logoImageSrc ? (
