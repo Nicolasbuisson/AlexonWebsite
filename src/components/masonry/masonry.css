@@ -1,0 +1,44 @@
+.masonry-container {
+    --column-count: 1;
+
+    column-count: var(--column-count);
+    column-gap: 1rem;
+}
+
+.masonry-item-wrapper {
+    position: relative;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+}
+
+.masonry-item-wrapper img {
+    object-fit: cover;
+    border-radius: 12px;
+    filter: drop-shadow(0px 0px 0.25rem rgba(255, 255, 255, 0.7));
+    width: 100%;
+    height: unset;
+    /* height: 100%; */
+}
+
+.masonry-item-image {
+    height: unset;
+}
+
+@media (min-width: 460px) {
+    .masonry-container {
+        --column-count: 2;
+    }
+}
+
+@media (min-width: 880px) {
+    .masonry-container {
+        --column-count: 3;
+    }
+}
+
+@media (min-width: 1280px) {
+    .masonry-container {
+        --column-count: 4;
+    }
+}

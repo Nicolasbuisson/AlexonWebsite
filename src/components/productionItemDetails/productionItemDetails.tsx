@@ -1,8 +1,7 @@
 "use client";
 import { CreditEntry, StillImage } from "../../types/work";
-import { BehindTheScenesGallery } from "../behindTheScenesGallery/behindTheScenesGallery";
 import { Credits } from "../credits/credits";
-import { FrameGallery } from "../frameGallery/frameGallery";
+import { MasonryLayout } from "../masonry/masonry";
 import "./productionItemDetails.css";
 import { useState } from "react";
 
@@ -75,17 +74,17 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
       </div>
       {tab === "Frame Gallery" && (
         <div className="fade-in">
-          <FrameGallery stills={stills} />
+          <MasonryLayout images={stills} />
         </div>
       )}
       {tab === "Photo Gallery" && (
         <div className="fade-in">
-          <FrameGallery stills={photos} />
+          <MasonryLayout images={photos} />
         </div>
       )}
       {tab === "Behind the Scenes" && (
         <div className="fade-in">
-          <BehindTheScenesGallery btsImages={bts} />
+          <MasonryLayout images={bts} />
         </div>
       )}
       {tab === "Credits" && (
