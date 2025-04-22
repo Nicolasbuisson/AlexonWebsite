@@ -52,27 +52,24 @@ export const Projects = (props: IProps) => {
           >
             {project.gridVideoPreview ? (
               <video
-                src={
-                  nextConfig.basePath + `/assets/${project.gridVideoPreview}`
-                }
+                src={nextConfig.basePath + project.gridVideoPreview}
                 muted
                 loop
                 className="projects-grid-card-preview"
               ></video>
-            ) : (
+            ) : project.gridImage ? (
               <Image
-                src={nextConfig.basePath + `/assets/${project.gridImage}`}
+                src={nextConfig.basePath + project.gridImage}
                 alt={`project thumbnail for ${project.title}`}
                 className="project-thumbnail"
                 fill
               />
+            ) : (
+              <></>
             )}
             {project.logoImage ? (
               <Image
-                src={
-                  nextConfig.basePath +
-                  `/assets/clientLogos/${project.logoImage}`
-                }
+                src={nextConfig.basePath + project.logoImage}
                 alt={`client logo for ${project.client}`}
                 className="project-logo"
                 fill
