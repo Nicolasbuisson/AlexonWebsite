@@ -887,7 +887,6 @@
         "description": "On a meteoric rise, John Summit is shaping up to be one of the biggest DJs in the electronic music space. One of the driving forces behind his meteoric rise? His focus on social media. John Summit’s team tasked us with capturing the Montreal stop of his Comfort in Chaos tour, one where he would perform in front of the iconic Montreal Olympic Stadium.",
         "videos": [],
         "gridVideoPreview": "productions/johnSummit/preview.mp4",
-        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "JohnSummit.png",
         "services": ["Concert Videography"],
         "stills": [],
@@ -908,7 +907,6 @@
         "description": "We had the pleasure of creating authentic and raw short-form videos to convey Dim Mak and Steve Aoki’s return to Montreal. The goal was to convey the raw energy and emotion present at this performance and rapidly deliver the content for immediate social media usage.",
         "videos": [],
         "gridVideoPreview": "productions/newCityGas/preview.mp4",
-        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "NewCityGas.png",
         "services": ["Concert Videography"],
         "stills": [],
@@ -927,7 +925,6 @@
         "description": "We had the pleasure of capturing BUNT’s sold out show and first passage in Montreal. The goal here was to really showcase the “in the round” energy. Sweat, tears, screams - this show had it all. The result was a compelling visual showcase of raw and emotional moments.",
         "videos": [],
         "gridVideoPreview": "productions/bunt/preview.mp4",
-        "gridImage": "productions/mcgillUniversity/preview.jpg",
         "logoImage": "BUNT.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [],
@@ -984,6 +981,39 @@
             {"title": "Production Partner", "name": "Penrose Partners"},
             {"title": "Photographer", "name": "Xavier Barriault"},
             {"title": "Camera Operators", "name": "Keoni Lachhar"}
+        ],
+        "displayOnHomePage": false 
+    },
+    {
+        "route": "aquilasafaris",
+        "title": "Aquila Safaris",
+        "client": "Aquila Safaris",
+        "description": "",
+        "videos": [],
+        "gridVideoPreview": "productions/aquilaSafaris/preview.mp4",
+        "logoImage": "AquilaSafaris.png",
+        "services": ["Video Production", "Commercial Photography"],
+        "stills": [
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/1.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/2.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/3.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/4.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/5.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/6.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/7.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/8.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/9.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/10.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/11.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/12.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/13.jpeg"},
+            {"imageUrl": "/assets/productions/aquilaSafaris/stills/14.jpeg"}
+        ],
+        "photos": [],
+        "bts": [],
+        "credits": [
+            {"title": "Camera Operators", "name": "Alexon"},
+            {"title": "Editor", "name": "Alexon"}
         ],
         "displayOnHomePage": false 
     }
