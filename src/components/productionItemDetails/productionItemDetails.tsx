@@ -20,7 +20,16 @@ interface ProductionItemDetailsProps {
 
 export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
   const { stills, photos, bts, credits } = props;
-  const [tab, setTab] = useState<ProductionItemDetailsTab>("Frame Gallery");
+  // set initial tab to first tab that has items to display
+  const [tab, setTab] = useState<ProductionItemDetailsTab>(
+    stills.length > 0
+      ? "Frame Gallery"
+      : photos.length > 0
+      ? "Photo Gallery"
+      : bts.length > 0
+      ? "Behind the Scenes"
+      : "Credits"
+  );
 
   return (
     <div className="production-item-details">
