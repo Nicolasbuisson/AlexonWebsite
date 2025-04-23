@@ -1,26 +1,12 @@
 import "./productions.css";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
-import { ILogo, LogoList } from "../../components/logoList/logoList";
+import { LogoList } from "../../components/logoList/logoList";
 import nextConfig from "../../../next.config";
 import projectsJSON from "../../resources/projects.json";
 
 function Productions() {
   const { projects } = projectsJSON;
-
-  const projectsUniqueLogos: ILogo[] = [];
-  projects
-    .filter((project) => project.excludeLogoList !== "true")
-    .map((project) => {
-      if (
-        !projectsUniqueLogos.find((pul) => pul.src === project.logoImageDark)
-      ) {
-        projectsUniqueLogos.push({
-          src: nextConfig.basePath + project.logoImageDark,
-          alt: project.client + " logo",
-        });
-      }
-    });
 
   return (
     <div className="productions-container">
@@ -46,7 +32,131 @@ function Productions() {
       </section>
       <section className="productions-clients-section">
         <h2 className="productions-clients-title">Trusted by</h2>
-        <LogoList logos={projectsUniqueLogos}></LogoList>
+        <LogoList
+          logos={[
+            {
+              src: nextConfig.basePath + "/assets/clientLogos/CoronaBlack.png",
+              alt: "Corona logo",
+            },
+            {
+              src:
+                nextConfig.basePath +
+                "/assets/clientLogos/FourSeasonsBlack.png",
+              alt: "Four Seasons logo",
+            },
+            {
+              src: nextConfig.basePath + "/assets/clientLogos/ELLEBlack.png",
+              alt: "ELLE logo",
+            },
+            {
+              src:
+                nextConfig.basePath + "/assets/clientLogos/JohnSummitBlack.png",
+              alt: "John Summit logo",
+            },
+            {
+              src:
+                nextConfig.basePath +
+                "/assets/clientLogos/McGillUniversityBlack.png",
+              alt: "McGill University logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/AirCanadaBlack.png`,
+              alt: "AirCanada logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/BelcoreBlack.png`,
+              alt: "Belcore logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/BUNTBlack.png`,
+              alt: "BUNT logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/CCLuxembourgBlack.png`,
+              alt: "Chamber of Commerce Luxembourg logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/ChrisLakeBlack.png`,
+              alt: "Chris Lake logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/ClaptoneBlack.png`,
+              alt: "Claptone logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/ElewanaBlack.png`,
+              alt: "Elewana logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/IleSoniqBlack.png`,
+              alt: "Ile Soniq logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/KSHMRBlack.png`,
+              alt: "KSHMR logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/LequilibreBlack.png`,
+              alt: "L'Équilibre logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/LHOFTBlack.png`,
+              alt: "LHOFT logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/MonolinkBlack.png`,
+              alt: "Monolink logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/NewCityGasBlack.png`,
+              alt: "New City Gas logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/OnomoHotelsBlack.png`,
+              alt: "Onomo Hotels logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/PatschBlack.png`,
+              alt: "Patsch logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/PrepinsonBlack.png`,
+              alt: "Prepinson logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/St-PierreBlack.png`,
+              alt: "St-Pierre logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/VacierBlack.png`,
+              alt: "Vacier logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/VaudeBlack.png`,
+              alt: "Vaude logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/Web3MTLBlack.png`,
+              alt: "Web3MTL logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/XiaomiBlack.png`,
+              alt: "Xiaomi logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/PonenteBlack.png`,
+              alt: "Ponente logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/ParcOmegaBlack.png`,
+              alt: "Parc Omega logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/CoinbaseBlack.png`,
+              alt: "Coinbase logo",
+            },
+          ]}
+        ></LogoList>
       </section>
     </div>
   );

@@ -1,7 +1,7 @@
 import "./logoList.css";
 import Image from "next/image";
 
-export interface ILogo {
+interface ILogo {
   src: string;
   alt: string;
 }

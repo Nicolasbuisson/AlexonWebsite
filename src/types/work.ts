@@ -18,8 +18,6 @@ export interface WorkItemProps {
     gridVideoPreview?: string;
     gridImage?: string;
     logoImage: string;
-    logoImageDark: string;
-    excludeLogoList?: string;
     services: string[];
     stills: StillImage[];
     photos: StillImage[];
