@@ -155,6 +155,10 @@ function Productions() {
               src: `${nextConfig.basePath}/assets/clientLogos/CoinbaseBlack.png`,
               alt: "Coinbase logo",
             },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/AquilaSafarisBlack.png`,
+              alt: "Aquila Safaris logo",
+            },
           ]}
         ></LogoList>
       </section>
