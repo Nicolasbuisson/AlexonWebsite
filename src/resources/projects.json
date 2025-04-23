@@ -9,6 +9,7 @@
         "gridVideoPreview": "/assets/productions/fourSeasons/preview.mp4",
         "gridImage": "/assets/productions/fourSeasons/preview.jpg",
         "logoImage": "/assets/clientLogos/FourSeasons.png",
+        "logoImageDark": "/assets/clientLogos/FourSeasonsBlack.png",
         "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
@@ -44,6 +45,7 @@
         "gridVideoPreview": "/assets/productions/corona/preview.mp4",
         "gridImage": "/assets/productions/corona/preview.jpg",
         "logoImage": "/assets/clientLogos/Corona.png",
+        "logoImageDark": "/assets/clientLogos/CoronaBlack.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [],
         "photos": [
@@ -93,6 +95,7 @@
         "gridImage": "/assets/productions/elle/preview.jpg",
         "gridVideoPreview": "/assets/productions/elle/preview.mp4",
         "logoImage": "/assets/clientLogos/ELLE.png",
+        "logoImageDark": "/assets/clientLogos/ELLEBlack.png",
         "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/elle/stills/1.jpeg"},
@@ -128,6 +131,7 @@
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "gridVideoPreview": "/assets/productions/onomoHotels/preview.mp4",
         "logoImage": "/assets/clientLogos/OnomoHotels.png",
+        "logoImageDark": "/assets/clientLogos/OnomoHotelsBlack.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/onomoHotels/stills/1.jpeg"},
@@ -203,6 +207,7 @@
         "gridVideoPreview": "/assets/productions/lequilibre/preview.mp4",
         "gridImage": "/assets/productions/lequilibre/preview.jpg",
         "logoImage": "/assets/clientLogos/Lequilibre.png",
+        "logoImageDark": "/assets/clientLogos/LequilibreBlack.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/lequilibre/stills/1.jpeg"},
@@ -260,6 +265,7 @@
         "gridVideoPreview": "/assets/productions/elewana/preview.mp4",
         "gridImage": "/assets/productions/elewana/preview.jpg",
         "logoImage": "/assets/clientLogos/Elewana.png",
+        "logoImageDark": "/assets/clientLogos/ElewanaBlack.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [],
         "photos": [
@@ -311,6 +317,7 @@
         "gridVideoPreview": "/assets/productions/harasDePrepinson/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/Prepinson.png",
+        "logoImageDark": "/assets/clientLogos/PrepinsonBlack.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/harasDePrepinson/stills/1.jpeg"},
@@ -366,6 +373,7 @@
         "gridVideoPreview": "/assets/productions/maisonPrepinson/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/Prepinson.png",
+        "logoImageDark": "/assets/clientLogos/PrepinsonBlack.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/maisonPrepinson/stills/1.jpeg"},
@@ -415,6 +423,7 @@
         "gridVideoPreview": "/assets/productions/lhoft/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/LHOFT.png",
+        "logoImageDark": "/assets/clientLogos/LHOFTBlack.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/lhoft/stills/1.jpeg"},
@@ -488,6 +497,7 @@
         "videos": [],
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/Web3MTL.png",
+        "logoImageDark": "/assets/clientLogos/Web3MTLBlack.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [],
         "photos": [],
@@ -506,6 +516,7 @@
         "videos": [],
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/ChrisLake.png",
+        "logoImageDark": "/assets/clientLogos/ChrisLakeBlack.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [],
         "photos": [],
@@ -525,6 +536,7 @@
         "gridVideoPreview": "/assets/productions/claptone/preview.mp4",
         "gridImage": "/assets/productions/claptone/preview.jpg",
         "logoImage": "/assets/clientLogos/Claptone.png",
+        "logoImageDark": "/assets/clientLogos/ClaptoneBlack.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [],
         "photos": [
@@ -559,6 +571,7 @@
         "videos": [],
         "gridImage": "/assets/productions/businessClubFranceLux/preview.jpg",
         "logoImage": "/assets/clientLogos/CCLuxembourg.png",
+        "logoImageDark": "/assets/clientLogos/CCLuxembourgBlack.png",
         "services": ["Event Photography"],
         "stills": [],
         "photos": [
@@ -597,6 +610,8 @@
         "gridVideoPreview": "/assets/productions/visionBoard/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/AlexonSignature.png",
+        "logoImageDark": "/assets/clientLogos/AlexonSignatureBlack.png",
+        "excludeLogoList": "true",
         "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "/assets/productions/visionBoard/stills/1.jpeg"},
@@ -641,8 +656,9 @@
         "description": "Alexon's life has radically and quickly changed. At 21, he's already been able to accomplish many of his dreams. But as he learns, with all good things there comes many sacrifices and hardships...",
         "videos": ["https://www.youtube.com/embed/4mC7V-_V5Ic"],
         "gridVideoPreview": "/assets/productions/willIEverMakeIt/preview.mp4",
-        "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/AlexonSignature.png",
+        "logoImageDark": "/assets/clientLogos/AlexonSignatureBlack.png",
+        "excludeLogoList": "true",
         "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "/assets/productions/willIEverMakeIt/stills/1.jpeg"},
@@ -688,6 +704,7 @@
         "videos": [],
         "gridImage": "/assets/productions/chamberOfCommerceLux/preview.JPG",
         "logoImage": "/assets/clientLogos/CCLuxembourg.png",
+        "logoImageDark": "/assets/clientLogos/CCLuxembourgBlack.png",
         "services": ["Event Photography"],
         "stills": [],
         "photos": [
@@ -724,8 +741,8 @@
         "client": "Monolink",
         "description": "Our team captured the emotional intensity of Monolink’s live performance in Montreal, blending sound, light, and emotion into powerful but authentic short-form videos and photos. Through creative camera work and atmospheric lighting, we recreated the hypnotic experience of his performances. The final product immersed viewers in Monolink’s artistic world.",
         "videos": [],
-        "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/Monolink.png",
+        "logoImageDark": "/assets/clientLogos/MonolinkBlack.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [],
         "photos": [],
@@ -745,6 +762,7 @@
         "gridVideoPreview": "/assets/productions/parcOmega/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/ParcOmega.png",
+        "logoImageDark": "/assets/clientLogos/ParcOmegaBlack.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/parcOmega/stills/1.jpeg"},
@@ -796,6 +814,7 @@
         "gridVideoPreview": "/assets/productions/ponente/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "logoImage": "/assets/clientLogos/Ponente.png",
+        "logoImageDark": "/assets/clientLogos/PonenteBlack.png",
         "services": ["Commercial Photography", "Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/ponente/stills/1.jpeg"},
@@ -854,7 +873,8 @@
         "gridVideoPreview": "/assets/productions/mcgillUniversity/preview.mp4",
         "gridImage": "/assets/productions/mcgillUniversity/preview.jpg",
         "logoImage": "/assets/clientLogos/McGillUniversity.png",
-       "services": ["Video Production"],
+        "logoImageDark": "/assets/clientLogos/McGillUniversityBlack.png",
+        "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/mcgillUniversity/stills/1.jpeg"},
             {"imageUrl": "/assets/productions/mcgillUniversity/stills/2.jpeg"},
@@ -888,6 +908,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/johnSummit/preview.mp4",
         "logoImage": "/assets/clientLogos/JohnSummit.png",
+        "logoImageDark": "/assets/clientLogos/JohnSummitBlack.png",
         "services": ["Concert Videography"],
         "stills": [],
         "photos": [],
@@ -908,6 +929,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/newCityGas/preview.mp4",
         "logoImage": "/assets/clientLogos/NewCityGas.png",
+        "logoImageDark": "/assets/clientLogos/NewCityGasBlack.png",
         "services": ["Concert Videography"],
         "stills": [],
         "photos": [],
@@ -926,6 +948,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/bunt/preview.mp4",
         "logoImage": "/assets/clientLogos/BUNT.png",
+        "logoImageDark": "/assets/clientLogos/BUNTBlack.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [],
         "photos": [
@@ -952,6 +975,7 @@
         "videos": ["https://youtube.com/embed/vu9C_KBagII"],
         "gridImage": "/assets/productions/mcgillUniversity/preview.jpg",
         "logoImage": "/assets/clientLogos/Coinbase.png",
+        "logoImageDark": "/assets/clientLogos/CoinbaseBlack.png",
         "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [],
         "photos": [
@@ -992,6 +1016,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/aquilaSafaris/preview.mp4",
         "logoImage": "/assets/clientLogos/AquilaSafaris.png",
+        "logoImageDark": "/assets/clientLogos/AquilaSafarisBlack.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/aquilaSafaris/stills/1.jpeg"},
