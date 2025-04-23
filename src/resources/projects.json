@@ -481,42 +481,6 @@
         "displayOnHomePage": false
     },
     {
-        "route": "web3mtl",
-        "title": "Web3MTL",
-        "client": "Web3MTL",
-        "description": "We had the pleasure of covering Web3MTL’s one year anniversary. Having been founded as a way to further drive growth in Montreal’s Web3 and crypto ecosystem, this organization was able to gather players from a myriad of firms and backgrounds.",
-        "videos": [],
-        "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/Web3MTL.png",
-        "services": ["Video Production", "Event Photography"],
-        "stills": [],
-        "photos": [],
-        "bts": [],
-        "credits": [
-            {"title": "Director, Filmmaker & Editor", "name": "Alexon"},
-            {"title": "Photographer", "name": "Keoni Lachhar"}
-        ],
-        "displayOnHomePage": false
-    },
-    {
-        "route": "chrislake",
-        "title": "Chris Lake",
-        "client": "Chris Lake",
-        "description": "Our energetic and immersive concert visuals captured the pulse of Chris Lake’s performances in Montreal. The result was a piece that mirrored the intensity and euphoria of his shows.",
-        "videos": [],
-        "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/ChrisLake.png",
-        "services": ["Concert Videography", "Event Photography"],
-        "stills": [],
-        "photos": [],
-        "bts": [],
-        "credits": [
-            {"title": "Camera Operators", "name": "Alexon, Evan Silverman"},
-            {"title": "Photography", "name": "Alexon, Evan Silverman"}
-        ],
-        "displayOnHomePage": false
-    },
-    {
         "route": "claptone",
         "title": "Claptone",
         "client": "Claptone",
