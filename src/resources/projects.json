@@ -719,24 +719,6 @@
         "displayOnHomePage": false
     },
     {
-        "route": "monolink",
-        "title": "Monolink",
-        "client": "Monolink",
-        "description": "Our team captured the emotional intensity of Monolink’s live performance in Montreal, blending sound, light, and emotion into powerful but authentic short-form videos and photos. Through creative camera work and atmospheric lighting, we recreated the hypnotic experience of his performances. The final product immersed viewers in Monolink’s artistic world.",
-        "videos": [],
-        "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/Monolink.png",
-        "services": ["Event Photography", "Concert Videography"],
-        "stills": [],
-        "photos": [],
-        "bts": [],
-        "credits": [
-            {"title": "Camera Operators", "name": "Alexon, Evan Silverman"},
-            {"title": "Photography", "name": "Alexon, Evan Silverman"}
-        ],
-        "displayOnHomePage": false
-    },
-    {
         "route": "parcomega",
         "title": "Parc Oméga",
         "client": "Parc Oméga",
