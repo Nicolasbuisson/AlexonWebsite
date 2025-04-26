@@ -25,7 +25,7 @@ export const ProductionsCarouselCard = (
     >
       {videoSrc ? (
         <video
-          src={nextConfig.basePath + `/assets/${videoSrc}`}
+          src={nextConfig.basePath + `${videoSrc}`}
           muted
           autoPlay
           loop
@@ -33,7 +33,7 @@ export const ProductionsCarouselCard = (
         ></video>
       ) : imageSrc ? (
         <Image
-          src={`${nextConfig.basePath}/assets/${imageSrc}`}
+          src={`${nextConfig.basePath}${imageSrc}`}
           alt={`${title} production cover`}
           fill
           className="production-carousel-card-img"
@@ -44,7 +44,7 @@ export const ProductionsCarouselCard = (
 
       {logoImageSrc ? (
         <Image
-          src={nextConfig.basePath + `/assets/clientLogos/${logoImageSrc}`}
+          src={nextConfig.basePath + `${logoImageSrc}`}
           alt={`client logo for ${client}`}
           className="production-carousel-card-logo"
           fill
