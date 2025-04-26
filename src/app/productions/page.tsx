@@ -159,6 +159,14 @@ function Productions() {
               src: `${nextConfig.basePath}/assets/clientLogos/AquilaSafarisBlack.png`,
               alt: "Aquila Safaris logo",
             },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/PuntoDeVistaBlack.png`,
+              alt: "Punto de Vista logo",
+            },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/BDBlack.png`,
+              alt: "Beautiful Destinations logo",
+            },
           ]}
         ></LogoList>
       </section>
