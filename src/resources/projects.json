@@ -896,7 +896,7 @@
         "client": "Coinbase",
         "description": "We had the pleasure of working with Coinbase to create video content for their Stand with Crypto movement across Canada. The goal was to raise awareness and usher policy change in regards to cryptocurrency in Canada. Through a myriad of video interviews we conveyed the multitude of use cases that cryptocurrency has today. The result was a compelling narrative that cemented cryptocurrency as a positive force for change in Canada’s future.",
         "videos": ["https://youtube.com/embed/vu9C_KBagII"],
-        "gridImage": "/assets/productions/mcgillUniversity/preview.jpg",
+        "gridVideoPreview": "/assets/productions/coinbase/preview.mp4",
         "logoImage": "/assets/clientLogos/Coinbase.png",
         "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [],
