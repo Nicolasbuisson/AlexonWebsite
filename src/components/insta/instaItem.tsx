@@ -1,26 +1,15 @@
-import { MediaType } from "../../types/insta";
+import { InstaItemProps } from "../../types/insta";
 import { CarouselIcon } from "./icons/carouselIcon";
 import { VideoIcon } from "./icons/videoIcon";
 import "./instaItem.css";
 
-interface InstaItem {
-  permaLink: string;
-  mediaURL: string;
-  mediaType: MediaType;
-  caption: string;
-}
-
-export const InstaItem = (props: InstaItem) => {
-  const { permaLink, mediaURL, mediaType, caption } = props;
+export const InstaItem = (props: InstaItemProps) => {
+  const { permaLink, mediaURL, mediaType, caption, thumbnailURL = "" } = props;
 
   return (
     <a href={permaLink} target="_blank" rel="noopener noreferrer">
       <div className="insta-grid-item">
-        {permaLink.match("/reel/") ? (
-          <video src={mediaURL} controls></video>
-        ) : (
-          <img src={mediaURL}></img>
-        )}
+        <img src={mediaType === "VIDEO" ? thumbnailURL : mediaURL} />
         <p className="caption">{caption}</p>
         {mediaType === "CAROUSEL_ALBUM" ? (
           <CarouselIcon className="insta-svg"></CarouselIcon>
