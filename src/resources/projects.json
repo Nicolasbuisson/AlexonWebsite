@@ -931,39 +931,6 @@
         "displayOnHomePage": false 
     },
     {
-        "route": "aquilasafaris",
-        "title": "Aquila Safaris",
-        "client": "Aquila Safaris",
-        "description": "",
-        "videos": [],
-        "gridVideoPreview": "/assets/productions/aquilaSafaris/preview.mp4",
-        "logoImage": "/assets/clientLogos/AquilaSafaris.png",
-        "services": ["Video Production", "Commercial Photography"],
-        "stills": [
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/1.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/2.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/3.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/4.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/5.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/6.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/7.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/8.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/9.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/10.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/11.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/12.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/13.jpeg"},
-            {"imageUrl": "/assets/productions/aquilaSafaris/stills/14.jpeg"}
-        ],
-        "photos": [],
-        "bts": [],
-        "credits": [
-            {"title": "Camera Operators", "name": "Alexon"},
-            {"title": "Editor", "name": "Alexon"}
-        ],
-        "displayOnHomePage": false 
-    },
-    {
         "route": "beautythathurts",
         "title": "Beauty that Hurts",
         "client": "Beautiful Destinations",
