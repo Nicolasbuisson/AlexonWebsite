@@ -160,12 +160,13 @@
     --services-columns: 1fr;
 
     padding-block: var(--section-padding-block);
-    padding-inline: var(--section-padding-inline);
+    padding-inline: calc(var(--section-padding-inline) - 2rem);
     background-color: var(--clr-dark);
     color: var(--clr-light);
     width: 100%;
     margin: auto;
     display: grid;
+    justify-items: center;
     justify-content: center;
     grid-template-columns: var(--services-columns);
     gap: 1rem;
@@ -174,7 +175,6 @@
 @media (width > 880px) {
     .home-services-section {
         --services-columns: 1fr 1fr;
-        gap: 4rem;
     }
 }
 

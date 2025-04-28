@@ -108,7 +108,7 @@ function Home() {
           title={"Short Form Content"}
           description={"Scale your brand through increased reach"}
           link={"/shortform"}
-          imageSrc={"/assets/images/rice-hills.jpg"}
+          imageSrc={"/assets/images/Shortform.jpg"}
         />
         <ServiceCard
           title={"Productions"}
@@ -116,12 +116,17 @@ function Home() {
             "Brand videos, documentaries, aftermovies to forge brand personality and tell impactful stories"
           }
           link={"/productions"}
-          imageSrc={"/assets/images/lake.jpg"}
+          imageSrc={"/assets/images/Productions.jpeg"}
         />
       </section>
       <section className="home-work-section">
         <h2>Our Work</h2>
         <Projects projects={projects} homePageFilter />
+        <h3
+        // do arrow animation like Jacob Media
+        >
+          Link to see all our work
+        </h3>
       </section>
       <InstaSection />
     </div>

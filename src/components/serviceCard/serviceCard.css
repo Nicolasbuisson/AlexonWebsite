@@ -1,20 +1,17 @@
 .service-card {
     --service-card-height: 300px;
+    --aspect-ratio: 0.77;
 
     position: relative;
     height: var(--service-card-height);
+    width: calc(var(--service-card-height) * var(--aspect-ratio));
     display: grid;
     align-items: end;
     grid-template-columns: 1fr;
     color: var(--clr-light);
     border-radius: 24px;
     transition: filter 500ms;
-}
 
-@media (width > 880px) {
-    .service-card {
-        --service-card-height: 600px;
-    }
 }
 
 .service-card img {
@@ -27,7 +24,7 @@
 .service-card-text {
     z-index: 2;
     padding-inline: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
 }
 
 .service-card-text h3 {
@@ -50,4 +47,28 @@
 .service-card:hover+.service-card,
 .service-card:has(+ .service-card:hover) {
     filter: brightness(.5) saturate(.75);
+}
+
+
+
+@media (width > 660px) {
+    .service-card {
+        --service-card-height: 400px;
+    }
+
+    .service-card-text {
+        padding-bottom: 3rem;
+    }
+}
+
+@media (width > 880px) {
+    .service-card {
+        --service-card-height: 500px;
+    }
+}
+
+@media (width > 1280px) {
+    .service-card {
+        --service-card-height: 600px;
+    }
 }
