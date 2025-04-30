@@ -7,7 +7,7 @@
     --burger-bar-third-translateY: 0.775em;
     --max-logo-height: 6;
     --max-logo-difference: 4;
-    --logo-starting-height: 25;
+    --logo-starting-translateY: 35;
 
     background-color: var(--clr-dark);
     height: var(--menu-height);
@@ -32,7 +32,7 @@ nav {
 
 .nav-scroll {
     /* background starts transparent and becomes opacity 1 when --scroll reaches 33.3vh */
-    background-color: rgb(0, 0, 0, calc((min(var(--scroll), var(--logo-starting-height))/ var(--logo-starting-height))));
+    background-color: rgb(0, 0, 0, calc((min(var(--scroll), var(--logo-starting-translateY))/ var(--logo-starting-translateY))));
 }
 
 nav>* {
@@ -57,8 +57,8 @@ nav>* {
 }
 
 .logo-scroll {
-    transform: translateY(calc(1vh * var(--logo-starting-height) - 1vh * min(var(--scroll), var(--logo-starting-height))));
-    height: min(1rem * calc(var(--max-logo-height) - (min(var(--scroll), var(--logo-starting-height)) * (var(--max-logo-difference) / var(--logo-starting-height)))), 1rem * var(--max-logo-height));
+    transform: translateY(calc(1vh * var(--logo-starting-translateY) - 1vh * min(var(--scroll), var(--logo-starting-translateY))));
+    height: min(1rem * calc(var(--max-logo-height) - (min(var(--scroll), var(--logo-starting-translateY)) * (var(--max-logo-difference) / var(--logo-starting-translateY)))), 1rem * var(--max-logo-height));
     /*
     (oldVal - oldMin) * newRange / oldRange + newMin
     Start at max size then decrease linearly as we scroll, pick the minimal value between the 2
@@ -66,7 +66,6 @@ nav>* {
 }
 
 .burger-menu {
-    margin-right: 0.5rem;
     grid-column: 3;
     width: var(--bar-width);
     justify-self: end;

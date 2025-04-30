@@ -27,7 +27,7 @@
 }
 
 .home-hero-text {
-    --home-pitch-top: 37%;
+    --home-pitch-top: 46%;
     --home-pitch-fs: 1.75rem;
     position: absolute;
     top: var(--home-pitch-top);
@@ -185,14 +185,14 @@
 
 @media (width < 880px) {
     .home-hero-text {
-        --home-pitch-top: 35%;
+        --home-pitch-top: 44%;
         --home-pitch-fs: 1.5rem;
     }
 }
 
 @media (width < 550px) {
     .home-hero-text {
-        --home-pitch-top: 32%;
+        --home-pitch-top: 42%;
         --home-pitch-fs: 0.8rem;
     }
 }
