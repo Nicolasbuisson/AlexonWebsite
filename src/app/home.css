@@ -42,8 +42,8 @@
 .home-pitch-section {
     padding-block: 10vh;
     padding-block: 10svh;
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
     width: 100%;
     margin: auto;
 }
@@ -83,7 +83,7 @@
     --video-max-height: 500px;
     --video-max-width: 640px;
 
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
     color: var(--clr-light);
     padding-block: var(--section-padding-block);
     padding-inline: 2rem;
@@ -146,8 +146,8 @@
 
 .home-clients-section {
     padding-block: var(--section-padding-block);
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
     text-align: center;
 
     & h3 {

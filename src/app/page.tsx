@@ -76,28 +76,25 @@ function Home() {
         <LogoList
           logos={[
             {
-              src: nextConfig.basePath + "/assets/clientLogos/CoronaBlack.png",
+              src: nextConfig.basePath + "/assets/clientLogos/Corona.png",
               alt: "Corona logo",
             },
             {
-              src:
-                nextConfig.basePath +
-                "/assets/clientLogos/FourSeasonsBlack.png",
+              src: nextConfig.basePath + "/assets/clientLogos/FourSeasons.png",
               alt: "Four Seasons logo",
             },
             {
-              src: nextConfig.basePath + "/assets/clientLogos/ELLEBlack.png",
+              src: nextConfig.basePath + "/assets/clientLogos/ELLE.png",
               alt: "ELLE logo",
             },
             {
-              src:
-                nextConfig.basePath + "/assets/clientLogos/JohnSummitBlack.png",
+              src: nextConfig.basePath + "/assets/clientLogos/JohnSummit.png",
               alt: "John Summit logo",
             },
             {
               src:
                 nextConfig.basePath +
-                "/assets/clientLogos/McGillUniversityBlack.png",
+                "/assets/clientLogos/McGillUniversity.png",
               alt: "McGill University logo",
             },
           ]}
