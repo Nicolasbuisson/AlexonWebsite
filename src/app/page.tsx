@@ -10,6 +10,7 @@ import { ServiceCard } from "../components/serviceCard/serviceCard";
 import nextConfig from "../../next.config";
 import { projects } from "../resources/projects.json";
 import useScrollPercentage from "../hooks/useScrollPercentage";
+import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
 
 function Home() {
   useScrollPercentage(); // initiate css variable --scroll
@@ -119,11 +120,12 @@ function Home() {
       <section className="home-work-section">
         <h2>Our Work</h2>
         <Projects projects={projects} homePageFilter />
-        <h3
-        // do arrow animation like Jacob Media
-        >
-          Link to see all our work
-        </h3>
+        <ArrowPathLink
+          url="/productions"
+          text="See our work"
+          className="home-work-link"
+          svgClassName="home-work-arrow"
+        />
       </section>
       <InstaSection />
     </div>

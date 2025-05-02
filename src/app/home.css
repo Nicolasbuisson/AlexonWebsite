@@ -183,6 +183,12 @@
     padding-inline: var(--section-padding-inline);
 }
 
+.home-work-link {
+    display: block;
+    margin-block-start: 3rem;
+    text-align: center;
+}
+
 @media (width < 880px) {
     .home-hero-text {
         --home-pitch-top: 44%;
