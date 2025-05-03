@@ -1,4 +1,3 @@
-"use client";
 import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
 import nextConfig from "../../../next.config";
@@ -9,21 +8,8 @@ import { Package } from "../../components/package/package";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
 import { ParallaxScrollGallery } from "../../components/parallaxScrollGallery/parallaxScrollGallery";
-import { useEffect } from "react";
-import Lenis from "lenis";
 
 function ShortForm() {
-  useEffect(() => {
-    const lenis = new Lenis({ smoothWheel: true });
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <div className="shortform-container">
       <Navigation />
