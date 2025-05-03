@@ -1,3 +1,4 @@
+"use client";
 import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
 import nextConfig from "../../../next.config";
@@ -7,8 +8,22 @@ import { Statistic } from "../../components/statistic/statistic";
 import { Package } from "../../components/package/package";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
+import { ParallaxScrollGallery } from "../../components/parallaxScrollGallery/parallaxScrollGallery";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 function ShortForm() {
+  useEffect(() => {
+    const lenis = new Lenis({ smoothWheel: true });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <div className="shortform-container">
       <Navigation />
@@ -225,53 +240,12 @@ function ShortForm() {
               />
             </div>
           </HorizontalScroller>
+          <h2 className="shortform-work-title">Our Work</h2>
         </section>
       </div>
       <section className="shortform-work-section">
-        <h2 className="shortform-work-title">Our Work</h2>
-        <div className="shortform-work-grid">
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Belcore.mov"}
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Claptone.mov"}
-            controls
-          />
-          <video
-            src={
-              nextConfig.basePath +
-              "/assets/videos/shortform/CoinbasePenrosePartners.mp4"
-            }
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Corona.mov"}
-            controls
-          />
-          <video
-            src={
-              nextConfig.basePath +
-              "/assets/videos/shortform/ElewanaCollection.mov"
-            }
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Prepinson.mov"}
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
-            controls
-          />
-          <video
-            src={nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"}
-            controls
-          />
+        <div className="parallax-scroll-gallery-wrapper">
+          <ParallaxScrollGallery></ParallaxScrollGallery>
         </div>
       </section>
       <section className="shortform-results-section">

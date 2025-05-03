@@ -1,0 +1,93 @@
+.parallax-scroll-gallery {
+    --parallax-scroll-gap: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--parallax-scroll-gap);
+    position: relative;
+    overflow: hidden;
+    height: 140svh;
+    height: 140vh;
+}
+
+.parallax-scroll-column:nth-child(1) {
+    top: -88%;
+}
+
+.parallax-scroll-column:nth-child(2) {
+    top: -44%;
+}
+
+.parallax-scroll-column:nth-child(3) {
+    top: -77%;
+}
+
+@media (width < 880px) {
+    .parallax-scroll-gallery {
+        gap: 1.25rem;
+        height: 140svh;
+        height: 140vh;
+    }
+
+    .parallax-scroll-column:nth-child(1) {
+        top: -78%;
+    }
+
+    .parallax-scroll-column:nth-child(2) {
+        top: -51%;
+    }
+
+    .parallax-scroll-column:nth-child(3) {
+        top: -67%;
+    }
+}
+
+@media (width < 740px) {
+    .parallax-scroll-gallery {
+        height: 100svh;
+        height: 100vh;
+    }
+
+    .parallax-scroll-column:nth-child(1) {
+        top: -92%;
+    }
+
+    .parallax-scroll-column:nth-child(2) {
+        top: -58%;
+    }
+
+    .parallax-scroll-column:nth-child(3) {
+        top: -77%;
+    }
+}
+
+@media (width < 600px) {
+    .parallax-scroll-gallery {
+        gap: 1rem;
+        height: 60svh;
+        height: 60vh;
+    }
+
+    .parallax-scroll-column:nth-child(1) {
+        top: -132%;
+    }
+
+    .parallax-scroll-column:nth-child(2) {
+        top: -78%;
+    }
+
+    .parallax-scroll-column:nth-child(3) {
+        top: -98%;
+    }
+}
+
+@media (width < 420px) {
+    .parallax-scroll-column:nth-child(1) {
+        top: -122%;
+    }
+
+    .parallax-scroll-column:nth-child(2) {
+        top: -72%;
+    }
+}

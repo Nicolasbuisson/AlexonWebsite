@@ -1,0 +1,14 @@
+.parallax-scroll-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--parallax-scroll-gap);
+    position: relative;
+    height: 100%;
+}
+
+.parallax-scroll-column video {
+    width: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 12px;
+}

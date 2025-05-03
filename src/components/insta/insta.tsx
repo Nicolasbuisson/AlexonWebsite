@@ -82,7 +82,7 @@ export const Insta = () => {
     });
   }, [instaItems]);
 
-  const windowWidth = useWindowSize();
+  const { width: windowWidth } = useWindowSize();
 
   const getPageSize = useCallback((): number => {
     if (windowWidth <= 440) {

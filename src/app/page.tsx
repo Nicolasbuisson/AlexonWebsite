@@ -11,9 +11,22 @@ import nextConfig from "../../next.config";
 import { projects } from "../resources/projects.json";
 import useScrollPercentage from "../hooks/useScrollPercentage";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 function Home() {
-  useScrollPercentage(); // initiate css variable --scroll
+  useEffect(() => {
+    useScrollPercentage(); // initiate css variable --scroll
+
+    const lenis = new Lenis({ smoothWheel: true });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <div className="home-section-container">

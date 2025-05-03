@@ -23,7 +23,7 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     projectsWithCurrentProjectExcluded.length
   );
 
-  const windowWidth = useWindowSize();
+  const { width: windowWidth } = useWindowSize();
 
   const getPageSize = useCallback((): number => {
     if (windowWidth <= 580) {

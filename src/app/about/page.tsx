@@ -12,7 +12,7 @@ import { useCallback } from "react";
 
 function AboutPage() {
   useScrollPercentage(); // initiate css variable --scroll
-  const windowWidth = useWindowSize();
+  const { width: windowWidth } = useWindowSize();
 
   const scrollOffsetIntersection = useCallback(() => {
     if (windowWidth >= 1240) {
