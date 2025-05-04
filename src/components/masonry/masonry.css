@@ -38,7 +38,9 @@
 }
 
 @media (min-width: 1280px) {
-    .masonry-container {
+
+    /* make column-count 4 only if the container has 10 children or more */
+    .masonry-container:has(> *:nth-child(10)) {
         --column-count: 4;
     }
 }

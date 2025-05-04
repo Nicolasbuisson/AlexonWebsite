@@ -1,5 +1,5 @@
-import { StillImage } from "../../types/work";
 import "./masonry.css";
+import { StillImage } from "../../types/work";
 import nextConfig from "../../../next.config";
 
 interface MasonryProps {
