@@ -71,7 +71,7 @@ export default async function productionsItem({
         <div
           className="productionsItem-title-background"
           style={{
-            backgroundImage: `url(${nextConfig.basePath}/assets/${gridImage})`,
+            backgroundImage: `url(${nextConfig.basePath}${gridImage})`,
           }}
         >
           <h2>{title}</h2>
