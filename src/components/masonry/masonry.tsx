@@ -17,13 +17,6 @@ export const MasonryLayout = (props: MasonryProps) => {
             key={"masonry-item " + image.imageUrl}
             className="masonry-item-wrapper"
           >
-            {/* <Image
-              src={nextConfig.basePath + image.imageUrl}
-              alt={"project picture"}
-              //fill
-              //   style={{ height: "unset" }}
-              className="masonry-item-image"
-            /> */}
             <img
               src={nextConfig.basePath + image.imageUrl}
               alt={"project picture"}
