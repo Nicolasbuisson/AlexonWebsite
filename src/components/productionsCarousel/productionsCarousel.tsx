@@ -19,9 +19,6 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
   );
 
   const [pageSize, setPageSize] = useState<number>(1);
-  const [totalProductionsShown, setTotalProductionsShown] = useState<number>(
-    projectsWithCurrentProjectExcluded.length
-  );
 
   const { width: windowWidth } = useWindowSize();
 
@@ -35,13 +32,6 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     }
   }, [windowWidth]);
 
-  const getTotalProductionsShown = useCallback((): number => {
-    return (
-      Math.floor(projectsWithCurrentProjectExcluded.length / pageSize) *
-      pageSize
-    );
-  }, [pageSize]);
-
   // set state variable correctly on initial load
   useEffect(() => {
     setPageSize(getPageSize());
@@ -52,35 +42,28 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
     setPageSize(getPageSize());
   }, [windowWidth]);
 
-  // set total productions to show in carousel whenever page size changes
-  useEffect(() => {
-    setTotalProductionsShown(getTotalProductionsShown());
-  }, [pageSize]);
-
   return (
     <Carousel
       pageSize={pageSize}
-      totalPages={Math.floor(totalProductionsShown / pageSize)}
+      totalPages={projectsWithCurrentProjectExcluded.length / pageSize}
       itemWidthMin={256}
       itemWidthMax={512}
       dynamicSize
       rootClass="production-carousel"
     >
-      {projectsWithCurrentProjectExcluded
-        .slice(0, totalProductionsShown)
-        .map((project: WorkItemProps) => {
-          return (
-            <ProductionsCarouselCard
-              key={"production-carousel-" + project.route}
-              title={project.title}
-              route={project.route}
-              imageSrc={project.gridImage}
-              client={project.client}
-              logoImageSrc={project.logoImage}
-              videoSrc={project.gridVideoPreview}
-            />
-          );
-        })}
+      {projectsWithCurrentProjectExcluded.map((project: WorkItemProps) => {
+        return (
+          <ProductionsCarouselCard
+            key={"production-carousel-" + project.route}
+            title={project.title}
+            route={project.route}
+            imageSrc={project.gridImage}
+            client={project.client}
+            logoImageSrc={project.logoImage}
+            videoSrc={project.gridVideoPreview}
+          />
+        );
+      })}
     </Carousel>
   );
 };

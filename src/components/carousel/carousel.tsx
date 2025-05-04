@@ -26,8 +26,12 @@ export const Carousel = (props: IProps) => {
   const [index, setIndex] = useState<number>(0);
 
   const updateIndex = (index: number) => {
-    if (index < 0) index += totalPages;
-    const modulatedIndex = index % totalPages;
+    const modulatedIndex =
+      index < 0
+        ? totalPages - 1 // if index is less than 0, go to the end
+        : index >= totalPages
+        ? 0 // if index is greater than total pages, go to start
+        : Math.min(index, totalPages - 1); // else increment page accordingly
     setIndex(modulatedIndex);
     (
       document.querySelector(".carousel-container") as HTMLElement
