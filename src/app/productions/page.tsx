@@ -167,6 +167,10 @@ function Productions() {
               src: `${nextConfig.basePath}/assets/clientLogos/BDBlack.png`,
               alt: "Beautiful Destinations logo",
             },
+            {
+              src: `${nextConfig.basePath}/assets/clientLogos/ToyotaBlack.png`,
+              alt: "Toyota logo",
+            },
           ]}
         ></LogoList>
       </section>
