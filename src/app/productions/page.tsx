@@ -14,7 +14,9 @@ function Productions() {
       <section className="productions-section-container">
         <div className="productions-video-background">
           <video
-            src={nextConfig.basePath + "/assets/videos/Productions.mp4"}
+            src={
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Productions.mp4"
+            }
             muted
             autoPlay
             loop

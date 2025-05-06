@@ -34,8 +34,7 @@ function Home() {
         <div className="home-hero-bg">
           <video
             src={
-              nextConfig.basePath +
-              "/assets/videos/VisualizerAlexonMedia-v1.mov"
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/VisualizerAlexonMedia-v1.mov"
             }
             muted
             autoPlay
@@ -61,14 +60,18 @@ function Home() {
       </section>
       <section className="home-video-section">
         <video
-          src={nextConfig.basePath + "/assets/videos/CoronaPreview.mov"}
+          src={
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/CoronaPreview.mov"
+          }
           muted
           autoPlay
           loop
           className="landscape"
         ></video>
         <video
-          src={nextConfig.basePath + "/assets/videos/Xiaomi-WebsiteMedia.mp4"}
+          src={
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Xiaomi-WebsiteMedia.mp4"
+          }
           muted
           autoPlay
           loop
@@ -76,7 +79,7 @@ function Home() {
         ></video>
         <video
           src={
-            nextConfig.basePath + "/assets/videos/L'Equilibre-MovingImage.mov"
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/L'Equilibre-MovingImage.mov"
           }
           muted
           autoPlay
@@ -118,7 +121,9 @@ function Home() {
           title={"Short Form Content"}
           description={"Scale your brand through increased reach"}
           link={"/shortform"}
-          imageSrc={"/assets/images/Shortform.jpg"}
+          imageSrc={
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Shortform.jpg"
+          }
         />
         <ServiceCard
           title={"Productions"}
@@ -126,7 +131,9 @@ function Home() {
             "Brand videos, documentaries, aftermovies to forge brand personality and tell impactful stories"
           }
           link={"/productions"}
-          imageSrc={"/assets/images/Productions.jpeg"}
+          imageSrc={
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Productions.jpeg"
+          }
         />
       </section>
       <section className="home-work-section">

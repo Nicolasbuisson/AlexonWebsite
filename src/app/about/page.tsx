@@ -3,7 +3,6 @@ import "./about.css";
 import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
-import nextConfig from "../../../next.config";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
 import Image from "next/image";
 import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
@@ -34,14 +33,18 @@ function AboutPage() {
       <section className="about-section-hero-container">
         <div className="about-hero">
           <Image
-            src={nextConfig.basePath + "/assets/images/AboutLayerClouds.jpg"}
+            src={
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AboutLayerClouds.jpg"
+            }
             alt="about hero background"
             width={2016}
             height={1512}
             className="about-hero-image about-hero-background"
           />
           <Image
-            src={nextConfig.basePath + "/assets/images/AboutLayerAlexon2.png"}
+            src={
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AboutLayerAlexon2.png"
+            }
             alt="about hero foreground"
             width={2016}
             height={1512}
@@ -72,7 +75,7 @@ function AboutPage() {
               <span className="about-story-logo-wrapper">
                 <Image
                   src={
-                    nextConfig.basePath + "/assets/logos/Signature-white.png"
+                    "https://alexonmedia.s3.ca-central-1.amazonaws.com/logos/Signature-white.png"
                   }
                   alt={"Alexon signature logo"}
                   className="about-story-logo"
@@ -126,28 +129,36 @@ function AboutPage() {
           </div>
           <div className="about-story-image-grid">
             <Image
-              src={nextConfig.basePath + "/assets/images/AlexBali.jpg"}
+              src={
+                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexBali.jpg"
+              }
               width={2832}
               height={4240}
               alt={"Alexon in Bali"}
               layout="responsive"
             />
             <Image
-              src={nextConfig.basePath + "/assets/images/AlexParis.jpg"}
+              src={
+                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexParis.jpg"
+              }
               width={3072}
               height={4608}
               alt={"Alexon in Paris"}
               layout="responsive"
             />
             <Image
-              src={nextConfig.basePath + "/assets/images/AlexTanzania.png"}
+              src={
+                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexTanzania.png"
+              }
               width={3533}
               height={5300}
-              alt={"Alexon in Tanzania working for Patsch"}
+              alt={"Alexon in Tanzania"}
               layout="responsive"
             />
             <Image
-              src={nextConfig.basePath + "/assets/images/Skydive.png"}
+              src={
+                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Skydive.png"
+              }
               width={1915}
               height={2872}
               alt={"Alexon skydiving"}

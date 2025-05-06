@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
-import nextConfig from "../../../next.config";
 
 interface NavigationProps {
   transparent?: boolean;
@@ -60,7 +59,11 @@ export const Navigation = (props: NavigationProps) => {
           href="/"
           className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
         >
-          <img src={nextConfig.basePath + "/assets/logos/Full-white.png"}></img>
+          <img
+            src={
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/logos/Full-white.png"
+            }
+          ></img>
         </Link>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
