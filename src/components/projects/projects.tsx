@@ -69,7 +69,7 @@ export const Projects = (props: IProps) => {
             )}
             {project.logoImage ? (
               <Image
-                src={nextConfig.basePath + project.logoImage}
+                src={project.logoImage}
                 alt={`client logo for ${project.client}`}
                 className="project-logo"
                 fill

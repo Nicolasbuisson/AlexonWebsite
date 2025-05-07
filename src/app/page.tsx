@@ -92,25 +92,23 @@ function Home() {
         <LogoList
           logos={[
             {
-              src: nextConfig.basePath + "/assets/clientLogos/Corona.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png",
               alt: "Corona logo",
             },
             {
-              src: nextConfig.basePath + "/assets/clientLogos/FourSeasons.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png",
               alt: "Four Seasons logo",
             },
             {
-              src: nextConfig.basePath + "/assets/clientLogos/ELLE.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ELLE.png",
               alt: "ELLE logo",
             },
             {
-              src: nextConfig.basePath + "/assets/clientLogos/JohnSummit.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/JohnSummit.png",
               alt: "John Summit logo",
             },
             {
-              src:
-                nextConfig.basePath +
-                "/assets/clientLogos/McGillUniversity.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png",
               alt: "McGill University logo",
             },
           ]}

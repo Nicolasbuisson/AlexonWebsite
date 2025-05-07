@@ -1,6 +1,5 @@
 import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
-import nextConfig from "../../../next.config";
 import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { Offerings } from "../../components/offerings/offerings";
 import { Statistic } from "../../components/statistic/statistic";
@@ -16,7 +15,9 @@ function ShortForm() {
       <section className="shortform-hero-section">
         <div className="shortform-video-background">
           <video
-            src={nextConfig.basePath + "/assets/videos/Productions.mp4"}
+            src={
+              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Productions.mp4"
+            }
             muted
             autoPlay
             loop
@@ -163,7 +164,7 @@ function ShortForm() {
           <HorizontalScroller>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/Corona.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png`}
                 fill
                 alt="Corona logo"
                 className="shortform-horizontal-scroller-logo"
@@ -171,7 +172,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/FourSeasons.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png`}
                 fill
                 alt="Four Seasons logo"
                 className="shortform-horizontal-scroller-logo"
@@ -179,7 +180,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/McGillUniversity.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png`}
                 fill
                 alt="McGill University logo"
                 className="shortform-horizontal-scroller-logo"
@@ -187,7 +188,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/Coinbase.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/Coinbase.png`}
                 fill
                 alt="Coinbase logo"
                 className="shortform-horizontal-scroller-logo"
@@ -195,7 +196,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/AirCanada.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanada.png`}
                 fill
                 alt="AirCanada logo"
                 className="shortform-horizontal-scroller-logo"
@@ -203,7 +204,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/Claptone.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png`}
                 fill
                 alt="Claptone logo"
                 className="shortform-horizontal-scroller-logo"
@@ -211,7 +212,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/ParcOmega.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png`}
                 fill
                 alt="Parc Omega logo"
                 className="shortform-horizontal-scroller-logo"
@@ -219,7 +220,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`${nextConfig.basePath}/assets/clientLogos/Monolink.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Monolink.png`}
                 fill
                 alt="Monolink logo"
                 className="shortform-horizontal-scroller-logo"

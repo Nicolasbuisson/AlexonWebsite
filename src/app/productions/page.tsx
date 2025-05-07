@@ -2,7 +2,6 @@ import "./productions.css";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
-import nextConfig from "../../../next.config";
 import projectsJSON from "../../resources/projects.json";
 
 function Productions() {
@@ -37,140 +36,135 @@ function Productions() {
         <LogoList
           logos={[
             {
-              src: nextConfig.basePath + "/assets/clientLogos/CoronaBlack.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CoronaBlack.png",
               alt: "Corona logo",
             },
             {
-              src:
-                nextConfig.basePath +
-                "/assets/clientLogos/FourSeasonsBlack.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasonsBlack.png",
               alt: "Four Seasons logo",
             },
             {
-              src: nextConfig.basePath + "/assets/clientLogos/ELLEBlack.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ELLEBlack.png",
               alt: "ELLE logo",
             },
             {
-              src:
-                nextConfig.basePath + "/assets/clientLogos/JohnSummitBlack.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/JohnSummitBlack.png",
               alt: "John Summit logo",
             },
             {
-              src:
-                nextConfig.basePath +
-                "/assets/clientLogos/McGillUniversityBlack.png",
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversityBlack.png",
               alt: "McGill University logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/AirCanadaBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanadaBlack.png`,
               alt: "AirCanada logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/BelcoreBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BelcoreBlack.png`,
               alt: "Belcore logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/BUNTBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BUNTBlack.png`,
               alt: "BUNT logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/CCLuxembourgBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CCLuxembourgBlack.png`,
               alt: "Chamber of Commerce Luxembourg logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/ChrisLakeBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ChrisLakeBlack.png`,
               alt: "Chris Lake logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/ClaptoneBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ClaptoneBlack.png`,
               alt: "Claptone logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/ElewanaBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ElewanaBlack.png`,
               alt: "Elewana logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/IleSoniqBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/IleSoniqBlack.png`,
               alt: "Ile Soniq logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/KSHMRBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/KSHMRBlack.png`,
               alt: "KSHMR logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/LequilibreBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/LequilibreBlack.png`,
               alt: "L'Équilibre logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/LHOFTBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/LHOFTBlack.png`,
               alt: "LHOFT logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/MonolinkBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/MonolinkBlack.png`,
               alt: "Monolink logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/NewCityGasBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/NewCityGasBlack.png`,
               alt: "New City Gas logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/OnomoHotelsBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/OnomoHotelsBlack.png`,
               alt: "Onomo Hotels logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/PatschBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PatschBlack.png`,
               alt: "Patsch logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/PrepinsonBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PrepinsonBlack.png`,
               alt: "Prepinson logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/St-PierreBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/St-PierreBlack.png`,
               alt: "St-Pierre logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/VacierBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/VacierBlack.png`,
               alt: "Vacier logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/VaudeBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/VaudeBlack.png`,
               alt: "Vaude logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/Web3MTLBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Web3MTLBlack.png`,
               alt: "Web3MTL logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/XiaomiBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/XiaomiBlack.png`,
               alt: "Xiaomi logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/PonenteBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PonenteBlack.png`,
               alt: "Ponente logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/ParcOmegaBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmegaBlack.png`,
               alt: "Parc Omega logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/CoinbaseBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CoinbaseBlack.png`,
               alt: "Coinbase logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/AquilaSafarisBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AquilaSafarisBlack.png`,
               alt: "Aquila Safaris logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/PuntoDeVistaBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PuntoDeVistaBlack.png`,
               alt: "Punto de Vista logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/BDBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BDBlack.png`,
               alt: "Beautiful Destinations logo",
             },
             {
-              src: `${nextConfig.basePath}/assets/clientLogos/ToyotaBlack.png`,
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
           ]}

@@ -8,7 +8,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/fourSeasons/preview.mp4",
         "gridImage": "/assets/productions/fourSeasons/preview.jpg",
-        "logoImage": "/assets/clientLogos/FourSeasons.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png",
         "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/fourSeasons/stills/still1.jpeg"},
@@ -43,7 +43,7 @@
         "videos": ["https://youtube.com/embed/ITLSqXL-nGc"],
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
         "gridVideoPreview": "/assets/productions/onomoHotels/preview.mp4",
-        "logoImage": "/assets/clientLogos/OnomoHotels.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/OnomoHotels.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/onomoHotels/stills/1.jpeg"},
@@ -118,7 +118,7 @@
         "videos": ["https://www.youtube.com/embed/EV4SFvjYch8"],
         "gridVideoPreview": "/assets/productions/corona/preview.mp4",
         "gridImage": "/assets/productions/corona/preview.jpg",
-        "logoImage": "/assets/clientLogos/Corona.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [],
         "photos": [
@@ -167,7 +167,7 @@
         "videos": ["https://www.youtube.com/embed/Nq_xYiUh6vI"],
         "gridVideoPreview": "/assets/productions/lequilibre/preview.mp4",
         "gridImage": "/assets/productions/lequilibre/preview.jpg",
-        "logoImage": "/assets/clientLogos/Lequilibre.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Lequilibre.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/lequilibre/stills/1.jpeg"},
@@ -223,7 +223,7 @@
         "description": "Some moments in life are so beautiful that they hurt… Almost as if they give a feeling of bittersweetness - because we’ll never relive the same moment… But the key is to surrender yourself to the transient nature of moments and places - because they’re only beautiful because they’re ephemeral. For Alexon travel filmmaking has always been an imperfect attempt at immortalizing these fragments of time. This film was created for the Beautiful Destinations Academy & Visit Dubai.",
         "videos": ["https://www.youtube.com/embed/WMsyFY5ivG8"],
         "gridVideoPreview": "/assets/productions/beautyThatHurts/preview.mp4",
-        "logoImage": "/assets/clientLogos/BD.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BD.png",
         "services": ["Passion Project", "Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/beautyThatHurts/stills/1.jpeg"},
@@ -270,7 +270,7 @@
         "description": "We had the pleasure of working with Coinbase to create video content for their Stand with Crypto movement across Canada. The goal was to raise awareness and usher policy change in regards to cryptocurrency in Canada. Through a myriad of video interviews we conveyed the multitude of use cases that cryptocurrency has today. The result was a compelling narrative that cemented cryptocurrency as a positive force for change in Canada’s future.",
         "videos": ["https://youtube.com/embed/vu9C_KBagII"],
         "gridVideoPreview": "/assets/productions/coinbase/preview.mp4",
-        "logoImage": "/assets/clientLogos/Coinbase.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png",
         "services": ["Event Videography", "Video Production", "Short-Form Content"],
         "stills": [],
         "photos": [
@@ -311,7 +311,7 @@
         "videos": ["https://youtube.com/embed/bE8Pa9WE_00"],
         "gridImage": "/assets/productions/elle/preview.jpg",
         "gridVideoPreview": "/assets/productions/elle/preview.mp4",
-        "logoImage": "/assets/clientLogos/ELLE.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ELLE.png",
         "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/elle/stills/1.jpeg"},
@@ -346,7 +346,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/elewana/preview.mp4",
         "gridImage": "/assets/productions/elewana/preview.jpg",
-        "logoImage": "/assets/clientLogos/Elewana.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Elewana.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [],
         "photos": [
@@ -397,7 +397,7 @@
         "videos": ["https://youtube.com/embed/EUJ684JrVdo", "https://youtube.com/embed/9Aia_hPqXVU", "https://youtube.com/embed/T7-DMx4WmDc", "https://youtube.com/embed/aj0f_PkbRpM"],
         "gridVideoPreview": "/assets/productions/harasDePrepinson/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/Prepinson.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/harasDePrepinson/stills/1.jpeg"},
@@ -452,7 +452,7 @@
         "videos": ["https://youtube.com/embed/TKroMAx3Tqs", "https://youtube.com/embed/FTu9finC3aQ"],
         "gridVideoPreview": "/assets/productions/maisonPrepinson/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/Prepinson.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Prepinson.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
             {"imageUrl": "/assets/productions/maisonPrepinson/stills/1.jpeg"},
@@ -501,7 +501,7 @@
         "videos": ["https://youtube.com/embed/RyotR5f1E-g", "https://youtube.com/embed/irGHzrw5VUY"],
         "gridVideoPreview": "/assets/productions/lhoft/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/LHOFT.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/LHOFT.png",
         "services": ["Video Production", "Event Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/lhoft/stills/1.jpeg"},
@@ -575,7 +575,7 @@
         "videos": [],
         "gridVideoPreview": "/assets/productions/claptone/preview.mp4",
         "gridImage": "/assets/productions/claptone/preview.jpg",
-        "logoImage": "/assets/clientLogos/Claptone.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png",
         "services": ["Concert Videography", "Event Photography"],
         "stills": [],
         "photos": [
@@ -609,7 +609,7 @@
         "description": "We produced sophisticated and photographs that reflect the club’s role in fostering cross-border business connections and showcase the different general assemblies and events. The content highlights key networking events and the club’s impact on the business community.",
         "videos": [],
         "gridImage": "/assets/productions/businessClubFranceLux/preview.jpg",
-        "logoImage": "/assets/clientLogos/CCLuxembourg.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [],
         "photos": [
@@ -647,7 +647,7 @@
         "videos": ["https://www.youtube.com/embed/lZCiJBP88Og"],
         "gridVideoPreview": "/assets/productions/visionBoard/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/AlexonSignature.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "/assets/productions/visionBoard/stills/1.jpeg"},
@@ -693,7 +693,7 @@
         "videos": ["https://www.youtube.com/embed/4mC7V-_V5Ic"],
         "gridVideoPreview": "/assets/productions/willIEverMakeIt/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/AlexonSignature.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AlexonSignature.png",
         "services": ["Video Production", "Passion Project"],
         "stills": [
             {"imageUrl": "/assets/productions/willIEverMakeIt/stills/1.jpeg"},
@@ -738,7 +738,7 @@
         "description": "We captured photographs to highlight the chamber’s role in building business bridges between Luxembourg and Montreal. The content focuses on key events, trade partnerships, member success stories, and the signature of a Memorandum of Agreement between different Chambers of Commerce.",
         "videos": [],
         "gridImage": "/assets/productions/chamberOfCommerceLux/preview.JPG",
-        "logoImage": "/assets/clientLogos/CCLuxembourg.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [],
         "photos": [
@@ -777,7 +777,7 @@
         "videos": ["https://youtube.com/embed/niQZyYJbeN4"],
         "gridVideoPreview": "/assets/productions/parcOmega/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/ParcOmega.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [
             {"imageUrl": "/assets/productions/parcOmega/stills/1.jpeg"},
@@ -828,7 +828,7 @@
         "videos": ["https://youtube.com/embed/zSKykcznOT8"],
         "gridVideoPreview": "/assets/productions/ponente/preview.mp4",
         "gridImage": "/assets/productions/harasDePrepinson/preview.jpg",
-        "logoImage": "/assets/clientLogos/Ponente.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Ponente.png",
         "services": ["Commercial Photography", "Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/ponente/stills/1.jpeg"},
@@ -886,7 +886,7 @@
         "videos": ["https://youtube.com/embed/3Z5nh0JMM0g"],
         "gridVideoPreview": "/assets/productions/mcgillUniversity/preview.mp4",
         "gridImage": "/assets/productions/mcgillUniversity/preview.jpg",
-        "logoImage": "/assets/clientLogos/McGillUniversity.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png",
        "services": ["Video Production"],
         "stills": [
             {"imageUrl": "/assets/productions/mcgillUniversity/stills/1.jpeg"},
@@ -920,7 +920,7 @@
         "description": "On a meteoric rise, John Summit is shaping up to be one of the biggest DJs in the electronic music space. One of the driving forces behind his meteoric rise? His focus on social media. John Summit’s team tasked us with capturing the Montreal stop of his Comfort in Chaos tour, one where he would perform in front of the iconic Montreal Olympic Stadium.",
         "videos": [],
         "gridVideoPreview": "/assets/productions/johnSummit/preview.mp4",
-        "logoImage": "/assets/clientLogos/JohnSummit.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/JohnSummit.png",
         "services": ["Concert Videography"],
         "stills": [],
         "photos": [],
@@ -940,7 +940,7 @@
         "description": "We had the pleasure of creating authentic and raw short-form videos to convey Dim Mak and Steve Aoki’s return to Montreal. The goal was to convey the raw energy and emotion present at this performance and rapidly deliver the content for immediate social media usage.",
         "videos": [],
         "gridVideoPreview": "/assets/productions/newCityGas/preview.mp4",
-        "logoImage": "/assets/clientLogos/NewCityGas.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/NewCityGas.png",
         "services": ["Concert Videography"],
         "stills": [],
         "photos": [],
@@ -958,7 +958,7 @@
         "description": "We had the pleasure of capturing BUNT’s sold out show and first passage in Montreal. The goal here was to really showcase the “in the round” energy. Sweat, tears, screams - this show had it all. The result was a compelling visual showcase of raw and emotional moments.",
         "videos": [],
         "gridVideoPreview": "/assets/productions/bunt/preview.mp4",
-        "logoImage": "/assets/clientLogos/BUNT.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BUNT.png",
         "services": ["Event Photography", "Concert Videography"],
         "stills": [],
         "photos": [
@@ -984,7 +984,7 @@
         "description": "Weekenders hosts mastermind retreats for entrepreneurs in breathtaking environments - Punto de Vista is no exception to this, being one of the most exceptional properties in Costa Rica, with panoramic views of the Manuel Antonio National Park. For this project we were tasked with capturing both the exquisite stay and visuals that Punto de Vista has to offer, as well as the Weekenders’s largest mastermind retreat to date.",
         "videos": ["https://www.youtube.com/embed/HJH_rg2S1Wg"],
         "gridVideoPreview": "/assets/productions/puntoDeVista/preview.mp4",
-        "logoImage": "/assets/clientLogos/PuntoDeVista.png",
+        "logoImage": "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PuntoDeVista.png",
         "services": ["Video Production", "Commercial Photography"],
         "stills": [],
         "photos": [

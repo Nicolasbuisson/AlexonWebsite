@@ -1,3 +1,8 @@
+.arrow-path-link {
+    width: fit-content;
+    margin-inline: auto;
+}
+
 .arrow-path-initial,
 .arrow-path-final {
     display: block;
