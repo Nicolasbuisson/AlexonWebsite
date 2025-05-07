@@ -7,7 +7,6 @@ import { LogoList } from "../components/logoList/logoList";
 import { Navigation } from "../components/navigation/navigation";
 import { Projects } from "../components/projects/projects";
 import { ServiceCard } from "../components/serviceCard/serviceCard";
-import nextConfig from "../../next.config";
 import { projects } from "../resources/projects.json";
 import useScrollPercentage from "../hooks/useScrollPercentage";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import "./serviceCard.css";
-import nextConfig from "../../../next.config";
 import Image from "next/image";
 
 interface IServiceCard {
