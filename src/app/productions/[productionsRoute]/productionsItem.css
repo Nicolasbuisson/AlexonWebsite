@@ -19,9 +19,9 @@
     border-image: fill 0 linear-gradient(#0000, #000);
     padding-top: 15%;
     margin-bottom: 2rem;
+    color: var(--clr-light);
 
     h2 {
-        color: var(--clr-light);
         inset: 0;
         margin: auto;
         width: 80%;

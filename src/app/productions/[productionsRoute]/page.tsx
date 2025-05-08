@@ -70,9 +70,19 @@ export default async function productionsItem({
       <section className="productionsItem-section">
         <div
           className="productionsItem-title-background"
-          style={{
-            backgroundImage: `url(${nextConfig.basePath}${gridImage})`,
-          }}
+          style={
+            gridImage
+              ? {
+                  // fix this, so that url is just gridImage without basePath
+                  backgroundImage: `url(${nextConfig.basePath}${gridImage})`,
+                }
+              : {
+                  borderImage:
+                    "fill 0 linear-gradient(180deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 1) 100%)",
+                  color: "var(--clr-dark)",
+                  paddingTop: "5%",
+                }
+          }
         >
           <h2>{title}</h2>
         </div>
