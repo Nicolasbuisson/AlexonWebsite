@@ -1,4 +1,3 @@
-import nextConfig from "../../../next.config";
 import "./productionsCarouselCard.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +24,7 @@ export const ProductionsCarouselCard = (
     >
       {videoSrc ? (
         <video
-          src={nextConfig.basePath + `${videoSrc}`}
+          src={videoSrc}
           muted
           autoPlay
           loop
@@ -33,7 +32,7 @@ export const ProductionsCarouselCard = (
         ></video>
       ) : imageSrc ? (
         <Image
-          src={`${nextConfig.basePath}${imageSrc}`}
+          src={imageSrc}
           alt={`${title} production cover`}
           fill
           className="production-carousel-card-img"
@@ -44,7 +43,7 @@ export const ProductionsCarouselCard = (
 
       {logoImageSrc ? (
         <Image
-          src={nextConfig.basePath + `${logoImageSrc}`}
+          src={logoImageSrc}
           alt={`client logo for ${client}`}
           className="production-carousel-card-logo"
           fill

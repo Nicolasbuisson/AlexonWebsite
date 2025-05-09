@@ -1,7 +1,6 @@
-import nextConfig from "../../../../next.config";
+import "./productionsItem.css";
 import { Navigation } from "../../../components/navigation/navigation";
 import { WorkItemProps } from "../../../types/work";
-import "./productionsItem.css";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
 import { ProductionItemDetails } from "../../../components/productionItemDetails/productionItemDetails";
@@ -73,8 +72,7 @@ export default async function productionsItem({
           style={
             gridImage
               ? {
-                  // fix this, so that url is just gridImage without basePath
-                  backgroundImage: `url(${nextConfig.basePath}${gridImage})`,
+                  backgroundImage: `url(${gridImage})`,
                 }
               : {
                   borderImage:

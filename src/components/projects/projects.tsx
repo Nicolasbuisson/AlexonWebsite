@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { WorkItemProps } from "../../types/work";
 import "./projects.css";
-import nextConfig from "../../../next.config";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -52,14 +51,14 @@ export const Projects = (props: IProps) => {
           >
             {project.gridVideoPreview ? (
               <video
-                src={nextConfig.basePath + project.gridVideoPreview}
+                src={project.gridVideoPreview}
                 muted
                 loop
                 className="projects-grid-card-preview"
               ></video>
             ) : project.gridImage ? (
               <Image
-                src={nextConfig.basePath + project.gridImage}
+                src={project.gridImage}
                 alt={`project thumbnail for ${project.title}`}
                 className="project-thumbnail"
                 fill
