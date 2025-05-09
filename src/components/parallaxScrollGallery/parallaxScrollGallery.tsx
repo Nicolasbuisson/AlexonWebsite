@@ -1,7 +1,6 @@
 "use client";
 import "./parallaxScrollGallery.css";
 import { ParallaxScrollColumn } from "./parallaxScrollColumn";
-import nextConfig from "../../../next.config";
 import { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import { useWindowSize } from "../../hooks/useWindowSize";
@@ -26,23 +25,22 @@ export const ParallaxScrollGallery = () => {
     <div ref={containerRef} className="parallax-scroll-gallery">
       <ParallaxScrollColumn
         videos={[
-          nextConfig.basePath + "/assets/videos/shortform/Claptone.mov",
-          nextConfig.basePath + "/assets/videos/shortform/Claptone.mov",
-          nextConfig.basePath + "/assets/videos/shortform/Claptone.mov",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Claptone.mp4",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Corona.mp4",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/L'Equilibre.mp4",
           width < 420
-            ? nextConfig.basePath + "/assets/videos/shortform/Vacier.mov"
+            ? "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Weekenders1.mp4"
             : "",
         ]}
         parallaxCoefficient={y1}
       />
       <ParallaxScrollColumn
         videos={[
-          nextConfig.basePath + "/assets/videos/shortform/Corona.mov",
-          nextConfig.basePath +
-            "/assets/videos/shortform/ElewanaCollection.mov",
-          nextConfig.basePath + "/assets/videos/shortform/Prepinson.mov",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Belcore.mp4",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Elewana.mp4",
+          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Prepinson.mp4",
           width < 420
-            ? nextConfig.basePath + "/assets/videos/shortform/Prepinson.mov"
+            ? "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Weekenders2.mp4"
             : "",
         ]}
         parallaxCoefficient={y2}
@@ -50,9 +48,9 @@ export const ParallaxScrollGallery = () => {
       {width >= 420 && (
         <ParallaxScrollColumn
           videos={[
-            nextConfig.basePath + "/assets/videos/shortform/Vacier.mov",
-            nextConfig.basePath + "/assets/videos/shortform/Vacier.mov",
-            nextConfig.basePath + "/assets/videos/shortform/Vacier.mov",
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/CoinbasePenrosePartners.mp4",
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Vacier.mp4",
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Ylee.mp4",
           ]}
           parallaxCoefficient={y3}
         />

@@ -188,7 +188,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/Coinbase.png`}
+                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png`}
                 fill
                 alt="Coinbase logo"
                 className="shortform-horizontal-scroller-logo"
