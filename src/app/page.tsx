@@ -1,4 +1,3 @@
-"use client";
 import "./home.css";
 import { ButtonBackgroundHoverEffect } from "../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
@@ -8,24 +7,9 @@ import { Navigation } from "../components/navigation/navigation";
 import { Projects } from "../components/projects/projects";
 import { ServiceCard } from "../components/serviceCard/serviceCard";
 import { projects } from "../resources/projects.json";
-import useScrollPercentage from "../hooks/useScrollPercentage";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
-import { useEffect } from "react";
-import Lenis from "lenis";
 
 function Home() {
-  useScrollPercentage(); // initiate css variable --scroll
-  useEffect(() => {
-    const lenis = new Lenis({ smoothWheel: true });
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <div className="home-section-container">
       <Navigation sticky titleScroll showIcons></Navigation>

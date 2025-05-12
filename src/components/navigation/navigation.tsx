@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
+import useScrollPercentage from "../../hooks/useScrollPercentage";
+import Lenis from "lenis";
 
 interface NavigationProps {
   transparent?: boolean;
@@ -18,6 +20,20 @@ export const Navigation = (props: NavigationProps) => {
     titleScroll = false,
     showIcons = false,
   } = props;
+
+  useScrollPercentage(); // initialize css variable --scroll
+  useEffect(() => {
+    // initialize Lenis smooth scroll
+    const lenis = new Lenis({ smoothWheel: true });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+  }, []);
+
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [isMenuClicked, setIsMenuClicked] = useState(false);

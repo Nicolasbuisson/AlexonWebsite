@@ -3,14 +3,12 @@ import "./about.css";
 import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
-import useScrollPercentage from "../../hooks/useScrollPercentage";
 import Image from "next/image";
 import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { useCallback } from "react";
 
 function AboutPage() {
-  useScrollPercentage(); // initiate css variable --scroll
   const { width: windowWidth } = useWindowSize();
 
   const scrollOffsetIntersection = useCallback(() => {
