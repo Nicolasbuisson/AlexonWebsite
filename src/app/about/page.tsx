@@ -104,7 +104,6 @@ function AboutPage() {
               width={2832}
               height={4240}
               alt={"Alexon in Bali"}
-              layout="responsive"
             />
             <Image
               src={
@@ -113,7 +112,6 @@ function AboutPage() {
               width={3072}
               height={4608}
               alt={"Alexon in Paris"}
-              layout="responsive"
             />
             <Image
               src={
@@ -122,7 +120,6 @@ function AboutPage() {
               width={3533}
               height={5300}
               alt={"Alexon in Tanzania"}
-              layout="responsive"
             />
             <Image
               src={
@@ -131,7 +128,6 @@ function AboutPage() {
               width={1915}
               height={2872}
               alt={"Alexon skydiving"}
-              layout="responsive"
             />
           </div>
         </div>
