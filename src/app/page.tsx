@@ -8,6 +8,8 @@ import { Projects } from "../components/projects/projects";
 import { ServiceCard } from "../components/serviceCard/serviceCard";
 import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
+import { HorizontalScroller } from "../components/horizontalScroller/horizontalScroller";
+import Image from "next/image";
 
 function Home() {
   return (
@@ -28,6 +30,74 @@ function Home() {
           <h3 className="home-pitch">elevate your brand</h3>
           <ButtonBackgroundHoverEffect text="Let's Work Together"></ButtonBackgroundHoverEffect>
         </div>
+      </section>
+      <section>
+        <HorizontalScroller>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png`}
+              fill
+              alt="Corona logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png`}
+              fill
+              alt="Four Seasons logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png`}
+              fill
+              alt="McGill University logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png`}
+              fill
+              alt="Coinbase logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanada.png`}
+              fill
+              alt="AirCanada logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png`}
+              fill
+              alt="Claptone logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png`}
+              fill
+              alt="Parc Omega logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Monolink.png`}
+              fill
+              alt="Monolink logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+        </HorizontalScroller>
       </section>
       <section className="home-pitch-section">
         <h3 className="home-pitch-long">
