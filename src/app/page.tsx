@@ -2,7 +2,6 @@ import "./home.css";
 import { ButtonBackgroundHoverEffect } from "../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { InstaSection } from "../components/insta/instaSection";
-import { LogoList } from "../components/logoList/logoList";
 import { Navigation } from "../components/navigation/navigation";
 import { Projects } from "../components/projects/projects";
 import { ServiceCard } from "../components/serviceCard/serviceCard";
