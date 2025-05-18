@@ -111,35 +111,6 @@ function Home() {
           />
         </h3>
       </section>
-      <section className="home-video-section">
-        <video
-          src={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/CoronaPreview.mov"
-          }
-          muted
-          autoPlay
-          loop
-          className="landscape"
-        ></video>
-        <video
-          src={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Xiaomi-WebsiteMedia.mp4"
-          }
-          muted
-          autoPlay
-          loop
-          className="portrait"
-        ></video>
-        <video
-          src={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/L'Equilibre-MovingImage.mov"
-          }
-          muted
-          autoPlay
-          loop
-          className="landscape"
-        ></video>
-      </section>
       <section className="home-clients-section">
         <h3>Join the ranks of clients like:</h3>
         <LogoList
