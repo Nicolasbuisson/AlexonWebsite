@@ -111,33 +111,6 @@ function Home() {
           />
         </h3>
       </section>
-      <section className="home-clients-section">
-        <h3>Join the ranks of clients like:</h3>
-        <LogoList
-          logos={[
-            {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png",
-              alt: "Corona logo",
-            },
-            {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png",
-              alt: "Four Seasons logo",
-            },
-            {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ELLE.png",
-              alt: "ELLE logo",
-            },
-            {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/JohnSummit.png",
-              alt: "John Summit logo",
-            },
-            {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png",
-              alt: "McGill University logo",
-            },
-          ]}
-        ></LogoList>
-      </section>
       <section className="home-services-section">
         <ServiceCard
           title={"Short Form Content"}

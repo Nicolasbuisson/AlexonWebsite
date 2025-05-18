@@ -79,18 +79,6 @@
     justify-content: center;
 }
 
-.home-clients-section {
-    padding-block: var(--section-padding-block);
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    text-align: center;
-
-    & h3 {
-        margin-block: 1.5rem;
-        padding-inline: 2%;
-    }
-}
-
 .home-services-section {
     --services-columns: 1fr;
 
