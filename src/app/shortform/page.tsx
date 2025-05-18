@@ -22,10 +22,10 @@ function ShortForm() {
             autoPlay
             loop
           ></video>
+          <h2 className="shortform-title">
+            Optimized vertical videos for Limitless Impact
+          </h2>
           <div className="shortform-hero-text">
-            <h2 className="shortform-title">
-              Optimized vertical videos for Limitless Impact
-            </h2>
             <p>Maximize your reach, increase your conversions,</p>
             <p>
               and boost your sales with our effortless short-form content
