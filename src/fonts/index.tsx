@@ -22,6 +22,21 @@ export const fontGotham = localFont({
       weight: "400",
       style: "normal",
     },
+    {
+      path: "./gotham/gotham-bookitalic-webfont.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./gotham/gotham-mediumitalic-webfont.woff2",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./gotham/gotham-bolditalic-webfont.woff2",
+      weight: "600",
+      style: "italic",
+    },
   ],
   variable: "--ff-primary",
 });

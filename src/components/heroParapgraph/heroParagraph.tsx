@@ -9,6 +9,7 @@ interface IProps {
   scrollOffset?: any[];
   boldStartIndex?: number;
   boldEndIndex?: number;
+  italicIndexes?: number[][];
   startFromEnd?: boolean;
 }
 
@@ -19,6 +20,7 @@ export const HeroParagraph = (props: IProps) => {
     scrollOffset = ["start 0.9", "start 0.4"],
     boldEndIndex = 0,
     boldStartIndex = 0,
+    italicIndexes = [],
     startFromEnd = false,
   } = props;
 
@@ -46,6 +48,7 @@ export const HeroParagraph = (props: IProps) => {
             totalCharCount={text.length}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
+            italicIndexes={italicIndexes}
             startFromEnd={startFromEnd}
           >
             {word}
@@ -65,6 +68,7 @@ interface WordProps {
   totalCharCount: number;
   boldStartIndex: number;
   boldEndIndex: number;
+  italicIndexes: number[][];
   startFromEnd: boolean;
 }
 
@@ -78,6 +82,7 @@ const Word = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
+    italicIndexes,
     startFromEnd,
   } = props;
   const characters = children.split("");
@@ -98,6 +103,7 @@ const Word = (props: WordProps) => {
             totalCharCount={totalCharCount}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
+            italicIndexes={italicIndexes}
             startFromEnd={startFromEnd}
           >
             {character}
@@ -118,6 +124,7 @@ const Character = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
+    italicIndexes,
     startFromEnd,
   } = props;
   const characterOpacity = useTransform(
@@ -126,14 +133,20 @@ const Character = (props: WordProps) => {
     startFromEnd ? [1, 0] : [0.1, 1]
   );
 
+  const italized = italicIndexes.find(
+    (indexRange) =>
+      start * totalCharCount >= indexRange[0] &&
+      end * totalCharCount <= indexRange[1]
+  );
+  const bold =
+    end * totalCharCount <= boldEndIndex &&
+    start * totalCharCount >= boldStartIndex;
+
   return (
     <motion.span
       key={keyId}
-      className={`hero-character ${
-        end * totalCharCount <= boldEndIndex &&
-        start * totalCharCount >= boldStartIndex
-          ? "bold"
-          : ""
+      className={`hero-character ${bold ? "bold" : ""} ${
+        italized ? "italic" : ""
       }`}
       style={{ opacity: characterOpacity }}
     >

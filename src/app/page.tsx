@@ -98,15 +98,22 @@ function Home() {
           </div>
         </HorizontalScroller>
       </section>
-      <section className="home-pitch-section">
-        <h3 className="home-pitch-long">
+      <section className="home-about-section">
+        <div className="home-about-header">
+          <h4>About</h4>
+          <h4>01/</h4>
+        </div>
+        <h3 className="home-about-description">
           <HeroParagraph
             text={
-              "Alexon media is a pioneering creative and production house Offering commercials, branded, and short-form content to your favourite brands worlwide"
+              "Your long-term partner and in-house production team for pioneering commercials, branded, and short-form content worldwide"
             }
             className="home-hero-paragraph"
-            boldStartIndex={36}
-            boldEndIndex={66}
+            italicIndexes={[
+              [7, 25],
+              [62, 73],
+              [112, 121],
+            ]}
           />
         </h3>
       </section>
