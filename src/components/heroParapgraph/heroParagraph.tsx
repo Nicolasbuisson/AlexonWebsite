@@ -145,8 +145,8 @@ const Character = (props: WordProps) => {
   return (
     <motion.span
       key={keyId}
-      className={`hero-character ${bold ? "bold" : ""} ${
-        italized ? "italic" : ""
+      className={`hero-character${bold ? " bold" : ""}${
+        italized ? " italic" : ""
       }`}
       style={{ opacity: characterOpacity }}
     >

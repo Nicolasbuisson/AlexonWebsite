@@ -95,6 +95,7 @@
 }
 
 .home-about-description {
+    margin-block: 2rem;
     margin-inline: auto;
     text-align: center;
     text-wrap: balance;
@@ -105,7 +106,7 @@
     }
 }
 
-.home-hero-paragraph {
+.home-about-hero-paragraph {
     font-size: inherit;
     font-weight: inherit;
     text-align: center;
@@ -115,6 +116,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.home-about-paragraph {
+    color: var(--clr-light-grey);
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.home-about-link {
+    margin-block-start: 2rem;
 }
 
 .home-services-section {
@@ -145,9 +156,7 @@
 }
 
 .home-work-link {
-    display: block;
     margin-block-start: 3rem;
-    text-align: center;
 }
 
 @media (width < 880px) {

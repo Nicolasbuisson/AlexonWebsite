@@ -108,7 +108,7 @@ function Home() {
             text={
               "Your long-term partner and in-house production team for pioneering commercials, branded, and short-form content worldwide"
             }
-            className="home-hero-paragraph"
+            className="home-about-hero-paragraph"
             italicIndexes={[
               [7, 25],
               [62, 73],
@@ -116,6 +116,18 @@ function Home() {
             ]}
           />
         </h3>
+        <p className="home-about-paragraph">
+          Since 2019, Alexon and his team have worked with some of your
+          favourite brands to craft impactful and strategic branded content to
+          elevate businesses, engage audiences, and boost our clients’ revenues
+          by over 4.5M$+
+        </p>
+        <ArrowPathLink
+          url="/about"
+          text="About Us"
+          className="home-about-link"
+          svgClassName="home-work-arrow"
+        />
       </section>
       <section className="home-services-section">
         <ServiceCard
@@ -142,7 +154,7 @@ function Home() {
         <Projects projects={projects} homePageFilter />
         <ArrowPathLink
           url="/productions"
-          text="See our work"
+          text="See our Work"
           className="home-work-link"
           svgClassName="home-work-arrow"
         />
