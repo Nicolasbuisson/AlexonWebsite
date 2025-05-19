@@ -32,68 +32,68 @@ function Home() {
       </section>
       <section>
         <HorizontalScroller>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png`}
               fill
               alt="Corona logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png`}
               fill
               alt="Four Seasons logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png`}
               fill
               alt="McGill University logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png`}
               fill
               alt="Coinbase logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanada.png`}
               fill
               alt="AirCanada logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png`}
               fill
               alt="Claptone logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png`}
               fill
               alt="Parc Omega logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
+          <div className="home-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Monolink.png`}
               fill
               alt="Monolink logo"
-              className="shortform-horizontal-scroller-logo"
+              className="home-horizontal-scroller-logo"
             />
           </div>
         </HorizontalScroller>

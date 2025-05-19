@@ -79,6 +79,22 @@
     justify-content: center;
 }
 
+.home-horizontal-scroller-logo-wrapper {
+    position: relative;
+    height: 80px;
+    aspect-ratio: 2;
+}
+
+@media (width < 880px) {
+    .home-horizontal-scroller-logo-wrapper {
+        height: 60px;
+    }
+}
+
+.home-horizontal-scroller-logo {
+    object-fit: contain;
+}
+
 .home-services-section {
     --services-columns: 1fr;
 
