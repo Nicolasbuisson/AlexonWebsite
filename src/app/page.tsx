@@ -27,7 +27,10 @@ function Home() {
         </div>
         <div className="home-hero-text">
           <h3 className="home-pitch">elevate your brand</h3>
-          <ButtonBackgroundHoverEffect text="Let's Work Together"></ButtonBackgroundHoverEffect>
+          <ButtonBackgroundHoverEffect
+            text="Let's Work Together"
+            link="/contact"
+          ></ButtonBackgroundHoverEffect>
         </div>
       </section>
       <section>
@@ -122,6 +125,32 @@ function Home() {
           elevate businesses, engage audiences, and boost our clients’ revenues
           by over 4.5M$+
         </p>
+        <div className="home-about-collage">
+          <div className="home-about-collage-image-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg`}
+              alt="Villa picture"
+              fill
+              className="home-about-collage-image"
+            />
+          </div>
+          <div className="home-about-collage-image-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About2.jpeg`}
+              alt="girl in Ocean picture"
+              fill
+              className="home-about-collage-image"
+            />
+          </div>
+          <div className="home-about-collage-image-wrapper">
+            <Image
+              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About3.jpeg`}
+              alt="Alexon at Atlantis picture"
+              fill
+              className="home-about-collage-image"
+            />
+          </div>
+        </div>
         <ArrowPathLink
           url="/about"
           text="About Us"
@@ -145,7 +174,7 @@ function Home() {
           }
           link={"/productions"}
           imageSrc={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Productions.jpeg"
+            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg"
           }
         />
       </section>

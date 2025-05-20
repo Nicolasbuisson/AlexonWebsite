@@ -44,7 +44,7 @@
 @media (width < 580px) {
   :root {
     --section-padding-block: 2rem;
-    --section-padding-inline: 4rem;
+    --section-padding-inline: 3rem;
   }
 }
 
