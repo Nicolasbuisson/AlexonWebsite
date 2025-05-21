@@ -7,70 +7,75 @@
     gap: var(--parallax-scroll-gap);
     position: relative;
     overflow: hidden;
-    height: 140svh;
-    height: 140vh;
+    height: 200svh;
+    height: 200vh;
 }
 
 .parallax-scroll-column:nth-child(1) {
-    top: -88%;
+    top: -136%;
 }
 
 .parallax-scroll-column:nth-child(2) {
-    top: -44%;
+    top: -111%;
 }
 
 .parallax-scroll-column:nth-child(3) {
-    top: -77%;
+    top: -130%;
 }
 
-@media (width < 880px) {
-    .parallax-scroll-gallery {
-        gap: 1.25rem;
-        height: 140svh;
-        height: 140vh;
-    }
-
+@media (width < 1240px) {
     .parallax-scroll-column:nth-child(1) {
-        top: -78%;
+        top: -110%;
     }
 
     .parallax-scroll-column:nth-child(2) {
-        top: -51%;
+        top: -100%;
     }
 
     .parallax-scroll-column:nth-child(3) {
-        top: -67%;
+        top: -114%;
     }
 }
 
-@media (width < 740px) {
-    .parallax-scroll-gallery {
-        height: 100svh;
-        height: 100vh;
-    }
-
+@media (width < 1000px) {
     .parallax-scroll-column:nth-child(1) {
-        top: -92%;
+        top: -100%;
     }
 
     .parallax-scroll-column:nth-child(2) {
-        top: -58%;
+        top: -100%;
     }
 
     .parallax-scroll-column:nth-child(3) {
-        top: -77%;
+        top: -102%;
+    }
+}
+
+@media (width < 800px) {
+    .parallax-scroll-gallery {
+        --parallax-scroll-gap: 1.25rem;
+    }
+
+    .parallax-scroll-column:nth-child(1) {
+        top: -88%;
+    }
+
+    .parallax-scroll-column:nth-child(2) {
+        top: -80%;
+    }
+
+    .parallax-scroll-column:nth-child(3) {
+        top: -97%;
     }
 }
 
 @media (width < 600px) {
     .parallax-scroll-gallery {
-        gap: 1rem;
-        height: 60svh;
-        height: 60vh;
+        --parallax-scroll-gap: 1rem;
     }
 
     .parallax-scroll-column:nth-child(1) {
-        top: -132%;
+        top: -82%;
     }
 
     .parallax-scroll-column:nth-child(2) {
@@ -78,16 +83,6 @@
     }
 
     .parallax-scroll-column:nth-child(3) {
-        top: -98%;
-    }
-}
-
-@media (width < 420px) {
-    .parallax-scroll-column:nth-child(1) {
-        top: -122%;
-    }
-
-    .parallax-scroll-column:nth-child(2) {
-        top: -72%;
+        top: -88%;
     }
 }

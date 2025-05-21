@@ -9,6 +9,7 @@
 
 .parallax-scroll-column video {
     width: 100%;
+    max-height: 720px;
     aspect-ratio: 9/16;
     border-radius: 12px;
 }

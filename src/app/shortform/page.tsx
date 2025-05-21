@@ -238,7 +238,7 @@ function ShortForm() {
       <section className="shortform-results-section">
         <div className="shortform-results-text">
           <h3>Results you can see</h3>
-          <h3 className="grey">And measure</h3>
+          <h3 className="grey">and Measure</h3>
           <p className="grey">
             Capture attention, tell your story, and drive results with our
             short-form video packages.
