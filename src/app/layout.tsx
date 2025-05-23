@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const playfair = Playfair_Display({
+  subsets: ["latin"],
   style: ["italic"],
   variable: "--ff-playfair-display",
 });

@@ -112,7 +112,7 @@
     font-weight: inherit;
     text-align: center;
     margin-inline: auto;
-    max-width: 30ch;
+    max-width: 40ch;
     text-wrap: pretty;
     display: flex;
     flex-wrap: wrap;
