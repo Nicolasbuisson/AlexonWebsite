@@ -5,6 +5,8 @@
 }
 
 .hero-character {
+    font-family: inherit;
+    font-style: inherit;
     font-size: inherit;
     font-weight: inherit;
 }
@@ -17,4 +19,18 @@
     font-family: var(--ff-playfair-display);
     font-style: italic;
     font-weight: 600;
+}
+
+.text-accent-linear-gradient {
+    background: linear-gradient(90deg, var(--clr-light), var(--clr-accent) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-accent-solid {
+    background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

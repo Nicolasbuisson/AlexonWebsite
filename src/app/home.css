@@ -79,6 +79,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-block-end: 1rem;
+    color: var(--clr-accent);
 
     h4 {
         font-weight: 600;
@@ -90,7 +91,7 @@
 .home-work-header h4:first-of-type::before {
     content: '';
     display: inline-block;
-    background-color: var(--clr-light);
+    background-color: var(--clr-accent);
     border-radius: 50%;
     aspect-ratio: 1;
     height: 0.5rem;

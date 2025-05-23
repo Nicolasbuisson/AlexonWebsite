@@ -9,8 +9,21 @@ interface IProps {
   scrollOffset?: any[];
   boldStartIndex?: number;
   boldEndIndex?: number;
-  italicIndexes?: number[][];
+  italicWordIndexes?: number[];
   startFromEnd?: boolean;
+}
+
+interface WordProps {
+  children: string;
+  keyId: string;
+  start: number;
+  end: number;
+  scrollYProgress: MotionValue<number>;
+  totalCharCount: number;
+  boldStartIndex: number;
+  boldEndIndex: number;
+  startFromEnd: boolean;
+  extraClasses?: string;
 }
 
 export const HeroParagraph = (props: IProps) => {
@@ -20,7 +33,7 @@ export const HeroParagraph = (props: IProps) => {
     scrollOffset = ["start 0.9", "start 0.4"],
     boldEndIndex = 0,
     boldStartIndex = 0,
-    italicIndexes = [],
+    italicWordIndexes = [],
     startFromEnd = false,
   } = props;
 
@@ -38,6 +51,15 @@ export const HeroParagraph = (props: IProps) => {
         const step = 1 / words.length;
         const start = i * step;
         const end = start + step;
+        const foundIndex = italicWordIndexes.findIndex((index) => index === i);
+        // foundIndex not equal to -1 means it exists
+        const extraClasses =
+          foundIndex !== -1
+            ? italicWordIndexes[foundIndex] > 1 &&
+              italicWordIndexes.includes(italicWordIndexes[foundIndex] - 1)
+              ? "hero-paragraph-italic text-accent-solid"
+              : "hero-paragraph-italic text-accent-linear-gradient"
+            : "";
         return (
           <Word
             key={"hero-word-" + i}
@@ -48,8 +70,8 @@ export const HeroParagraph = (props: IProps) => {
             totalCharCount={text.length}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
-            italicIndexes={italicIndexes}
             startFromEnd={startFromEnd}
+            extraClasses={extraClasses}
           >
             {word}
           </Word>
@@ -58,19 +80,6 @@ export const HeroParagraph = (props: IProps) => {
     </p>
   );
 };
-
-interface WordProps {
-  children: string;
-  keyId: string;
-  start: number;
-  end: number;
-  scrollYProgress: MotionValue<number>;
-  totalCharCount: number;
-  boldStartIndex: number;
-  boldEndIndex: number;
-  italicIndexes: number[][];
-  startFromEnd: boolean;
-}
 
 const Word = (props: WordProps) => {
   const {
@@ -82,14 +91,14 @@ const Word = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
-    italicIndexes,
     startFromEnd,
+    extraClasses = "",
   } = props;
   const characters = children.split("");
   const amount = end - start;
   const step = amount / children.length;
   return (
-    <span key={keyId} className="hero-word">
+    <span key={keyId} className={"hero-word " + extraClasses}>
       {characters.map((character, i) => {
         const characterStart = start + step * i;
         const characterEnd = characterStart + step;
@@ -103,7 +112,6 @@ const Word = (props: WordProps) => {
             totalCharCount={totalCharCount}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
-            italicIndexes={italicIndexes}
             startFromEnd={startFromEnd}
           >
             {character}
@@ -124,19 +132,12 @@ const Character = (props: WordProps) => {
     totalCharCount,
     boldStartIndex,
     boldEndIndex,
-    italicIndexes,
     startFromEnd,
   } = props;
   const characterOpacity = useTransform(
     scrollYProgress,
     startFromEnd ? [1 - end, 1 - start] : [start, end],
     startFromEnd ? [1, 0] : [0.1, 1]
-  );
-
-  const italized = italicIndexes.find(
-    (indexRange) =>
-      start * totalCharCount >= indexRange[0] &&
-      end * totalCharCount <= indexRange[1]
   );
   const bold =
     end * totalCharCount <= boldEndIndex &&
@@ -145,9 +146,7 @@ const Character = (props: WordProps) => {
   return (
     <motion.span
       key={keyId}
-      className={`hero-character${bold ? " bold" : ""}${
-        italized ? " hero-paragraph-italic" : ""
-      }`}
+      className={`hero-character ${bold ? "bold" : ""}`}
       style={{ opacity: characterOpacity }}
     >
       {children}

@@ -112,11 +112,7 @@ function Home() {
               "Your long-term partner and in-house production team for pioneering commercials, branded, and short-form content worldwide"
             }
             className="home-about-hero-paragraph"
-            italicIndexes={[
-              [7, 25],
-              [62, 73],
-              [112, 121],
-            ]}
+            italicWordIndexes={[1, 2, 8, 14]}
           />
         </h3>
         <p className="home-about-paragraph">
