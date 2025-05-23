@@ -4,11 +4,11 @@ import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { InstaSection } from "../components/insta/instaSection";
 import { Navigation } from "../components/navigation/navigation";
 import { Projects } from "../components/projects/projects";
-import { ServiceCard } from "../components/serviceCard/serviceCard";
 import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
 import { HorizontalScroller } from "../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
+import { ServicesOverview } from "../components/servicesOverview/servicesOverview";
 
 function Home() {
   return (
@@ -159,23 +159,41 @@ function Home() {
         />
       </section>
       <section className="home-services-section">
-        <ServiceCard
-          title={"Short Form Content"}
-          description={"Scale your brand through increased reach"}
-          link={"/shortform"}
-          imageSrc={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Shortform.jpg"
-          }
-        />
-        <ServiceCard
-          title={"Productions"}
-          description={
-            "Brand videos, documentaries, aftermovies to forge brand personality and tell impactful stories"
-          }
-          link={"/productions"}
-          imageSrc={
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg"
-          }
+        <div className="home-services-header">
+          <h4>Our Services</h4>
+          <h4>02/</h4>
+        </div>
+        <h3 className="home-services-description">
+          Complimentary services built for impact; Increased reach, increased
+          conversions
+        </h3>
+        <ServicesOverview
+          images={[
+            {
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg",
+              alt: "image for productions service",
+              link: "/productions",
+            },
+            {
+              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Shortform.jpg",
+              alt: "image for short form service",
+              link: "/shortform",
+            },
+          ]}
+          services={[
+            {
+              title: "Productions",
+              description:
+                "Brand videos, documentaries, and aftermovies to forge brand personality and tell impactful stories that convert",
+              link: "/productions",
+            },
+            {
+              title: "Short Form Content",
+              description:
+                "Scale your business with increased reach and conversions with our convenient all-in-one short-form packages",
+              link: "/shortform",
+            },
+          ]}
         />
       </section>
       <section className="home-work-section">
