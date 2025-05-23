@@ -13,6 +13,8 @@
     font-weight: 700;
 }
 
-.italic {
+.hero-paragraph-italic {
+    font-family: var(--ff-playfair-display);
     font-style: italic;
+    font-weight: 600;
 }
