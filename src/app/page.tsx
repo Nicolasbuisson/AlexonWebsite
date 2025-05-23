@@ -197,7 +197,10 @@ function Home() {
         />
       </section>
       <section className="home-work-section">
-        <h2>Our Work</h2>
+        <div className="home-work-header">
+          <h4>Our Work</h4>
+          <h4>03/</h4>
+        </div>
         <Projects projects={projects} homePageFilter />
         <ArrowPathLink
           url="/productions"
