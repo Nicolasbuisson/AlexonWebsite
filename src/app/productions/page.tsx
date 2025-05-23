@@ -167,6 +167,14 @@ function Productions() {
               src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
+            {
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AtlantisBlack.png`,
+              alt: "Atlantis logo",
+            },
+            {
+              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AquaventureBlack.png`,
+              alt: "Aquaventure logo",
+            },
           ]}
         ></LogoList>
       </section>
