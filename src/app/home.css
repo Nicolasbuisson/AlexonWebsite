@@ -154,9 +154,10 @@
     grid-row: 1/2;
     grid-column: 1/2;
     justify-self: end;
-    top: 2rem;
+    top: 3rem;
     left: 0.25rem;
-    z-index: 1;
+    z-index: 0;
+    filter: brightness(1.2) saturate(1.1);
     aspect-ratio: 855/1280;
 }
 
@@ -174,7 +175,7 @@
 
 @media (width > 480px) {
     .home-about-collage {
-        --home-about-collage-image-height: clamp(160px, 160px + 12vw, 360px);
+        --home-about-collage-image-height: clamp(160px, 160px + 9vw, 320px);
     }
 
     .home-about-collage-image-wrapper:nth-child(1) {
@@ -183,13 +184,46 @@
     }
 
     .home-about-collage-image-wrapper:nth-child(2) {
-        top: 2rem;
-        left: 3.75rem;
+        top: 3rem;
+        left: 3rem;
     }
 }
 
 .home-about-link {
     margin-block-start: 2rem;
+}
+
+@media (width > 1160px) {
+    .home-about-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .home-about-header {
+        margin-block-end: unset;
+    }
+
+    .home-about-description {
+        margin-block-start: 2rem;
+        margin-block-end: unset;
+    }
+
+    .home-about-paragraph {
+        text-align: start;
+    }
+
+    .home-about-collage {
+        margin-block: unset;
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    .home-about-link {
+        margin-block-start: unset;
+        align-self: end;
+        grid-row: 3/4;
+    }
 }
 
 .home-services-section {
