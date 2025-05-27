@@ -242,6 +242,16 @@
     font-weight: 500;
 }
 
+.home-services-description span {
+    font-weight: inherit;
+    font-family: var(--ff-playfair-display);
+    font-style: italic;
+    background: linear-gradient(90deg, var(--clr-light), var(--clr-accent) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .home-work-section {
     padding-block: var(--section-padding-block);
     padding-inline: var(--section-padding-inline);

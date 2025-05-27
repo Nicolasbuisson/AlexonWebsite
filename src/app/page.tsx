@@ -160,8 +160,10 @@ function Home() {
           <h4>02/</h4>
         </div>
         <h3 className="home-services-description">
-          Complimentary services built for impact; Increased reach, increased
-          conversions
+          Complimentary services built for <span>impact</span>
+          <br />
+          Increased <span>reach</span>, increased
+          <span> conversions</span>
         </h3>
         <ServicesOverview
           images={[
