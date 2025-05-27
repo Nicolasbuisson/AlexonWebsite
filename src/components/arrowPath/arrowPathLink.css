@@ -11,6 +11,10 @@
     transition: all 0.4s ease-in-out;
 }
 
+.arrow-path-final g path {
+    fill: var(--clr-accent);
+}
+
 .arrow-path-svg {
     --arrow-dimensions: 22px;
     width: var(--arrow-dimensions);
