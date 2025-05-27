@@ -257,6 +257,10 @@
     padding-inline: var(--section-padding-inline);
 }
 
+.home-work-header {
+    margin-block-end: 3rem;
+}
+
 .home-work-link {
     margin-block-start: 3rem;
 }
