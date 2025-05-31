@@ -18,9 +18,7 @@ export const Footer = () => {
       <div className="footer-items-container">
         <Link href="/" className="footer-logo">
           <img
-            src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/logos/AM-white.png"
-            }
+            src={"https://d128kbp85lo7cj.cloudfront.net/logos/AM-white.png"}
             alt="Alexon Logo"
           />
         </Link>

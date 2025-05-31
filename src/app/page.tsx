@@ -18,7 +18,7 @@ function Home() {
         <div className="home-hero-bg">
           <video
             src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/VisualizerAlexonMedia-v1.mov"
+              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mov"
             }
             muted
             autoPlay
@@ -37,7 +37,7 @@ function Home() {
         <HorizontalScroller>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
               fill
               alt="Corona logo"
               className="home-horizontal-scroller-logo"
@@ -45,7 +45,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
               fill
               alt="Four Seasons logo"
               className="home-horizontal-scroller-logo"
@@ -53,7 +53,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
               fill
               alt="McGill University logo"
               className="home-horizontal-scroller-logo"
@@ -61,7 +61,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
               fill
               alt="Coinbase logo"
               className="home-horizontal-scroller-logo"
@@ -69,7 +69,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanada.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
               fill
               alt="AirCanada logo"
               className="home-horizontal-scroller-logo"
@@ -77,7 +77,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
               fill
               alt="Claptone logo"
               className="home-horizontal-scroller-logo"
@@ -85,7 +85,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
               fill
               alt="Parc Omega logo"
               className="home-horizontal-scroller-logo"
@@ -93,7 +93,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Monolink.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
               fill
               alt="Monolink logo"
               className="home-horizontal-scroller-logo"
@@ -124,7 +124,7 @@ function Home() {
         <div className="home-about-collage">
           <div className="home-about-collage-image-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/images/About1.jpg`}
               alt="Villa picture"
               fill
               className="home-about-collage-image"
@@ -132,7 +132,7 @@ function Home() {
           </div>
           <div className="home-about-collage-image-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About2.jpeg`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/images/About2.jpeg`}
               alt="girl in Ocean picture"
               fill
               className="home-about-collage-image"
@@ -140,7 +140,7 @@ function Home() {
           </div>
           <div className="home-about-collage-image-wrapper">
             <Image
-              src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About3.jpeg`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/images/About3.jpeg`}
               alt="Alexon at Atlantis picture"
               fill
               className="home-about-collage-image"
@@ -168,12 +168,12 @@ function Home() {
         <ServicesOverview
           images={[
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/About1.jpg",
+              src: "https://d128kbp85lo7cj.cloudfront.net/images/About1.jpg",
               alt: "image for productions service",
               link: "/productions",
             },
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Shortform.jpg",
+              src: "https://d128kbp85lo7cj.cloudfront.net/images/Shortform.jpg",
               alt: "image for short form service",
               link: "/shortform",
             },

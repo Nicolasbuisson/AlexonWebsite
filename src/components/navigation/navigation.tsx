@@ -76,9 +76,7 @@ export const Navigation = (props: NavigationProps) => {
           className={`nav-logo ${titleScroll ? "logo-scroll" : ""}`}
         >
           <img
-            src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/logos/Full-white.png"
-            }
+            src={"https://d128kbp85lo7cj.cloudfront.net/logos/Full-white.png"}
           ></img>
         </Link>
         <div className="burger-menu" onClick={updateMenu}>

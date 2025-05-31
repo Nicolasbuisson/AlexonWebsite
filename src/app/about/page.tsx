@@ -13,7 +13,7 @@ function AboutPage() {
         <div className="about-hero">
           <Image
             src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AboutLayerClouds.jpg"
+              "https://d128kbp85lo7cj.cloudfront.net/images/AboutLayerClouds.jpg"
             }
             alt="about hero background"
             width={2016}
@@ -22,7 +22,7 @@ function AboutPage() {
           />
           <Image
             src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AboutLayerAlexon2.png"
+              "https://d128kbp85lo7cj.cloudfront.net/images/AboutLayerAlexon2.png"
             }
             alt="about hero foreground"
             width={2016}
@@ -44,7 +44,7 @@ function AboutPage() {
               <span className="about-story-logo-wrapper">
                 <Image
                   src={
-                    "https://alexonmedia.s3.ca-central-1.amazonaws.com/logos/Signature-white.png"
+                    "https://d128kbp85lo7cj.cloudfront.net/logos/Signature-white.png"
                   }
                   alt={"Alexon signature logo"}
                   className="about-story-logo"
@@ -98,33 +98,27 @@ function AboutPage() {
           </div>
           <div className="about-story-image-grid">
             <Image
-              src={
-                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexBali.jpg"
-              }
+              src={"https://d128kbp85lo7cj.cloudfront.net/images/AlexBali.jpg"}
               width={2832}
               height={4240}
               alt={"Alexon in Bali"}
             />
             <Image
-              src={
-                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexParis.jpg"
-              }
+              src={"https://d128kbp85lo7cj.cloudfront.net/images/AlexParis.jpg"}
               width={3072}
               height={4608}
               alt={"Alexon in Paris"}
             />
             <Image
               src={
-                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/AlexTanzania.png"
+                "https://d128kbp85lo7cj.cloudfront.net/images/AlexTanzania.png"
               }
               width={3533}
               height={5300}
               alt={"Alexon in Tanzania"}
             />
             <Image
-              src={
-                "https://alexonmedia.s3.ca-central-1.amazonaws.com/images/Skydive.png"
-              }
+              src={"https://d128kbp85lo7cj.cloudfront.net/images/Skydive.png"}
               width={1915}
               height={2872}
               alt={"Alexon skydiving"}

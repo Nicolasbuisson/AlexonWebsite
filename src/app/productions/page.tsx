@@ -13,9 +13,7 @@ function Productions() {
       <section className="productions-section-container">
         <div className="productions-video-background">
           <video
-            src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Productions.mp4"
-            }
+            src={"https://d128kbp85lo7cj.cloudfront.net/videos/Productions.mp4"}
             muted
             autoPlay
             loop
@@ -36,143 +34,143 @@ function Productions() {
         <LogoList
           logos={[
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CoronaBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoronaBlack.png",
               alt: "Corona logo",
             },
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasonsBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasonsBlack.png",
               alt: "Four Seasons logo",
             },
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ELLEBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLEBlack.png",
               alt: "ELLE logo",
             },
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/JohnSummitBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummitBlack.png",
               alt: "John Summit logo",
             },
             {
-              src: "https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversityBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversityBlack.png",
               alt: "McGill University logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanadaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanadaBlack.png`,
               alt: "AirCanada logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BelcoreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BelcoreBlack.png`,
               alt: "Belcore logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BUNTBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNTBlack.png`,
               alt: "BUNT logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CCLuxembourgBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/CCLuxembourgBlack.png`,
               alt: "Chamber of Commerce Luxembourg logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ChrisLakeBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ChrisLakeBlack.png`,
               alt: "Chris Lake logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ClaptoneBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ClaptoneBlack.png`,
               alt: "Claptone logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ElewanaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ElewanaBlack.png`,
               alt: "Elewana logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/IleSoniqBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/IleSoniqBlack.png`,
               alt: "Ile Soniq logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/KSHMRBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/KSHMRBlack.png`,
               alt: "KSHMR logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/LequilibreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LequilibreBlack.png`,
               alt: "L'Équilibre logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/LHOFTBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LHOFTBlack.png`,
               alt: "LHOFT logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/MonolinkBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/MonolinkBlack.png`,
               alt: "Monolink logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/NewCityGasBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/NewCityGasBlack.png`,
               alt: "New City Gas logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/OnomoHotelsBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotelsBlack.png`,
               alt: "Onomo Hotels logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PatschBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PatschBlack.png`,
               alt: "Patsch logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PrepinsonBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PrepinsonBlack.png`,
               alt: "Prepinson logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/St-PierreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/St-PierreBlack.png`,
               alt: "St-Pierre logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/VacierBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VacierBlack.png`,
               alt: "Vacier logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/VaudeBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VaudeBlack.png`,
               alt: "Vaude logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Web3MTLBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/Web3MTLBlack.png`,
               alt: "Web3MTL logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/XiaomiBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/XiaomiBlack.png`,
               alt: "Xiaomi logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PonenteBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PonenteBlack.png`,
               alt: "Ponente logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmegaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmegaBlack.png`,
               alt: "Parc Omega logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/CoinbaseBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoinbaseBlack.png`,
               alt: "Coinbase logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AquilaSafarisBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AquilaSafarisBlack.png`,
               alt: "Aquila Safaris logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/PuntoDeVistaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PuntoDeVistaBlack.png`,
               alt: "Punto de Vista logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/BDBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BDBlack.png`,
               alt: "Beautiful Destinations logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ToyotaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AtlantisBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.png`,
               alt: "Atlantis logo",
             },
             {
-              src: `https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AquaventureBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AquaventureBlack.png`,
               alt: "Aquaventure logo",
             },
           ]}

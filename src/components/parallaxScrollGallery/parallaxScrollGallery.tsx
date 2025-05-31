@@ -51,29 +51,29 @@ export const ParallaxScrollGallery = () => {
     <div ref={containerRef} className="parallax-scroll-gallery">
       <ParallaxScrollColumn
         videos={[
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Belcore.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Corona.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/L'Equilibre.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Weekenders1.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Belcore.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Corona.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/L'Equilibre.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Weekenders1.mp4",
         ]}
         parallaxCoefficient={y1}
       />
       <ParallaxScrollColumn
         videos={[
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Claptone.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Elewana.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Prepinson.mp4",
-          "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Weekenders2.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Claptone.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Elewana.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Prepinson.mp4",
+          "https://d128kbp85lo7cj.cloudfront.net/reels/Weekenders2.mp4",
         ]}
         parallaxCoefficient={y2}
       />
       {width >= 420 && (
         <ParallaxScrollColumn
           videos={[
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Vacier.mp4",
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Atlantis.mp4",
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/Ylee.mp4",
-            "https://alexonmedia.s3.ca-central-1.amazonaws.com/reels/CoinbasePenrosePartners.mp4",
+            "https://d128kbp85lo7cj.cloudfront.net/reels/Vacier.mp4",
+            "https://d128kbp85lo7cj.cloudfront.net/reels/Atlantis.mp4",
+            "https://d128kbp85lo7cj.cloudfront.net/reels/Ylee.mp4",
+            "https://d128kbp85lo7cj.cloudfront.net/reels/CoinbasePenrosePartners.mp4",
           ]}
           parallaxCoefficient={y3}
         />

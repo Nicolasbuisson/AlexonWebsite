@@ -15,9 +15,7 @@ function ShortForm() {
       <section className="shortform-hero-section">
         <div className="shortform-video-background">
           <video
-            src={
-              "https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Productions.mp4"
-            }
+            src={"https://d128kbp85lo7cj.cloudfront.net/videos/Productions.mp4"}
             muted
             autoPlay
             loop
@@ -164,7 +162,7 @@ function ShortForm() {
           <HorizontalScroller>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Corona.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
                 fill
                 alt="Corona logo"
                 className="shortform-horizontal-scroller-logo"
@@ -172,7 +170,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/FourSeasons.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
                 fill
                 alt="Four Seasons logo"
                 className="shortform-horizontal-scroller-logo"
@@ -180,7 +178,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/McGillUniversity.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
                 fill
                 alt="McGill University logo"
                 className="shortform-horizontal-scroller-logo"
@@ -188,7 +186,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Coinbase.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
                 fill
                 alt="Coinbase logo"
                 className="shortform-horizontal-scroller-logo"
@@ -196,7 +194,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/AirCanada.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
                 fill
                 alt="AirCanada logo"
                 className="shortform-horizontal-scroller-logo"
@@ -204,7 +202,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Claptone.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
                 fill
                 alt="Claptone logo"
                 className="shortform-horizontal-scroller-logo"
@@ -212,7 +210,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/ParcOmega.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
                 fill
                 alt="Parc Omega logo"
                 className="shortform-horizontal-scroller-logo"
@@ -220,7 +218,7 @@ function ShortForm() {
             </div>
             <div className="shortform-horizontal-scroller-logo-wrapper">
               <Image
-                src={`https://alexonmedia.s3.ca-central-1.amazonaws.com/clientLogos/Monolink.png`}
+                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
                 fill
                 alt="Monolink logo"
                 className="shortform-horizontal-scroller-logo"
