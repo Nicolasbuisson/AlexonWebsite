@@ -1,8 +1,7 @@
 "use client";
 import "./heroParagraph.css";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
-import { config } from "../../config/config";
 
 interface IProps {
   text: string;
@@ -45,24 +44,6 @@ export const HeroParagraph = (props: IProps) => {
   });
 
   const words = text.split(" ");
-
-  useEffect(() => {
-    const asyncTestInsta = async () => {
-      const userId = config.INSTA_USER_ID;
-      const accessToken = config.INSTA_ACCESS_TOKEN;
-      const instaItemListURL = `https://graph.instagram.com/${userId}/media?access_token=${accessToken}`;
-      const instaItems = await fetch(instaItemListURL);
-      const { data } = await instaItems.json();
-      const itemId = data[0]?.id;
-      if (itemId) {
-        const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink,caption,media_type,thumbnail_url`;
-        const res = await fetch(instaItemURL);
-        const json = await res.json();
-        console.log(json);
-      }
-    };
-    asyncTestInsta();
-  }, []);
 
   return (
     <p ref={element} className={className}>
