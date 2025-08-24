@@ -31,12 +31,15 @@ export const Projects = (props: IProps) => {
           preview.pause();
           preview.currentTime = 0;
         };
-        preview.addEventListener("mouseenter", playVideo);
-        preview.addEventListener("mouseleave", pauseVideo);
-        preview.addEventListener("touchstart", playVideo);
-        preview.addEventListener("touchend", pauseVideo);
+        card.addEventListener("mouseenter", playVideo);
+        card.addEventListener("mouseleave", pauseVideo);
+        card.addEventListener("touchstart", playVideo);
+        card.addEventListener("touchend", pauseVideo);
       }
     });
+    // return () => {
+    //    hard to to event listener cleanup because functions are defined within if block
+    // };
   }, []);
 
   return (
