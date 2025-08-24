@@ -50,20 +50,25 @@
 }
 
 /* hover effect */
-.projects-grid:hover>.projects-grid-card {
-    filter: brightness(.5) saturate(.75)
+/* 
+this whole grid dimming effect is the most expensive one...
+might be better to just drop it, or make the whole grid dim by default
+not just on hover
+*/
+.projects-grid:hover a {
+    filter: brightness(.5) saturate(.75);
 }
 
-.projects-grid>.projects-grid-card:hover {
-    filter: brightness(1) saturate(1.5)
-}
+.projects-grid a:hover {
+    filter: brightness(1) saturate(1.5);
 
-.projects-grid>.projects-grid-card:hover .project-logo {
-    transform: translateY(-1rem);
-}
+    & .project-logo {
+        transform: translateY(-1rem);
+    }
 
-.projects-grid>.projects-grid-card:hover h4 {
-    opacity: 1;
+    & h4 {
+        opacity: 1;
+    }
 }
 
 .stacked {
