@@ -55,6 +55,7 @@ export const Projects = (props: IProps) => {
             {project.gridVideoPreview ? (
               <video
                 src={project.gridVideoPreview}
+                preload={homePageFilter ? "auto" : "none"}
                 muted
                 loop
                 className="projects-grid-card-preview"
