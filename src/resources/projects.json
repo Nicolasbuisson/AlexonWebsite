@@ -166,7 +166,7 @@
         "description": "Mixing passion and art is always a winning recipe. L'Équilibre is about a lot more than making delightful cakes and breads... It's about a perpetual quest for progress and excellence. Here we tried to really convey the philosophy of the head baker Benjamic Roc - an excellent pastry is the result of achieving a seemingly impossible balance between flavours, textures, and smells. Thus, we really wanted to convey the artistry and intentionality that goes into every pastry. A few years have passed yet this video continues to resonate with audiences and pastry-enthusiasts in the Parisian region.",
         "videos": ["https://www.youtube.com/embed/Nq_xYiUh6vI"],
         "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/lequilibre/preview.mp4",
-        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/lequilibre/preview.jpg",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/lequilibre/stills/1.jpeg",
         "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Lequilibre.png",
         "services": ["Video Production", "Commercial Photography", "Short-Form Content"],
         "stills": [
@@ -739,7 +739,7 @@
         "client": "Chamber of Commerce LUX/MTL",
         "description": "We captured photographs to highlight the chamber’s role in building business bridges between Luxembourg and Montreal. The content focuses on key events, trade partnerships, member success stories, and the signature of a Memorandum of Agreement between different Chambers of Commerce.",
         "videos": [],
-        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/preview.JPG",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/preview.jpg",
         "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CCLuxembourg.png",
         "services": ["Event Photography"],
         "stills": [],
@@ -1029,6 +1029,68 @@
             {"title": "Camera Operators & Photographers", "name": "Alexon, Isabelle Victoria, Ethan Chang"},
             {"title": "Editor", "name": "Alexon"},
             {"title": "Production", "name": "Celia Smith"}
+        ],
+        "displayOnHomePage": false 
+    },
+    {
+        "route": "beachclub",
+        "title": "Beach Club",
+        "client": "Beach Club",
+        "description": "Every summer Beachclub hosts some of the biggest DJs & artists on its island off of Montreal. Every show is different but every show is special. We got the opportunity to capture both video and photo for Beachclub’s social media accounts. We were tasked with shooting & editing video reels in order to build hype in the moment and share in real time what’s happening on the island. Our reels were edited and posted as the event was ongoing with the video recap being edited overnight and shared online the next morning for all eventgoers to reminisce about their most recent night.",
+        "videos": ["https://www.youtube.com/embed/HJH_rg2S1Wg"],
+        "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/preview.mp4",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/1.jpeg",
+        "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BeachClub.png",
+        "services": ["Event Photography", "Concert Videography", "Video Production"],
+        "stills": [],
+        "photos": [
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/1.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/2.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/3.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/4.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/5.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/6.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/7.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/8.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/9.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/10.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/11.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/12.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/13.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/14.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/15.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/16.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/17.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/18.jpeg"}
+        ],
+        "bts": [],
+        "credits": [
+            {"title": "Director", "name": "Alexon"},
+            {"title": "Video Camera Operators", "name": "Alexon, Fred Delisle"},
+            {"title": "Photographers", "name": "Alexon"},
+            {"title": "Editor", "name": "Alexon, Fred Delisle"},
+            {"title": "Production", "name": "Ambitious Media (Video), BigLaurPhotographie (Photo)"}
+        ],
+        "displayOnHomePage": false 
+    },
+        {
+        "route": "internationaldemongolfieres",
+        "title": "International de Mongolfières",
+        "client": "International de Mongolfières",
+        "description": "Every year, the International de Montgolfières is a celebration of music and summer in Quebec and also an occasion for hot air balloons to light up the sky. This year, T-Pain, Diplo & Talk headlined the event. We were tasked with creating all the official video content for the festival, producing and editing high-quality reels to be shared during the event on social media , as well as video recaps delivered overnight and shared each morning.",
+        "videos": ["https://www.youtube.com/embed/tnVR1uGiZd0"],
+        "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/internationalDeMongolfieres/preview.mp4",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/internationalDeMongolfieres/photos/1.jpeg",
+        "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/InternationalDeMongolfieres.png",
+        "services": ["Video Production", "Concert Videography"],
+        "stills": [],
+        "photos": [],
+        "bts": [],
+        "credits": [
+            {"title": "Camera Operators", "name": "Alexon, Alex Jauvin, Mathis Bouchard-Rouleau"},
+            {"title": "FPV Drone Pilot", "name": "François Glevarec"},
+            {"title": "Editor", "name": "Alexon"},
+            {"title": "Production", "name": "Ambitious Media"}
         ],
         "displayOnHomePage": false 
     }
