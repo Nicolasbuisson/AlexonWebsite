@@ -18,7 +18,7 @@ function Home() {
         <div className="home-hero-bg">
           <video
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mov"
+              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mp4"
             }
             muted
             autoPlay
