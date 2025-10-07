@@ -20,26 +20,39 @@ export const Projects = (props: IProps) => {
     // Select all cards
     const cards = document.querySelectorAll(".projects-grid-card");
 
-    cards.forEach((card) => {
-      const preview = card.querySelector("video");
-      if (preview) {
-        const playVideo = () => {
-          preview.play();
-        };
+    const cardsEventListenerToggle = (
+      addEventListener: boolean = true
+    ): void => {
+      cards.forEach((card) => {
+        const preview = card.querySelector("video");
+        if (preview) {
+          const playVideo = () => {
+            preview.play();
+          };
 
-        const pauseVideo = () => {
-          preview.pause();
-          preview.currentTime = 0;
-        };
-        card.addEventListener("mouseenter", playVideo);
-        card.addEventListener("mouseleave", pauseVideo);
-        card.addEventListener("touchstart", playVideo);
-        card.addEventListener("touchend", pauseVideo);
-      }
-    });
-    // return () => {
-    //    hard to to event listener cleanup because functions are defined within if block
-    // };
+          const pauseVideo = () => {
+            preview.pause();
+            preview.currentTime = 0;
+          };
+          if (addEventListener) {
+            card.addEventListener("mouseenter", playVideo);
+            card.addEventListener("mouseleave", pauseVideo);
+            card.addEventListener("touchstart", playVideo);
+            card.addEventListener("touchend", pauseVideo);
+          } else {
+            card.removeEventListener("mouseenter", playVideo);
+            card.removeEventListener("mouseleave", pauseVideo);
+            card.removeEventListener("touchstart", playVideo);
+            card.removeEventListener("touchend", pauseVideo);
+          }
+        }
+      });
+    };
+
+    cardsEventListenerToggle(true); // add event listeners on all cards
+    return () => {
+      cardsEventListenerToggle(false); // remove event listeners on all cards on unmount
+    };
   }, []);
 
   return (
@@ -55,7 +68,7 @@ export const Projects = (props: IProps) => {
             {project.gridVideoPreview ? (
               <video
                 src={project.gridVideoPreview}
-                preload={homePageFilter ? "auto" : "none"}
+                preload="auto"
                 muted
                 loop
                 className="projects-grid-card-preview"
