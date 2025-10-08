@@ -49,14 +49,8 @@
     transition: transform var(--projects-animation-duration);
 }
 
-/* hover effect */
-/* 
-this whole grid dimming effect is the most expensive one...
-might be better to just drop it, or make the whole grid dim by default
-not just on hover
-*/
-.projects-grid:hover a {
-    filter: brightness(.5) saturate(.75);
+.projects-grid a {
+    filter: brightness(.75) saturate(.75);
 }
 
 .projects-grid a:hover {

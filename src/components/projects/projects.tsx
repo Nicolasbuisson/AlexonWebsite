@@ -3,7 +3,7 @@ import Link from "next/link";
 import { WorkItemProps } from "../../types/work";
 import "./projects.css";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 interface IProps {
   projects: WorkItemProps[];
@@ -12,9 +12,11 @@ interface IProps {
 
 export const Projects = (props: IProps) => {
   const { projects, homePageFilter = false } = props;
-  const projectsToRender = homePageFilter
-    ? projects.filter((project) => project.displayOnHomePage)
-    : projects;
+  const projectsToRender = useMemo(() => {
+    return homePageFilter
+      ? projects.filter((project) => project.displayOnHomePage)
+      : projects;
+  }, []);
 
   useEffect(() => {
     // Select all cards
