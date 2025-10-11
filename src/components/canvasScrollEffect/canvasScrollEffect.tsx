@@ -1,6 +1,6 @@
 "use client";
 import "./canvasScrollEffect.css";
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { MotionValue, useMotionValueEvent, useTransform } from "framer-motion";
 import nextConfig from "../../../next.config";
 
@@ -19,16 +19,17 @@ export const CanvasScrollEffect = (props: CanvasScrollEffectProps) => {
   const { scrollYProgress } = props;
   const TOTAL_FRAMES = 113;
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [images, setImages] = useState<HTMLImageElement[]>([]);
 
-  const images = useMemo(() => {
+  useEffect(() => {
+    // need to load these on the client side because cannot use a Next Image to draw on the canvas
     const loadedImages: HTMLImageElement[] = [];
-
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       img.src = `${nextConfig.basePath}/aboutHeroFrames/${i}.webp`;
       loadedImages.push(img);
     }
-    return loadedImages;
+    setImages(loadedImages);
   }, []);
 
   const render = useCallback(
@@ -47,23 +48,31 @@ export const CanvasScrollEffect = (props: CanvasScrollEffectProps) => {
   const currentIndex = useTransform(scrollYProgress, [0, 1], [1, TOTAL_FRAMES]);
 
   useMotionValueEvent(currentIndex, "change", (latest) => {
-    console.log(Number(latest.toFixed()));
     render(Number(latest.toFixed()));
   });
 
   useEffect(() => {
     // show first image on mount
     render(1);
-    // TODO: SOMETIMES GET AN ERROR: ReferenceError: Image is not defined
-    // resulting in a blank canvas
-    // to combat this, I could a before element to the canvas with same size but a background of the first image!
-    // cause gets fixed as soon as you start scrolling
-    // OR LOOK IT UP AND FIGURE OUT WHY IT'S UNDEFINED
-  }, [render]);
+  }, [render, images]);
 
   // how to make canvas responsive if gotta set its height and width
   // took the height and width of the images
   // gotta fix that using ffmpeg, not sure why it reduced their size compared to the video...
 
-  return <canvas ref={canvasRef} height={563} width={1000}></canvas>;
+  return (
+    <canvas
+      ref={canvasRef}
+      height={563}
+      width={1000}
+      style={{
+        // add first frame as backgroundImage so canvas displays the first frame
+        // while the images are loading
+        backgroundImage: `url(${nextConfig.basePath}/aboutHeroFrames/1.webp)`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    ></canvas>
+  );
 };
