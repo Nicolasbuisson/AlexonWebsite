@@ -1,19 +1,21 @@
 .about-hero-text {
-    width: 100vw;
-    margin-top: 5rem;
+    position: sticky;
+    width: 100%;
+    height: fit-content;
+    margin-top: 4rem;
+    top: 4rem;
     text-wrap: balance;
-    z-index: 3;
-    transform: translateY(calc(0.4vh * var(--scroll)));
+    z-index: 4;
 }
 
 .about-hero-header {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .about-hero-paragraph {
-    color: var(--clr-dark);
+    color: var(--clr-light);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -25,6 +27,7 @@
     line-height: 1.4;
     text-align: center;
     text-wrap: pretty;
+    padding-bottom: 4rem;
 }
 
 @media (width < 520px) {

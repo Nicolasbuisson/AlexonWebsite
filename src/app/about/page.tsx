@@ -3,35 +3,14 @@ import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { Offerings } from "../../components/offerings/offerings";
 import Image from "next/image";
-import { AboutHeroText } from "../../components/aboutHeroText/aboutHeroText";
+import { AboutHero } from "../../components/aboutHero/aboutHero";
 
 function AboutPage() {
   return (
     <div className="about-container">
       <Navigation showIcons></Navigation>
       <section className="about-section-hero-container">
-        <div className="about-hero">
-          <Image
-            src={
-              "https://d128kbp85lo7cj.cloudfront.net/images/AboutLayerClouds.jpg"
-            }
-            alt="about hero background"
-            width={2016}
-            height={1512}
-            className="about-hero-image about-hero-background"
-          />
-          <Image
-            src={
-              "https://d128kbp85lo7cj.cloudfront.net/images/AboutLayerAlexon2.png"
-            }
-            alt="about hero foreground"
-            width={2016}
-            height={1512}
-            className="about-hero-image about-hero-foreground"
-          />
-          <AboutHeroText />
-          <div className="about-hero-background-layer" />
-        </div>
+        <AboutHero />
       </section>
       <section className="about-services-section">
         <Offerings />

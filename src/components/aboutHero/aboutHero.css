@@ -1,0 +1,28 @@
+.about-hero-container {
+    position: relative;
+    height: 4000px;
+    width: 100%;
+    background-color: var(--clr-dark);
+    margin-inline: auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.about-hero-container>* {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.about-hero-background-layer {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-image: fill 0 linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 8%);
+}

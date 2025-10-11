@@ -8,57 +8,6 @@
     color: var(--clr-light);
 }
 
-.about-hero {
-    position: relative;
-    overflow: hidden;
-    margin-inline: auto;
-    text-align: center;
-    height: 110vh;
-    height: 110svh;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    justify-items: center;
-}
-
-.about-hero>* {
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.about-hero-image {
-    object-fit: cover;
-}
-
-.about-hero-background {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.about-hero-foreground {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    top: 20%;
-    transform: translateY(calc(-0.2vh * var(--scroll)));
-    z-index: 4;
-}
-
-.about-hero-background-layer {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 5;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-image: fill 0 linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 8%);
-}
-
 .about-services-section {
     padding-block-end: var(--section-padding-block);
     padding-block-start: calc(var(--section-padding-block) + 4rem);

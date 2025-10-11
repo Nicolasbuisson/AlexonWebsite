@@ -1,25 +1,14 @@
 "use client";
 import "./aboutHeroText.css";
 import { HeroParagraph } from "../heroParapgraph/heroParagraph";
-import { useWindowSize } from "../../hooks/useWindowSize";
-import { useCallback } from "react";
+import { MotionValue } from "framer-motion";
 
-export const AboutHeroText = () => {
-  const { width: windowWidth } = useWindowSize();
+interface AboutHeroTextProps {
+  scrollYProgress: MotionValue<number>;
+}
 
-  const scrollOffsetIntersection = useCallback(() => {
-    if (windowWidth >= 1240) {
-      return "0.2";
-    } else if (windowWidth < 1240 && windowWidth > 720) {
-      return "0.3";
-    } else if (windowWidth <= 720 && windowWidth > 600) {
-      return "0.4";
-    } else if (windowWidth <= 600 && windowWidth > 460) {
-      return "0.55";
-    } else {
-      return "0.6";
-    }
-  }, [windowWidth]);
+export const AboutHeroText = (props: AboutHeroTextProps) => {
+  const { scrollYProgress } = props;
 
   return (
     <div className="about-hero-text">
@@ -29,8 +18,9 @@ export const AboutHeroText = () => {
           "Alexon Media crafts compelling visual narratives that captivate and convert. We are a team of storytellers, innovators, and digital strategists led by Alexon. Nimble, innovative, and always ahead of the curve, we turn ideas into impactful content that resonates across platforms. Let’s tell your story boldly, authentically, and with purpose."
         }
         className="about-hero-paragraph"
-        scrollOffset={["end " + scrollOffsetIntersection(), "end 0"]}
-        startFromEnd={true}
+        scrollYProgress={scrollYProgress}
+        startingOpacity={0}
+        startFromEnd={false}
       />
     </div>
   );

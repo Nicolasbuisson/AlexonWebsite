@@ -6,7 +6,9 @@ import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
 interface IProps {
   text: string;
   className?: string;
+  scrollYProgress?: MotionValue<number>;
   scrollOffset?: any[];
+  startingOpacity?: number;
   boldStartIndex?: number;
   boldEndIndex?: number;
   italicWordIndexes?: number[];
@@ -23,6 +25,7 @@ interface WordProps {
   boldStartIndex: number;
   boldEndIndex: number;
   startFromEnd: boolean;
+  startingOpacity: number;
   extraClasses?: string;
 }
 
@@ -30,7 +33,9 @@ export const HeroParagraph = (props: IProps) => {
   const {
     text,
     className = "",
+    scrollYProgress,
     scrollOffset = ["start 0.9", "start 0.4"],
+    startingOpacity = 0.05,
     boldEndIndex = 0,
     boldStartIndex = 0,
     italicWordIndexes = [],
@@ -38,10 +43,14 @@ export const HeroParagraph = (props: IProps) => {
   } = props;
 
   const element = useRef(null);
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: scrollYProgressInner } = useScroll({
     target: element,
     offset: scrollOffset,
   });
+
+  const childrenScrollYProgress = scrollYProgress
+    ? scrollYProgress
+    : scrollYProgressInner;
 
   const words = text.split(" ");
 
@@ -66,11 +75,12 @@ export const HeroParagraph = (props: IProps) => {
             keyId={"hero-word-" + i}
             start={start}
             end={end}
-            scrollYProgress={scrollYProgress}
+            scrollYProgress={childrenScrollYProgress}
             totalCharCount={text.length}
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
             startFromEnd={startFromEnd}
+            startingOpacity={startingOpacity}
             extraClasses={extraClasses}
           >
             {word}
@@ -92,6 +102,7 @@ const Word = (props: WordProps) => {
     boldStartIndex,
     boldEndIndex,
     startFromEnd,
+    startingOpacity,
     extraClasses = "",
   } = props;
   const characters = children.split("");
@@ -113,6 +124,7 @@ const Word = (props: WordProps) => {
             boldStartIndex={boldStartIndex}
             boldEndIndex={boldEndIndex}
             startFromEnd={startFromEnd}
+            startingOpacity={startingOpacity}
           >
             {character}
           </Character>
@@ -133,11 +145,12 @@ const Character = (props: WordProps) => {
     boldStartIndex,
     boldEndIndex,
     startFromEnd,
+    startingOpacity,
   } = props;
   const characterOpacity = useTransform(
     scrollYProgress,
     startFromEnd ? [1 - end, 1 - start] : [start, end],
-    startFromEnd ? [1, 0] : [0.1, 1]
+    startFromEnd ? [1, 0] : [startingOpacity, 1]
   );
   const bold =
     end * totalCharCount <= boldEndIndex &&
