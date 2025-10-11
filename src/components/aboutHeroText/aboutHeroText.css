@@ -1,15 +1,17 @@
 .about-hero-text {
+    --hero-text-spacing: 4rem;
+
     position: sticky;
     width: 100%;
     height: fit-content;
-    margin-top: 4rem;
-    top: 4rem;
+    margin-top: var(--hero-text-spacing);
+    top: var(--hero-text-spacing);
     text-wrap: balance;
     z-index: 4;
 }
 
 .about-hero-header {
-    margin-bottom: 4rem;
+    margin-bottom: var(--hero-text-spacing);
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -27,29 +29,41 @@
     line-height: 1.4;
     text-align: center;
     text-wrap: pretty;
-    padding-bottom: 4rem;
+    padding-bottom: var(--hero-text-spacing);
 }
 
-@media (width < 520px) {
+@media (width < 1080px) {
     .about-hero-text {
-        margin-top: 3rem;
-    }
-
-    .about-hero-header {
-        margin-bottom: 3rem;
+        --hero-text-spacing: 3rem;
     }
 }
 
-@media (width < 400px) {
+@media (width < 880px) {
     .about-hero-text {
-        margin-top: 1.5rem;
-    }
-
-    .about-hero-header {
-        margin-bottom: 1rem;
+        --hero-text-spacing: 2rem;
     }
 
     .about-hero-paragraph {
         width: 70%;
+    }
+}
+
+@media (width < 720px) {
+    .about-hero-text {
+        --hero-text-spacing: 1rem;
+    }
+
+    .about-hero-paragraph {
+        width: 80%;
+    }
+}
+
+@media (width < 560px) {
+    .about-hero-text {
+        --hero-text-spacing: 0.5rem;
+    }
+
+    .about-hero-paragraph {
+        width: 90%;
     }
 }
