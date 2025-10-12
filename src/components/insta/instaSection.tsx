@@ -65,7 +65,7 @@ export const InstaSection = async (props: IInstaSection) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="insta-title">@Alexoonnn</h3>
+          <h4 className="insta-title">@Alexoonnn</h4>
         </a>
         <Insta
           instaItems={instaItems}
