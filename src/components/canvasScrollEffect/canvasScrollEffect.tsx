@@ -35,11 +35,7 @@ export const CanvasScrollEffect = (props: CanvasScrollEffectProps) => {
   const render = useCallback(
     (index: number) => {
       if (images[index - 1]) {
-        canvasRef.current?.getContext("2d")?.drawImage(
-          images[index - 1],
-          0, //ref?.current.width / 2 - images[index - 1].width / 2,
-          0 // ref?.current.height / 2 - images[index - 1].height / 2
-        );
+        canvasRef.current?.getContext("2d")?.drawImage(images[index - 1], 0, 0);
       }
     },
     [images]
@@ -56,15 +52,11 @@ export const CanvasScrollEffect = (props: CanvasScrollEffectProps) => {
     render(1);
   }, [render, images]);
 
-  // how to make canvas responsive if gotta set its height and width
-  // took the height and width of the images
-  // gotta fix that using ffmpeg, not sure why it reduced their size compared to the video...
-
   return (
     <canvas
       ref={canvasRef}
-      height={563}
-      width={1000}
+      height={1080}
+      width={1920}
       style={{
         // add first frame as backgroundImage so canvas displays the first frame
         // while the images are loading
