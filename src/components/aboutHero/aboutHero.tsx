@@ -16,7 +16,6 @@ export const AboutHero = () => {
   return (
     <div ref={containerRef} className="about-hero-container">
       <CanvasScrollEffect
-        //frames={[]}
         scrollYProgress={scrollYProgress}
       ></CanvasScrollEffect>
       <AboutHeroText scrollYProgress={scrollYProgress} />

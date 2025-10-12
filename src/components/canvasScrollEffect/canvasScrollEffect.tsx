@@ -5,15 +5,8 @@ import { MotionValue, useMotionValueEvent, useTransform } from "framer-motion";
 import nextConfig from "../../../next.config";
 
 interface CanvasScrollEffectProps {
-  //frames: HTMLImageElement[];
   scrollYProgress: MotionValue<number>;
 }
-// LOOK INTO IMAGE HOSTING ON AWS INSTEAD OF PUBLIC FOLDER
-// need to preload all images from the AWS bucket beforehand...
-// unless I decide to do it in the public folder...
-// can just put them all in the public folder and have them served directly from website
-// but can also look into putting them on AWS and seeing if server can preload all of them
-// and pass them as a prop to the clientside component
 
 export const CanvasScrollEffect = (props: CanvasScrollEffectProps) => {
   const { scrollYProgress } = props;
