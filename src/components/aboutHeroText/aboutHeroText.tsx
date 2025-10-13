@@ -15,7 +15,7 @@ export const AboutHeroText = (props: AboutHeroTextProps) => {
       <h1 className="about-hero-header">About Us</h1>
       <HeroParagraph
         text={
-          "Alexon Media is a boutique video production agency creating luxury brand films and high-performance short-form content. We combine cinematic storytelling with strategic precision to move audiences and drive measurable brand growth."
+          "Alexon Media is a video production agency creating luxury brand films and high-performance short-form content. We combine cinematic storytelling with strategic precision to move audiences and drive measurable brand growth."
         }
         className="about-hero-paragraph"
         scrollYProgress={scrollYProgress}

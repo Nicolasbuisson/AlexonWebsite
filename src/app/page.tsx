@@ -154,12 +154,25 @@ function Home() {
           svgClassName="home-work-arrow"
         />
       </section>
-      <section className="home-services-section">
-        <div className="home-services-header">
-          <h4>Our Services</h4>
+      <section className="home-productions-section">
+        <div className="home-productions-header">
+          <h4>Productions</h4>
           <h4>02/</h4>
         </div>
-        <h3 className="home-services-description">
+        <Projects projects={projects} homePageFilter />
+        <ArrowPathLink
+          url="/productions"
+          text="See our Work"
+          className="home-work-link"
+          svgClassName="home-work-arrow"
+        />
+      </section>
+      <section className="home-shortform-section">
+        <div className="home-shortform-header">
+          <h4>Short-Form</h4>
+          <h4>03/</h4>
+        </div>
+        <h3 className="home-shortform-description">
           Complimentary services built for <span>impact</span>
           <br />
           Increased <span>reach</span>, increased
@@ -192,19 +205,6 @@ function Home() {
               link: "/shortform",
             },
           ]}
-        />
-      </section>
-      <section className="home-work-section">
-        <div className="home-work-header">
-          <h4>Our Work</h4>
-          <h4>03/</h4>
-        </div>
-        <Projects projects={projects} homePageFilter />
-        <ArrowPathLink
-          url="/productions"
-          text="See our Work"
-          className="home-work-link"
-          svgClassName="home-work-arrow"
         />
       </section>
       <InstaSection />
