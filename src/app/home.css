@@ -226,6 +226,19 @@
     }
 }
 
+.home-productions-section {
+    padding-block: var(--section-padding-block);
+    padding-inline: var(--section-padding-inline);
+}
+
+.home-productions-header {
+    margin-block-end: 3rem;
+}
+
+.home-work-link {
+    margin-block-start: 3rem;
+}
+
 .home-shortform-section {
     padding-block: var(--section-padding-block);
     padding-inline: calc(var(--section-padding-inline) - 2rem);
@@ -250,19 +263,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.home-productions-section {
-    padding-block: var(--section-padding-block);
-    padding-inline: var(--section-padding-inline);
-}
-
-.home-productions-header {
-    margin-block-end: 3rem;
-}
-
-.home-work-link {
-    margin-block-start: 3rem;
 }
 
 @media (width < 880px) {
