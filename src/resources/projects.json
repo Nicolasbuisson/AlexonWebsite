@@ -603,44 +603,6 @@
         ],
         "displayOnHomePage": false
     },
-    
-    {
-        "route": "businessclubfranceluxembourg",
-        "title": "Business Club France Luxembourg",
-        "client": "Business Club France Luxembourg",
-        "description": "We produced sophisticated and photographs that reflect the club’s role in fostering cross-border business connections and showcase the different general assemblies and events. The content highlights key networking events and the club’s impact on the business community.",
-        "videos": [],
-        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/preview.jpg",
-        "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CCLuxembourg.png",
-        "services": ["Event Photography"],
-        "stills": [],
-        "photos": [
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/1.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/2.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/3.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/4.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/5.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/6.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/7.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/8.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/9.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/10.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/11.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/12.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/13.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/14.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/15.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/16.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/17.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/18.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/businessClubFranceLux/photos/19.jpeg"}
-        ],
-        "bts": [],
-        "credits": [
-            {"title": "Photography", "name": "Alexon"}
-        ],
-        "displayOnHomePage": false
-    },
     {
         "route": "thevisionboard",
         "title": "The Vision Board",
