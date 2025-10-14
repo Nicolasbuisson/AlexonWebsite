@@ -9,6 +9,7 @@ import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
 import { HorizontalScroller } from "../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
 import { PageLoader } from "../components/pageLoader/pageLoader";
+import { TagLine } from "../components/tagLine/tagLine";
 
 function Home() {
   return (
@@ -164,6 +165,16 @@ function Home() {
           <h4>Productions</h4>
           <h4>02/</h4>
         </div>
+        <TagLine
+          children={
+            <h3>
+              Redefining <span>modern storytelling</span> through our signature
+              lens <br />
+              where creativity, agility, and mastery converge to set a{" "}
+              <span>new standard</span> in brand films.
+            </h3>
+          }
+        />
         <Projects projects={projects} homePageFilter />
         <ArrowPathLink
           url="/productions"
@@ -177,13 +188,17 @@ function Home() {
           <h4>Short-Form</h4>
           <h4>03/</h4>
         </div>
-        <h3 className="home-shortform-description">
-          Complimentary services built for <span>impact</span>
-          <br />
-          Increased <span>reach</span>, increased
-          <span> conversions</span>
-        </h3>
-        <div className="home-shortform-video-grid">
+        <TagLine
+          children={
+            <h3>
+              Complimentary services built for <span>impact</span>
+              <br />
+              Increased <span>reach</span>, increased
+              <span> conversions</span>
+            </h3>
+          }
+        />
+        <div className="home-shortform-video-container">
           {/* <video
             src={
               ""
@@ -192,7 +207,6 @@ function Home() {
             muted
             autoPlay
             loop
-            className="landscape"
           ></video>
           <video
             src={
@@ -202,7 +216,6 @@ function Home() {
             muted
             autoPlay
             loop
-            className="portrait"
           ></video>
           <video
             src={
@@ -212,7 +225,6 @@ function Home() {
             muted
             autoPlay
             loop
-            className="landscape"
           ></video> */}
         </div>
       </section>

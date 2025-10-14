@@ -1,0 +1,21 @@
+.tagline {
+    margin-block: 3rem;
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+    font-weight: 500;
+}
+
+.tagline h3 {
+    font-weight: inherit;
+}
+
+.tagline span {
+    font-weight: inherit;
+    font-family: var(--ff-playfair-display);
+    font-style: italic;
+    background: linear-gradient(90deg, var(--clr-light), var(--clr-accent) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
