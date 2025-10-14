@@ -3,12 +3,14 @@ import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
 import projectsJSON from "../../resources/projects.json";
+import { PageLoader } from "../../components/pageLoader/pageLoader";
 
 function Productions() {
   const { projects } = projectsJSON;
 
   return (
     <div className="productions-container">
+      <PageLoader />
       <Navigation showIcons></Navigation>
       <section className="productions-section-container">
         <div className="productions-video-background">

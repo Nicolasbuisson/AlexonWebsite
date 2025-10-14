@@ -7,10 +7,12 @@ import { Package } from "../../components/package/package";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
 import { ParallaxScrollGallery } from "../../components/parallaxScrollGallery/parallaxScrollGallery";
+import { PageLoader } from "../../components/pageLoader/pageLoader";
 
 function ShortForm() {
   return (
     <div className="shortform-container">
+      <PageLoader />
       <Navigation />
       <section className="shortform-hero-section">
         <div className="shortform-video-background">

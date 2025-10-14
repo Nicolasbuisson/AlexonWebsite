@@ -8,11 +8,12 @@ import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
 import { HorizontalScroller } from "../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
-import { ServicesOverview } from "../components/servicesOverview/servicesOverview";
+import { PageLoader } from "../components/pageLoader/pageLoader";
 
 function Home() {
   return (
     <div className="home-section-container">
+      <PageLoader />
       <Navigation sticky titleScroll showIcons></Navigation>
       <section className="home-hero-section">
         <div className="home-hero-bg">
@@ -178,34 +179,38 @@ function Home() {
           Increased <span>reach</span>, increased
           <span> conversions</span>
         </h3>
-        <ServicesOverview
-          images={[
-            {
-              src: "https://d128kbp85lo7cj.cloudfront.net/images/About1.jpg",
-              alt: "image for productions service",
-              link: "/productions",
-            },
-            {
-              src: "https://d128kbp85lo7cj.cloudfront.net/images/Shortform.jpg",
-              alt: "image for short form service",
-              link: "/shortform",
-            },
-          ]}
-          services={[
-            {
-              title: "Productions",
-              description:
-                "Brand videos, documentaries, and aftermovies to forge brand personality and tell impactful stories that convert",
-              link: "/productions",
-            },
-            {
-              title: "Short Form Content",
-              description:
-                "Scale your business with increased reach and conversions with our convenient all-in-one short-form packages",
-              link: "/shortform",
-            },
-          ]}
-        />
+        <div className="home-shortform-video-grid">
+          {/* <video
+            src={
+              ""
+              //"https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/CoronaPreview.mov"
+            }
+            muted
+            autoPlay
+            loop
+            className="landscape"
+          ></video>
+          <video
+            src={
+              ""
+              //"https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Xiaomi-WebsiteMedia.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            className="portrait"
+          ></video>
+          <video
+            src={
+              ""
+              //"https://d128kbp85lo7cj.cloudfront.net/reels/L'Equilibre.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            className="landscape"
+          ></video> */}
+        </div>
       </section>
       <InstaSection />
     </div>

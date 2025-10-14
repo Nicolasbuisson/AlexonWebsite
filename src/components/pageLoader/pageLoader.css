@@ -1,0 +1,89 @@
+@property --count {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: true;
+}
+
+@property --rotate-angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+.page-loader {
+    --animation-duration: 1800ms;
+    --count-font-size: 3rem;
+
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    height: 100vh;
+    height: 100svh;
+    width: 100vw;
+    width: 100svw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    transition: opacity 0.5s ease-out;
+}
+
+.page-loader::after {
+    --rotate-angle: 0deg;
+    --c1: var(--clr-accent);
+    --c2: var(--clr-dark);
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+    content: '';
+    width: 200px;
+    aspect-ratio: 1;
+    padding: 6px;
+    border-radius: 50%;
+    background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.2turn, var(--c2) 0.35turn);
+    animation: borderRotate calc(1.15 * var(--animation-duration)) linear forwards infinite;
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+}
+
+@keyframes borderRotate {
+    0% {
+        --rotate-angle: 0deg;
+    }
+
+    100% {
+        --rotate-angle: 360deg;
+    }
+}
+
+.page-loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.counter-initializer {
+    --count: 100;
+}
+
+.page-loader-counter {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: var(--count-font-size);
+    line-height: 1.3;
+    font-weight: 800;
+    transition: --count var(--animation-duration) ease-out;
+    counter-reset: count var(--count);
+}
+
+.page-loader-counter::before {
+    content: counter(count);
+}
+
+@media (width < 880px) {
+    .page-loader {
+        --count-font-size: 2.5rem;
+    }
+}
