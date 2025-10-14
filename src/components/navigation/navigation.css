@@ -121,6 +121,7 @@ nav>* {
 }
 
 .link:hover {
+    color: var(--clr-accent);
     transform: scale(1.2);
     filter: brightness(1);
 }
