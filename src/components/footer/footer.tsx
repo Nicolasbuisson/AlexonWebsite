@@ -28,9 +28,6 @@ export const Footer = () => {
           <a href="mailto:contact@alexonmedia.com" className="footer-link">
             contact@alexonmedia.com
           </a>
-          <a href="tel:+15145577790" className="footer-link">
-            +1 514 557 7790
-          </a>
           <a href="tel:+33783131299" className="footer-link">
             +33 7 83 13 12 99
           </a>
