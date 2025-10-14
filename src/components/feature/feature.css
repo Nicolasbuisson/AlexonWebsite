@@ -1,0 +1,25 @@
+.feature-container {
+    --feature-icon-size: 48px;
+
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-container svg {
+    height: var(--feature-icon-size);
+    width: var(--feature-icon-size);
+    fill: var(--clr-accent);
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-weight: 500;
+    text-wrap: balance;
+}
+
+.feature-description {
+    color: var(--clr-dark-grey);
+    text-wrap: pretty;
+}
