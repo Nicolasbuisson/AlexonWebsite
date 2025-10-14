@@ -27,7 +27,11 @@ function Home() {
           ></video>
         </div>
         <div className="home-hero-text">
-          <h3 className="home-pitch">elevate your brand</h3>
+          <h3 className="home-pitch">
+            Where cinematic excellence
+            <br />
+            meets strategic performance
+          </h3>
           <ButtonBackgroundHoverEffect
             text="Let's Work Together"
             link="/contact"
