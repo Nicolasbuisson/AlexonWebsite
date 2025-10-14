@@ -166,16 +166,14 @@ function Home() {
           <h4>Productions</h4>
           <h4>02/</h4>
         </div>
-        <TagLine
-          children={
-            <h3>
-              Redefining <span>modern storytelling</span> through our signature
-              lens <br />
-              where creativity, agility, and mastery converge to set a{" "}
-              <span>new standard</span> in brand films.
-            </h3>
-          }
-        />
+        <TagLine>
+          <h3>
+            Redefining <span>modern storytelling</span> through our signature
+            lens <br />
+            where creativity, agility, and mastery converge to set a{" "}
+            <span>new standard</span> in brand films.
+          </h3>
+        </TagLine>
         <Projects projects={projects} homePageFilter />
         <ArrowPathLink
           url="/productions"
@@ -189,15 +187,13 @@ function Home() {
           <h4>Short-Form</h4>
           <h4>03/</h4>
         </div>
-        <TagLine
-          children={
-            <h3>
-              Our <span>done-for-you</span> short-form content packages are
-              engineered for impact - where visual excellence meets brand
-              strategy to drive <span>reach, conversions, and ROI.</span>
-            </h3>
-          }
-        />
+        <TagLine>
+          <h3>
+            Our <span>done-for-you</span> short-form content packages are
+            engineered for impact - where visual excellence meets brand strategy
+            to drive <span>reach, conversions, and ROI.</span>
+          </h3>
+        </TagLine>
         <div className="home-shortform-video-container">
           <video
             src={
