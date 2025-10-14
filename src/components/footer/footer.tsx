@@ -13,6 +13,7 @@ export const Footer = () => {
         text="Book a Call"
         className="footer-button"
         link="/contact"
+        accent
       ></ButtonBackgroundHoverEffect>
       <hr className="footer-hr" />
       <div className="footer-items-container">

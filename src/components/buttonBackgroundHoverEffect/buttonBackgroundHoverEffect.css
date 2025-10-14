@@ -45,6 +45,10 @@
     transition: all ease-out 200ms;
 }
 
+.accent-background {
+    background-color: var(--clr-accent);
+}
+
 /* hover effect */
 .button-background-effect:hover {
     color: var(--clr-light);

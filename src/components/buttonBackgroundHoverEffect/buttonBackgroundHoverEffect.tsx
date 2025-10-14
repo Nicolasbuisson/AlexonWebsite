@@ -10,6 +10,7 @@ interface IProps {
   link?: string;
   onClick?: () => void;
   size?: buttonSize;
+  accent?: boolean;
 }
 
 export const ButtonBackgroundHoverEffect = (props: IProps) => {
@@ -19,6 +20,7 @@ export const ButtonBackgroundHoverEffect = (props: IProps) => {
     link = "",
     onClick = () => {},
     size = "normal",
+    accent = false,
   } = props;
   return link ? (
     <Link
@@ -28,7 +30,11 @@ export const ButtonBackgroundHoverEffect = (props: IProps) => {
       }`}
     >
       <button className="button-background-effect">{text}</button>
-      <button className="black-background">{text}</button>
+      <button
+        className={`black-background ${accent ? "accent-background" : ""}`}
+      >
+        {text}
+      </button>
     </Link>
   ) : (
     <div
