@@ -160,10 +160,6 @@ function Productions() {
               alt: "Punto de Vista logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BDBlack.png`,
-              alt: "Beautiful Destinations logo",
-            },
-            {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
