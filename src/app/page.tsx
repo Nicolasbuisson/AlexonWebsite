@@ -199,10 +199,9 @@ function Home() {
           }
         />
         <div className="home-shortform-video-container">
-          {/* <video
+          <video
             src={
-              ""
-              //"https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/CoronaPreview.mov"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.mp4"
             }
             muted
             autoPlay
@@ -210,8 +209,7 @@ function Home() {
           ></video>
           <video
             src={
-              ""
-              //"https://alexonmedia.s3.ca-central-1.amazonaws.com/videos/Xiaomi-WebsiteMedia.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/AlexParentsAdvice.mp4"
             }
             muted
             autoPlay
@@ -219,13 +217,18 @@ function Home() {
           ></video>
           <video
             src={
-              ""
-              //"https://d128kbp85lo7cj.cloudfront.net/reels/L'Equilibre.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Montgolfieeres.mp4"
             }
             muted
             autoPlay
             loop
-          ></video> */}
+          ></video>
+          <video
+            src={"https://d128kbp85lo7cj.cloudfront.net/shortform/DavidTso.mp4"}
+            muted
+            autoPlay
+            loop
+          ></video>
         </div>
         <div className="home-shortform-features-container">
           <Feature
