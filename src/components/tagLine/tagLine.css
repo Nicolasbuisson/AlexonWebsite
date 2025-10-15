@@ -14,7 +14,7 @@
     font-weight: inherit;
     font-family: var(--ff-playfair-display);
     font-style: italic;
-    background: linear-gradient(90deg, var(--clr-light), var(--clr-accent) 50%);
+    background: linear-gradient(90deg, var(--clr-accent-gradient-start), var(--clr-accent) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

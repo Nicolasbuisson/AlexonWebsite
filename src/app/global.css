@@ -7,7 +7,8 @@
   --clr-grey: #8b8b8b;
   --clr-dark-grey: #505050;
   --clr-dark: #000;
-  --clr-accent: #FCD848;
+  --clr-accent: #2B45FF;
+  --clr-accent-gradient-start: #1F2FCC;
   --clr-card-border: rgba(157, 157, 255, .05);
   --card-background: linear-gradient(140deg, #1b1b26 -41.97%, #09090d 77.06%);
 
