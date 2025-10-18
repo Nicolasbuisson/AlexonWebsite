@@ -60,9 +60,41 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLE.png`}
               fill
-              alt="McGill University logo"
+              alt="ELLE logo"
+              className="home-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="home-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummit.png`}
+              fill
+              alt="John Summit logo"
+              className="home-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="home-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
+              fill
+              alt="Air Canada logo"
+              className="home-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="home-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Xiaomi.png`}
+              fill
+              alt="Xiaomi logo"
+              className="home-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="home-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNT.png`}
+              fill
+              alt="BUNT logo"
               className="home-horizontal-scroller-logo"
             />
           </div>
@@ -76,9 +108,17 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotels.png`}
               fill
-              alt="AirCanada logo"
+              alt="Onomo Hotels logo"
+              className="home-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="home-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Toyota.png`}
+              fill
+              alt="Toyota logo"
               className="home-horizontal-scroller-logo"
             />
           </div>
@@ -87,22 +127,6 @@ function Home() {
               src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
               fill
               alt="Claptone logo"
-              className="home-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="home-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
-              fill
-              alt="Parc Omega logo"
-              className="home-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="home-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
-              fill
-              alt="Monolink logo"
               className="home-horizontal-scroller-logo"
             />
           </div>
