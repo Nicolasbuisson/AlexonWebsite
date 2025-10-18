@@ -139,10 +139,10 @@ function Home() {
         <h3 className="home-about-description">
           <HeroParagraph
             text={
-              "Your long-term partner and in-house production team for pioneering commercials, branded, and short-form content worldwide"
+              "Alexon Media is a social-first video production agency crafting cinematic storytelling for brands that want to stand out. We blend creative vision with strategic precision—producing both luxury brand films and high-performing short-form content designed to inspire, engage, and convert."
             }
             className="home-about-hero-paragraph"
-            italicWordIndexes={[1, 2, 8, 14]}
+            italicWordIndexes={[4, 5, 6, 7]}
           />
         </h3>
         <p className="home-about-paragraph">

@@ -64,8 +64,6 @@
     }
 }
 
-
-
 .home-horizontal-scroller-logo-wrapper {
     position: relative;
     height: 80px;
@@ -211,39 +209,6 @@
 
 .home-about-link {
     margin-block-start: 2rem;
-}
-
-@media (width > 1160px) {
-    .home-about-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .home-about-header {
-        margin-block-end: unset;
-    }
-
-    .home-about-description {
-        margin-block-start: 2rem;
-        margin-block-end: unset;
-    }
-
-    .home-about-paragraph {
-        text-align: start;
-    }
-
-    .home-about-collage {
-        margin-block: unset;
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .home-about-link {
-        margin-block-start: unset;
-        align-self: end;
-        grid-row: 3/4;
-    }
 }
 
 .home-productions-section {
