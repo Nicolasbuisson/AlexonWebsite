@@ -266,7 +266,7 @@ function Home() {
               </svg>
             }
             title="Speed Without Compromise"
-            description="We move at the speed of culture - without compromising quality. Our agile production model allows us to deliver cinematic content faster, keeping your brand ahead of trends and competition."
+            description="We move at the speed of culture without compromising quality. Our agile production model allows us to deliver cinematic content faster, keeping your brand ahead of trends and competition."
           />
           <Feature
             svgPath={
@@ -284,7 +284,7 @@ function Home() {
               </svg>
             }
             title="Done for you Workflow"
-            description="We make productions effortless. From ideation to execution, our done-for-you process handles every detail - so you can focus on your brand while we deliver results-ready content."
+            description="We make productions effortless. From ideation to execution, our done-for-you process handles every detail - so you can focus on running your business while we deliver impact-driven content."
           />
           <Feature
             svgPath={
@@ -304,7 +304,7 @@ function Home() {
               </svg>
             }
             title="Your Dedicated creative team"
-            description="You’re not just getting a vendor - you’re gaining a team. You will have a dedicated project manager, editor, and videographer who will evolve with you to create seamless, consistent, and high-impact content over time."
+            description="By partnering with us, you’re gaining a team. You will have a dedicated project manager, editor, and videographer who will evolve with you to create seamless, consistent, and high-impact over the long-run."
           />
         </div>
       </section>
