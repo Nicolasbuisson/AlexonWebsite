@@ -30,9 +30,7 @@ function Home() {
         </div>
         <div className="home-hero-text">
           <h3 className="home-pitch">
-            Where cinematic excellence
-            <br />
-            meets strategic performance
+            Where cinematic excellence meets strategic performance
           </h3>
           <ButtonBackgroundHoverEffect
             text="Let's Work Together"

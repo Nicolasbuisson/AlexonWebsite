@@ -5,7 +5,7 @@
     --burger-bar-translateX: 0.325em;
     --burger-bar-first-translateY: 0.65em;
     --burger-bar-third-translateY: 0.775em;
-    --max-logo-height: 6;
+    --max-logo-height: 6.5;
     --max-logo-difference: 4;
     --logo-starting-translateY: 35;
 
@@ -157,12 +157,15 @@ nav>* {
     }
 }
 
-@media (width < 880px) {
+/* Responsiveness */
+@media (width < 1000px) {
     .navigation-container {
-        --max-logo-height: 3;
-        --max-logo-difference: 1.5;
+        --max-logo-height: 3.5;
+        --max-logo-difference: 2;
     }
+}
 
+@media (width < 880px) {
     .nav-socials {
         display: none;
     }
