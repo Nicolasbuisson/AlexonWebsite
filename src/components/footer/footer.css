@@ -58,7 +58,7 @@
     }
 }
 
-@media (width >= 1020px ) {
+@media (width >=1020px) {
     .footer-items-container {
         --footer-logo-width: 120px;
 
@@ -88,7 +88,7 @@
     display: block;
     height: 1px;
     width: 0;
-    background-color: var(--clr-light);
+    background-color: var(--clr-accent);
     transition: 300ms ease-in-out;
 }
 
