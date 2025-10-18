@@ -138,12 +138,6 @@
     align-items: baseline;
 }
 
-.home-about-paragraph {
-    color: var(--clr-light-grey);
-    text-align: center;
-    text-wrap: pretty;
-}
-
 .home-about-collage {
     --home-about-collage-image-height: 154px;
 

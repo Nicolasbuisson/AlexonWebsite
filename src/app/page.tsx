@@ -145,12 +145,6 @@ function Home() {
             italicWordIndexes={[4, 5, 6, 7]}
           />
         </h3>
-        <p className="home-about-paragraph">
-          Since 2019, Alexon and his team have worked with some of your
-          favourite brands to craft impactful and strategic branded content to
-          elevate businesses, engage audiences, and boost our clients’ revenues
-          by over 4.5M$+
-        </p>
         <div className="home-about-collage">
           <div className="home-about-collage-image-wrapper">
             <Image
@@ -177,12 +171,6 @@ function Home() {
             />
           </div>
         </div>
-        <ArrowPathLink
-          url="/about"
-          text="About Us"
-          className="home-about-link"
-          svgClassName="home-work-arrow"
-        />
       </section>
       <section className="home-productions-section">
         <div className="home-productions-header">
