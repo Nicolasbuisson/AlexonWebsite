@@ -34,15 +34,10 @@
 
 /* hover effects */
 .socials-link:hover {
-    background-color: var(--clr-light);
-    transform: scale(0.8);
-}
-
-.socials-link:hover > svg {
-    /* make icons black on hover */
-    filter: invert(0%) sepia(6%) saturate(26%) hue-rotate(224deg) brightness(97%) contrast(107%);
+    background-color: var(--clr-accent);
+    transform: scale(0.9);
 }
 
 .socials-icon:hover {
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
