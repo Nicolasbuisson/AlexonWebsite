@@ -35,6 +35,7 @@ function ShortForm() {
               text="See Packages"
               className="shortform-hero-button"
               link="#shortform-packages"
+              accent
             ></ButtonBackgroundHoverEffect>
           </div>
         </div>

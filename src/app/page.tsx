@@ -37,6 +37,7 @@ function Home() {
           <ButtonBackgroundHoverEffect
             text="Let's Work Together"
             link="/contact"
+            accent
           ></ButtonBackgroundHoverEffect>
         </div>
       </section>
