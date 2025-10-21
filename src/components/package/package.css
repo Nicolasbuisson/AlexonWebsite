@@ -1,13 +1,13 @@
 .package-container {
     --package-width: 160px;
+    --package-border-size: 0.25rem;
 
     width: var(--package-width);
     padding: 1rem;
-
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    border: 1px solid var(--clr-light);
-    border-radius: 12px;
+    border: var(--package-border-size) solid var(--clr-light);
+    border-radius: 24px;
 }
 
 @media (width > 280px) {
@@ -129,8 +129,8 @@
 
 .package-card-border-effect {
     --rotate-angle: 0deg;
-    --c1: var(--clr-light);
-    --c2: var(--clr-dark);
+    --c1: var(--clr-accent);
+    --c2: var(--clr-light);
 
     position: relative;
     border-radius: 24px;
@@ -139,10 +139,10 @@
 .package-card-border-effect:hover::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: calc(var(--package-border-size) * -1);
     border-radius: 24px;
-    padding: 4px;
-    background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
+    padding: var(--package-border-size);
+    background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.35turn);
     animation: borderRotate 4s linear forwards infinite;
     /* mask needed because border-image does not allow border-radius
   Solution: create a 2 masks:
