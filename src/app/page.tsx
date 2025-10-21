@@ -11,6 +11,7 @@ import Image from "next/image";
 import { PageLoader } from "../components/pageLoader/pageLoader";
 import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
+import { AboutCollage } from "../components/aboutCollage/aboutCollage";
 
 function Home() {
   return (
@@ -145,32 +146,7 @@ function Home() {
             italicWordIndexes={[4, 5, 6, 7]}
           />
         </h3>
-        <div className="home-about-collage">
-          <div className="home-about-collage-image-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/images/About1.jpg`}
-              alt="Villa picture"
-              fill
-              className="home-about-collage-image"
-            />
-          </div>
-          <div className="home-about-collage-image-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/images/About2.jpeg`}
-              alt="girl in Ocean picture"
-              fill
-              className="home-about-collage-image"
-            />
-          </div>
-          <div className="home-about-collage-image-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/images/About3.jpeg`}
-              alt="Alexon at Atlantis picture"
-              fill
-              className="home-about-collage-image"
-            />
-          </div>
-        </div>
+        <AboutCollage />
       </section>
       <section className="home-productions-section">
         <div className="home-productions-header">
