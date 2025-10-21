@@ -32,6 +32,7 @@ export const Package = (props: IPackage) => {
           link="/contact"
           size="small"
           className="package-button"
+          accent
         />
         <p className="package-inclusion-title">Includes</p>
         <div className="package-inclusion-list">
