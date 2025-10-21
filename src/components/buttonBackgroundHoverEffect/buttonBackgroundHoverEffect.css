@@ -69,6 +69,7 @@
 }
 
 .button-size-small {
+    --button-background-effect-height: 33px;
     --button-background-effect-padding-block: 0.5rem;
     --button-background-effect-padding-inline: 0.75rem;
     --button-background-effect-font-size: 0.8rem;
