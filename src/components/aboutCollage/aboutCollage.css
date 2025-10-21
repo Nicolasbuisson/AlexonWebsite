@@ -16,6 +16,7 @@
     width: fit-content;
     border-radius: 1rem;
     object-fit: contain;
+    transition: opacity 500ms ease-out;
 }
 
 .home-about-collage-image:nth-child(1) {
