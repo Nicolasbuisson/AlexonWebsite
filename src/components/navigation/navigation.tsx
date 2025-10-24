@@ -5,6 +5,7 @@ import "./navigation.css";
 import { Socials } from "../socials/socials";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
 import Lenis from "lenis";
+import { FlipLink } from "../flipLink/flipLink";
 
 interface NavigationProps {
   transparent?: boolean;
@@ -88,49 +89,39 @@ export const Navigation = (props: NavigationProps) => {
       <div id="menu-container">
         <ul className="menu" id="menu">
           <li>
-            <Link
+            <FlipLink
               href="/"
-              className="link"
+              label="Home"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              Home
-            </Link>
+            ></FlipLink>
           </li>
-          <li className="services-menu">
-            <Link
+          <li>
+            <FlipLink
               href="/shortform"
-              className="link services-link"
+              label="Short-Form"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              Short Form
-            </Link>
+            ></FlipLink>
           </li>
           <li>
-            <Link
+            <FlipLink
               href="/productions"
-              className="link"
+              label="Productions"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              Productions
-            </Link>
+            ></FlipLink>
           </li>
           <li>
-            <Link
+            <FlipLink
               href="/about"
-              className="link"
+              label="About"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              About
-            </Link>
+            ></FlipLink>
           </li>
           <li>
-            <Link
+            <FlipLink
               href="/contact"
-              className="link"
+              label="Contact"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              Contact
-            </Link>
+            ></FlipLink>
           </li>
         </ul>
       </div>
