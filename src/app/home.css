@@ -59,7 +59,7 @@
 
 @media (width < 550px) {
     .home-hero-text {
-        --home-pitch-top: 42%;
+        --home-pitch-top: 44%;
         --home-pitch-fs: 0.8rem;
     }
 }

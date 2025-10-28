@@ -145,7 +145,7 @@ nav>* {
 @media (width < 1000px) {
     .navigation-container {
         --max-logo-height: 3.5;
-        --max-logo-difference: 2;
+        --max-logo-difference: 1.5;
     }
 }
 
@@ -158,7 +158,7 @@ nav>* {
 @media (width < 550px) {
     .navigation-container {
         --menu-height: 4em;
-        --max-logo-height: 1.5;
+        --max-logo-height: 1.8;
         --max-logo-difference: 0.5;
         --bar-height: 0.125rem;
         --bar-width: 2rem;
