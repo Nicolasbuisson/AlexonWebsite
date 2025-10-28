@@ -49,19 +49,22 @@
     transition: transform var(--projects-animation-duration);
 }
 
-.projects-grid a {
-    filter: brightness(.75) saturate(.75);
-}
-
-.projects-grid a:hover {
-    filter: brightness(1) saturate(1.5);
-
-    & .project-logo {
-        transform: translateY(-1rem);
+/* only include hover effects if not on a mobile device */
+@media (width > 480px) {
+    .projects-grid a {
+        filter: brightness(.75) saturate(.75);
     }
 
-    & h4 {
-        opacity: 1;
+    .projects-grid a:hover {
+        filter: brightness(1) saturate(1.5);
+
+        & .project-logo {
+            transform: translateY(-1rem);
+        }
+
+        & h4 {
+            opacity: 1;
+        }
     }
 }
 
