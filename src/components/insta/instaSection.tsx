@@ -44,7 +44,7 @@ export const InstaSection = async (props: IInstaSection) => {
     const itemPromises: Promise<InstaItemProps>[] = [];
 
     for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
-      const itemId = data[i]?.id;
+      const itemId = data?.[i]?.id;
       const instaItemPromise = fetchInstaItem(itemId);
       itemPromises.push(instaItemPromise);
     }
