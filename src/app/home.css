@@ -87,6 +87,7 @@
     color: var(--clr-light);
     width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 .home-about-header {
