@@ -21,6 +21,7 @@ function ShortForm() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
           <h2 className="shortform-title">
             Optimized vertical videos for Limitless Impact

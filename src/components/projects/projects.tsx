@@ -73,6 +73,7 @@ export const Projects = (props: IProps) => {
                 preload="auto"
                 muted
                 loop
+                playsInline
                 className="projects-grid-card-preview"
               ></video>
             ) : project.gridImage ? (

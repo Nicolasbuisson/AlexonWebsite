@@ -28,6 +28,7 @@ export const ProductionsCarouselCard = (
           muted
           autoPlay
           loop
+          playsInline
           className="production-carousel-card-video"
         ></video>
       ) : imageSrc ? (

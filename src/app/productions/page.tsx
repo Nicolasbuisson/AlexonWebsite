@@ -19,6 +19,7 @@ function Productions() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
           <h2 className="productions-title">
             Crafting <span className="productions-title-reg">Stories</span>

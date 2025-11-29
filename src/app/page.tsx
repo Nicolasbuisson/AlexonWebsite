@@ -27,6 +27,7 @@ function Home() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
         </div>
         <div className="home-hero-text">
@@ -189,6 +190,7 @@ function Home() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
           <video
             src={
@@ -197,6 +199,7 @@ function Home() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
           <video
             src={
@@ -205,12 +208,14 @@ function Home() {
             muted
             autoPlay
             loop
+            playsInline
           ></video>
           <video
             src={"https://d128kbp85lo7cj.cloudfront.net/shortform/DavidTso.mp4"}
             muted
             autoPlay
             loop
+            playsInline
           ></video>
         </div>
         <div className="home-shortform-features-container">

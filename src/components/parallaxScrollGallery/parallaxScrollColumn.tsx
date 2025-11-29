@@ -22,6 +22,7 @@ export const ParallaxScrollColumn = (props: IProps) => {
             autoPlay
             muted
             loop
+            playsInline
           ></video>
         ) : (
           <></>
