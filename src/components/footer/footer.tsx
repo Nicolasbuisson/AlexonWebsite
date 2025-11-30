@@ -44,9 +44,9 @@ export const Footer = () => {
           <Link href="/productions" className="footer-link">
             Productions
           </Link>
-          <Link href="/about" className="footer-link">
+          {/* <Link href="/about" className="footer-link">
             About
-          </Link>
+          </Link> */}
           <Link href="/contact" className="footer-link">
             Contact
           </Link>
