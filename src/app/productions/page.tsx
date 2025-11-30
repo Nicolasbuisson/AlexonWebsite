@@ -164,14 +164,6 @@ function Productions() {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
-            {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.png`,
-              alt: "Atlantis logo",
-            },
-            {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AquaventureBlack.png`,
-              alt: "Aquaventure logo",
-            },
           ]}
         ></LogoList>
       </section>
