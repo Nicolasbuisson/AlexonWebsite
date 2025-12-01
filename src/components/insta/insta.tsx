@@ -19,7 +19,9 @@ export const Insta = (props: InstaProps) => {
   const getPageSize = useCallback((): number => {
     if (windowWidth <= 440) {
       return 2;
-    } else if (440 < windowWidth && windowWidth < 880) {
+    } else if (440 < windowWidth && windowWidth <= 620) {
+      return 3;
+    } else if (620 < windowWidth && windowWidth <= 880) {
       return 4;
     } else {
       return 5;
@@ -30,6 +32,7 @@ export const Insta = (props: InstaProps) => {
     <Carousel
       pageSize={getPageSize()}
       totalPages={Math.floor(totalItems / getPageSize())}
+      itemWidthMin={124}
     >
       {instaItems.map((item) => {
         return (

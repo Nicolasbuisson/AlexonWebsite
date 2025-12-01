@@ -36,29 +36,32 @@
 .carousel-previous-button {
     left: 0;
     border-radius: 0px 20px 20px 0px;
-    padding: 0px 4px 0px 0px;
+    padding: 4px 8px 2px 0px;
 }
 
 .carousel-next-button {
     right: 0;
     border-radius: 20px 0px 0px 20px;
-    padding: 0px 0px 0px 4px;
+    padding: 4px 0px 2px 8px;
 }
 
 .carousel-previous-button>svg,
 .carousel-next-button>svg {
     height: var(--carousel-svg-height);
-    padding: 4px;
+    padding: 0px;
 }
 
-@media (width < 880px) {
+/* mobile needs bigger buttons */
+@media (width < 440px) {
     .carousel-container {
         --carousel-svg-height: 20px;
     }
-}
 
-@media (width < 440px) {
-    .carousel-container {
-        --carousel-svg-height: 16px;
+    .carousel-previous-button {
+        padding: 8px 12px 6px 0px;
+    }
+
+    .carousel-next-button {
+        padding: 8px 0px 6px 12px;
     }
 }
