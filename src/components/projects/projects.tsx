@@ -93,6 +93,7 @@ export const Projects = (props: IProps) => {
                 alt={`client logo for ${project.client}`}
                 className="project-logo"
                 fill
+                style={{ inset: "50%" }}
               />
             ) : (
               <></>
