@@ -74,6 +74,7 @@ export const Projects = (props: IProps) => {
                 muted
                 loop
                 playsInline
+                poster={project.gridImage}
                 className="projects-grid-card-preview"
               ></video>
             ) : project.gridImage ? (
