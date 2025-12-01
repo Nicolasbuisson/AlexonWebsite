@@ -5,11 +5,11 @@
     display: grid;
     grid-template-columns: repeat(var(--grid-column-count), 1fr);
 
-    a {
+    & a {
         text-decoration: none;
     }
 
-    h4 {
+    & h4 {
         width: 100%;
         text-align: center;
         opacity: 0;
