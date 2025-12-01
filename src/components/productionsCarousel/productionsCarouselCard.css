@@ -30,5 +30,13 @@
     place-self: center;
     max-width: 40%;
     max-height: 40%;
-    transition: transform var(--production-carousel-animation-duration);
+    transition: all var(--production-carousel-animation-duration);
+}
+
+@media (width <=480px) {
+    .production-carousel-card-logo {
+        /* place-self is not supported for some reason on IOS Safari */
+        place-self: unset;
+        transform: translate(-50%, -50%);
+    }
 }

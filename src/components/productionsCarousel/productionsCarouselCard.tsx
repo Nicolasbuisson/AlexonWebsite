@@ -48,6 +48,7 @@ export const ProductionsCarouselCard = (
           alt={`client logo for ${client}`}
           className="production-carousel-card-logo"
           fill
+          style={{ inset: "50%" }}
         />
       ) : (
         <></>

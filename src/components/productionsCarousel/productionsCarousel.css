@@ -12,5 +12,5 @@
 }
 
 .production-carousel>.production-carousel-card:hover .production-carousel-card-logo {
-    transform: translateY(-1rem);
+    translate: 0 -1rem;
 }
