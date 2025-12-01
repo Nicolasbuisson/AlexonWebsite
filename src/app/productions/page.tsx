@@ -164,6 +164,14 @@ function Productions() {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.png`,
               alt: "Toyota logo",
             },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/EmiratesNBD_black.png`,
+              alt: "Emirates NBD logo",
+            },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISA_black.png`,
+              alt: "Visa logo",
+            },
           ]}
         ></LogoList>
       </section>
