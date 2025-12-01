@@ -204,12 +204,12 @@
         "displayOnHomePage": true
     },
         {
-        "route": "internationaldemongolfieres",
-        "title": "International de Mongolfières",
-        "client": "International de Mongolfières",
+        "route": "internationaldemontgolfieres",
+        "title": "International de Montgolfières",
+        "client": "International de Montgolfières",
         "description": "Every year, the International de Montgolfières is a celebration of music and summer in Quebec and also an occasion for hot air balloons to light up the sky. This year, T-Pain, Diplo & Talk headlined the event. We were tasked with creating all the official video content for the festival, producing and editing high-quality reels to be shared during the event on social media , as well as video recaps delivered overnight and shared each morning.",
         "videos": ["https://www.youtube.com/embed/tnVR1uGiZd0"],
-        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/InternationalDeMongolfieres.jpg",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/InternationalDeMontgolfieres.jpg",
         "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/internationalDeMongolfieres/preview.mp4",
         "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/InternationalDeMongolfieres.png",
         "services": ["Video Production", "Concert Videography"],
