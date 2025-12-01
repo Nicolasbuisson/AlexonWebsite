@@ -90,3 +90,12 @@
         --grid-column-count: 1;
     }
 }
+
+@media (width <=480px) {
+    .project-logo {
+        /* place-self is not supported for some reason on IOS Safari */
+        place-self: unset;
+        inset: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
