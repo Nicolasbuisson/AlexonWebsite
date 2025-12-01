@@ -1,5 +1,50 @@
 {
     "projects" : [
+            {
+        "route": "visaxemiratesnbd",
+        "title": "Visa x Emirates NBD - Play it like Pep",
+        "client": "Visa x Emirates NBD",
+        "description": "Emirates NBD’s “Play It Like Pep” campaign marked a standout moment in the region’s advertising landscape, transforming everyday billboards into an electrifying, stadium-like experience. By pairing Pep Guardiola’s global star power with bold, dual-language visuals, the bank delivered a message that was both culturally resonant and instantly attention-grabbing. The campaign didn’t just promote a product — it created a sense of aspiration, urgency, and fandom that united audiences across the UAE and beyond.Its bold expansion into Riyadh’s Boulevard City further amplified its statement, dominating one of Saudi Arabia’s most iconic entertainment districts and showcasing the campaign’s ambition on a cross-border scale. Our video recap became a pivotal extension of that impact, capturing the energy, scale, and creative precision of the activation in a way static billboards couldn’t. By spotlighting the story behind the execution and giving viewers a narrative-driven experience, the recap broadened the campaign’s reach and transformed a powerful outdoor concept into a shareable, lasting brand moment.",
+        "videos": ["https://www.youtube.com/embed/mH13Adbu11A"],
+        "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/preview.mp4",
+        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/VisaxEmirates.jpg",
+        "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISAxEmiratesNBD.png",
+        "services": ["Video Production"],
+        "stills": [
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/1.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/2.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/3.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/4.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/5.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/6.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/7.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/8.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/9.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/10.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/11.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/12.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/13.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/14.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/15.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/16.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/17.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/18.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/19.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/20.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/21.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/22.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/23.jpeg"},
+            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/stills/24.jpeg"}
+        ],
+        "photos": [],
+        "bts": [],
+        "credits": [
+            {"title": "Director", "name": "Love Paras"},
+            {"title": "Editing", "name": "Alexon"},
+            {"title": "Shooting", "name": "43Lens Agency"}
+        ],
+        "displayOnHomePage": true
+    },
     {
         "route": "fourseasons",
         "title": "Four Seasons",
@@ -267,7 +312,7 @@
             {"title": "Underwater Camera Operator", "name": "Alexon"},
             {"title": "BTS & Production Assistant", "name": "Jules Rapp"}
         ],
-        "displayOnHomePage": true
+        "displayOnHomePage": false
     },
     {
         "route": "lequilibre",
