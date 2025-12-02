@@ -762,44 +762,6 @@
         "displayOnHomePage": false
     },
     {
-        "route": "chamberofcommerceluxmtl",
-        "title": "Chamber of Commerce LUX/MTL",
-        "client": "Chamber of Commerce LUX/MTL",
-        "description": "We captured photographs to highlight the chamber’s role in building business bridges between Luxembourg and Montreal. The content focuses on key events, trade partnerships, member success stories, and the signature of a Memorandum of Agreement between different Chambers of Commerce.",
-        "videos": [],
-        "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/preview.jpg",
-        "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CCLuxembourg.png",
-        "services": ["Event Photography"],
-        "stills": [],
-        "photos": [
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/1.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/2.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/3.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/4.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/5.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/6.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/7.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/8.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/9.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/10.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/11.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/12.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/13.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/14.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/15.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/16.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/17.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/18.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/19.jpeg"},
-            {"imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/chamberOfCommerceLux/photos/20.jpeg"}
-        ],
-        "bts": [],
-        "credits":[
-            {"title": "Photography", "name" :"Alexon"}
-        ],
-        "displayOnHomePage": false
-    },
-    {
         "route": "parcomega",
         "title": "Parc Oméga",
         "client": "Parc Oméga",

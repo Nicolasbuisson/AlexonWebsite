@@ -69,10 +69,6 @@ function Productions() {
               alt: "BUNT logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/CCLuxembourgBlack.png`,
-              alt: "Chamber of Commerce Luxembourg logo",
-            },
-            {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ChrisLakeBlack.png`,
               alt: "Chris Lake logo",
             },
