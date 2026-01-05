@@ -17,11 +17,11 @@ export const InstaSection = async (props: IInstaSection) => {
   const fetchInstaItem = async (itemId: string): Promise<InstaItemProps> => {
     const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink,caption,media_type,thumbnail_url`;
 
-    // cache individual insta item for 1 day
+    // cache individual insta item for 1 hour
     // instagram graph api media urls and thumbnail urls expire over time (usually within a few days)
     // explains previous bug where request return 200 HTTP code with data
     // but image would not display correctly, because the img src link had expired
-    const res = await fetch(instaItemURL, {next: {revalidate: 86400}});
+    const res = await fetch(instaItemURL, {next: {revalidate: 3600}});
     const json = await res.json();
 
     const instaItem: InstaItemProps = {
