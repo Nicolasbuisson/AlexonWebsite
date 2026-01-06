@@ -26,7 +26,7 @@ export const InstaSection = async (props: IInstaSection) => {
     // instagram graph api media urls and thumbnail urls expire over time (usually within a few days)
     // must do revalidation if notice that media_url is expired for images and carousels
     // or if thumbnail_url is expired for videos
-    if (((json.media_type as MediaType) !== "VIDEO" && !isIgMediaUrlValid(json.media_url)) || ((json.media_type as MediaType) === "VIDEO" && !isIgMediaUrlValid(json.thumbnail_url))) {
+    if (!isIgMediaUrlValid((json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : json.media_url)) {
       // revalidate tag to fetch fresh data with non-expired media_url/thumbnail_url
       revalidateTag(`instaItem-id-${itemId}`); 
       res = await fetch(instaItemURL, {next: {revalidate: 86400, tags: [`instaItem-id-${itemId}`]}});
