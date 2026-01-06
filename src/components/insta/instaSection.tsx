@@ -2,6 +2,8 @@ import { InstaItemProps, MediaType } from "../../types/insta";
 import { Insta } from "./insta";
 import { config } from "../../config/config";
 import "./instaSection.css";
+import { isIgMediaUrlValid } from "../../utils/instaUrl";
+import { revalidateTag } from "next/cache";
 
 interface IInstaSection {
   additionalTitle?: string;
@@ -17,20 +19,27 @@ export const InstaSection = async (props: IInstaSection) => {
   const fetchInstaItem = async (itemId: string): Promise<InstaItemProps> => {
     const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink,caption,media_type,thumbnail_url`;
 
-    // cache individual insta item for 1 hour
+    // cache individual insta item for 1 day
+    let res = await fetch(instaItemURL, {next: {revalidate: 86400, tags: [`instaItem-id-${itemId}`]}});
+    let json = await res.json();
+    
     // instagram graph api media urls and thumbnail urls expire over time (usually within a few days)
-    // explains previous bug where request return 200 HTTP code with data
-    // but image would not display correctly, because the img src link had expired
-    const res = await fetch(instaItemURL, {next: {revalidate: 3600}});
-    const json = await res.json();
-
+    // must do revalidation if notice that media_url is expired for images and carousels
+    // or if thumbnail_url is expired for videos
+    if (((json.media_type as MediaType) !== "VIDEO" && !isIgMediaUrlValid(json.media_url)) || ((json.media_type as MediaType) === "VIDEO" && !isIgMediaUrlValid(json.thumbnail_url))) {
+      // revalidate tag to fetch fresh data with non-expired media_url/thumbnail_url
+      revalidateTag(`instaItem-id-${itemId}`); 
+      res = await fetch(instaItemURL, {next: {revalidate: 86400, tags: [`instaItem-id-${itemId}`]}});
+      json = await res.json();
+    }
+    
     const instaItem: InstaItemProps = {
       permaLink: json.permalink,
       mediaURL: json.media_url,
       mediaType: json.media_type,
       caption: json.caption,
       thumbnailURL:
-        (json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : "",
+      (json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : "",
     };
     return instaItem;
   };
