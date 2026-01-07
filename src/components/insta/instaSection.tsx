@@ -2,8 +2,6 @@ import { InstaItemProps, MediaType } from "../../types/insta";
 import { Insta } from "./insta";
 import { config } from "../../config/config";
 import "./instaSection.css";
-import { isIgMediaUrlValid } from "../../utils/instaUrl";
-import { revalidateTag } from "next/cache";
 
 interface IInstaSection {
   additionalTitle?: string;
@@ -19,19 +17,18 @@ export const InstaSection = async (props: IInstaSection) => {
   const fetchInstaItem = async (itemId: string): Promise<InstaItemProps> => {
     const instaItemURL = `https://graph.instagram.com/${itemId}?access_token=${accessToken}&fields=media_url,permalink,caption,media_type,thumbnail_url`;
 
-    // cache individual insta item for 1 day
-    let res = await fetch(instaItemURL, {next: {revalidate: 86400, tags: [`instaItem-id-${itemId}`]}});
-    let json = await res.json();
-    
     // instagram graph api media urls and thumbnail urls expire over time (usually within a few days)
     // must do revalidation if notice that media_url is expired for images and carousels
     // or if thumbnail_url is expired for videos
-    if (!isIgMediaUrlValid((json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : json.media_url)) {
-      // revalidate tag to fetch fresh data with non-expired media_url/thumbnail_url
-      revalidateTag(`instaItem-id-${itemId}`); 
-      res = await fetch(instaItemURL, {next: {revalidate: 86400, tags: [`instaItem-id-${itemId}`]}});
-      json = await res.json();
-    }
+    // I can use a cache tag on the request but afterwards I have no way of invalidating it
+    // invalidating a cache tag must be done in a server action which are designed for mutations
+    // not for data fetching queries...
+    // I could create a route handler specifically for the revalidation where I pass the tag to be revalidated as a search param
+    // but this seems very contrived for minimal performance gain...
+    // Workaround for now is to not cache the requests for individual instagram items
+    // to make sure the urls are not expired and always fresh.
+    const res = await fetch(instaItemURL, {cache: 'no-store'});
+    const json = await res.json();
     
     const instaItem: InstaItemProps = {
       permaLink: json.permalink,
