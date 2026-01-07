@@ -13,6 +13,9 @@ import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
 
+// revalidate and rebuild the static page every 5 minutes to obtain fresh instagram data
+export const revalidate = 300;
+
 function Home() {
   return (
     <div className="home-section-container">

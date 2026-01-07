@@ -25,9 +25,12 @@ export const InstaSection = async (props: IInstaSection) => {
     // not for data fetching queries...
     // I could create a route handler specifically for the revalidation where I pass the tag to be revalidated as a search param
     // but this seems very contrived for minimal performance gain...
-    // Workaround for now is to not cache the requests for individual instagram items
-    // to make sure the urls are not expired and always fresh.
-    const res = await fetch(instaItemURL, {cache: 'no-store'});
+    // Should not cache the requests for individual instagram items to make sure the urls are not expired and always fresh.
+    // Cannot have a static page if I do no-store to prevent caching on this request, must be in a dynamic page
+    // Solution: only cache for 5 minutes, rebuild static pages every 5 minutes as well
+    // to make sure we get up to date instagram data, worst case data is stale for 5 minutes
+    // and user sees blank images instead of instagram one
+    const res = await fetch(instaItemURL, {next: {revalidate: 300}});
     const json = await res.json();
     
     const instaItem: InstaItemProps = {
