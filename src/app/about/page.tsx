@@ -5,8 +5,8 @@ import { Offerings } from "../../components/offerings/offerings";
 import Image from "next/image";
 import { AboutHero } from "../../components/aboutHero/aboutHero";
 
-// revalidate and rebuild the static page every 5 minutes to obtain fresh instagram data
-export const revalidate = 300;
+// revalidate and rebuild the static page every 15 minutes to obtain fresh instagram data
+export const revalidate = 900;
 
 function AboutPage() {
   return (
