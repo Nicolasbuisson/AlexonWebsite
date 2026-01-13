@@ -50,20 +50,30 @@ export const InstaSection = async (props: IInstaSection) => {
 
     // no cache for fresh instagram data
     const res = await fetch(instaItemListURL, {cache: 'no-store'});
-    const { data } = await res.json();
+    const {status} = res;
+    
+    if(status === 200) {
+      const { data } = await res.json();
+      const itemPromises: Promise<InstaItemProps>[] = [];
 
-    const itemPromises: Promise<InstaItemProps>[] = [];
-
-    for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
-      const itemId = data?.[i]?.id;
-      const instaItemPromise = fetchInstaItem(itemId);
-      itemPromises.push(instaItemPromise);
+      for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
+        const itemId = data?.[i]?.id;
+        if(!itemId) continue;
+        const instaItemPromise = fetchInstaItem(itemId);
+        itemPromises.push(instaItemPromise);
+      }
+      const items = await Promise.all(itemPromises);
+      return items;
+    } else { 
+      return [];
     }
-    const items = await Promise.all(itemPromises);
-    return items;
   };
 
   const instaItems = (await fetchInstaItemList()) ?? [];
+
+  if(instaItems.length === 0) {
+    return <></>
+  }
 
   return (
     <section className="insta-section">
