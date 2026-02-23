@@ -134,6 +134,12 @@ nav>* {
 }
 
 /* Responsiveness */
+@media (550px < width < 1540px) {
+    .navigation-container {
+        --logo-starting-translateY: 33;
+    }
+}
+
 @media (width < 1260px) {
     .navigation-container {
         --max-logo-height: 4;
@@ -141,7 +147,6 @@ nav>* {
     }
 }
 
-/* Responsiveness */
 @media (width < 1000px) {
     .navigation-container {
         --max-logo-height: 3.5;
