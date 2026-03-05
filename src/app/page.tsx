@@ -1,5 +1,4 @@
 import "./home.css";
-import { ButtonBackgroundHoverEffect } from "../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { InstaSection } from "../components/insta/instaSection";
 import { Navigation } from "../components/navigation/navigation";
@@ -12,6 +11,7 @@ import { PageLoader } from "../components/pageLoader/pageLoader";
 import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
+import { HomeHero } from "../components/homeHero/homeHero";
 
 // revalidate and rebuild the static page every 15 minutes to obtain fresh instagram data
 export const revalidate = 900;
@@ -21,29 +21,7 @@ function Home() {
     <div className="home-section-container">
       <PageLoader />
       <Navigation sticky titleScroll showIcons></Navigation>
-      <section className="home-hero-section">
-        <div className="home-hero-bg">
-          <video
-            src={
-              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mp4"
-            }
-            muted
-            autoPlay
-            loop
-            playsInline
-          ></video>
-        </div>
-        <div className="home-hero-text">
-          <h3 className="home-pitch">
-            Where cinematic excellence meets strategic performance
-          </h3>
-          <ButtonBackgroundHoverEffect
-            text="Let's Work Together"
-            link="/contact"
-            accent
-          ></ButtonBackgroundHoverEffect>
-        </div>
-      </section>
+      <HomeHero />
       <section>
         <HorizontalScroller>
           <div className="home-horizontal-scroller-logo-wrapper">
