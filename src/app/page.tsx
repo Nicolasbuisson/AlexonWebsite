@@ -1,7 +1,6 @@
 import "./home.css";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { InstaSection } from "../components/insta/instaSection";
-import { Navigation } from "../components/navigation/navigation";
 import { Projects } from "../components/projects/projects";
 import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
@@ -20,7 +19,6 @@ function Home() {
   return (
     <div className="home-section-container">
       <PageLoader />
-      <Navigation sticky titleScroll showIcons></Navigation>
       <HomeHero />
       <section>
         <HorizontalScroller>
