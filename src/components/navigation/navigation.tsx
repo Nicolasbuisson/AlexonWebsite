@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
@@ -12,6 +12,7 @@ interface NavigationProps {
   sticky?: boolean;
   titleScroll?: boolean; //differentiate between scroll effect title and just static title
   showIcons?: boolean;
+  ref?: RefObject<HTMLDivElement>;
 }
 
 export const Navigation = (props: NavigationProps) => {
@@ -20,6 +21,7 @@ export const Navigation = (props: NavigationProps) => {
     sticky = false,
     titleScroll = false,
     showIcons = false,
+    ref,
   } = props;
 
   useScrollPercentage(); // initialize css variable --scroll
@@ -64,6 +66,7 @@ export const Navigation = (props: NavigationProps) => {
 
   return (
     <header
+      ref={ref}
       className={
         sticky
           ? "navigation-container sticky-navigation-container"
