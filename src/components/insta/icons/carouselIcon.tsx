@@ -1,5 +1,3 @@
-import { SvgProps } from "../../../types/insta";
-
 export const CarouselIcon = (props: SvgProps) => {
   const { className } = props;
   return (
