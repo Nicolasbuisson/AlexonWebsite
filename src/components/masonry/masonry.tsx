@@ -1,5 +1,4 @@
 import "./masonry.css";
-import { StillImage } from "../../types/work";
 
 interface MasonryProps {
   images: StillImage[];

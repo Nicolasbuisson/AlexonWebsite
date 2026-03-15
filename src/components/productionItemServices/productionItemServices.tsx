@@ -1,6 +1,5 @@
 import Link from "next/link";
 import "./productionItemServices.css";
-import { ServiceType } from "../../types/work";
 
 interface IProductionItemServicesProps {
   services: string[];

@@ -1,6 +1,5 @@
 import "./productionsItem.css";
 import { Navigation } from "../../../components/navigation/navigation";
-import { WorkItemProps } from "../../../types/work";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
 import { ProductionItemDetails } from "../../../components/productionItemDetails/productionItemDetails";
@@ -27,7 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { productionsRoute } = await params;
   const productionItem = projectsJSON.projects.find(
-    (project: WorkItemProps) => project.route === productionsRoute
+    (project: WorkItemProps) => project.route === productionsRoute,
   )!;
   return {
     title: `Alexon Media - ${productionItem.title}`,
@@ -43,7 +42,7 @@ export default async function productionsItem({
 }) {
   const { productionsRoute } = await params;
   const productionItem = projectsJSON.projects.find(
-    (project: WorkItemProps) => project.route === productionsRoute
+    (project: WorkItemProps) => project.route === productionsRoute,
   )!;
   if (!productionItem) {
     return (

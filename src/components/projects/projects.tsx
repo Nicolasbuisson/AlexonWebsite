@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { WorkItemProps } from "../../types/work";
 import "./projects.css";
 import Image from "next/image";
 import { useEffect, useMemo } from "react";
@@ -23,7 +22,7 @@ export const Projects = (props: IProps) => {
     const cards = document.querySelectorAll(".projects-grid-card");
 
     const cardsEventListenerToggle = (
-      addEventListener: boolean = true
+      addEventListener: boolean = true,
     ): void => {
       cards.forEach((card) => {
         const preview = card.querySelector("video");

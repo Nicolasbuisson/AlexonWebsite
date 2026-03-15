@@ -1,4 +1,3 @@
-import { CustomerExperienceProps } from "../../types/customerExperience";
 import "./customerExperience.css";
 
 export const CustomerExperience = (props: CustomerExperienceProps) => {

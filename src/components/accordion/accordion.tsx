@@ -1,5 +1,4 @@
 import "./accordion.css";
-import { FaqProps } from "../../types/faq";
 
 interface IProps {
   faqs: FaqProps[];
@@ -16,12 +15,12 @@ export const Accordion = (props: IProps) => {
     Array.from(document.querySelectorAll(".accordion-x")).map(
       (accordionButton: Element) => {
         accordionButton.setAttribute("aria-expanded", "false");
-      }
+      },
     );
     Array.from(document.querySelectorAll(".accordion-content")).map(
       (accordionButton: Element) => {
         accordionButton.setAttribute("aria-hidden", "true");
-      }
+      },
     );
 
     if (activePanelIsOpened === "true") {

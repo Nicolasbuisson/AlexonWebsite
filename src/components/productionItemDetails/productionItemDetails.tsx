@@ -1,5 +1,4 @@
 "use client";
-import { CreditEntry, StillImage } from "../../types/work";
 import { Credits } from "../credits/credits";
 import { MasonryLayout } from "../masonry/masonry";
 import "./productionItemDetails.css";
@@ -25,10 +24,10 @@ export const ProductionItemDetails = (props: ProductionItemDetailsProps) => {
     stills.length > 0
       ? "Frame Gallery"
       : photos.length > 0
-      ? "Photo Gallery"
-      : bts.length > 0
-      ? "Behind the Scenes"
-      : "Credits"
+        ? "Photo Gallery"
+        : bts.length > 0
+          ? "Behind the Scenes"
+          : "Credits",
   );
 
   return (
