@@ -1,4 +1,3 @@
-import { InstaItemProps, MediaType } from "../../types/insta";
 import { Insta } from "./insta";
 import { config } from "../../config/config";
 import "./instaSection.css";
@@ -30,16 +29,16 @@ export const InstaSection = async (props: IInstaSection) => {
     // Solution: only cache for 15 minutes, rebuild static pages every 15 minutes as well
     // to make sure we get up to date instagram data, worst case data is stale for 15 minutes
     // and user sees blank images instead of instagram one
-    const res = await fetch(instaItemURL, {next: {revalidate: 900}});
+    const res = await fetch(instaItemURL, { next: { revalidate: 900 } });
     const json = await res.json();
-    
+
     const instaItem: InstaItemProps = {
       permaLink: json.permalink,
       mediaURL: json.media_url,
       mediaType: json.media_type,
       caption: json.caption,
       thumbnailURL:
-      (json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : "",
+        (json.media_type as MediaType) === "VIDEO" ? json.thumbnail_url : "",
     };
     return instaItem;
   };
@@ -52,30 +51,30 @@ export const InstaSection = async (props: IInstaSection) => {
     const instaItemListURL = `https://graph.instagram.com/${userId}/media?access_token=${accessToken}`;
 
     // insta item list cached for 4 hours
-    const res = await fetch(instaItemListURL, {next: {revalidate: 14400}});
-    const {status} = res;
-    
-    if(status === 200) {
+    const res = await fetch(instaItemListURL, { next: { revalidate: 14400 } });
+    const { status } = res;
+
+    if (status === 200) {
       const { data } = await res.json();
       const itemPromises: Promise<InstaItemProps>[] = [];
 
       for (let i = 0; i < TOTAL_INSTA_ITEMS; i++) {
         const itemId = data?.[i]?.id;
-        if(!itemId) continue;
+        if (!itemId) continue;
         const instaItemPromise = fetchInstaItem(itemId);
         itemPromises.push(instaItemPromise);
       }
       const items = await Promise.all(itemPromises);
       return items;
-    } else { 
+    } else {
       return [];
     }
   };
 
   const instaItems = (await fetchInstaItemList()) ?? [];
 
-  if(instaItems.length === 0) {
-    return <></>
+  if (instaItems.length === 0) {
+    return <></>;
   }
 
   return (

@@ -1,6 +1,5 @@
 "use client";
 import { useCallback } from "react";
-import { InstaItemProps } from "../../types/insta";
 import "./insta.css";
 import { InstaItem } from "./instaItem";
 import { Carousel } from "../carousel/carousel";
