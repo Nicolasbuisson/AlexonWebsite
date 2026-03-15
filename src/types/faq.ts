@@ -1,4 +1,4 @@
-export interface FaqProps {
-    title: string;
-    content: string;
+interface FaqProps {
+  title: string;
+  content: string;
 }

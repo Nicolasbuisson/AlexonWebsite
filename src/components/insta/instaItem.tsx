@@ -1,4 +1,3 @@
-import { InstaItemProps } from "../../types/insta";
 import { CarouselIcon } from "./icons/carouselIcon";
 import { VideoIcon } from "./icons/videoIcon";
 import "./instaItem.css";

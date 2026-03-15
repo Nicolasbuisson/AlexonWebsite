@@ -1,6 +1,5 @@
 "use client";
 import "./productionsCarousel.css";
-import { WorkItemProps } from "../../types/work";
 import projectsJSON from "../../resources/projects.json";
 import { Carousel } from "../carousel/carousel";
 import { useWindowSize } from "../../hooks/useWindowSize";
@@ -15,7 +14,7 @@ export const ProductionsCarousel = (props: ProductionsCarouselProps) => {
   const { productionToExclude } = props;
 
   const projectsWithCurrentProjectExcluded = projectsJSON.projects.filter(
-    (project) => project.title !== productionToExclude
+    (project) => project.title !== productionToExclude,
   );
 
   const [pageSize, setPageSize] = useState<number>(1);

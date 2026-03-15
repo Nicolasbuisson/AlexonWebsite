@@ -1,4 +1,3 @@
-import { CreditEntry } from "../../types/work";
 import "./credits.css";
 
 interface CreditProps {
