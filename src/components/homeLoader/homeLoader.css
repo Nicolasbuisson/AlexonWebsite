@@ -1,0 +1,25 @@
+.home-loader-container {
+  height: 90vh;
+  height: 90svh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-dark);
+  /* control Z-index from GSAP timeline */
+}
+
+.home-loader-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  /* control Z-index from GSAP timeline */
+}
+
+.home-loader-image-wrapper {
+  position: relative;
+  height: 460px;
+  border-radius: 3px;
+}

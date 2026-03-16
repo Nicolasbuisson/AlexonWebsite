@@ -1,8 +1,10 @@
 "use client";
+import "./homeLoader.css";
 import { RefObject } from "react";
 import Image from "next/image";
 
 interface IHomeLoaderProps {
+  containerRef: RefObject<HTMLDivElement>;
   columnRef: RefObject<HTMLDivElement>;
   cardsRef: RefObject<(HTMLDivElement | null)[]>;
   lastImgRef: RefObject<HTMLImageElement>;
@@ -10,34 +12,11 @@ interface IHomeLoaderProps {
 }
 
 export const HomeLoader = (props: IHomeLoaderProps) => {
-  const { columnRef, cardsRef, lastImgRef, images } = props;
+  const { containerRef, columnRef, cardsRef, lastImgRef, images } = props;
 
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "var(--clr-dark)",
-        overflow: "hidden",
-        // if overflow here is not hidden, its size grows by how much we shift the columnRef in the timeline
-        // which makes the overlay and video not line up cause all of sudden the sizes changed dynamically...
-
-        // control Z-index from GSAP timeline
-      }}
-    >
-      <div
-        ref={columnRef}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1.5rem",
-          width: "min(420px, 90vw)",
-        }}
-      >
+    <div ref={containerRef} className="home-loader-container">
+      <div ref={columnRef} className="home-loader-column" style={{}}>
         {images.map((image, i) => {
           const isLast = i === images.length - 1;
           return (
@@ -46,29 +25,14 @@ export const HomeLoader = (props: IHomeLoaderProps) => {
               ref={(el) => {
                 cardsRef.current![i] = el;
               }}
-              style={{
-                position: "relative",
-                flexShrink: 0,
-                width: "100%",
-                height: "320px",
-                borderRadius: "3px",
-                overflow: "hidden",
-              }}
+              className="home-loader-image-wrapper"
             >
               <Image
                 ref={isLast ? lastImgRef : null}
                 src={image.src}
-                width={800}
-                height={800}
                 alt={image.label}
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  zIndex: 100,
-                }}
+                fill
+                objectFit="cover"
               />
             </div>
           );

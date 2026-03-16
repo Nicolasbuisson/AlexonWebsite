@@ -3,11 +3,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-items: center;
-  /* 90 before */
   height: 90vh;
   height: 90svh;
-  overflow: hidden;
-  /* not sure why I need to keep this... otherwise everything gets messed up in hero section */
 }
 
 .home-hero-section > * {

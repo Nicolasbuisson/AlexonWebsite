@@ -8,8 +8,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 
 export const HomeHero = () => {
-  // fix up the styling in HomeLoader and get relevant pictures
-
+  const containerRef = useRef<HTMLDivElement>(null);
   const columnRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const lastImgRef = useRef<HTMLImageElement>(null);
@@ -49,6 +48,7 @@ export const HomeHero = () => {
   // or use the useGSAP hook
   useLayoutEffect(() => {
     if (
+      containerRef &&
       columnRef &&
       cardsRef &&
       lastImgRef &&
@@ -57,6 +57,7 @@ export const HomeHero = () => {
       heroTextRef &&
       navRef
     ) {
+      const imageContainer = containerRef.current!;
       const column = columnRef.current!;
       const cards = cardsRef.current;
       const lastImg = lastImgRef.current!;
@@ -70,8 +71,8 @@ export const HomeHero = () => {
       const gap = 24; // 1.5rem at 16px base
       const totalShift = (IMAGES.length - 2) * (cardH + gap);
 
-      // initial column state
-      gsap.set(column, { zIndex: 1 });
+      // initial container and column state
+      gsap.set([imageContainer, column], { zIndex: 21 });
       // initial overlay state — hidden, low z-index
       gsap.set(overlay, { autoAlpha: 0, zIndex: 0 });
       // initial hero text state - opacity hidden and slightly lower
@@ -95,7 +96,7 @@ export const HomeHero = () => {
       tl.call(
         () => {
           const rect = lastImg.getBoundingClientRect();
-          gsap.set(column, {
+          gsap.set([imageContainer, column], {
             zIndex: 0,
           });
           gsap.set(overlay, {
@@ -208,6 +209,7 @@ export const HomeHero = () => {
       <Navigation ref={navRef} sticky titleScroll showIcons />
       <section className="home-hero-section">
         <HomeLoader
+          containerRef={containerRef}
           columnRef={columnRef}
           cardsRef={cardsRef}
           lastImgRef={lastImgRef}
