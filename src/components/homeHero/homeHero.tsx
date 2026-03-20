@@ -190,15 +190,15 @@ export const HomeHero = () => {
           duration: 0.4,
           ease: "power1.inOut",
         },
-        ">0.2", // start 0.4 seconds after end of overlay expansion
+        ">0.2", // start 0.2 seconds after end of overlay expansion
       );
 
       tl.to(
         video,
         {
           opacity: 1,
-          duration: 0.1, // make it faster so it's already there?
-          ease: "linear",
+          duration: 0.05, // make it faster so it's already there?
+          ease: "power1.inOut",
         },
         "<", // start at same time as overlay fade
       );
