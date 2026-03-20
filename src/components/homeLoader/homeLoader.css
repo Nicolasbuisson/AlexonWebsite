@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: var(--clr-dark);
   /* control Z-index from GSAP timeline */
 }
@@ -14,12 +13,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
   /* control Z-index from GSAP timeline */
 }
 
 .home-loader-image-wrapper {
   position: relative;
   height: 460px;
+  aspect-ratio: 1;
   border-radius: 3px;
 }

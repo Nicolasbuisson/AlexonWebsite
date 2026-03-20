@@ -8,10 +8,11 @@ import { gsap } from "gsap";
 import Image from "next/image";
 
 export const HomeHero = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const homeHeroSectionRef = useRef<HTMLDivElement>(null);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
   const columnRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const lastImgRef = useRef<HTMLImageElement>(null);
+  const overlayImgRef = useRef<HTMLImageElement>(null);
   const overlayRef = useRef<HTMLImageElement>(null);
 
   const navRef = useRef<HTMLDivElement>(null);
@@ -38,38 +39,47 @@ export const HomeHero = () => {
     },
     {
       src: "https://d128kbp85lo7cj.cloudfront.net/images/VisualizerAlexonMediaFrame-v1.jpg",
-      label: "05 — Valley",
+      label: "same image as overlay to be expanded",
+      overlay: true,
     },
-    // remove translateY of parent? or put translateY on all images and just screw the column container
+    {
+      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      label: "06 — Peaks",
+    },
   ];
 
-  const LAST_SRC = IMAGES[IMAGES.length - 1].src;
+  const overlaySrc =
+    IMAGES.find((image) => image.overlay)?.src ?? IMAGES[IMAGES.length - 1].src;
 
   // or use the useGSAP hook
   useLayoutEffect(() => {
     if (
-      containerRef &&
+      homeHeroSectionRef &&
+      imageContainerRef &&
       columnRef &&
       cardsRef &&
-      lastImgRef &&
+      overlayImgRef &&
       overlayRef &&
       videoRef &&
       heroTextRef &&
       navRef
     ) {
-      const imageContainer = containerRef.current!;
+      const homeHeroSection = homeHeroSectionRef.current!;
+      const imageContainer = imageContainerRef.current!;
       const column = columnRef.current!;
       const cards = cardsRef.current;
-      const lastImg = lastImgRef.current!;
+      const overlayImg = overlayImgRef.current!;
       const overlay = overlayRef.current!;
       const video = videoRef.current!;
       const heroText = heroTextRef.current!;
       const nav = navRef.current!;
+      const allCardsExceptLast = cards.slice(0, -1);
+      const lastCard = cards[cards.length - 1];
 
       // measure
       const cardH = cards?.[0]!.offsetHeight ?? 0;
       const gap = 24; // 1.5rem at 16px base
-      const totalShift = (IMAGES.length - 2) * (cardH + gap);
+      const totalShift = Math.round((IMAGES.length - 2.3) * (cardH + gap));
 
       // initial container and column state
       gsap.set([imageContainer, column], { zIndex: 21 });
@@ -85,24 +95,25 @@ export const HomeHero = () => {
       // timeline
       const tl = gsap.timeline({ paused: true, delay: 0.7 });
 
-      // 1. Scroll column up
-      tl.to(column, {
+      // 1. Scroll all cards up
+      tl.to(cards, {
         y: -totalShift,
         duration: 2.0,
         ease: "power1.inOut",
       });
 
-      // 2. Snap overlay — kept as .call() because getBoundingClientRect() must be live
+      //2. Snap overlay — kept as .call() because getBoundingClientRect() must be live
       tl.call(
         () => {
-          const rect = lastImg.getBoundingClientRect();
-          gsap.set([imageContainer, column], {
-            zIndex: 0,
-          });
+          const rect = overlayImg.getBoundingClientRect();
+          const parentRect = homeHeroSection.getBoundingClientRect();
+
           gsap.set(overlay, {
             autoAlpha: 1,
             zIndex: 9999,
-            top: rect.top,
+            top: Math.abs(parentRect.top - rect.top),
+            // not sure why but this should not be negative, so we must take absolute value
+            // in case rect.top > parentRect.top
             left: rect.left,
             width: rect.width,
             height: rect.height,
@@ -112,7 +123,7 @@ export const HomeHero = () => {
         ">",
       );
 
-      // 3. Expand overlay, fade out lastImg, reset column — all in parallel
+      // 3. Expand overlay, fade out overlayImg,
       tl.to(
         overlay,
         {
@@ -127,7 +138,7 @@ export const HomeHero = () => {
       );
 
       tl.to(
-        lastImg,
+        overlayImg,
         {
           opacity: 0,
           duration: 0.05,
@@ -136,15 +147,40 @@ export const HomeHero = () => {
         "<",
       ); // start at same time as overlay expansion
 
+      // make other images scroll out of screen as if pushed by the overlay expansion
       tl.to(
-        column,
+        allCardsExceptLast,
+        //cards,
         {
-          y: -(1.5 * totalShift),
+          y: -1.25 * totalShift,
           duration: 1.2,
           ease: "power1.inOut",
         },
         "<",
       ); // start at same time as overlay expansion
+
+      // push last card down
+      tl.to(
+        lastCard,
+        {
+          y: -0.75 * totalShift,
+          duration: 1.2,
+          ease: "power1.inOut",
+        },
+        "<",
+      ); // start at same time as overlay expansion
+
+      //make cards z-index 0 again to make them stay behind
+      tl.call(
+        () => {
+          gsap.set([imageContainer, column, cards], {
+            zIndex: 0,
+            opacity: 0,
+          });
+        },
+        [],
+        ">", // once cards finished moving out of frame
+      );
 
       // 4. Fade overlay out, fade video in
       tl.to(
@@ -154,7 +190,7 @@ export const HomeHero = () => {
           duration: 0.4,
           ease: "power1.inOut",
         },
-        ">0.4", // start 0.4 seconds after end of overlay expansion
+        ">0.2", // start 0.4 seconds after end of overlay expansion
       );
 
       tl.to(
@@ -162,7 +198,7 @@ export const HomeHero = () => {
         {
           opacity: 1,
           duration: 0.1, // make it faster so it's already there?
-          ease: "power1.inOut",
+          ease: "linear",
         },
         "<", // start at same time as overlay fade
       );
@@ -173,7 +209,7 @@ export const HomeHero = () => {
           video.play();
         },
         [],
-        ">0.6",
+        ">0.2",
       );
 
       // 6. Fade in heroText and nav, slide heroText to y:0 — in parallel
@@ -207,12 +243,12 @@ export const HomeHero = () => {
   return (
     <>
       <Navigation ref={navRef} sticky titleScroll showIcons />
-      <section className="home-hero-section">
+      <section ref={homeHeroSectionRef} className="home-hero-section">
         <HomeLoader
-          containerRef={containerRef}
+          containerRef={imageContainerRef}
           columnRef={columnRef}
           cardsRef={cardsRef}
-          lastImgRef={lastImgRef}
+          overlayImgRef={overlayImgRef}
           images={IMAGES}
         />
         <div className="home-hero-bg">
@@ -227,7 +263,7 @@ export const HomeHero = () => {
           ></video>
           <Image
             ref={overlayRef}
-            src={LAST_SRC}
+            src={overlaySrc}
             width={1920}
             height={1080}
             alt="fullscreen overlay"

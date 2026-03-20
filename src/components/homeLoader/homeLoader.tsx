@@ -7,18 +7,17 @@ interface IHomeLoaderProps {
   containerRef: RefObject<HTMLDivElement>;
   columnRef: RefObject<HTMLDivElement>;
   cardsRef: RefObject<(HTMLDivElement | null)[]>;
-  lastImgRef: RefObject<HTMLImageElement>;
-  images: { src: string; label: string }[];
+  overlayImgRef: RefObject<HTMLImageElement>;
+  images: { src: string; label: string; overlay?: boolean }[];
 }
 
 export const HomeLoader = (props: IHomeLoaderProps) => {
-  const { containerRef, columnRef, cardsRef, lastImgRef, images } = props;
+  const { containerRef, columnRef, cardsRef, overlayImgRef, images } = props;
 
   return (
     <div ref={containerRef} className="home-loader-container">
       <div ref={columnRef} className="home-loader-column" style={{}}>
         {images.map((image, i) => {
-          const isLast = i === images.length - 1;
           return (
             <div
               key={i}
@@ -28,7 +27,7 @@ export const HomeLoader = (props: IHomeLoaderProps) => {
               className="home-loader-image-wrapper"
             >
               <Image
-                ref={isLast ? lastImgRef : null}
+                ref={image.overlay ? overlayImgRef : null}
                 src={image.src}
                 alt={image.label}
                 fill
