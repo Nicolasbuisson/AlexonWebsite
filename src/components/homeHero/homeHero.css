@@ -17,7 +17,8 @@
   background-color: var(--clr-dark);
   /* Used if the image is unavailable */
   width: 100%;
-  height: 100%;
+  height: 90vh;
+  height: 90svh;
   background-position: center;
   background-size: cover;
 }
