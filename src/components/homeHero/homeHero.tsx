@@ -95,6 +95,24 @@ export const HomeHero = () => {
       // timeline
       const tl = gsap.timeline({ paused: true, delay: 0.7 });
 
+      const disableScroll = () => {
+        document.body.style.overflow = "hidden";
+        document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+      };
+      const enableScroll = () => {
+        document.body.style.overflow = "auto";
+        document.body.setAttribute("data-lenis-prevent", "false"); // Make sure you pass false as string
+      };
+
+      // 0. Disable scroll
+      tl.call(
+        () => {
+          disableScroll();
+        },
+        [],
+        "<",
+      );
+
       // 1. Scroll all cards up
       tl.to(cards, {
         y: -totalShift,
@@ -233,6 +251,18 @@ export const HomeHero = () => {
           ease: "power1.inOut",
         },
         "<0.7", // start 0.7 seconds after heroText animation start
+      );
+
+      // 8. Enable scroll
+      tl.call(
+        () => {
+          enableScroll();
+          gsap.set(document.body, {
+            overflow: "auto",
+          });
+        },
+        [],
+        ">",
       );
 
       tl.play();
