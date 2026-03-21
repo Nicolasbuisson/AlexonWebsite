@@ -212,26 +212,28 @@ export const HomeHero = () => {
         ">0.2",
       );
 
-      // 6. Fade in heroText and nav, slide heroText to y:0 — in parallel
-      tl.to(
-        [heroText, nav],
-        {
-          opacity: 1,
-          duration: 0.7,
-          ease: "power1.inOut",
-        },
-        ">",
-      );
-
+      // 6. Fade in/slide heroText
       tl.to(
         heroText,
         {
           y: 0,
-          duration: 0.7,
+          opacity: 1,
+          duration: 1.0,
           ease: "power1.inOut",
         },
-        "<",
+        ">",
       ); // parallel with opacity
+
+      // 7. Make nav appear
+      tl.to(
+        [nav],
+        {
+          opacity: 1,
+          duration: 1.0,
+          ease: "power1.inOut",
+        },
+        "<0.7", // start 0.7 seconds after heroText animation start
+      );
 
       tl.play();
       return () => {
