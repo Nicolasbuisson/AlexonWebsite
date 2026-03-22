@@ -87,8 +87,7 @@ export const HomeHero = () => {
       gsap.set(overlay, { autoAlpha: 0, zIndex: 0 });
       // initial hero text state - opacity hidden and slightly lower
       gsap.set(heroText, { y: 100, opacity: 0 });
-      // initial nav state - opacity hidden
-      gsap.set(nav, { opacity: 0 });
+      // initial nav state - opacity hidden with hideOnMount prop
       // initial video state - opacity hidden
       gsap.set(video, { opacity: 0 });
 
@@ -265,6 +264,9 @@ export const HomeHero = () => {
         ">",
       );
 
+      // now add slightly more spacing between images
+      // and make sure image height is responsive, this will look like shit on a phone right now
+
       tl.play();
       return () => {
         tl.kill();
@@ -274,7 +276,7 @@ export const HomeHero = () => {
 
   return (
     <>
-      <Navigation ref={navRef} sticky titleScroll showIcons />
+      <Navigation ref={navRef} sticky titleScroll showIcons hideOnMount />
       <section ref={homeHeroSectionRef} className="home-hero-section">
         <HomeLoader
           containerRef={imageContainerRef}

@@ -13,6 +13,7 @@ interface NavigationProps {
   titleScroll?: boolean; //differentiate between scroll effect title and just static title
   showIcons?: boolean;
   ref?: RefObject<HTMLDivElement>;
+  hideOnMount?: boolean;
 }
 
 export const Navigation = (props: NavigationProps) => {
@@ -22,6 +23,7 @@ export const Navigation = (props: NavigationProps) => {
     titleScroll = false,
     showIcons = false,
     ref,
+    hideOnMount = false,
   } = props;
 
   useScrollPercentage(); // initialize css variable --scroll
@@ -72,6 +74,7 @@ export const Navigation = (props: NavigationProps) => {
           ? "navigation-container sticky-navigation-container"
           : "navigation-container"
       }
+      style={hideOnMount ? { opacity: 0 } : {}}
     >
       <nav className={navClasses}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
