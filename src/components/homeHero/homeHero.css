@@ -1,3 +1,8 @@
+body {
+  /* initialize to overflow hidden for homeHero GSAP animation timeline */
+  overflow: hidden;
+}
+
 .home-hero-section {
   display: grid;
   grid-template-columns: 1fr;
