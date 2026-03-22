@@ -264,9 +264,6 @@ export const HomeHero = () => {
         ">",
       );
 
-      // now add slightly more spacing between images
-      // and make sure image height is responsive, this will look like shit on a phone right now
-
       tl.play();
       return () => {
         tl.kill();
