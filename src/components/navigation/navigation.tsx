@@ -48,15 +48,19 @@ export const Navigation = (props: NavigationProps) => {
       setBurgerClass("burger-bar clicked");
       document.getElementById("menu-container")!.style.right = "0%";
       document.getElementById("menu")!.style.opacity = "100%";
-      // might be nicer to transition on the opacity then just display none that shit...
-      // or also could be nice to keep it if it's at the top...
-      // I think playing with the Z-index could fix this?
-      document.getElementById("nav-logo")?.classList.add("hide");
+      // disable scrolling with timeout to wait for menu animation to finish (500ms)
+      // to avoid scrollbar dissapearing causing slight layout shift: all elements go to the right
+      setTimeout(() => {
+        document.body.style.overflow = "hidden";
+        document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+      }, 450);
     } else {
       setBurgerClass("burger-bar unclicked");
       document.getElementById("menu-container")!.style.right = "-100%";
       document.getElementById("menu")!.style.opacity = "0%";
-      document.getElementById("nav-logo")?.classList.remove("hide");
+      // re-enable scrolling
+      document.body.style.overflow = "auto";
+      document.body.setAttribute("data-lenis-prevent", "false"); // Make sure you pass false as string
     }
     setIsMenuClicked(!isMenuClicked);
   };
