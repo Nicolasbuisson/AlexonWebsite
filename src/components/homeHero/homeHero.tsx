@@ -19,32 +19,31 @@ export const HomeHero = () => {
   const heroTextRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // ─── placeholder images (replace with your own) ───────────────────────────────
   const IMAGES = [
     {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      label: "01 — Peaks",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis.jpg",
+      label: "Atlantis",
     },
     {
-      src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-      label: "02 — Forest",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI.jpg",
+      label: "DJI",
     },
     {
-      src: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80",
-      label: "03 — Desert",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON.jpg",
+      label: "ON",
     },
     {
-      src: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800&q=80",
-      label: "04 — Lake",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA.jpg",
+      label: "Pep x VISA",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/images/VisualizerAlexonMediaFrame-v1.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.jpg",
       label: "same image as overlay to be expanded",
       overlay: true,
     },
     {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      label: "06 — Peaks",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields.jpg",
+      label: "Alexon in a very chinese time of his life",
     },
   ];
 
@@ -79,7 +78,7 @@ export const HomeHero = () => {
       // measure
       const cardH = cards?.[0]!.offsetHeight ?? 0;
       const gap = 24; // 1.5rem at 16px base
-      const totalShift = Math.round((IMAGES.length - 2.3) * (cardH + gap));
+      const totalShift = Math.round((IMAGES.length - 2) * (cardH + gap));
 
       // initial container and column state
       gsap.set([imageContainer, column], { zIndex: 21 });
@@ -169,7 +168,7 @@ export const HomeHero = () => {
         allCardsExceptLast,
         //cards,
         {
-          y: -1.25 * totalShift,
+          y: -1.4 * totalShift,
           duration: 1.2,
           ease: "power1.inOut",
         },
@@ -180,7 +179,7 @@ export const HomeHero = () => {
       tl.to(
         lastCard,
         {
-          y: -0.75 * totalShift,
+          y: -0.1 * totalShift,
           duration: 1.2,
           ease: "power1.inOut",
         },

@@ -10,7 +10,7 @@
 
   --home-loader-column-gap: 3rem;
   --home-loader-image-height: 460px;
-  --home-loader-image-aspect-ratio: 1;
+  --home-loader-image-aspect-ratio: 1200/675; /* default 1200 x 675 */
 }
 
 .home-loader-column {
@@ -27,22 +27,21 @@
   border-radius: 3px;
 }
 
-@media (width < 800px) {
+@media (width < 960px) {
   .home-loader-container {
-    --home-loader-image-height: 420px;
+    --home-loader-image-height: 360px;
   }
 }
 
-@media (width < 600px) {
+@media (width < 740px) {
   .home-loader-container {
-    --home-loader-image-height: 400px;
-    --home-loader-image-aspect-ratio: 9/12;
+    --home-loader-image-height: 240px;
   }
 }
 
-@media (width < 400px) {
+@media (width < 500px) {
   .home-loader-container {
-    --home-loader-image-height: 320px;
-    --home-loader-image-aspect-ratio: 8/12;
+    --home-loader-image-height: 160px;
+    --home-loader-column-gap: 2rem;
   }
 }
