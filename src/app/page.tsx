@@ -6,7 +6,6 @@ import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
 import { HorizontalScroller } from "../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
-import { PageLoader } from "../components/pageLoader/pageLoader";
 import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
@@ -18,7 +17,6 @@ export const revalidate = 900;
 function Home() {
   return (
     <div className="home-section-container">
-      <PageLoader />
       <HomeHero />
       <section>
         <HorizontalScroller>
