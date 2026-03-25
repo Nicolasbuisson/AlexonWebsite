@@ -119,13 +119,13 @@ export const Navigation = (props: NavigationProps) => {
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
           </li>
-          {/* <li>
+          <li>
             <FlipLink
               href="/about"
               label="About"
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
-          </li> */}
+          </li>
           <li>
             <FlipLink
               href="/contact"
