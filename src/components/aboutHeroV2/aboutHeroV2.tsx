@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 export const AboutHeroV2 = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,6 +15,8 @@ export const AboutHeroV2 = () => {
   const image4Ref = useRef<HTMLDivElement>(null);
   const image5Ref = useRef<HTMLDivElement>(null);
   const image6Ref = useRef<HTMLDivElement>(null);
+
+  const dimensions = useWindowSize();
 
   useLayoutEffect(() => {
     const image1 = image1Ref.current;
@@ -30,21 +33,25 @@ export const AboutHeroV2 = () => {
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
-        markers: true, // remove, only for debugging
       },
     });
 
     // duration of each animation is determined by scrollTrigger
-    // it divides it up equally between all of them
-    // if want to increase timeline duration, increase container height for more scroll room
+    // it divides it up equally between all of them. But can determine coefficient with duration param.
+    // if want to increase timeline's total duration, increase container height for more scroll room
+    const perspectiveShift = dimensions.width >= 550 ? 1500 : 600;
 
-    tl.to(image1, { z: 1400 });
-    tl.to(image2, { z: 1200 }, "<50%"); // start at same time as previous animation reaches 50% completion
-    tl.to(image3, { opacity: 1, z: 1500 }, "<50%");
-    tl.to(image4, { opacity: 1, z: 1500 }, "<50%");
-    tl.to(image5, { opacity: 1, z: 1200 }, "<50%");
-    tl.to(image6, { opacity: 1, z: 1200 }, "<50%");
-  }, []);
+    tl.to(image1, { z: perspectiveShift - 100, duration: 1 });
+    tl.to(image2, { z: perspectiveShift - 300, duration: 1 }, "<50%"); // start at same time as previous animation reaches 50% completion
+    tl.to(image3, { opacity: 1, duration: 0.5 }, "<50%");
+    tl.to(image3, { z: perspectiveShift, duration: 1 }, "<50%");
+    tl.to(image4, { opacity: 1, duration: 0.5 }, "<50%");
+    tl.to(image4, { z: perspectiveShift, duration: 1 }, "<50%");
+    tl.to(image5, { opacity: 1, duration: 0.5 }, "<50%");
+    tl.to(image5, { z: perspectiveShift - 200, duration: 1 }, "<50%");
+    tl.to(image6, { opacity: 1, duration: 0.5 }, "<50%");
+    tl.to(image6, { z: perspectiveShift - 100, duration: 1 }, "<50%");
+  }, [dimensions]);
 
   return (
     <section className="about-hero-container" id="trigger-container">
