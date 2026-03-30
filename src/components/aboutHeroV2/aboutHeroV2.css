@@ -1,8 +1,8 @@
 .about-hero-container {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  height: 300vh;
-  height: 300svh;
+  height: 400vh;
+  height: 400svh;
   width: 100%;
   position: relative;
 }
@@ -33,30 +33,32 @@
   aspect-ratio: 1280/959;
   width: 30vw;
   width: 30svw;
-  left: 4%;
+  left: 2%;
   top: 4%;
-  transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, -100px);
 }
 
 .about-hero-image-wrapper:nth-child(2) {
   aspect-ratio: 853/1280;
   width: 27vw;
   width: 27svw;
-  right: 2%;
+  right: 3%;
   top: 16%;
-  transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, -150px);
 }
 
 .about-hero-image-wrapper:nth-child(3) {
+  opacity: 0;
   aspect-ratio: 1280/959;
   width: 27vw;
   width: 27svw;
   left: 10%;
-  top: 70%;
+  top: 50%;
   transform: translate3d(0px, 0px, -3000px);
 }
 
 .about-hero-image-wrapper:nth-child(4) {
+  opacity: 0;
   aspect-ratio: 1280/720;
   width: 27vw;
   width: 27svw;
@@ -66,20 +68,22 @@
 }
 
 .about-hero-image-wrapper:nth-child(5) {
+  opacity: 0;
   aspect-ratio: 1030/1288;
   width: 27vw;
   width: 27svw;
   left: 2%;
-  top: 62%;
+  top: 52%;
   transform: translate3d(0px, 0px, -3000px);
 }
 
 .about-hero-image-wrapper:nth-child(6) {
+  opacity: 0;
   aspect-ratio: 1280/854;
   width: 27vw;
   width: 27svw;
   right: 0%;
-  top: 22%;
+  top: 42%;
   transform: translate3d(0px, 0px, -3000px);
 }
 
