@@ -1,0 +1,18 @@
+.about-aim-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-aim-item-heading {
+  font-weight: 500;
+}
+
+.about-aim-item-title {
+  font-size: var(--fs-h4);
+  font-weight: 500;
+}
+
+.about-aim-item-description {
+  text-wrap: pretty;
+}
