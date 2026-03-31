@@ -34,7 +34,6 @@
 .about-aim-text {
   display: grid;
   align-items: start;
-  grid-template-rows: fit-content 2fr 2fr;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
@@ -46,9 +45,8 @@
   font-size: var(--fs-h3);
 }
 
-@media (width < 880px) {
+@media (width < 780px) {
   .about-aim-text {
-    grid-template-rows: unset;
     grid-template-columns: 1fr;
   }
 }

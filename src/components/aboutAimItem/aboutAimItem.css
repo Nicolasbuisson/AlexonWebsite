@@ -1,7 +1,8 @@
 .about-aim-item-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
   gap: 0.5rem;
+  grid-row: span 3;
 }
 
 .about-aim-item-heading {
