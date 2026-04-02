@@ -24,13 +24,28 @@
   object-fit: cover;
 }
 
-.about-founder-text-container {
+.about-founder-grid-container {
+  display: grid;
+  grid-template-columns: var(--about-grid-template-columns);
   position: absolute;
   top: 50%;
-  padding-inline: 25%;
+  padding-inline: 2rem;
+}
+
+.about-founder-grid-container h3 {
+  color: var(--clr-accent);
+  font-family: var(--ff-secondary);
+}
+
+.about-founder-text-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.about-founder-text-container h4 {
+  font-size: var(--fs-h3);
+  font-family: var(--ff-secondary);
 }
 
 .about-founder-text-container p {
@@ -42,8 +57,5 @@
   .about-founder-section {
     height: 220vh;
     height: 220svh;
-  }
-  .about-founder-text-container {
-    padding-inline: 2rem;
   }
 }

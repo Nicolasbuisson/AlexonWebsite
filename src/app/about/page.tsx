@@ -4,17 +4,15 @@ import { Navigation } from "../../components/navigation/navigation";
 import { AboutHeroV2 } from "../../components/aboutHeroV2/aboutHeroV2";
 import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
 import { AboutAimItem } from "../../components/aboutAimItem/aboutAimitem";
-// import { Offerings } from "../../components/offerings/offerings";
+import { AboutFounder } from "../../components/aboutFounder/aboutFounder";
 
 // revalidate and rebuild the static page every 15 minutes to obtain fresh instagram data
 export const revalidate = 900;
 
 function AboutPage() {
-  // Check Alexon Website notion, put details in a ticket on Kanban
   return (
     <div className="about-container">
       <Navigation showIcons />
-      {/* <AboutHero /> */}
       <AboutHeroV2 />
       <section className="about-philosophy-section">
         <h3>Our Philosophy</h3>
@@ -57,6 +55,7 @@ function AboutPage() {
           />
         </div>
       </section>
+      <AboutFounder />
       <InstaSection additionalTitle="Follow the Journey" />
     </div>
   );
