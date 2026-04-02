@@ -1,0 +1,19 @@
+.about-aim-item-wrapper {
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: 0.5rem;
+  grid-row: span 3;
+}
+
+.about-aim-item-heading {
+  font-weight: 500;
+}
+
+.about-aim-item-title {
+  font-size: var(--fs-h4);
+  font-weight: 500;
+}
+
+.about-aim-item-description {
+  text-wrap: pretty;
+}
