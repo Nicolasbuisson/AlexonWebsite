@@ -25,9 +25,12 @@ export const Footer = () => {
         </Link>
         <div className="footer-contact-container">
           <h4>Contact</h4>
-          <p>Montréal, Canada</p>
+          <p>Dubai, UAE</p>
           <a href="mailto:contact@alexonmedia.com" className="footer-link">
             contact@alexonmedia.com
+          </a>
+          <a href="tel:+33783131299" className="footer-link">
+            +971 585676713
           </a>
           <a href="tel:+33783131299" className="footer-link">
             +33 7 83 13 12 99
