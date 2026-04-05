@@ -91,7 +91,7 @@ export const HomeHero = () => {
       gsap.set(video, { opacity: 0 });
 
       // timeline
-      const tl = gsap.timeline({ paused: true, delay: 0.7 });
+      const tl = gsap.timeline({ paused: true, delay: 0.4 });
 
       const disableScroll = () => {
         document.body.style.overflow = "hidden";
@@ -114,7 +114,7 @@ export const HomeHero = () => {
       // 1. Scroll all cards up
       tl.to(cards, {
         y: -totalShift,
-        duration: 2.0,
+        duration: 1.7,
         ease: "power1.inOut",
       });
 
@@ -147,7 +147,7 @@ export const HomeHero = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          duration: 1.2,
+          duration: 0.8,
           ease: "power1.inOut",
         },
         ">",
@@ -158,7 +158,7 @@ export const HomeHero = () => {
         {
           opacity: 0,
           duration: 0.05,
-          ease: "power1.inOut",
+          ease: "power1.in",
         },
         "<",
       ); // start at same time as overlay expansion
@@ -166,10 +166,9 @@ export const HomeHero = () => {
       // make other images scroll out of screen as if pushed by the overlay expansion
       tl.to(
         allCardsExceptLast,
-        //cards,
         {
           y: -1.4 * totalShift,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power1.inOut",
         },
         "<",
@@ -180,7 +179,7 @@ export const HomeHero = () => {
         lastCard,
         {
           y: -0.1 * totalShift,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power1.inOut",
         },
         "<",
@@ -203,10 +202,10 @@ export const HomeHero = () => {
         overlay,
         {
           opacity: 0,
-          duration: 0.4,
-          ease: "power1.inOut",
+          duration: 0.3,
+          ease: "power1.in",
         },
-        ">0.2", // start 0.2 seconds after end of overlay expansion
+        ">0.1", // start 0.1 seconds after end of overlay expansion
       );
 
       tl.to(
@@ -214,7 +213,7 @@ export const HomeHero = () => {
         {
           opacity: 1,
           duration: 0.05, // make it faster so it's already there?
-          ease: "power1.inOut",
+          ease: "power1.in",
         },
         "<", // start at same time as overlay fade
       );
@@ -245,10 +244,10 @@ export const HomeHero = () => {
         [nav],
         {
           opacity: 1,
-          duration: 1.0,
+          duration: 0.5,
           ease: "power1.inOut",
         },
-        "<0.7", // start 0.7 seconds after heroText animation start
+        "<0.5", // start 0.5 seconds after heroText animation start
       );
 
       // 8. Enable scroll
