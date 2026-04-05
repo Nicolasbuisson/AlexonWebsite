@@ -105,13 +105,13 @@ export const Navigation = (props: NavigationProps) => {
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
           </li>
-          <li>
+          {/* <li>
             <FlipLink
               href="/shortform"
               label="Short-Form"
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
-          </li>
+          </li> */}
           <li>
             <FlipLink
               href="/productions"
