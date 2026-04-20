@@ -32,6 +32,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0; /* will be changed by GSAP animation */
+  will-change: opacity;
 }
 
 .home-hero-overlay {
@@ -51,6 +53,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0; /* will be changed by GSAP animation */
+  will-change: opacity;
 }
 
 .home-pitch {

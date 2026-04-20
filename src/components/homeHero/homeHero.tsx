@@ -84,11 +84,10 @@ export const HomeHero = () => {
       gsap.set([imageContainer, column], { zIndex: 21 });
       // initial overlay state — hidden, low z-index
       gsap.set(overlay, { autoAlpha: 0, zIndex: 0 });
-      // initial hero text state - opacity hidden and slightly lower
-      gsap.set(heroText, { y: 100, opacity: 0 });
+      // initial hero text state - opacity hidden (in css) and slightly lower
+      gsap.set(heroText, { y: 100 });
       // initial nav state - opacity hidden with hideOnMount prop
-      // initial video state - opacity hidden
-      gsap.set(video, { opacity: 0 });
+      // initial video state - opacity hidden (in css)
 
       // timeline
       const tl = gsap.timeline({ paused: true, delay: 0.4 });
