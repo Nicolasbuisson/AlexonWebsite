@@ -168,6 +168,10 @@ function Productions() {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISA_black.png`,
               alt: "Visa logo",
             },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.png`,
+              alt: "Atlantis logo",
+            },
           ]}
         ></LogoList>
       </section>
