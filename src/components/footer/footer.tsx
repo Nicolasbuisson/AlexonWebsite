@@ -24,7 +24,7 @@ export const Footer = () => {
           />
         </Link>
         <div className="footer-contact-container">
-          <h4>Contact</h4>
+          <p className="footer-navigation-title">Contact</p>
           <p>Dubai, UAE</p>
           <a href="mailto:contact@alexonmedia.com" className="footer-link">
             contact@alexonmedia.com
@@ -37,13 +37,13 @@ export const Footer = () => {
           </a>
         </div>
         <div className="footer-navigation-container">
-          <h4>Navigation</h4>
+          <p className="footer-navigation-title">Navigation</p>
           <Link href="/" className="footer-link">
             Home
           </Link>
-          {/* <Link href="/shortform" className="footer-link">
-            Short Form Services
-          </Link> */}
+          <Link href="/shortform" className="footer-link">
+            Short Form
+          </Link>
           <Link href="/productions" className="footer-link">
             Productions
           </Link>
@@ -55,7 +55,7 @@ export const Footer = () => {
           </Link>
         </div>
         <div className="footer-socials-container">
-          <h4>Follow Us</h4>
+          <p className="footer-navigation-title">Follow Us</p>
           <Socials flexDirection="row" className="footer-socials"></Socials>
         </div>
       </div>
