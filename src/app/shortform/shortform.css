@@ -13,16 +13,10 @@
   padding-inline: 10%;
 }
 
-.shortform-packages-white-background {
-  background-color: var(--clr-light);
-}
-
 .shortform-packages-section {
   background-color: var(--clr-dark);
   padding-inline: calc(var(--section-padding-inline) - 4rem);
   padding-block-start: var(--section-padding-block);
-  border-bottom-right-radius: 32px;
-  border-bottom-left-radius: 32px;
 }
 
 .shortform-packages-title {
