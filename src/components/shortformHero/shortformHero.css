@@ -1,0 +1,91 @@
+.shortform-hero {
+  height: 100vh;
+  height: 100svh;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.shortform-heading {
+  font-size: var(--fs-h4);
+  color: var(--clr-grey);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.shortform-heading span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(200px);
+  animation: slideUp 0.6s var(--ease) forwards;
+  animation-delay: 0.8s;
+}
+
+.shortform-title {
+  line-height: 0.9;
+  text-wrap: balance;
+  font-weight: 700;
+  font-family: var(--ff-primary);
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.shortform-title p {
+  overflow: hidden;
+  font-weight: inherit;
+}
+
+.shortform-title span {
+  display: inline-block;
+  font-weight: inherit;
+  opacity: 0;
+  transform: translateY(200px);
+  animation: slideUp 0.6s var(--ease) forwards;
+}
+
+.shortform-title p:nth-child(2) span {
+  animation-delay: 0.2s;
+}
+
+.shortform-title p:nth-child(3) span {
+  animation-delay: 0.4s;
+}
+
+.shortform-title p:last-child {
+  color: var(--clr-accent);
+}
+
+.shortform-hero-text {
+  overflow: hidden;
+  /* sized by the first paragraph alone (see the width:0 rule below) */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-grey);
+}
+
+/* keep the later paragraphs out of the width calculation, then let them
+   stretch to whatever width the first paragraph settled on */
+.shortform-hero-text p:not(:first-child) {
+  width: 0;
+  min-width: 100%;
+}
+
+.shortform-hero-text p span {
+  display: inline-block;
+  font-weight: 500;
+  text-wrap: pretty;
+  opacity: 0;
+  transform: translateY(200px);
+  animation: slideUp 0.6s var(--ease) forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

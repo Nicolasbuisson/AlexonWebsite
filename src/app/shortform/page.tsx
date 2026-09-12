@@ -1,48 +1,83 @@
 import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
-import { ButtonBackgroundHoverEffect } from "../../components/buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
-import { Offerings } from "../../components/offerings/offerings";
 import { Statistic } from "../../components/statistic/statistic";
 import { Package } from "../../components/package/package";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
-import { ParallaxScrollGallery } from "../../components/parallaxScrollGallery/parallaxScrollGallery";
-import { PageLoader } from "../../components/pageLoader/pageLoader";
+import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 
 function ShortForm() {
   return (
     <div className="shortform-container">
-      <PageLoader />
       <Navigation />
       <section className="shortform-hero-section">
-        <div className="shortform-video-background">
-          <video
-            src={"https://d128kbp85lo7cj.cloudfront.net/videos/Productions.mp4"}
-            muted
-            autoPlay
-            loop
-            playsInline
-          ></video>
-          <h2 className="shortform-title">
-            Optimized vertical videos for Limitless Impact
-          </h2>
-          <div className="shortform-hero-text">
-            <p>Maximize your reach, increase your conversions,</p>
-            <p>
-              and boost your sales with our effortless short-form content
-              offering
-            </p>
-            <ButtonBackgroundHoverEffect
-              text="See Packages"
-              className="shortform-hero-button"
-              link="#shortform-packages"
-              accent
-            ></ButtonBackgroundHoverEffect>
+        <ShortFormHero />
+        <HorizontalScroller>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
+              fill
+              alt="Corona logo"
+              className="shortform-horizontal-scroller-logo"
+            />
           </div>
-        </div>
-      </section>
-      <section className="shortform-offerings-section">
-        <Offerings />
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
+              fill
+              alt="Four Seasons logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
+              fill
+              alt="McGill University logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
+              fill
+              alt="Coinbase logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
+              fill
+              alt="AirCanada logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
+              fill
+              alt="Claptone logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
+              fill
+              alt="Parc Omega logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+          <div className="shortform-horizontal-scroller-logo-wrapper">
+            <Image
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
+              fill
+              alt="Monolink logo"
+              className="shortform-horizontal-scroller-logo"
+            />
+          </div>
+        </HorizontalScroller>
       </section>
       <div className="shortform-packages-white-background">
         <section className="shortform-packages-section" id="shortform-packages">
@@ -163,80 +198,15 @@ function ShortForm() {
               ]}
             />
           </div>
-          <HorizontalScroller>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
-                fill
-                alt="Corona logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
-                fill
-                alt="Four Seasons logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
-                fill
-                alt="McGill University logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
-                fill
-                alt="Coinbase logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
-                fill
-                alt="AirCanada logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
-                fill
-                alt="Claptone logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
-                fill
-                alt="Parc Omega logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-            <div className="shortform-horizontal-scroller-logo-wrapper">
-              <Image
-                src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
-                fill
-                alt="Monolink logo"
-                className="shortform-horizontal-scroller-logo"
-              />
-            </div>
-          </HorizontalScroller>
-          <h2 className="shortform-work-title">Our Work</h2>
         </section>
       </div>
-      <section className="shortform-work-section">
+      {/* <section className="shortform-work-section">
+      unfortunately, not enough video content + degrades performance too much
+      to have 12 videos of 10 MB each loading
         <div className="parallax-scroll-gallery-wrapper">
           <ParallaxScrollGallery></ParallaxScrollGallery>
         </div>
-      </section>
+      </section> */}
       <section className="shortform-results-section">
         <div className="shortform-results-text">
           <h3>Results you can see</h3>
