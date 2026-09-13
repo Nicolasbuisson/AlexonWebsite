@@ -83,6 +83,51 @@ function ShortForm() {
       <ShortFormPainPoints />
       <section className="shortform-work-section">
         <h2>Our Work</h2>
+        <div className="shortform-work-video-container">
+          <video
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></video>
+          <video
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/AlexParentsAdvice.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></video>
+          <video
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Montgolfieeres.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></video>
+          <video
+            src={"https://d128kbp85lo7cj.cloudfront.net/shortform/DavidTso.mp4"}
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></video>
+          <video
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.mp4"
+            }
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></video>
+        </div>
       </section>
       <section className="shortform-process-section">Process SVG anim</section>
       <section className="shortform-packages-section" id="shortform-packages">
