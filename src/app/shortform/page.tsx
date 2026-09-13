@@ -129,6 +129,64 @@ function ShortForm() {
           ></video>
         </div>
       </section>
+      <section className="shortform-results-section">
+        <div className="shortform-results-text">
+          <h2>
+            Results you can see
+            <br />
+            and Measure
+          </h2>
+          <p className="grey">
+            Capture attention, tell your story, and drive results with our
+            short-form video packages.
+          </p>
+          <p className="grey">
+            Designed for virality and engagement, our videos make your brand
+            stand out in the scroll and ultimately boost your revenues.
+          </p>
+        </div>
+        <div className="stats-container">
+          <Statistic
+            title="ROI"
+            statNumber={1}
+            statString="#"
+            statStringBeforeNumber
+            description="Highest ROI of any marketing strategy"
+          />
+          <Statistic
+            title="Reach"
+            statNumber={8}
+            statString="x"
+            statStringBeforeNumber
+            description="After 3 months"
+          />
+          <Statistic
+            title="Cost Savings"
+            statNumber={11000}
+            statString="$"
+            statStringBeforeNumber
+            description="Saved anually on marketing expenses"
+          />
+          <Statistic
+            title="Brand Perception"
+            statNumber={93}
+            statString="%"
+            description="Increase in likelihood of purchase"
+          />
+          <Statistic
+            title="Conversion Rate"
+            statNumber={29}
+            statString="%"
+            description=" Increase after investing in your brand presence"
+          />
+          <Statistic
+            title="Follower Growth"
+            statNumber={59}
+            statString="%"
+            description="After a year"
+          />
+        </div>
+      </section>
       <section className="shortform-process-section">Process SVG anim</section>
       <section className="shortform-packages-section" id="shortform-packages">
         <h3 className="shortform-packages-title">
@@ -256,61 +314,6 @@ function ShortForm() {
           <ParallaxScrollGallery></ParallaxScrollGallery>
         </div>
       </section> */}
-      <section className="shortform-results-section">
-        <div className="shortform-results-text">
-          <h3>Results you can see</h3>
-          <h3 className="grey">and Measure</h3>
-          <p className="grey">
-            Capture attention, tell your story, and drive results with our
-            short-form video packages.
-          </p>
-          <p className="grey">
-            Designed for virality and engagement, our videos make your brand
-            stand out in the scroll and ultimately boost your revenues.
-          </p>
-        </div>
-        <div className="stats-container">
-          <Statistic
-            title="ROI"
-            statNumber={1}
-            statString="#"
-            statStringBeforeNumber
-            description="Highest ROI of any marketing strategy"
-          />
-          <Statistic
-            title="Reach"
-            statNumber={8}
-            statString="x"
-            statStringBeforeNumber
-            description="After 3 months"
-          />
-          <Statistic
-            title="Cost Savings"
-            statNumber={11000}
-            statString="$"
-            statStringBeforeNumber
-            description="Saved anually on marketing expenses"
-          />
-          <Statistic
-            title="Brand Perception"
-            statNumber={93}
-            statString="%"
-            description="Increase in likelihood of purchase"
-          />
-          <Statistic
-            title="Conversion Rate"
-            statNumber={29}
-            statString="%"
-            description=" Increase after investing in your brand presence"
-          />
-          <Statistic
-            title="Follower Growth"
-            statNumber={59}
-            statString="%"
-            description="After a year"
-          />
-        </div>
-      </section>
       <section className="shortform-faq-section">
         Use Accordion component
       </section>

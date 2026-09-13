@@ -173,13 +173,9 @@
   margin-bottom: 1rem;
 }
 
-.shortform-results-text h3 {
+.shortform-results-text h2 {
   font-size: var(--fs-h2);
-  font-weight: 600;
   line-height: 1;
-}
-
-.shortform-results-text h3:last-of-type {
   margin-bottom: 1rem;
 }
 
@@ -216,4 +212,9 @@
   .stats-container {
     grid-template-columns: 1fr;
   }
+}
+
+.shortform-process-section {
+  padding-inline: var(--section-padding-inline);
+  padding-block: var(--section-padding-block);
 }
