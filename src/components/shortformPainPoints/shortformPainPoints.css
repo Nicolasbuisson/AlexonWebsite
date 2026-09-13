@@ -83,6 +83,32 @@
   gap: 1rem;
 }
 
+/* horizontal by default - turns vertical alongside the two columns at 880px */
+.shortform-painpoints-divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.shortform-painpoints-divider::before,
+.shortform-painpoints-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--clr-grey);
+}
+
+.shortform-painpoints-divider-dot {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--clr-grey);
+}
+
 .shortform-painpoints-cons-text,
 .shortform-painpoints-pros-text {
   text-align: start;
@@ -107,11 +133,23 @@
 
 @media (width >= 880px) {
   .shortform-painpoints-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
   }
 
   .shortform-painpoints-cons,
   .shortform-painpoints-pros {
     gap: 0.75rem;
+  }
+
+  .shortform-painpoints-divider {
+    flex-direction: column;
+    /* insets the line ends from the top/bottom edges of the cards */
+    padding-block: 1.5rem;
+  }
+
+  .shortform-painpoints-divider::before,
+  .shortform-painpoints-divider::after {
+    width: 2px;
+    height: auto;
   }
 }

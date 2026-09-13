@@ -114,6 +114,9 @@ export const ShortFormPainPoints = () => {
             />
           ))}
         </div>
+        <div className="shortform-painpoints-divider" aria-hidden="true">
+          <span className="shortform-painpoints-divider-dot" />
+        </div>
         <div className="shortform-painpoints-pros">
           <div className="shortform-painpoints-pros-text">
             <p>With Us</p>
