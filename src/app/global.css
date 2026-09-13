@@ -10,6 +10,10 @@
   --clr-accent: #2b45ff;
   --clr-accent-gradient-start: #1f2fcc;
   --clr-card-border: rgba(157, 157, 255, 0.05);
+  --clr-negative: #e8674a;
+  --clr-negative-surface: #fbe2db;
+  --clr-positive: #177a5e;
+  --clr-positive-surface: #d8efe3;
   --card-background: linear-gradient(140deg, #1b1b26 -41.97%, #09090d 77.06%);
 
   --fs-h1: 3rem;
@@ -25,11 +29,11 @@
   --section-padding-inline: 6rem;
 }
 
-@media (width > 880px) {
+@media (width >= 880px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.1rem;
-    --fs-h3: 1.75rem;
+    --fs-h3: 2rem;
     --fs-h4: 1.25rem;
     --fs-body: 1rem;
 
@@ -38,13 +42,13 @@
   }
 }
 
-@media (width > 1280px) {
+@media (width >= 1280px) {
   :root {
     --section-padding-inline: 8rem;
   }
 }
 
-@media (width < 580px) {
+@media (width <= 580px) {
   :root {
     --section-padding-block: 2rem;
     --section-padding-inline: 3rem;

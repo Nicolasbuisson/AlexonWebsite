@@ -1,0 +1,117 @@
+.shortform-painpoints-section {
+  padding-inline: var(--section-padding-inline);
+  padding-block: var(--section-padding-block);
+  text-align: center;
+
+  /* scroll interceptor animation - see .shortform-painpoints-visible */
+  opacity: 0;
+  transform: translateY(100px);
+  filter: blur(4px);
+  transition:
+    opacity 500ms var(--ease),
+    transform 500ms var(--ease),
+    filter 500ms var(--ease);
+}
+
+.shortform-painpoints-section.shortform-painpoints-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* staggered item reveal - the per-item transition-delay is set inline */
+.shortform-painpoints-section .painpoint-item {
+  opacity: 0;
+  transition:
+    opacity 500ms var(--ease),
+    transform 500ms var(--ease);
+}
+
+.shortform-painpoints-cons .painpoint-item {
+  transform: translateX(-48px);
+}
+
+.shortform-painpoints-pros .painpoint-item {
+  transform: translateX(48px);
+}
+
+.shortform-painpoints-section.shortform-painpoints-visible .painpoint-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shortform-painpoints-section,
+  .shortform-painpoints-section .painpoint-item {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+.shortform-painpoints-heading {
+  color: var(--clr-grey);
+  font-size: var(--fs-h4);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.shortform-painpoints-title {
+  text-wrap: balance;
+  margin-bottom: 2rem;
+}
+
+.shortform-painpoints-title span {
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+.shortform-painpoints-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.shortform-painpoints-cons,
+.shortform-painpoints-pros {
+  padding: 2rem;
+  border: 2px solid var(--clr-grey);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shortform-painpoints-cons-text,
+.shortform-painpoints-pros-text {
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.shortform-painpoints-cons-text p:first-child {
+  text-transform: uppercase;
+  color: var(--clr-grey);
+}
+
+.shortform-painpoints-pros-text p:first-child {
+  text-transform: uppercase;
+  color: var(--clr-positive);
+  filter: brightness(1.2);
+}
+
+.shortform-painpoints-cons-text p:last-child,
+.shortform-painpoints-pros-text p:last-child {
+  font-size: var(--fs-h4);
+}
+
+@media (width >= 880px) {
+  .shortform-painpoints-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shortform-painpoints-cons,
+  .shortform-painpoints-pros {
+    gap: 0.75rem;
+  }
+}

@@ -5,6 +5,7 @@ import { Package } from "../../components/package/package";
 import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
 import Image from "next/image";
 import { ShortFormHero } from "../../components/shortformHero/shortformHero";
+import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
 
 function ShortForm() {
   return (
@@ -79,7 +80,7 @@ function ShortForm() {
           </div>
         </HorizontalScroller>
       </section>
-      <section className="shortform-paintpoints-section">Pain points</section>
+      <ShortFormPainPoints />
       <section className="shortform-work-section">
         <h2>Our Work</h2>
       </section>

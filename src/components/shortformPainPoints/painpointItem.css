@@ -1,0 +1,42 @@
+.painpoint-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.painpoint-item-icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.6rem;
+  border-radius: 0.65rem;
+}
+
+.painpoint-item-icon-con {
+  color: var(--clr-negative);
+  background: var(--clr-negative-surface);
+}
+
+.painpoint-item-icon-pro {
+  color: var(--clr-positive);
+  background: var(--clr-positive-surface);
+}
+
+.painpoint-item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 0.25rem;
+}
+
+.painpoint-item-title {
+  font-weight: 500;
+  line-height: 1;
+}
+
+.painpoint-item-description {
+  color: var(--clr-light-grey);
+  font-size: 14px;
+  line-height: 1.2;
+}
