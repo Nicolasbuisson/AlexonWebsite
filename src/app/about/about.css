@@ -3,14 +3,16 @@
   color: var(--clr-light);
 
   --about-grid-template-columns: 1fr 3fr;
+  --about-grid-gap: 2rem;
 }
 
 .about-philosophy-section,
 .about-aim-section {
   padding-block: var(--section-padding-block);
-  padding-inline: 2rem;
+  padding-inline: var(--section-padding-inline);
   display: grid;
   grid-template-columns: var(--about-grid-template-columns);
+  gap: var(--about-grid-gap);
 }
 
 .about-philosophy-section h3,
@@ -28,7 +30,6 @@
   justify-content: flex-start;
   align-items: baseline;
   margin-inline: auto;
-  font-size: var(--fs-h2);
 }
 
 .about-aim-text {
@@ -45,14 +46,19 @@
   font-size: var(--fs-h3);
 }
 
-@media (width < 780px) {
+@media (width <= 780px) {
   .about-aim-text {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width < 580px) {
+@media (width <= 580px) {
   .about-container {
     --about-grid-template-columns: 1fr;
+    --about-grid-gap: 0rem;
+  }
+
+  .about-philosophy-section {
+    gap: 0.5rem;
   }
 }

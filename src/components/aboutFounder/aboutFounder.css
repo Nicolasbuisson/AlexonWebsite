@@ -27,9 +27,9 @@
 .about-founder-grid-container {
   display: grid;
   grid-template-columns: var(--about-grid-template-columns);
+  padding-inline: var(--section-padding-inline);
   position: absolute;
   top: 50%;
-  padding-inline: 2rem;
 }
 
 .about-founder-grid-container h3 {

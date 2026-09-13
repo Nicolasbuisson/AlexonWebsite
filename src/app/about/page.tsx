@@ -21,7 +21,7 @@ function AboutPage() {
             "At Alexon Media, we believe powerful stories & strategic content shouldn't come with complicated processes. Too often, brands face layers of agency bureaucracy just to produce premium content. We built Alexon Media as a non-agency—a nimble, collaborative team focused on making premium, high-production visuals as seamless and hassle-free as possible. By combining strategic thinking with cinematic storytelling, we help brands create standout content without the friction of traditional agency models."
           }
           className="about-philosophy-paragraph"
-          scrollOffset={["start 0.7", "end 0.8"]}
+          scrollOffset={["start 0.7", "end 0.6"]}
           boldStartIndex={238}
           boldEndIndex={250}
         />
