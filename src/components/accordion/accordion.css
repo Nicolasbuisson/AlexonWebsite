@@ -1,57 +1,59 @@
 .accordion {
-    --accordion-animation-duration: 400ms;
+  --accordion-animation-duration: 400ms;
 }
 
 .accordion-panel {
-  padding: 1rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--clr-grey);
 }
 
 .accordion-panel h4 {
-    position: relative;
-    cursor: pointer;
-    padding: 1rem;
-    margin-inline: 0.5rem;
-    display: grid;
-    justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding-block: 1rem;
+  display: grid;
+  line-height: 1;
 }
 
 .accordion-panel h4 > * {
-  grid-row: 1/1
+  grid-row: 1/1;
 }
 
 .accordion-content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows var(--accordion-animation-duration);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--accordion-animation-duration);
 }
 
-.accordion-content[aria-hidden='false'] {
-    grid-template-rows: 1fr;
+.accordion-content[aria-hidden="false"] {
+  grid-template-rows: 1fr;
 }
 
 .accordion-content > div {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .accordion-trigger {
+  cursor: inherit;
   background: transparent;
   border: 0;
+  padding: 0;
   font: inherit;
   color: inherit;
   text-wrap: pretty;
-  text-align: center;
+  text-align: start;
 }
 
 .accordion-x {
   align-self: center;
   justify-self: end;
-  margin-inline: 0.5rem;
+  margin-inline: 1rem;
 }
 
 .accordion-x::before,
 .accordion-x::after {
   position: absolute;
-  right: -1rem;
+  right: 0rem;
   content: "";
   display: block;
   width: 1em;
@@ -68,4 +70,3 @@
 .accordion-x[aria-expanded="true"]::after {
   transform: rotate(45deg);
 }
-

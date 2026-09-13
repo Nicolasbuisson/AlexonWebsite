@@ -6,6 +6,8 @@ import { HorizontalScroller } from "../../components/horizontalScroller/horizont
 import Image from "next/image";
 import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
+import { Accordion } from "../../components/accordion/accordion";
+import { faqs } from "../../resources/faq.json";
 
 function ShortForm() {
   return (
@@ -315,7 +317,11 @@ function ShortForm() {
         </div>
       </section> */}
       <section className="shortform-faq-section">
-        Use Accordion component
+        <div className="shortform-faq-container">
+          <p className="shortform-faq-heading">FAQ</p>
+          <h2 className="shortform-faq-title">Common Questions</h2>
+          <Accordion faqs={faqs} />
+        </div>
       </section>
     </div>
   );

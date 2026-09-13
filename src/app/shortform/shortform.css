@@ -218,3 +218,29 @@
   padding-inline: var(--section-padding-inline);
   padding-block: var(--section-padding-block);
 }
+
+.shortform-faq-section {
+  padding-inline: var(--section-padding-inline);
+  padding-block: var(--section-padding-block);
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.shortform-faq-container {
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+.shortform-faq-heading {
+  color: var(--clr-dark-grey);
+  font-size: var(--fs-h4);
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.shortform-faq-title {
+  text-align: center;
+  text-wrap: balance;
+  margin-bottom: 2rem;
+}
