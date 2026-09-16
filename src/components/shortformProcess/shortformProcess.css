@@ -1,0 +1,9 @@
+.shortform-process-container {
+}
+
+.cycle-diagram {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+}
