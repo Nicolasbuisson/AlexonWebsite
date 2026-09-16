@@ -48,12 +48,9 @@ export const Navigation = (props: NavigationProps) => {
       setBurgerClass("burger-bar clicked");
       document.getElementById("menu-container")!.style.right = "0%";
       document.getElementById("menu")!.style.opacity = "100%";
-      // disable scrolling with timeout to wait for menu animation to finish (500ms)
-      // to avoid scrollbar dissapearing causing slight layout shift: all elements go to the right
-      setTimeout(() => {
-        document.body.style.overflow = "hidden";
-        document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
-      }, 450);
+      // disable scrolling immediately, no layout shift thanks to scrollbar-gutter: stable
+      document.body.style.overflow = "hidden";
+      document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
     } else {
       setBurgerClass("burger-bar unclicked");
       document.getElementById("menu-container")!.style.right = "-100%";
@@ -105,13 +102,13 @@ export const Navigation = (props: NavigationProps) => {
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
           </li>
-          {/* <li>
+          <li>
             <FlipLink
               href="/shortform"
               label="Short-Form"
               onClick={() => window.scrollTo(0, 0)}
             ></FlipLink>
-          </li> */}
+          </li>
           <li>
             <FlipLink
               href="/productions"

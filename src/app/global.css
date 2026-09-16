@@ -18,6 +18,7 @@
 
   --fs-h1: 3rem;
   --fs-h2: 2.5rem;
+  --fs-h25: 2rem;
   --fs-h3: 1.5rem;
   --fs-h4: 1.15rem;
   --fs-body: 1rem;
@@ -33,6 +34,7 @@
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.1rem;
+    --fs-h25: 2.5rem;
     --fs-h3: 2rem;
     --fs-h4: 1.25rem;
     --fs-body: 1rem;
@@ -88,6 +90,14 @@ h3 {
 
 h4 {
   font-size: var(--fs-h4);
+}
+
+html {
+  /* reserve the scrollbar gutter permanently so locking body scroll
+  (nav menu open) doesn't remove it and shift the layout right */
+  scrollbar-gutter: stable;
+  /* the gutter shows the canvas background when no scrollbar is painted */
+  background-color: var(--clr-dark);
 }
 
 body {
