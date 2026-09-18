@@ -1,6 +1,11 @@
 .shortform-process-container {
 }
 
+.shortform-process-container h2 {
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+}
+
 .cycle-diagram {
   display: block;
   width: 600px;
