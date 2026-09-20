@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 /**
  * Five arrows chasing each other around a 600x600 ring, clockwise:
- * target -> clipboard -> camera -> laptop -> rocket -> back to target.
+ * target -> clipboard -> camera -> film -> rocket -> back to target.
  *
  * BAND. Symmetric about a constant midline at r=204: the half-width tapers from
  * 34px at the tail (68px wide) to 46px at the head base (92px wide), and BOTH
@@ -45,11 +45,27 @@ type Step = {
   tailAngle: number;
   /** Filled arrow body. */
   arrow: string;
-  /** Stroked line-art icon, authored in a 48x48 box. */
+  /**
+   * Stroked line-art icon from Lucide, authored in a 24x24 box. Lucide ships
+   * each icon as several elements -- <circle>, <rect>, <line>, multiple
+   * <path>s -- so each one here is flattened into a single d: the reveal below
+   * drives one dashoffset per icon, which needs one path to measure.
+   * Subpaths are ordered so the icon draws itself outside-in.
+   */
   icon: string;
-  /** Places the 48x48 icon box inside that arrow's head. */
+  /** Places the icon box inside that arrow's head: re-origin, scale, position. */
   iconTransform: string;
 };
+
+/**
+ * Every icon is 24x24, so they all share one recipe: centre the box on the
+ * origin, scale it to a 62.4px footprint inside the 92px head, then move it
+ * into place. Scaling multiplies the stroke too, so the group's nominal 1.5
+ * lands at 3.9 root units on screen.
+ */
+const ICON_SCALE = 2.3;
+const iconTransform = (x: number, y: number) =>
+  `translate(${x} ${y}) scale(${ICON_SCALE}) translate(-12 -12)`;
 
 /** Flow order. Also the order the animation timeline steps through. */
 const STEPS: Step[] = [
@@ -59,8 +75,9 @@ const STEPS: Step[] = [
     tailAngle: 139,
     arrow:
       "M120.38 456.14C103.37 438.16 89.09 417.38 78.29 394.75C67.49 372.12 60.19 347.64 56.82 322.47C53.46 297.3 54.03 271.44 58.62 246.13C63.21 220.82 71.81 196.08 84.1 173.12L68.56 159.62L180.09 134.96L171.2 248.84L155.27 234.99C148.24 248.33 143.07 262.79 140.03 277.83C136.99 292.87 136.09 308.47 137.43 324.02C138.78 339.57 142.37 355.07 148.13 369.86C153.9 384.65 161.84 398.75 171.7 411.53Z",
-    icon: "M24 38a14 14 0 1 1 0-28 14 14 0 1 1 0 28ZM24 32a8 8 0 1 1 0-16 8 8 0 1 1 0 16ZM24 26.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5ZM24 24 39 9M31.5 9H39v7.5",
-    iconTransform: "translate(135.62 186.11) scale(1.3) translate(-24 -24)",
+    // lucide/target -- three concentric circles, as arc pairs.
+    icon: "M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0M6 12a6 6 0 1 0 12 0 6 6 0 1 0-12 0M10 12a2 2 0 1 0 4 0 2 2 0 1 0-4 0",
+    iconTransform: iconTransform(135.62, 186.11),
   },
   {
     id: "clipboard",
@@ -68,8 +85,9 @@ const STEPS: Step[] = [
     tailAngle: 211,
     arrow:
       "M95.99 177.42C107.84 155.69 123.19 135.68 141.38 118.42C159.56 101.16 180.58 86.65 203.48 75.67C226.38 64.69 251.16 57.24 276.64 53.79C302.13 50.33 328.32 50.86 353.95 55.46L361.99 36.5L419.91 134.96L308.85 161.69L317.1 142.26C302.25 139.7 286.89 139.25 271.65 141.01C256.41 142.77 241.29 146.73 226.92 152.81C212.54 158.9 198.92 167.1 186.63 177.15C174.34 187.21 163.39 199.11 154.28 212.44Z",
-    icon: "M16 8H13a3 3 0 0 0-3 3v29a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3V11a3 3 0 0 0-3-3h-3M19 4h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H19a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2ZM14 20l2.5 2.5L21 17.5M25 20h9M14 28l2.5 2.5L21 25.5M25 28h9M14 36l2.5 2.5L21 33.5M25 36h9",
-    iconTransform: "translate(357.52 108.48) scale(1.3) translate(-24 -24)",
+    // lucide/clipboard-check -- board, then the clip <rect>, then the tick.
+    icon: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 2h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM9 14l2 2 4-4",
+    iconTransform: iconTransform(357.52, 108.48),
   },
   {
     id: "camera",
@@ -77,17 +95,20 @@ const STEPS: Step[] = [
     tailAngle: 283,
     arrow:
       "M353.54 68.1C377.87 72.65 401.64 81.07 423.67 93.03C445.71 104.99 466.01 120.5 483.53 138.89C501.04 157.27 515.78 178.53 526.94 201.7C538.11 224.87 545.7 249.94 549.25 275.74L569.76 277.54L494.02 363.04L434.27 265.68L455.3 267.52C453.15 252.6 448.83 237.86 442.45 223.91C436.07 209.96 427.63 196.8 417.4 185.01C407.17 173.22 395.16 162.8 381.8 154.22C368.44 145.64 353.73 138.9 338.24 134.36Z",
-    icon: "M11 17h6l3-4h8l3 4h6a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V20a3 3 0 0 1 3-3ZM24 31.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 1 0 0 13ZM33.5 22h.01",
-    iconTransform: "translate(499.92 295.52) scale(1.3) translate(-24 -24)",
+    // lucide/video -- body <rect> first, then the lens wedge.
+    icon: "M4 6h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zM16 13l5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5",
+    iconTransform: iconTransform(499.92, 295.52),
   },
+
   {
-    id: "laptop",
+    id: "film",
     label: "Montage",
     tailAngle: 355,
     arrow:
       "M537.09 279.26C540.28 303.8 539.62 329.01 535.06 353.66C530.49 378.32 522.01 402.41 509.94 424.76C497.87 447.1 482.2 467.68 463.62 485.46C445.03 503.24 423.53 518.2 400.09 529.55L404.72 549.61L300 504L374.13 417.1L378.88 437.67C392.4 431.01 405.09 422.34 416.38 411.96C427.68 401.58 437.58 389.49 445.64 376.12C453.69 362.75 459.9 348.1 463.93 332.75C467.96 317.39 469.82 301.32 469.35 285.18Z",
-    icon: "M10 34V16a3 3 0 0 1 3-3h22a3 3 0 0 1 3 3v18M7 34h34l2.5 4.5H4.5ZM24 28a5 5 0 1 1 0-10 5 5 0 1 1 0 10ZM24 16v-2M28.95 18.05l1.41-1.41M31 23h2M28.95 27.95l1.41 1.41M24 30v2M19.05 27.95l-1.41 1.41M17 23h-2M19.05 18.05l-1.41-1.41",
-    iconTransform: "translate(366.04 488.75) scale(1.3) translate(-24 -24)",
+    // lucide/film -- frame <rect>, then the two rails, then the sprockets.
+    icon: "M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM7 3v18M17 3v18M3 12h18M3 7.5h4M3 16.5h4M17 7.5h4M17 16.5h4",
+    iconTransform: iconTransform(366.04, 488.75),
   },
   {
     id: "rocket",
@@ -95,14 +116,15 @@ const STEPS: Step[] = [
     tailAngle: 67,
     arrow:
       "M392.99 519.08C370.63 529.7 346.46 536.86 321.6 540.14C296.74 543.41 271.21 542.8 246.23 538.22C221.25 533.64 196.83 525.1 174.18 512.92C151.53 500.74 130.65 484.91 112.61 466.13L94.97 476.73L105.98 363.04L211.54 406.69L193.45 417.56C203.96 428.36 216.12 437.75 229.48 445.29C242.84 452.82 257.41 458.5 272.61 462.03C287.82 465.56 303.66 466.93 319.51 466.02C335.36 465.11 351.22 461.91 366.42 456.49Z",
-    icon: "M24 5c5 5 7.5 11.5 7.5 19v8h-15v-8c0-7.5 2.5-14 7.5-19ZM24 22a3.5 3.5 0 1 1 0-7 3.5 3.5 0 1 1 0 7ZM16.5 25 11 30.5V38l5.5-5.5M31.5 25 37 30.5V38l-5.5-5.5M20 33c.5 4.5 2 7 4 9 2-2 3.5-4.5 4-9",
-    iconTransform: "translate(140.89 421.14) scale(1.3) translate(-24 -24)",
+    // lucide/rocket -- body first, then the two fins, then the exhaust.
+    icon: "M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09",
+    iconTransform: iconTransform(140.89, 421.14),
   },
 ];
 
 /**
  * Every arrow must paint above the one it laps onto, which is a cycle: target
- * over clipboard over camera over laptop over rocket -- and rocket over target.
+ * over clipboard over camera over film over rocket -- and rocket over target.
  * No flat paint order satisfies all five, so we paint STEPS in reverse (rocket
  * first, target last) and then re-stamp rocket's head on top through a wedge
  * clip to close the loop. The wedge only spans rocket's own arrowhead, where
@@ -141,16 +163,21 @@ const polar = (degrees: number, radius: number) => {
 /** Midline arc spanning one arrow, from just behind its tail to past its tip. */
 const revealArc = (tailAngle: number) => {
   const [x0, y0] = polar(tailAngle - REVEAL_PAD, MIDLINE_RADIUS);
-  const [x1, y1] = polar(
-    tailAngle + ARROW_SWEEP + REVEAL_PAD,
-    MIDLINE_RADIUS,
-  );
+  const [x1, y1] = polar(tailAngle + ARROW_SWEEP + REVEAL_PAD, MIDLINE_RADIUS);
   // Always under 180deg, always clockwise: large-arc 0, sweep 1.
   return `M${x0.toFixed(2)} ${y0.toFixed(2)} A${MIDLINE_RADIUS} ${MIDLINE_RADIUS} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
 };
 
 /** Length of the path, used to park a dashoffset at "not drawn yet". */
 const pathLength = (_: number, el: SVGPathElement) => el.getTotalLength();
+
+/**
+ * Where each step's icon starts drawing, relative to the end of its own arrow
+ * reveal: the barbs of the head are in view by ~62% of the sweep, so starting
+ * the icon 0.3 before the reveal lands puts it inside a head that already
+ * exists.
+ */
+const ICON_LEAD = 0.3;
 
 /**
  * Pixels of scroll the whole five-step cycle is spread over. Tied to the pin
@@ -178,6 +205,19 @@ export const ShortFormProcess = () => {
         strokeDashoffset: pathLength,
       });
 
+      /**
+       * ...except that a parked dashoffset does not reliably hide a path made
+       * of several subpaths. The dash pattern restarts at every subpath, and
+       * at each restart the renderer paints a degenerate round cap -- a dot --
+       * even though the whole subpath sits inside a gap. That is one stray dot
+       * per subpath after the first, which is exactly what showed up around
+       * the rocket (two fins and the exhaust) before its arrowhead arrived.
+       * Lengthening the dash period does not help, because the dots are not
+       * leftover path: they are caps on nothing. So the icons are also held
+       * out of the render tree until their own tween starts.
+       */
+      gsap.set(icons, { visibility: "hidden" });
+
       const cycleTimeline = gsap.timeline({
         defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
         scrollTrigger: {
@@ -200,11 +240,22 @@ export const ShortFormProcess = () => {
         cycleTimeline.to(reveals[i], { strokeDashoffset: 0, duration: 1 });
         // ...and the icon draws itself over the last stretch, which is exactly
         // when the head it sits in comes into view (the barbs start at ~62% of
-        // the sweep, the tip lands at 100%).
+        // the sweep, the tip lands at 100%). An absolute position rather than
+        // "-=0.3", so the unhide below can be pinned to the same instant.
+        const iconStart = cycleTimeline.duration() - ICON_LEAD;
+        // Scrub runs this backwards too, and GSAP reverts a .set() on reverse,
+        // so the icon hides itself again when you scroll back up.
+        // immediateRender is on by default for zero-duration tweens, which
+        // would unhide every icon the moment the timeline is built.
+        cycleTimeline.set(
+          icons[i],
+          { visibility: "visible", immediateRender: false },
+          iconStart,
+        );
         cycleTimeline.to(
           icons[i],
           { strokeDashoffset: 0, duration: 0.5 },
-          "-=0.3",
+          iconStart,
         );
       });
     }, containerRef);
@@ -278,10 +329,12 @@ export const ShortFormProcess = () => {
           />
         </g>
 
+        {/* Lucide's own rendering defaults, at the width that survives
+            ICON_SCALE -- see the transform recipe above. */}
         <g
           fill="none"
           stroke="#000"
-          strokeWidth={3}
+          strokeWidth={1.5}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
