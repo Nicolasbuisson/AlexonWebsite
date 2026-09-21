@@ -237,22 +237,41 @@ const ARROW_DRAW = 1;
 /* --- Card timing -------------------------------------------------------- */
 
 /**
- * The cards are stacked in one cell, so exactly one is legible at a time: each
- * slides up through that cell, growing in as it arrives and shrinking back out
- * as it leaves, and the next one is already on its way in before the last has
- * finished going. Distance is in percent of a card's own height, so it scales
- * with however tall the copy wraps.
+ * The cards ride a stack of slots numbered by their offset from the step being
+ * drawn: 0 is the centre, -1 is the one just finished sitting above it, +1 is
+ * the one coming next below it, and anything at |2| is parked off the stack
+ * with nothing showing. Each step shifts the whole stack up by one slot, so a
+ * card walks +2 -> +1 -> 0 -> -1 -> -2 across the scroll.
  */
-const CARD_TRAVEL = 40;
-/** Scale a card sits at before it has arrived and after it has left. */
-const CARD_RESTING_SCALE = 0.75;
-/** Timeline units a card spends arriving, and again leaving. */
-const CARD_FADE = 0.45;
+const CARD_SLOT_LIMIT = 2;
+/**
+ * Slot pitch, in percent of a card's own height. Every card is stretched to
+ * the height of the tallest one by the grid, so one percentage lands the same
+ * distance for all six. At 110 the 0.7-scaled neighbours clear the centre
+ * card by about a quarter of its height.
+ */
+const CARD_SLOT_OFFSET = 110;
+/** Scale and opacity of the neighbours, either side of the centre slot. */
+const CARD_RESTING_SCALE = 0.7;
+const CARD_NEIGHBOUR_OPACITY = 0.5;
+/** Timeline units the stack takes to shift up by one slot. */
+const CARD_SLIDE = 0.6;
 /**
  * Timeline units a step with no arrow of its own owns -- enough to arrive and
  * be read. Only the trailing "Learn & Repeat" card uses this today.
  */
 const CARD_ONLY_SPAN = 1;
+
+/** Slot a card sits in once the stack has run out of room for it. */
+const cardSlot = (offset: number) =>
+  Math.max(-CARD_SLOT_LIMIT, Math.min(CARD_SLOT_LIMIT, offset));
+
+/** Where a card sits, and how it looks, in a given slot. */
+const cardSlotState = (slot: number) => ({
+  yPercent: slot * CARD_SLOT_OFFSET,
+  scale: slot === 0 ? 1 : CARD_RESTING_SCALE,
+  opacity: slot === 0 ? 1 : Math.abs(slot) === 1 ? CARD_NEIGHBOUR_OPACITY : 0,
+});
 
 /**
  * Pixels of scroll the whole five-step cycle is spread over. Tied to the pin
@@ -285,12 +304,11 @@ export const ShortFormProcess = () => {
         strokeDashoffset: pathLength,
       });
 
-      // Same for the cards: every one of them is parked below its cell, small
-      // and invisible, until its own step comes round.
-      gsap.set(cards, {
-        yPercent: CARD_TRAVEL,
-        opacity: 0,
-        scale: CARD_RESTING_SCALE,
+      // The stack opens one slot lower than the first step, so the first card
+      // rises into the centre as the first arrow draws rather than starting
+      // there. That is the layout for a notional step -1.
+      cards.forEach((card, i) => {
+        gsap.set(card, cardSlotState(cardSlot(i + 1)));
       });
 
       /**
@@ -324,56 +342,55 @@ export const ShortFormProcess = () => {
       });
 
       /**
-       * A card rises into its cell over CARD_FADE, growing to full size. The
-       * from-values are already on the element from the set above, but they
-       * still have to be stated so scrubbing backwards puts them back --
-       * immediateRender off, or every card would snap to its start state the
-       * moment the timeline is built.
+       * Shifts the whole stack up by one slot, so step `active` lands in the
+       * centre: the card above it dims and shrinks on its way out, the one
+       * below takes the centre, and a fresh one appears at the bottom.
+       *
+       * Both ends of every move are stated explicitly. A plain .to() would
+       * record its start value the first time it renders, and a scrub can jump
+       * the playhead across several steps at once, which leaves those tweens
+       * rendering out of order and reading a start value from the wrong slot.
+       * immediateRender is off for the same reason it is off elsewhere here:
+       * otherwise each fromTo would stamp its from-state at build time.
        */
-      const enterCard = (card: Element, at: number) =>
-        cycleTimeline.fromTo(
-          card,
-          { yPercent: CARD_TRAVEL, opacity: 0, scale: CARD_RESTING_SCALE },
-          {
-            yPercent: 0,
-            opacity: 1,
-            scale: 1,
-            duration: CARD_FADE,
-            immediateRender: false,
-          },
-          at,
-        );
+      const showStep = (active: number, at: number) => {
+        cards.forEach((card, i) => {
+          const from = cardSlot(i - active + 1); // its slot on the step before
+          const to = cardSlot(i - active);
+          // Already parked off the stack and staying there -- nothing moves.
+          if (from === to) return;
 
-      /** ...and keeps going the same way out the top, shrinking as it goes. */
-      const exitCard = (card: Element, at: number) =>
-        cycleTimeline.to(
-          card,
-          {
-            yPercent: -CARD_TRAVEL,
-            opacity: 0,
-            scale: CARD_RESTING_SCALE,
-            duration: CARD_FADE,
-          },
-          at,
-        );
+          cycleTimeline.fromTo(
+            card,
+            cardSlotState(from),
+            {
+              ...cardSlotState(to),
+              duration: CARD_SLIDE,
+              immediateRender: false,
+            },
+            at,
+          );
+        });
+      };
 
       /**
-       * Every tween is positioned absolutely off this rather than appended,
-       * because a card's exit outlives the step that owns it -- it overlaps
-       * the next card's arrival -- and appending would let that overhang push
-       * the following arrow down the timeline.
+       * Where the step being built begins. Every tween is positioned
+       * absolutely off this rather than appended, because the card slide and
+       * the arrow it belongs to start together and run for different lengths
+       * -- appending would stack them end to end instead.
        */
       let stepStart = 0;
       // Indexes reveals/icons, which only exist for the steps in the diagram.
       let diagramIndex = 0;
 
       STEPS.forEach((step, i) => {
-        const card = cards[i];
+        // The stack shifts as the step begins, so the card being described is
+        // centred for as long as its arrow is being drawn.
+        showStep(i, stepStart);
 
         if (step.isNotInDiagram) {
           // No arrow to keep pace with, so the card is the whole beat. Nothing
-          // follows it, so it arrives and stays for the rest of the scroll.
-          enterCard(card, stepStart);
+          // follows it, so it stays centred for the rest of the scroll.
           stepStart += CARD_ONLY_SPAN;
           return;
         }
@@ -405,15 +422,15 @@ export const ShortFormProcess = () => {
           iconStart,
         );
 
-        // The card arrives with the tail of the arrow and holds while the head
-        // and its icon land, then leaves once the arrow is complete -- so it
-        // is still on screen for the whole of the stage it describes.
-        enterCard(card, stepStart);
-        exitCard(card, stepStart + ARROW_DRAW);
-
         // The next step starts where this one's icon finishes drawing.
         stepStart = iconStart + ICON_DRAW;
       });
+
+      // A timeline is only as long as its children, and the last card slides
+      // into place well before the beat it owns is up. This empty tween claims
+      // the rest of that beat, so the final card holds still for a moment
+      // instead of the pin releasing the instant it lands.
+      cycleTimeline.to({}, { duration: 0 }, stepStart);
     }, containerRef);
 
     return () => ctx.revert();
