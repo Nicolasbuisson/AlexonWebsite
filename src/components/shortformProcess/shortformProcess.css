@@ -19,6 +19,15 @@
   height: auto;
 }
 
+/* An SVG <text>, so it paints with fill rather than color, and its font-size
+   is in user units -- 600 of them across the diagram -- which is what keeps it
+   in proportion when the svg is scaled down by max-width. */
+.cycle-diagram-text {
+  fill: var(--clr-accent);
+  font-size: 48px;
+  font-weight: 500;
+}
+
 /* One cell, every card in it: the scroll timeline offsets them from that cell
    to build the stack -- centre card, dimmed neighbour above and below, the
    rest parked out of sight -- so their resting position has to be the same

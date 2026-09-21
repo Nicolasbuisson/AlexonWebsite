@@ -8,6 +8,7 @@ import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
 import { Accordion } from "../../components/accordion/accordion";
 import { faqs } from "../../resources/faq.json";
+import { ShortFormProcess } from "../../components/shortformProcess/shortformProcess";
 
 function ShortForm() {
   return (
@@ -189,7 +190,9 @@ function ShortForm() {
           />
         </div>
       </section>
-      <section className="shortform-process-section">Process SVG anim</section>
+      <section className="shortform-process-section">
+        <ShortFormProcess />
+      </section>
       <section className="shortform-packages-section" id="shortform-packages">
         <h3 className="shortform-packages-title">
           Packages optimized for success

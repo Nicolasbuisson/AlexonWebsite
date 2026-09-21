@@ -288,6 +288,7 @@ export const ShortFormProcess = () => {
   const iconRefs = useRef<Array<SVGPathElement | null>>([]);
   // Every step gets a card, drawn or not, so this one is indexed by STEPS.
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const centreLabelRef = useRef<SVGTextElement>(null);
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
@@ -309,6 +310,15 @@ export const ShortFormProcess = () => {
       // there. That is the layout for a notional step -1.
       cards.forEach((card, i) => {
         gsap.set(card, cardSlotState(cardSlot(i + 1)));
+      });
+
+      // The ring's centre label is nothing until the cycle closes. Scaling an
+      // SVG element means the transform attribute, so state the origin rather
+      // than relying on the bounding box GSAP would work one out from.
+      gsap.set(centreLabelRef.current, {
+        opacity: 0,
+        scale: 0,
+        transformOrigin: "50% 50%",
       });
 
       /**
@@ -389,6 +399,21 @@ export const ShortFormProcess = () => {
         showStep(i, stepStart);
 
         if (step.isNotInDiagram) {
+          // This step is the ring itself rather than any one arrow, so what it
+          // draws is the label in the middle -- growing in on the same beat as
+          // its card takes the centre slot.
+          cycleTimeline.fromTo(
+            centreLabelRef.current,
+            { opacity: 0, scale: 0 },
+            {
+              opacity: 1,
+              scale: 1,
+              duration: CARD_SLIDE,
+              immediateRender: false,
+            },
+            stepStart,
+          );
+
           // No arrow to keep pace with, so the card is the whole beat. Nothing
           // follows it, so it stays centred for the rest of the scroll.
           stepStart += CARD_ONLY_SPAN;
@@ -435,6 +460,9 @@ export const ShortFormProcess = () => {
 
     return () => ctx.revert();
   }, []);
+
+  // text in the middle can be absolutely positioned if we put both it and the svg in a relative parent container
+  // whose intrinsic size will just be the svg
 
   return (
     <div className="shortform-process-container" ref={containerRef}>
@@ -524,6 +552,19 @@ export const ShortFormProcess = () => {
               </g>
             ))}
           </g>
+          {/* Placed by its own x/y rather than by CSS: SVG content has no box
+              layout, so position/top/left do nothing in here. In exchange the
+              label lives in user units and scales with the ring. */}
+          <text
+            ref={centreLabelRef}
+            className="cycle-diagram-text"
+            x={CENTER}
+            y={CENTER}
+            textAnchor="middle"
+            dominantBaseline="central"
+          >
+            Repeat
+          </text>
         </svg>
         <div className="shortform-process-cards-container">
           {STEPS.map((step, i) => (
