@@ -6,9 +6,50 @@
   margin-bottom: 0.5rem;
 }
 
+.shortform-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
 .cycle-diagram {
   display: block;
   width: 600px;
   max-width: 100%;
   height: auto;
+}
+
+/* One cell, every card in it: the scroll timeline slides them through it one
+   at a time, so they have to share the same spot rather than stack down the
+   column. The row is as tall as the longest card and sits centred against the
+   diagram beside it. */
+.shortform-process-cards-container {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.shortform-process-card {
+  grid-area: 1 / 1;
+  width: 100%;
+  border: 2px solid var(--clr-light);
+  padding: 1rem;
+  background: var(--card-background);
+  border-radius: 12px;
+}
+
+.shortform-process-card-title {
+  font-size: var(--fs-h4);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.shortform-process-card-title span {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--clr-accent);
+}
+
+.shortform-process-card-description {
+  line-height: 1.1;
 }

@@ -33,10 +33,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  * independently -- see the scroll timeline below.
  */
 
-type Step = {
+/**
+ * A step that owns one arrow on the ring. The ring only has room for the five
+ * arrows described above, so the geometry lives here rather than on Step.
+ */
+type DiagramStep = {
   id: string;
   /** Human-readable name of the stage, used for the accessible description. */
   label: string;
+  /** What the stage involves, in at most two sentences. */
+  description: string;
+  /** Present and false on every step that is drawn. See Step. */
+  isNotInDiagram?: false;
   /**
    * Polar angle of the blunt tail edge, in SVG degrees about (300,300) -- so
    * 0 points right and angles grow clockwise on screen. The arrow runs from
@@ -58,6 +66,20 @@ type Step = {
 };
 
 /**
+ * A step of the process that is not drawn on the ring, so it carries no
+ * geometry at all -- the flag is what tells the two apart, and narrows the
+ * union everywhere the diagram is built.
+ */
+type NonDiagramStep = {
+  id: string;
+  label: string;
+  description: string;
+  isNotInDiagram: true;
+};
+
+type Step = DiagramStep | NonDiagramStep;
+
+/**
  * Every icon is 24x24, so they all share one recipe: centre the box on the
  * origin, scale it to a 62.4px footprint inside the 92px head, then move it
  * into place. Scaling multiplies the stroke too, so the group's nominal 1.5
@@ -71,7 +93,9 @@ const iconTransform = (x: number, y: number) =>
 const STEPS: Step[] = [
   {
     id: "target",
-    label: "Objectifs",
+    label: "Strategy",
+    description:
+      "We define who you are talking to and what the content has to achieve. Every decision after this is measured against those goals.",
     tailAngle: 139,
     arrow:
       "M120.38 456.14C103.37 438.16 89.09 417.38 78.29 394.75C67.49 372.12 60.19 347.64 56.82 322.47C53.46 297.3 54.03 271.44 58.62 246.13C63.21 220.82 71.81 196.08 84.1 173.12L68.56 159.62L180.09 134.96L171.2 248.84L155.27 234.99C148.24 248.33 143.07 262.79 140.03 277.83C136.99 292.87 136.09 308.47 137.43 324.02C138.78 339.57 142.37 355.07 148.13 369.86C153.9 384.65 161.84 398.75 171.7 411.53Z",
@@ -81,7 +105,9 @@ const STEPS: Step[] = [
   },
   {
     id: "clipboard",
-    label: "Planification",
+    label: "Plan",
+    description:
+      "The strategy turns into a concrete calendar of hooks, formats and posting cadence. You sign off on it before anything is shot.",
     tailAngle: 211,
     arrow:
       "M95.99 177.42C107.84 155.69 123.19 135.68 141.38 118.42C159.56 101.16 180.58 86.65 203.48 75.67C226.38 64.69 251.16 57.24 276.64 53.79C302.13 50.33 328.32 50.86 353.95 55.46L361.99 36.5L419.91 134.96L308.85 161.69L317.1 142.26C302.25 139.7 286.89 139.25 271.65 141.01C256.41 142.77 241.29 146.73 226.92 152.81C212.54 158.9 198.92 167.1 186.63 177.15C174.34 187.21 163.39 199.11 154.28 212.44Z",
@@ -91,7 +117,9 @@ const STEPS: Step[] = [
   },
   {
     id: "camera",
-    label: "Tournage",
+    label: "Film",
+    description:
+      "We capture weeks of content in a single focused shoot. Batching keeps production light and your calendar clear.",
     tailAngle: 283,
     arrow:
       "M353.54 68.1C377.87 72.65 401.64 81.07 423.67 93.03C445.71 104.99 466.01 120.5 483.53 138.89C501.04 157.27 515.78 178.53 526.94 201.7C538.11 224.87 545.7 249.94 549.25 275.74L569.76 277.54L494.02 363.04L434.27 265.68L455.3 267.52C453.15 252.6 448.83 237.86 442.45 223.91C436.07 209.96 427.63 196.8 417.4 185.01C407.17 173.22 395.16 162.8 381.8 154.22C368.44 145.64 353.73 138.9 338.24 134.36Z",
@@ -102,7 +130,9 @@ const STEPS: Step[] = [
 
   {
     id: "film",
-    label: "Montage",
+    label: "Produce",
+    description:
+      "Every take is cut, captioned and scored into a piece that holds attention from the first frame. You review each edit before it ships.",
     tailAngle: 355,
     arrow:
       "M537.09 279.26C540.28 303.8 539.62 329.01 535.06 353.66C530.49 378.32 522.01 402.41 509.94 424.76C497.87 447.1 482.2 467.68 463.62 485.46C445.03 503.24 423.53 518.2 400.09 529.55L404.72 549.61L300 504L374.13 417.1L378.88 437.67C392.4 431.01 405.09 422.34 416.38 411.96C427.68 401.58 437.58 389.49 445.64 376.12C453.69 362.75 459.9 348.1 463.93 332.75C467.96 317.39 469.82 301.32 469.35 285.18Z",
@@ -112,7 +142,9 @@ const STEPS: Step[] = [
   },
   {
     id: "rocket",
-    label: "Publication",
+    label: "Publish",
+    description:
+      "Each piece goes out on the platforms that suit it, at the times your audience is watching. Nothing sits waiting in a folder.",
     tailAngle: 67,
     arrow:
       "M392.99 519.08C370.63 529.7 346.46 536.86 321.6 540.14C296.74 543.41 271.21 542.8 246.23 538.22C221.25 533.64 196.83 525.1 174.18 512.92C151.53 500.74 130.65 484.91 112.61 466.13L94.97 476.73L105.98 363.04L211.54 406.69L193.45 417.56C203.96 428.36 216.12 437.75 229.48 445.29C242.84 452.82 257.41 458.5 272.61 462.03C287.82 465.56 303.66 466.93 319.51 466.02C335.36 465.11 351.22 461.91 366.42 456.49Z",
@@ -120,17 +152,36 @@ const STEPS: Step[] = [
     icon: "M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09",
     iconTransform: iconTransform(140.89, 421.14),
   },
+  {
+    id: "repeat",
+    label: "Learn & Repeat",
+    description:
+      "We read the numbers on every post and feed what worked into the next cycle. The system gets sharper with each round.",
+    isNotInDiagram: true,
+  },
 ];
+
+/**
+ * The steps the ring actually draws, in flow order. Everything below indexes
+ * against this list rather than STEPS, so a step flagged isNotInDiagram never
+ * claims an arrow, a mask or a slot in the timeline.
+ */
+const DIAGRAM_STEPS = STEPS.filter(
+  (step): step is DiagramStep => !step.isNotInDiagram,
+);
 
 /**
  * Every arrow must paint above the one it laps onto, which is a cycle: target
  * over clipboard over camera over film over rocket -- and rocket over target.
- * No flat paint order satisfies all five, so we paint STEPS in reverse (rocket
- * first, target last) and then re-stamp rocket's head on top through a wedge
- * clip to close the loop. The wedge only spans rocket's own arrowhead, where
- * the only other geometry is target's tail.
+ * No flat paint order satisfies all five, so we paint DIAGRAM_STEPS in reverse
+ * (rocket first, target last) and then re-stamp rocket's head on top through a
+ * wedge clip to close the loop. The wedge only spans rocket's own arrowhead,
+ * where the only other geometry is target's tail.
  */
-const PAINT_ORDER = STEPS.map((step, index) => ({ step, index })).reverse();
+const PAINT_ORDER = DIAGRAM_STEPS.map((step, index) => ({
+  step,
+  index,
+})).reverse();
 
 const CYCLE_CLOSER_ID = "rocket";
 const CYCLE_CLOSER_CLIP =
@@ -178,6 +229,30 @@ const pathLength = (_: number, el: SVGPathElement) => el.getTotalLength();
  * exists.
  */
 const ICON_LEAD = 0.3;
+/** Timeline units an icon takes to draw itself. */
+const ICON_DRAW = 0.5;
+/** Timeline units an arrow takes to wipe from its tail to its tip. */
+const ARROW_DRAW = 1;
+
+/* --- Card timing -------------------------------------------------------- */
+
+/**
+ * The cards are stacked in one cell, so exactly one is legible at a time: each
+ * slides up through that cell, growing in as it arrives and shrinking back out
+ * as it leaves, and the next one is already on its way in before the last has
+ * finished going. Distance is in percent of a card's own height, so it scales
+ * with however tall the copy wraps.
+ */
+const CARD_TRAVEL = 40;
+/** Scale a card sits at before it has arrived and after it has left. */
+const CARD_RESTING_SCALE = 0.75;
+/** Timeline units a card spends arriving, and again leaving. */
+const CARD_FADE = 0.45;
+/**
+ * Timeline units a step with no arrow of its own owns -- enough to arrive and
+ * be read. Only the trailing "Learn & Repeat" card uses this today.
+ */
+const CARD_ONLY_SPAN = 1;
 
 /**
  * Pixels of scroll the whole five-step cycle is spread over. Tied to the pin
@@ -188,21 +263,34 @@ const SCROLL_DISTANCE = 2000;
 
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  // All three are indexed the same as STEPS.
+  // All three are indexed the same as DIAGRAM_STEPS.
   const arrowRefs = useRef<Array<SVGPathElement | null>>([]);
   const revealRefs = useRef<Array<SVGPathElement | null>>([]);
   const iconRefs = useRef<Array<SVGPathElement | null>>([]);
+  // Every step gets a card, drawn or not, so this one is indexed by STEPS.
+  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const reveals = revealRefs.current.filter(Boolean);
       const icons = iconRefs.current.filter(Boolean);
+      const cards = cardRefs.current.filter(
+        (el): el is HTMLDivElement => el !== null,
+      );
 
       // Nothing is drawn until the scrub says so.
       gsap.set([...reveals, ...icons], {
         strokeDasharray: pathLength,
         strokeDashoffset: pathLength,
+      });
+
+      // Same for the cards: every one of them is parked below its cell, small
+      // and invisible, until its own step comes round.
+      gsap.set(cards, {
+        yPercent: CARD_TRAVEL,
+        opacity: 0,
+        scale: CARD_RESTING_SCALE,
       });
 
       /**
@@ -235,28 +323,96 @@ export const ShortFormProcess = () => {
         },
       });
 
-      STEPS.forEach((_, i) => {
+      /**
+       * A card rises into its cell over CARD_FADE, growing to full size. The
+       * from-values are already on the element from the set above, but they
+       * still have to be stated so scrubbing backwards puts them back --
+       * immediateRender off, or every card would snap to its start state the
+       * moment the timeline is built.
+       */
+      const enterCard = (card: Element, at: number) =>
+        cycleTimeline.fromTo(
+          card,
+          { yPercent: CARD_TRAVEL, opacity: 0, scale: CARD_RESTING_SCALE },
+          {
+            yPercent: 0,
+            opacity: 1,
+            scale: 1,
+            duration: CARD_FADE,
+            immediateRender: false,
+          },
+          at,
+        );
+
+      /** ...and keeps going the same way out the top, shrinking as it goes. */
+      const exitCard = (card: Element, at: number) =>
+        cycleTimeline.to(
+          card,
+          {
+            yPercent: -CARD_TRAVEL,
+            opacity: 0,
+            scale: CARD_RESTING_SCALE,
+            duration: CARD_FADE,
+          },
+          at,
+        );
+
+      /**
+       * Every tween is positioned absolutely off this rather than appended,
+       * because a card's exit outlives the step that owns it -- it overlaps
+       * the next card's arrival -- and appending would let that overhang push
+       * the following arrow down the timeline.
+       */
+      let stepStart = 0;
+      // Indexes reveals/icons, which only exist for the steps in the diagram.
+      let diagramIndex = 0;
+
+      STEPS.forEach((step, i) => {
+        const card = cards[i];
+
+        if (step.isNotInDiagram) {
+          // No arrow to keep pace with, so the card is the whole beat. Nothing
+          // follows it, so it arrives and stays for the rest of the scroll.
+          enterCard(card, stepStart);
+          stepStart += CARD_ONLY_SPAN;
+          return;
+        }
+
+        const d = diagramIndex++;
+
         // The arrow wipes from its tail to its tip...
-        cycleTimeline.to(reveals[i], { strokeDashoffset: 0, duration: 1 });
+        cycleTimeline.to(
+          reveals[d],
+          { strokeDashoffset: 0, duration: ARROW_DRAW },
+          stepStart,
+        );
         // ...and the icon draws itself over the last stretch, which is exactly
         // when the head it sits in comes into view (the barbs start at ~62% of
-        // the sweep, the tip lands at 100%). An absolute position rather than
-        // "-=0.3", so the unhide below can be pinned to the same instant.
-        const iconStart = cycleTimeline.duration() - ICON_LEAD;
+        // the sweep, the tip lands at 100%).
+        const iconStart = stepStart + ARROW_DRAW - ICON_LEAD;
         // Scrub runs this backwards too, and GSAP reverts a .set() on reverse,
         // so the icon hides itself again when you scroll back up.
         // immediateRender is on by default for zero-duration tweens, which
         // would unhide every icon the moment the timeline is built.
         cycleTimeline.set(
-          icons[i],
+          icons[d],
           { visibility: "visible", immediateRender: false },
           iconStart,
         );
         cycleTimeline.to(
-          icons[i],
-          { strokeDashoffset: 0, duration: 0.5 },
+          icons[d],
+          { strokeDashoffset: 0, duration: ICON_DRAW },
           iconStart,
         );
+
+        // The card arrives with the tail of the arrow and holds while the head
+        // and its icon land, then leaves once the arrow is complete -- so it
+        // is still on screen for the whole of the stage it describes.
+        enterCard(card, stepStart);
+        exitCard(card, stepStart + ARROW_DRAW);
+
+        // The next step starts where this one's icon finishes drawing.
+        stepStart = iconStart + ICON_DRAW;
       });
     }, containerRef);
 
@@ -266,92 +422,111 @@ export const ShortFormProcess = () => {
   return (
     <div className="shortform-process-container" ref={containerRef}>
       <h2>A proven content system delivers consistent results</h2>
-
-      <svg
-        className="cycle-diagram"
-        width={600}
-        height={600}
-        viewBox="0 0 600 600"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-label={`Cycle de création : ${STEPS.map((s) => s.label).join(", ")}`}
-      >
-        <defs>
-          <clipPath id="cycle-head-clip">
-            <path d={CYCLE_CLOSER_CLIP} />
-          </clipPath>
-
-          {STEPS.map((step, i) => (
-            <mask
-              key={`reveal-${step.id}`}
-              id={`cycle-reveal-${step.id}`}
-              maskUnits="userSpaceOnUse"
-              x={0}
-              y={0}
-              width={600}
-              height={600}
-            >
-              <path
-                ref={(el) => {
-                  revealRefs.current[i] = el;
-                }}
-                className="cycle-diagram__reveal"
-                d={revealArc(step.tailAngle)}
-                fill="none"
-                stroke="#fff"
-                strokeWidth={REVEAL_BAND}
-              />
-            </mask>
-          ))}
-        </defs>
-
-        {/* White body, 2px black outline. Where a head laps a tail, the head's
-            outline stays visible on top so the two arrows never merge. */}
-        <g fill="#fff" stroke="#000" strokeWidth={2}>
-          {PAINT_ORDER.map(({ step, index }) => (
-            <path
-              key={`arrow-${step.id}`}
-              ref={(el) => {
-                arrowRefs.current[index] = el;
-              }}
-              id={`cycle-arrow-${step.id}`}
-              className="cycle-diagram__arrow"
-              d={step.arrow}
-              mask={`url(#cycle-reveal-${step.id})`}
-            />
-          ))}
-
-          {/* Clones the mask along with the geometry, so the re-stamp reveals
-              in step with the arrow it duplicates. */}
-          <use
-            href={`#cycle-arrow-${CYCLE_CLOSER_ID}`}
-            clipPath="url(#cycle-head-clip)"
-          />
-        </g>
-
-        {/* Lucide's own rendering defaults, at the width that survives
-            ICON_SCALE -- see the transform recipe above. */}
-        <g
-          fill="none"
-          stroke="#000"
-          strokeWidth={1.5}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      <div className="shortform-process-grid">
+        <svg
+          className="cycle-diagram"
+          width={600}
+          height={600}
+          viewBox="0 0 600 600"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label={`process of creation: ${DIAGRAM_STEPS.map((s) => s.label).join(", ")}`}
         >
-          {STEPS.map((step, i) => (
-            <g key={`icon-${step.id}`} transform={step.iconTransform}>
+          <defs>
+            <clipPath id="cycle-head-clip">
+              <path d={CYCLE_CLOSER_CLIP} />
+            </clipPath>
+
+            {DIAGRAM_STEPS.map((step, i) => (
+              <mask
+                key={`reveal-${step.id}`}
+                id={`cycle-reveal-${step.id}`}
+                maskUnits="userSpaceOnUse"
+                x={0}
+                y={0}
+                width={600}
+                height={600}
+              >
+                <path
+                  ref={(el) => {
+                    revealRefs.current[i] = el;
+                  }}
+                  className="cycle-diagram__reveal"
+                  d={revealArc(step.tailAngle)}
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth={REVEAL_BAND}
+                />
+              </mask>
+            ))}
+          </defs>
+
+          {/* White body, 2px black outline. Where a head laps a tail, the head's
+            outline stays visible on top so the two arrows never merge. */}
+          <g fill="#fff" stroke="#000" strokeWidth={2}>
+            {PAINT_ORDER.map(({ step, index }) => (
               <path
+                key={`arrow-${step.id}`}
                 ref={(el) => {
-                  iconRefs.current[i] = el;
+                  arrowRefs.current[index] = el;
                 }}
-                id={`cycle-icon-${step.id}`}
-                className="cycle-diagram__icon"
-                d={step.icon}
+                id={`cycle-arrow-${step.id}`}
+                className="cycle-diagram__arrow"
+                d={step.arrow}
+                mask={`url(#cycle-reveal-${step.id})`}
               />
-            </g>
+            ))}
+
+            {/* Clones the mask along with the geometry, so the re-stamp reveals
+              in step with the arrow it duplicates. */}
+            <use
+              href={`#cycle-arrow-${CYCLE_CLOSER_ID}`}
+              clipPath="url(#cycle-head-clip)"
+            />
+          </g>
+
+          {/* Lucide's own rendering defaults, at the width that survives
+            ICON_SCALE -- see the transform recipe above. */}
+          <g
+            fill="none"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {DIAGRAM_STEPS.map((step, i) => (
+              <g key={`icon-${step.id}`} transform={step.iconTransform}>
+                <path
+                  ref={(el) => {
+                    iconRefs.current[i] = el;
+                  }}
+                  id={`cycle-icon-${step.id}`}
+                  className="cycle-diagram__icon"
+                  d={step.icon}
+                />
+              </g>
+            ))}
+          </g>
+        </svg>
+        <div className="shortform-process-cards-container">
+          {STEPS.map((step, i) => (
+            <div
+              key={step.id}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              className="shortform-process-card"
+            >
+              <p className="shortform-process-card-title">
+                <span>{i + 1}.</span> {step.label}
+              </p>
+              <p className="shortform-process-card-description">
+                {step.description}
+              </p>
+            </div>
           ))}
-        </g>
-      </svg>
+        </div>
+      </div>
     </div>
   );
 };
