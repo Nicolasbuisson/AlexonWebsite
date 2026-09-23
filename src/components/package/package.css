@@ -1,150 +1,161 @@
 .package-container {
-    --package-width: 160px;
-    --package-border-size: 0.25rem;
+  --package-width: 160px;
+  --package-border-size: 0.25rem;
 
-    width: var(--package-width);
-    padding: 1rem;
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    border: var(--package-border-size) solid var(--clr-light);
-    border-radius: 24px;
+  width: var(--package-width);
+  padding: 1rem;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  border: var(--package-border-size) solid var(--clr-light);
+  border-radius: 24px;
 }
 
 @media (width > 280px) {
-    .package-container {
-        --package-width: 240px;
-    }
+  .package-container {
+    --package-width: 240px;
+  }
 }
 
 @media (width > 440px) {
-    .package-container {
-        --package-width: 360px;
-    }
+  .package-container {
+    --package-width: 360px;
+  }
 }
 
 @media (width > 880px) {
-    .package-container {
-        width: unset;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: subgrid;
-    }
+  .package-container {
+    width: unset;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+  }
 }
 
 .package-title {
-    text-transform: uppercase;
-    font-weight: 600;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .package-price {
-    color: var(--clr-grey);
-    font-weight: 600;
+  color: var(--clr-grey);
+  font-weight: 600;
 }
 
 .package-price span {
-    font-size: 0.8rem;
-    font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .package-divider {
-    margin-inline: auto;
-    margin-block: 1.25rem;
-    height: 1px;
-    background-color: var(--clr-grey);
+  margin-inline: auto;
+  margin-block: 1.25rem;
+  height: 1px;
+  background-color: var(--clr-grey);
 }
 
 .package-description {
-    color: var(--clr-light-grey);
-    text-wrap: pretty;
-    font-weight: 500;
+  color: var(--clr-light-grey);
+  text-wrap: pretty;
+  font-weight: 500;
 }
 
 .package-button {
-    margin-inline: auto;
+  margin-inline: auto;
 }
 
 .package-inclusion-title {
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .package-inclusion-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .package-inclusion-list-item-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .package-inclusion-list-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
 }
 
 .package-inclusion-list-item-info-icon {
-    flex-shrink: 0;
-    vertical-align: middle;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .package-inclusion-list-item-details {
-    width: 60%;
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
-    padding: 0.5rem;
-    font-size: 0.8rem;
-    border-radius: 12px;
+  width: 60%;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 12px;
 
-    position: absolute;
-    right: 0;
-    bottom: 1.5rem;
-    z-index: 3;
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 3;
 
-    display: none;
-    opacity: 0;
-    transition: display 400ms, opacity 400ms;
-    transition-behavior: allow-discrete;
+  display: none;
+  opacity: 0;
+  transition:
+    display 400ms,
+    opacity 400ms;
+  transition-behavior: allow-discrete;
 }
 
-.package-inclusion-list-item-info-icon:hover+.package-inclusion-list-item-details {
-    display: inline-block;
-    opacity: 1;
+.package-inclusion-list-item-info-icon:hover
+  + .package-inclusion-list-item-details {
+  display: inline-block;
+  opacity: 1;
 
-    @starting-style {
-        opacity: 0;
-    }
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 /* Package hover border effect */
 @property --rotate-angle {
-    syntax: '<angle>';
-    initial-value: 90deg;
-    inherits: true;
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
 }
 
 .package-card-border-effect {
-    --rotate-angle: 0deg;
-    --c1: var(--clr-accent);
-    --c2: var(--clr-light);
+  --rotate-angle: 0deg;
+  --c1: var(--clr-accent);
+  --c2: var(--clr-light);
 
-    position: relative;
-    border-radius: 24px;
+  position: relative;
+  border-radius: 24px;
 }
 
-.package-card-border-effect:hover::before {
-    content: '';
-    position: absolute;
-    inset: calc(var(--package-border-size) * -1);
-    border-radius: 24px;
-    padding: var(--package-border-size);
-    background: conic-gradient(from var(--rotate-angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.35turn);
-    animation: borderRotate 4s linear forwards infinite;
-    /* mask needed because border-image does not allow border-radius
+/* Old approach, kept for reference: add the `package-card-border-effect-conic`
+   class to the card to switch back to the rotating conic gradient border */
+.package-card-border-effect-conic:hover::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--package-border-size) * -1);
+  border-radius: 24px;
+  padding: var(--package-border-size);
+  background: conic-gradient(
+    from var(--rotate-angle),
+    var(--c2),
+    var(--c1) 0.1turn,
+    var(--c1) 0.15turn,
+    var(--c2) 0.35turn
+  );
+  animation: borderRotate 4s linear forwards infinite;
+  /* mask needed because border-image does not allow border-radius
   Solution: create a 2 masks:
   - one will cover the whole element
   - the other will cover only the content-box (excludes the border)
@@ -152,22 +163,94 @@
   and we are left only with the border.
   Use a pseudo-element to not mask the actual content of our item
   */
-    mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    mask-composite: exclude;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
 
 @keyframes borderRotate {
-    0% {
-        --rotate-angle: 0deg;
-    }
+  0% {
+    --rotate-angle: 0deg;
+  }
 
-    50% {
-        --rotate-angle: 180deg;
-    }
+  50% {
+    --rotate-angle: 180deg;
+  }
 
-    100% {
-        --rotate-angle: 360deg;
-    }
+  100% {
+    --rotate-angle: 360deg;
+  }
+}
+
+/* New approach: a single element travelling along the card's border box */
+
+/* The track is what the tracer actually follows: offset-path reads the
+   containing block's box, not the tracer's own, so the tracer needs a
+   containing block that sits where we want the path.
+   An absolutely positioned child is laid out against the card's PADDING box
+   (the inner edge of the border), so a negative inset of half the border size
+   pushes the track out to the middle of the border. The radius shrinks by the
+   same amount, since the card's 24px radius is measured at the outer edge. */
+.package-card-border-track {
+  position: absolute;
+  inset: calc(var(--package-border-size) / -2);
+  border-radius: calc(24px - var(--package-border-size) / 2);
+  pointer-events: none;
+}
+
+.package-card-border-tracer {
+  --tracer-size: 0.5rem;
+  /* set per dot from the component: position in the chain, and how opaque it is */
+  --i: 0;
+  --tracer-opacity: 1;
+  /* how far each dot trails the one ahead of it, expressed as a slice of the
+     animation. Bigger step = longer, looser segment */
+  --tracer-step: 0.02s;
+  /* kept low because every dot in the chain stacks its own glow */
+  --tracer-glow-opacity: 35%;
+
+  position: absolute;
+  width: var(--tracer-size);
+  height: var(--tracer-size);
+  /* square bodies butt up against each other, so the chain reads as one
+     continuous band rather than a string of beads */
+  border-radius: 0;
+  background-color: var(--c1);
+  box-shadow: 0 0 0.25rem 0.0325rem
+    color-mix(in srgb, var(--c1) var(--tracer-glow-opacity), transparent);
+
+  offset-path: border-box;
+  offset-distance: 0%;
+  offset-rotate: auto;
+  opacity: 0;
+}
+
+/* only the two ends are round, giving the segment rounded caps */
+.package-card-border-tracer:first-child,
+.package-card-border-tracer:last-child {
+  border-radius: 50%;
+}
+
+.package-card-border-effect:hover .package-card-border-tracer {
+  opacity: var(--tracer-opacity);
+
+  /* every dot runs the same animation; the negative delay is what strings them
+     out along the path, each one a fixed slice ahead of the previous */
+  animation-name: borderTrace;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-delay: calc(var(--i) * var(--tracer-step) * -1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes borderTrace {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
 }

@@ -1,5 +1,21 @@
+import { CSSProperties } from "react";
 import { ButtonBackgroundHoverEffect } from "../buttonBackgroundHoverEffect/buttonBackgroundHoverEffect";
 import "./package.css";
+
+// Dots chained one behind the other to read as a single segment travelling the
+// border. Opacity peaks in the middle of the chain and fades towards both ends
+// so the segment tapers off instead of ending abruptly.
+const TRACER_COUNT = 50;
+const TRACER_MIN_OPACITY = 0.2;
+
+const tracers = Array.from({ length: TRACER_COUNT }, (_, index) => {
+  const middle = (TRACER_COUNT - 1) / 2;
+  const distanceFromMiddle = Math.abs(index - middle) / middle;
+  return {
+    index,
+    opacity: 1 - distanceFromMiddle * (1 - TRACER_MIN_OPACITY),
+  };
+});
 
 interface IPackageItem {
   item: string;
@@ -16,7 +32,21 @@ interface IPackage {
 export const Package = (props: IPackage) => {
   const { title, price, description, itemList } = props;
   return (
-    <div className="package-container package-card-border-effect ">
+    <div className="package-container package-card-border-effect">
+      <span className="package-card-border-track" aria-hidden="true">
+        {tracers.map((tracer) => (
+          <span
+            key={tracer.index}
+            className="package-card-border-tracer"
+            style={
+              {
+                "--i": tracer.index,
+                "--tracer-opacity": tracer.opacity,
+              } as CSSProperties
+            }
+          />
+        ))}
+      </span>
       <div>
         <h4 className="package-title">{title}</h4>
         <h4 className="package-price">
@@ -28,7 +58,7 @@ export const Package = (props: IPackage) => {
       </div>
       <div>
         <ButtonBackgroundHoverEffect
-          text={"Book Call Now"}
+          text={"Book Call"}
           link="/contact"
           size="small"
           className="package-button"
