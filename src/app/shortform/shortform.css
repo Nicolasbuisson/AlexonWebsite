@@ -15,7 +15,7 @@
 
 .shortform-packages-section {
   background-color: var(--clr-dark);
-  padding-inline: calc(var(--section-padding-inline) - 4rem);
+  padding-inline: var(--section-padding-inline);
   padding-block-start: var(--section-padding-block);
 }
 
@@ -205,10 +205,6 @@
 }
 
 @media (width < 720px) {
-  .shortform-results-section {
-    padding-inline: calc(var(--section-padding-inline) - 2rem);
-  }
-
   .stats-container {
     grid-template-columns: 1fr;
   }

@@ -34,12 +34,12 @@
 }
 
 /* One cell, every card in it: the scroll timeline offsets them from that cell
-   to build the stack -- centre card, dimmed neighbour above and below, the
-   rest parked out of sight -- so their resting position has to be the same
-   spot rather than a column of six. Stretching them to the row's height (the
+   to build the carousel, so their resting position has to be the same spot
+   rather than a column of six. Stretching them to the row's height (the
    default, and what the tallest card sets) is what makes one slot pitch land
-   the same distance for all of them. The neighbours deliberately overflow the
-   row, so nothing here may clip. */
+   the same distance for all of them -- and it holds the row still while they
+   swap, since the row is sized by the tallest card rather than by whichever
+   one is on show. */
 .shortform-process-cards-container {
   display: grid;
   align-content: center;
@@ -71,4 +71,25 @@
 .shortform-process-card-description {
   line-height: 1.1;
   text-wrap: pretty;
+}
+
+@media (width <= 880px) {
+  .shortform-process-container h2 {
+    text-align: center;
+  }
+  .shortform-process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 0rem;
+  }
+  .cycle-diagram {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+  }
+  .shortform-process-cards-container {
+    overflow: hidden;
+  }
 }

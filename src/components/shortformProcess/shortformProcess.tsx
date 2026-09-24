@@ -236,14 +236,31 @@ const ARROW_DRAW = 1;
 
 /* --- Card timing -------------------------------------------------------- */
 
+/** Timeline units the carousel takes to shift by one slot. */
+const CARD_SLIDE = 0.6;
 /**
- * The cards ride a stack of slots numbered by their offset from the step being
- * drawn: 0 is the centre, -1 is the one just finished sitting above it, +1 is
- * the one coming next below it, and anything at |2| is parked off the stack
- * with nothing showing. Each step shifts the whole stack up by one slot, so a
- * card walks +2 -> +1 -> 0 -> -1 -> -2 across the scroll.
+ * Timeline units a step with no arrow of its own owns -- enough to arrive and
+ * be read. Only the trailing "Learn & Repeat" card uses this today.
  */
-const CARD_SLOT_LIMIT = 2;
+const CARD_ONLY_SPAN = 1;
+
+/* --- Card layouts ------------------------------------------------------- */
+
+/**
+ * The cards ride a carousel of slots numbered by their offset from the step
+ * being drawn: 0 is the slot on show, -1 the step just finished, +1 the one
+ * coming next. Every step shifts each card one slot closer to 0 and on out the
+ * far side. A layout decides how far from 0 a card can still be seen and what
+ * each slot looks like; a card past that limit is parked in the last slot with
+ * nothing showing, so it holds still until its turn comes round.
+ */
+type CardLayout = {
+  /** Slots either side of 0. A card beyond it is clamped into the last one. */
+  slotLimit: number;
+  /** Where a card sits, and how it looks, in a given slot. */
+  state: (slot: number) => gsap.TweenVars;
+};
+
 /**
  * Slot pitch, in percent of a card's own height. Every card is stretched to
  * the height of the tallest one by the grid, so one percentage lands the same
@@ -254,24 +271,86 @@ const CARD_SLOT_OFFSET = 110;
 /** Scale and opacity of the neighbours, either side of the centre slot. */
 const CARD_RESTING_SCALE = 0.7;
 const CARD_NEIGHBOUR_OPACITY = 0.5;
-/** Timeline units the stack takes to shift up by one slot. */
-const CARD_SLIDE = 0.6;
+
 /**
- * Timeline units a step with no arrow of its own owns -- enough to arrive and
- * be read. Only the trailing "Learn & Repeat" card uses this today.
+ * Wide screens: a vertical stack deep enough to show the step on show flanked
+ * by the one before and the one after, so a card walks +2 -> +1 -> 0 -> -1 ->
+ * -2 across the scroll and the neighbours give it context.
  */
-const CARD_ONLY_SPAN = 1;
+const STACKED_CARDS: CardLayout = {
+  slotLimit: 2,
+  // Every property either layout touches is stated in both, so switching
+  // between them leaves nothing behind from the other one.
+  state: (slot) => ({
+    xPercent: 0,
+    x: 0,
+    yPercent: slot * CARD_SLOT_OFFSET,
+    y: 0,
+    scale: slot === 0 ? 1 : CARD_RESTING_SCALE,
+    opacity: slot === 0 ? 1 : Math.abs(slot) === 1 ? CARD_NEIGHBOUR_OPACITY : 0,
+  }),
+};
 
-/** Slot a card sits in once the stack has run out of room for it. */
-const cardSlot = (offset: number) =>
-  Math.max(-CARD_SLOT_LIMIT, Math.min(CARD_SLOT_LIMIT, offset));
+/** Slot pitch for the sliding layout, in percent of a card's own width. */
+const CARD_SLIDE_OFFSET = 100;
+/**
+ * Extra pitch on top of that width, in px, and so the literal gap between the
+ * card leaving and the card arriving. It cannot come from `gap` on their
+ * container: every card is in the same grid cell, and a grid with one cell has
+ * nothing to put a gap between. The space has to be carried by the move
+ * itself -- which is why it is stated here in px rather than as more percent,
+ * since a gap that grew with the card would not be a gap so much as a pause.
+ */
+const CARD_SLIDE_GAP = 32; // 2rem
 
-/** Where a card sits, and how it looks, in a given slot. */
-const cardSlotState = (slot: number) => ({
-  yPercent: slot * CARD_SLOT_OFFSET,
-  scale: slot === 0 ? 1 : CARD_RESTING_SCALE,
-  opacity: slot === 0 ? 1 : Math.abs(slot) === 1 ? CARD_NEIGHBOUR_OPACITY : 0,
-});
+/**
+ * Narrow screens: one slot, crossed horizontally. There is no width to spare
+ * for a neighbour to be legible beside it, so the cards travel single file --
+ * the next one in from the left as the current one leaves to the right -- and
+ * the limit drops to 1, because one slot off centre is already out of frame.
+ *
+ * A pitch of a full card width plus the gap is what keeps the two cards in
+ * flight apart: halfway through a shift they are CARD_SLIDE_GAP from each
+ * other rather than edge to edge, each most of the way out of the frame its
+ * container clips. GSAP renders the two as translate(%) translate(px), so they
+ * simply add up.
+ */
+const SLIDING_CARDS: CardLayout = {
+  slotLimit: 1,
+  state: (slot) => ({
+    // Travel is left to right, so the sign flips: the slot ahead of centre
+    // (+1) waits out to the left, the one behind it (-1) has left to the right.
+    xPercent: -slot * CARD_SLIDE_OFFSET,
+    x: -slot * CARD_SLIDE_GAP,
+    yPercent: 0,
+    y: 0,
+    scale: 1,
+    opacity: slot === 0 ? 1 : 0,
+  }),
+};
+
+/**
+ * Which layout is in play, as the pair of queries gsap.matchMedia() branches
+ * on. Keep in step with the breakpoint in the stylesheet, which clips the
+ * sliding layout's frame -- one picks the animation, the other holds it inside
+ * the column.
+ *
+ * Both halves have to be declared, and they have to cover every width between
+ * them: matchMedia only runs its callback if one of its queries matches, so a
+ * lone "is it wide" would leave narrow screens with no timeline at all rather
+ * than the other branch of one. Writing the second as the negation of the
+ * first is what guarantees the cover -- a hand-written (max-width: 880px) would
+ * strand the fractional widths between them, which real devices do report.
+ *
+ * The .02 keeps "strictly wider than 880" true at the precision browsers
+ * actually resolve a query to, which is a 64th of a pixel.
+ */
+const WIDE_LAYOUT = "(min-width: 880.02px)";
+const NARROW_LAYOUT = `not all and ${WIDE_LAYOUT}`;
+
+/** Slot a card sits in once the carousel has run out of room for it. */
+const cardSlot = (layout: CardLayout, offset: number) =>
+  Math.max(-layout.slotLimit, Math.min(layout.slotLimit, offset));
 
 /**
  * Pixels of scroll the whole five-step cycle is spread over. Tied to the pin
@@ -280,6 +359,13 @@ const cardSlotState = (slot: number) => ({
  */
 const SCROLL_DISTANCE = 2000;
 const PIN_TOP_OFFSET = 32; // 2rem
+const PIN_TOP_OFFSET_NARROW = 0; // 0.75rem
+// need to figure out mobile view?
+// can make the card carousel a horizontal X slider beneath the diagram?
+// --> might work for an Ipad but not a phone?
+// or completely remove the diagram and just show the cards and add the icon to the card?
+// add repeat/cycle icon to 6th card?
+// DO HORIZONTAL X SLIDER, MAKE SURE IT ALL FITS ON AN IPHONE FRAME, TEST WITH RESPONSIVE MODE
 
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -293,7 +379,24 @@ export const ShortFormProcess = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
+    /**
+     * Only the cards differ between the two layouts -- the arrows, their masks,
+     * the icons and the centre label are the same animation at every width --
+     * so this is one callback reading a condition rather than two timelines
+     * kept in sync by hand. GSAP re-runs it when the query flips, reverting
+     * everything the previous run set on the way.
+     */
+    const mm = gsap.matchMedia(containerRef);
+
+    // isNarrow is never read: it is declared so that one query always matches,
+    // which is what gets this callback run at all. See the queries themselves.
+    mm.add({ isWide: WIDE_LAYOUT, isNarrow: NARROW_LAYOUT }, (context) => {
+      const isWide = Boolean(context.conditions?.isWide);
+      const cardLayout = isWide ? STACKED_CARDS : SLIDING_CARDS;
+      const pinTopOffset = isWide ? PIN_TOP_OFFSET : PIN_TOP_OFFSET_NARROW;
+      /** Clamped slot for a card `offset` steps from the one being drawn. */
+      const slot = (offset: number) => cardSlot(cardLayout, offset);
+
       const reveals = revealRefs.current.filter(Boolean);
       const icons = iconRefs.current.filter(Boolean);
       const cards = cardRefs.current.filter(
@@ -306,11 +409,11 @@ export const ShortFormProcess = () => {
         strokeDashoffset: pathLength,
       });
 
-      // The stack opens one slot lower than the first step, so the first card
-      // rises into the centre as the first arrow draws rather than starting
-      // there. That is the layout for a notional step -1.
+      // The carousel opens one slot short of the first step, so the first card
+      // arrives as the first arrow draws rather than starting in place. That is
+      // the layout for a notional step -1.
       cards.forEach((card, i) => {
-        gsap.set(card, cardSlotState(cardSlot(i + 1)));
+        gsap.set(card, cardLayout.state(slot(i + 1)));
       });
 
       // The ring's centre label is nothing until the cycle closes. Scaling an
@@ -345,7 +448,7 @@ export const ShortFormProcess = () => {
           // adds the matching page height itself via its pin-spacer.
           pin: true,
           anticipatePin: 1,
-          start: `center center+=${PIN_TOP_OFFSET}`,
+          start: `center center+=${pinTopOffset}`,
           end: `+=${SCROLL_DISTANCE}`,
           scrub: 1,
           invalidateOnRefresh: true,
@@ -353,9 +456,9 @@ export const ShortFormProcess = () => {
       });
 
       /**
-       * Shifts the whole stack up by one slot, so step `active` lands in the
-       * centre: the card above it dims and shrinks on its way out, the one
-       * below takes the centre, and a fresh one appears at the bottom.
+       * Shifts every card one slot along, so step `active` lands in the slot on
+       * show and the step before it leaves. Which way they travel and what they
+       * look like getting there is the layout's business, not this function's.
        *
        * Both ends of every move are stated explicitly. A plain .to() would
        * record its start value the first time it renders, and a scrub can jump
@@ -366,16 +469,16 @@ export const ShortFormProcess = () => {
        */
       const showStep = (active: number, at: number) => {
         cards.forEach((card, i) => {
-          const from = cardSlot(i - active + 1); // its slot on the step before
-          const to = cardSlot(i - active);
-          // Already parked off the stack and staying there -- nothing moves.
+          const from = slot(i - active + 1); // its slot on the step before
+          const to = slot(i - active);
+          // Already parked out of frame and staying there -- nothing moves.
           if (from === to) return;
 
           cycleTimeline.fromTo(
             card,
-            cardSlotState(from),
+            cardLayout.state(from),
             {
-              ...cardSlotState(to),
+              ...cardLayout.state(to),
               duration: CARD_SLIDE,
               immediateRender: false,
             },
@@ -395,8 +498,8 @@ export const ShortFormProcess = () => {
       let diagramIndex = 0;
 
       STEPS.forEach((step, i) => {
-        // The stack shifts as the step begins, so the card being described is
-        // centred for as long as its arrow is being drawn.
+        // The carousel shifts as the step begins, so the card being described
+        // is on show for as long as its arrow is being drawn.
         showStep(i, stepStart);
 
         if (step.isNotInDiagram) {
@@ -457,9 +560,9 @@ export const ShortFormProcess = () => {
       // the rest of that beat, so the final card holds still for a moment
       // instead of the pin releasing the instant it lands.
       cycleTimeline.to({}, { duration: 0 }, stepStart);
-    }, containerRef);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   // text in the middle can be absolutely positioned if we put both it and the svg in a relative parent container
