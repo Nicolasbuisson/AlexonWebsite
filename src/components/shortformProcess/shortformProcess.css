@@ -2,8 +2,13 @@
 }
 
 .shortform-process-container h2 {
-  line-height: 0.9;
-  margin-bottom: 0.5rem;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.shortform-process-container h2 span {
+  font-weight: inherit;
+  color: var(--clr-accent);
 }
 
 .shortform-process-grid {

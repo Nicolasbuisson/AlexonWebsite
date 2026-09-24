@@ -279,6 +279,7 @@ const cardSlotState = (slot: number) => ({
  * of a side effect of how tall the heading happens to wrap.
  */
 const SCROLL_DISTANCE = 2000;
+const PIN_TOP_OFFSET = 32; // 2rem
 
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -344,7 +345,7 @@ export const ShortFormProcess = () => {
           // adds the matching page height itself via its pin-spacer.
           pin: true,
           anticipatePin: 1,
-          start: "center center",
+          start: `center center+=${PIN_TOP_OFFSET}`,
           end: `+=${SCROLL_DISTANCE}`,
           scrub: 1,
           invalidateOnRefresh: true,
@@ -466,7 +467,9 @@ export const ShortFormProcess = () => {
 
   return (
     <div className="shortform-process-container" ref={containerRef}>
-      <h2>A proven content system delivers consistent results</h2>
+      <h2>
+        A proven content system delivers <span>consistent</span> results
+      </h2>
       <div className="shortform-process-grid">
         <svg
           className="cycle-diagram"
