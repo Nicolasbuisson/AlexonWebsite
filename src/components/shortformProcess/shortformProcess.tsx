@@ -267,9 +267,9 @@ type CardLayout = {
  * distance for all six. At 110 the 0.7-scaled neighbours clear the centre
  * card by about a quarter of its height.
  */
-const CARD_SLOT_OFFSET = 110;
+const CARD_SLOT_OFFSET = 107;
 /** Scale and opacity of the neighbours, either side of the centre slot. */
-const CARD_RESTING_SCALE = 0.7;
+const CARD_RESTING_SCALE = 0.65;
 const CARD_NEIGHBOUR_OPACITY = 0.5;
 
 /**
@@ -339,14 +339,21 @@ const SLIDING_CARDS: CardLayout = {
  * them: matchMedia only runs its callback if one of its queries matches, so a
  * lone "is it wide" would leave narrow screens with no timeline at all rather
  * than the other branch of one. Writing the second as the negation of the
- * first is what guarantees the cover -- a hand-written (max-width: 880px) would
+ * first is what guarantees the cover -- a hand-written (max-width: 940px) would
  * strand the fractional widths between them, which real devices do report.
  *
- * The .02 keeps "strictly wider than 880" true at the precision browsers
+ * The .02 keeps "strictly wider than 940" true at the precision browsers
  * actually resolve a query to, which is a 64th of a pixel.
  */
-const WIDE_LAYOUT = "(min-width: 880.02px)";
+const WIDE_LAYOUT = "(min-width: 940.02px)";
 const NARROW_LAYOUT = `not all and ${WIDE_LAYOUT}`;
+
+/**
+ * Where the pin tucks itself closer to the top. Its own breakpoint rather than
+ * the layout's: the heading wants that room back well before the cards change
+ * how they move, so the two are free to sit at different widths.
+ */
+const NARROW_PIN = "(max-width: 1200px)";
 
 /** Slot a card sits in once the carousel has run out of room for it. */
 const cardSlot = (layout: CardLayout, offset: number) =>
@@ -359,13 +366,7 @@ const cardSlot = (layout: CardLayout, offset: number) =>
  */
 const SCROLL_DISTANCE = 2000;
 const PIN_TOP_OFFSET = 32; // 2rem
-const PIN_TOP_OFFSET_NARROW = 0; // 0.75rem
-// need to figure out mobile view?
-// can make the card carousel a horizontal X slider beneath the diagram?
-// --> might work for an Ipad but not a phone?
-// or completely remove the diagram and just show the cards and add the icon to the card?
-// add repeat/cycle icon to 6th card?
-// DO HORIZONTAL X SLIDER, MAKE SURE IT ALL FITS ON AN IPHONE FRAME, TEST WITH RESPONSIVE MODE
+const PIN_TOP_OFFSET_NARROW = 0;
 
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -390,177 +391,183 @@ export const ShortFormProcess = () => {
 
     // isNarrow is never read: it is declared so that one query always matches,
     // which is what gets this callback run at all. See the queries themselves.
-    mm.add({ isWide: WIDE_LAYOUT, isNarrow: NARROW_LAYOUT }, (context) => {
-      const isWide = Boolean(context.conditions?.isWide);
-      const cardLayout = isWide ? STACKED_CARDS : SLIDING_CARDS;
-      const pinTopOffset = isWide ? PIN_TOP_OFFSET : PIN_TOP_OFFSET_NARROW;
-      /** Clamped slot for a card `offset` steps from the one being drawn. */
-      const slot = (offset: number) => cardSlot(cardLayout, offset);
+    mm.add(
+      { isWide: WIDE_LAYOUT, isNarrow: NARROW_LAYOUT, isNarrowPin: NARROW_PIN },
+      (context) => {
+        const isWide = Boolean(context.conditions?.isWide);
+        const cardLayout = isWide ? STACKED_CARDS : SLIDING_CARDS;
+        // Its own breakpoint, so this one is not isWide.
+        const pinTopOffset = context.conditions?.isNarrowPin
+          ? PIN_TOP_OFFSET_NARROW
+          : PIN_TOP_OFFSET;
+        /** Clamped slot for a card `offset` steps from the one being drawn. */
+        const slot = (offset: number) => cardSlot(cardLayout, offset);
 
-      const reveals = revealRefs.current.filter(Boolean);
-      const icons = iconRefs.current.filter(Boolean);
-      const cards = cardRefs.current.filter(
-        (el): el is HTMLDivElement => el !== null,
-      );
+        const reveals = revealRefs.current.filter(Boolean);
+        const icons = iconRefs.current.filter(Boolean);
+        const cards = cardRefs.current.filter(
+          (el): el is HTMLDivElement => el !== null,
+        );
 
-      // Nothing is drawn until the scrub says so.
-      gsap.set([...reveals, ...icons], {
-        strokeDasharray: pathLength,
-        strokeDashoffset: pathLength,
-      });
-
-      // The carousel opens one slot short of the first step, so the first card
-      // arrives as the first arrow draws rather than starting in place. That is
-      // the layout for a notional step -1.
-      cards.forEach((card, i) => {
-        gsap.set(card, cardLayout.state(slot(i + 1)));
-      });
-
-      // The ring's centre label is nothing until the cycle closes. Scaling an
-      // SVG element means the transform attribute, so state the origin rather
-      // than relying on the bounding box GSAP would work one out from.
-      gsap.set(centreLabelRef.current, {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: "50% 50%",
-      });
-
-      /**
-       * ...except that a parked dashoffset does not reliably hide a path made
-       * of several subpaths. The dash pattern restarts at every subpath, and
-       * at each restart the renderer paints a degenerate round cap -- a dot --
-       * even though the whole subpath sits inside a gap. That is one stray dot
-       * per subpath after the first, which is exactly what showed up around
-       * the rocket (two fins and the exhaust) before its arrowhead arrived.
-       * Lengthening the dash period does not help, because the dots are not
-       * leftover path: they are caps on nothing. So the icons are also held
-       * out of the render tree until their own tween starts.
-       */
-      gsap.set(icons, { visibility: "hidden" });
-
-      const cycleTimeline = gsap.timeline({
-        defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
-        scrollTrigger: {
-          trigger: containerRef.current,
-          // Lock the diagram in the middle of the viewport and hold it there
-          // for SCROLL_DISTANCE, so the cycle can take as long as it likes
-          // without the container scrolling out from under it. ScrollTrigger
-          // adds the matching page height itself via its pin-spacer.
-          pin: true,
-          anticipatePin: 1,
-          start: `center center+=${pinTopOffset}`,
-          end: `+=${SCROLL_DISTANCE}`,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      /**
-       * Shifts every card one slot along, so step `active` lands in the slot on
-       * show and the step before it leaves. Which way they travel and what they
-       * look like getting there is the layout's business, not this function's.
-       *
-       * Both ends of every move are stated explicitly. A plain .to() would
-       * record its start value the first time it renders, and a scrub can jump
-       * the playhead across several steps at once, which leaves those tweens
-       * rendering out of order and reading a start value from the wrong slot.
-       * immediateRender is off for the same reason it is off elsewhere here:
-       * otherwise each fromTo would stamp its from-state at build time.
-       */
-      const showStep = (active: number, at: number) => {
-        cards.forEach((card, i) => {
-          const from = slot(i - active + 1); // its slot on the step before
-          const to = slot(i - active);
-          // Already parked out of frame and staying there -- nothing moves.
-          if (from === to) return;
-
-          cycleTimeline.fromTo(
-            card,
-            cardLayout.state(from),
-            {
-              ...cardLayout.state(to),
-              duration: CARD_SLIDE,
-              immediateRender: false,
-            },
-            at,
-          );
+        // Nothing is drawn until the scrub says so.
+        gsap.set([...reveals, ...icons], {
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength,
         });
-      };
 
-      /**
-       * Where the step being built begins. Every tween is positioned
-       * absolutely off this rather than appended, because the card slide and
-       * the arrow it belongs to start together and run for different lengths
-       * -- appending would stack them end to end instead.
-       */
-      let stepStart = 0;
-      // Indexes reveals/icons, which only exist for the steps in the diagram.
-      let diagramIndex = 0;
+        // The carousel opens one slot short of the first step, so the first card
+        // arrives as the first arrow draws rather than starting in place. That is
+        // the layout for a notional step -1.
+        cards.forEach((card, i) => {
+          gsap.set(card, cardLayout.state(slot(i + 1)));
+        });
 
-      STEPS.forEach((step, i) => {
-        // The carousel shifts as the step begins, so the card being described
-        // is on show for as long as its arrow is being drawn.
-        showStep(i, stepStart);
+        // The ring's centre label is nothing until the cycle closes. Scaling an
+        // SVG element means the transform attribute, so state the origin rather
+        // than relying on the bounding box GSAP would work one out from.
+        gsap.set(centreLabelRef.current, {
+          opacity: 0,
+          scale: 0,
+          transformOrigin: "50% 50%",
+        });
 
-        if (step.isNotInDiagram) {
-          // This step is the ring itself rather than any one arrow, so what it
-          // draws is the label in the middle -- growing in on the same beat as
-          // its card takes the centre slot.
-          cycleTimeline.fromTo(
-            centreLabelRef.current,
-            { opacity: 0, scale: 0 },
-            {
-              opacity: 1,
-              scale: 1,
-              duration: CARD_SLIDE,
-              immediateRender: false,
-            },
+        /**
+         * ...except that a parked dashoffset does not reliably hide a path made
+         * of several subpaths. The dash pattern restarts at every subpath, and
+         * at each restart the renderer paints a degenerate round cap -- a dot --
+         * even though the whole subpath sits inside a gap. That is one stray dot
+         * per subpath after the first, which is exactly what showed up around
+         * the rocket (two fins and the exhaust) before its arrowhead arrived.
+         * Lengthening the dash period does not help, because the dots are not
+         * leftover path: they are caps on nothing. So the icons are also held
+         * out of the render tree until their own tween starts.
+         */
+        gsap.set(icons, { visibility: "hidden" });
+
+        const cycleTimeline = gsap.timeline({
+          defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
+          scrollTrigger: {
+            trigger: containerRef.current,
+            // Lock the diagram in the middle of the viewport and hold it there
+            // for SCROLL_DISTANCE, so the cycle can take as long as it likes
+            // without the container scrolling out from under it. ScrollTrigger
+            // adds the matching page height itself via its pin-spacer.
+            pin: true,
+            anticipatePin: 1,
+            start: `center center+=${pinTopOffset}`,
+            end: `+=${SCROLL_DISTANCE}`,
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        /**
+         * Shifts every card one slot along, so step `active` lands in the slot on
+         * show and the step before it leaves. Which way they travel and what they
+         * look like getting there is the layout's business, not this function's.
+         *
+         * Both ends of every move are stated explicitly. A plain .to() would
+         * record its start value the first time it renders, and a scrub can jump
+         * the playhead across several steps at once, which leaves those tweens
+         * rendering out of order and reading a start value from the wrong slot.
+         * immediateRender is off for the same reason it is off elsewhere here:
+         * otherwise each fromTo would stamp its from-state at build time.
+         */
+        const showStep = (active: number, at: number) => {
+          cards.forEach((card, i) => {
+            const from = slot(i - active + 1); // its slot on the step before
+            const to = slot(i - active);
+            // Already parked out of frame and staying there -- nothing moves.
+            if (from === to) return;
+
+            cycleTimeline.fromTo(
+              card,
+              cardLayout.state(from),
+              {
+                ...cardLayout.state(to),
+                duration: CARD_SLIDE,
+                immediateRender: false,
+              },
+              at,
+            );
+          });
+        };
+
+        /**
+         * Where the step being built begins. Every tween is positioned
+         * absolutely off this rather than appended, because the card slide and
+         * the arrow it belongs to start together and run for different lengths
+         * -- appending would stack them end to end instead.
+         */
+        let stepStart = 0;
+        // Indexes reveals/icons, which only exist for the steps in the diagram.
+        let diagramIndex = 0;
+
+        STEPS.forEach((step, i) => {
+          // The carousel shifts as the step begins, so the card being described
+          // is on show for as long as its arrow is being drawn.
+          showStep(i, stepStart);
+
+          if (step.isNotInDiagram) {
+            // This step is the ring itself rather than any one arrow, so what it
+            // draws is the label in the middle -- growing in on the same beat as
+            // its card takes the centre slot.
+            cycleTimeline.fromTo(
+              centreLabelRef.current,
+              { opacity: 0, scale: 0 },
+              {
+                opacity: 1,
+                scale: 1,
+                duration: CARD_SLIDE,
+                immediateRender: false,
+              },
+              stepStart,
+            );
+
+            // No arrow to keep pace with, so the card is the whole beat. Nothing
+            // follows it, so it stays centred for the rest of the scroll.
+            stepStart += CARD_ONLY_SPAN;
+            return;
+          }
+
+          const d = diagramIndex++;
+
+          // The arrow wipes from its tail to its tip...
+          cycleTimeline.to(
+            reveals[d],
+            { strokeDashoffset: 0, duration: ARROW_DRAW },
             stepStart,
           );
+          // ...and the icon draws itself over the last stretch, which is exactly
+          // when the head it sits in comes into view (the barbs start at ~62% of
+          // the sweep, the tip lands at 100%).
+          const iconStart = stepStart + ARROW_DRAW - ICON_LEAD;
+          // Scrub runs this backwards too, and GSAP reverts a .set() on reverse,
+          // so the icon hides itself again when you scroll back up.
+          // immediateRender is on by default for zero-duration tweens, which
+          // would unhide every icon the moment the timeline is built.
+          cycleTimeline.set(
+            icons[d],
+            { visibility: "visible", immediateRender: false },
+            iconStart,
+          );
+          cycleTimeline.to(
+            icons[d],
+            { strokeDashoffset: 0, duration: ICON_DRAW },
+            iconStart,
+          );
 
-          // No arrow to keep pace with, so the card is the whole beat. Nothing
-          // follows it, so it stays centred for the rest of the scroll.
-          stepStart += CARD_ONLY_SPAN;
-          return;
-        }
+          // The next step starts where this one's icon finishes drawing.
+          stepStart = iconStart + ICON_DRAW;
+        });
 
-        const d = diagramIndex++;
-
-        // The arrow wipes from its tail to its tip...
-        cycleTimeline.to(
-          reveals[d],
-          { strokeDashoffset: 0, duration: ARROW_DRAW },
-          stepStart,
-        );
-        // ...and the icon draws itself over the last stretch, which is exactly
-        // when the head it sits in comes into view (the barbs start at ~62% of
-        // the sweep, the tip lands at 100%).
-        const iconStart = stepStart + ARROW_DRAW - ICON_LEAD;
-        // Scrub runs this backwards too, and GSAP reverts a .set() on reverse,
-        // so the icon hides itself again when you scroll back up.
-        // immediateRender is on by default for zero-duration tweens, which
-        // would unhide every icon the moment the timeline is built.
-        cycleTimeline.set(
-          icons[d],
-          { visibility: "visible", immediateRender: false },
-          iconStart,
-        );
-        cycleTimeline.to(
-          icons[d],
-          { strokeDashoffset: 0, duration: ICON_DRAW },
-          iconStart,
-        );
-
-        // The next step starts where this one's icon finishes drawing.
-        stepStart = iconStart + ICON_DRAW;
-      });
-
-      // A timeline is only as long as its children, and the last card slides
-      // into place well before the beat it owns is up. This empty tween claims
-      // the rest of that beat, so the final card holds still for a moment
-      // instead of the pin releasing the instant it lands.
-      cycleTimeline.to({}, { duration: 0 }, stepStart);
-    });
+        // A timeline is only as long as its children, and the last card slides
+        // into place well before the beat it owns is up. This empty tween claims
+        // the rest of that beat, so the final card holds still for a moment
+        // instead of the pin releasing the instant it lands.
+        cycleTimeline.to({}, { duration: 0 }, stepStart);
+      },
+    );
 
     return () => mm.revert();
   }, []);

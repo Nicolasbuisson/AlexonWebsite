@@ -73,7 +73,7 @@
   text-wrap: pretty;
 }
 
-@media (width <= 880px) {
+@media (width <= 940px) {
   .shortform-process-container h2 {
     text-align: center;
   }
@@ -88,5 +88,11 @@
     width: 400px;
     max-width: 100%;
     height: auto;
+  }
+}
+
+@media (940px <= width <= 1200px) {
+  .shortform-process-container h2 {
+    margin-block-end: 4rem;
   }
 }
