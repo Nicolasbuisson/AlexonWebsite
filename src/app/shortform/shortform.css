@@ -213,6 +213,7 @@
 .shortform-process-section {
   padding-inline: var(--section-padding-inline);
   padding-block: var(--section-padding-block);
+  overflow-x: hidden;
 }
 
 .shortform-faq-section {
