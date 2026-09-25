@@ -368,8 +368,18 @@ const SCROLL_DISTANCE = 2000;
 const PIN_TOP_OFFSET = 32; // 2rem
 const PIN_TOP_OFFSET_NARROW = 0;
 
+/* --- Heading reveal ----------------------------------------------------- */
+
+/** How far past the fold the heading has to be before it reveals, in px. */
+const HEADING_REVEAL_INSET = 220;
+/** How far it rises on the way in, in px. Positive is below its own place. */
+const HEADING_RISE = 24;
+/** Seconds. Not a scrub, so this one is played rather than scrolled. */
+const HEADING_FADE = 0.6;
+
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   // All three are indexed the same as DIAGRAM_STEPS.
   const arrowRefs = useRef<Array<SVGPathElement | null>>([]);
   const revealRefs = useRef<Array<SVGPathElement | null>>([]);
@@ -378,6 +388,45 @@ export const ShortFormProcess = () => {
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const centreLabelRef = useRef<SVGTextElement>(null);
   gsap.registerPlugin(ScrollTrigger);
+
+  /**
+   * The heading reveals itself once, off its own observer rather than off the
+   * cycle timeline: that timeline is scrubbed and does not begin until the
+   * section pins, by which point the heading has been on screen for a while.
+   */
+  useLayoutEffect(() => {
+    const heading = headingRef.current;
+    if (!heading) return;
+
+    gsap.set(heading, { opacity: 0, y: HEADING_RISE });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        // Nothing hides it again, so there is nothing left to watch for.
+        observer.disconnect();
+        gsap.to(heading, {
+          opacity: 1,
+          y: 0,
+          duration: HEADING_FADE,
+          ease: "power2.out",
+        });
+      },
+      // A negative bottom margin pulls the root's lower edge up the screen, so
+      // "intersecting" comes to mean "this far past the fold" rather than
+      // "touching it". The other three edges stay where they are, which is
+      // what still fires this for someone who loads the page already scrolled
+      // down to it.
+      { rootMargin: `0px 0px -${HEADING_REVEAL_INSET}px 0px` },
+    );
+
+    observer.observe(heading);
+
+    return () => {
+      observer.disconnect();
+      gsap.killTweensOf(heading);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     /**
@@ -572,12 +621,9 @@ export const ShortFormProcess = () => {
     return () => mm.revert();
   }, []);
 
-  // text in the middle can be absolutely positioned if we put both it and the svg in a relative parent container
-  // whose intrinsic size will just be the svg
-
   return (
     <div className="shortform-process-container" ref={containerRef}>
-      <h2>
+      <h2 ref={headingRef}>
         A proven content system delivers <span>consistent</span> results
       </h2>
       <div className="shortform-process-grid">
