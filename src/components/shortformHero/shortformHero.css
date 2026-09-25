@@ -1,7 +1,8 @@
 .shortform-hero {
-  height: fit-content;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  --shortform-hero-pt: 5rem;
+  height: calc(100vh - var(--shortform-hero-pt));
+  height: calc(100svh - var(--shortform-hero-pt));
+  padding-top: var(--shortform-hero-pt);
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -92,9 +93,10 @@
 
 @media (width >= 880px) {
   .shortform-hero {
-    height: 100vh;
-    height: 100svh;
-    padding-top: 4rem;
+    --shortform-hero-pt: 4rem;
+    height: calc(100vh - var(--shortform-hero-pt));
+    height: calc(100svh - var(--shortform-hero-pt));
+    padding-top: var(--shortform-hero-pt);
     padding-bottom: 0;
   }
   .shortform-title {
@@ -104,6 +106,6 @@
 
 @media (width >= 1020px) {
   .shortform-hero {
-    padding-top: 6rem;
+    --shortform-hero-pt: 6rem;
   }
 }
