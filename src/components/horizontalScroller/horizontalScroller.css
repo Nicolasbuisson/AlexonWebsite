@@ -3,6 +3,17 @@
     --spacing: 4rem;
 }
 
+/* Edge to edge, by cancelling the inline padding of the section around it --
+deliberately not by width: 100vw. The page reserves a scrollbar gutter for good
+(scrollbar-gutter: stable, global.css), so the viewport is always wider than the
+room a page actually has, and 100vw would overhang by the width of that gutter
+and put a horizontal scrollbar under the whole document. Undoing a padding needs
+no viewport arithmetic, so there is nothing to be wrong about. The variable is
+inherited, so this stays correct through every breakpoint that redefines it. */
+.scroller[data-full-bleed=true] {
+    margin-inline: calc(var(--section-padding-inline) * -1);
+}
+
 .scroller[data-animated=true] {
     overflow: hidden;
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);

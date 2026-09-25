@@ -4,10 +4,15 @@ import "./horizontalScroller.css";
 
 interface IProps {
   children: ReactNode;
+  /**
+   * Run edge to edge, cancelling the inline padding of the section it sits in.
+   * Off by default, so a scroller inside an unpadded parent is unaffected.
+   */
+  fullBleed?: boolean;
 }
 
 export const HorizontalScroller = (props: IProps) => {
-  const { children } = props;
+  const { children, fullBleed } = props;
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
     const addAnimation = () => {
@@ -33,7 +38,7 @@ export const HorizontalScroller = (props: IProps) => {
   }, []);
 
   return (
-    <div className="scroller">
+    <div className="scroller" data-full-bleed={fullBleed ? "true" : undefined}>
       <div className="scroller-inner">{children}</div>
     </div>
   );

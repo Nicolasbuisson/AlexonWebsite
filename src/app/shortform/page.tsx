@@ -16,7 +16,7 @@ function ShortForm() {
       <Navigation />
       <section className="shortform-hero-section">
         <ShortFormHero />
-        <HorizontalScroller>
+        <HorizontalScroller fullBleed>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
               src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
