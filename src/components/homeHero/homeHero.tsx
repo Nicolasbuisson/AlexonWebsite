@@ -285,6 +285,9 @@ export const HomeHero = () => {
             src={
               "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mp4"
             }
+            poster={
+              "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.jpg"
+            }
             muted
             loop
             playsInline
