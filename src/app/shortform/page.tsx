@@ -89,7 +89,7 @@ function ShortForm() {
         <div className="shortform-work-video-container">
           <video
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.webm"
             }
             muted
             autoPlay
@@ -98,7 +98,7 @@ function ShortForm() {
           ></video>
           <video
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/shortform/AlexParentsAdvice.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/AlexParentsAdvice.webm"
             }
             muted
             autoPlay
@@ -107,7 +107,7 @@ function ShortForm() {
           ></video>
           <video
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/shortform/Montgolfieeres.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Montgolfieeres.webm"
             }
             muted
             autoPlay
@@ -115,7 +115,9 @@ function ShortForm() {
             playsInline
           ></video>
           <video
-            src={"https://d128kbp85lo7cj.cloudfront.net/shortform/DavidTso.mp4"}
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/DavidTso.webm"
+            }
             muted
             autoPlay
             loop
@@ -123,7 +125,7 @@ function ShortForm() {
           ></video>
           <video
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/shortform/Weekenders.webm"
             }
             muted
             autoPlay

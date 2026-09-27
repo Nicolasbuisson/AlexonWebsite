@@ -46,6 +46,7 @@ const { values: opts, positionals } = parseArgs({
     invalidate: { type: "boolean", default: false },
     "distribution-id": { type: "string" },
     exclude: { type: "string", multiple: true, default: [] },
+    "keep-audio": { type: "boolean", default: false },
     "skip-larger": { type: "boolean", default: false },
     "delete-originals": { type: "boolean", default: false },
     help: { type: "boolean", default: false },
@@ -67,6 +68,9 @@ Options:
   --concurrency <n>     Files converted in parallel (default 2).
   --acl <acl>           ACL for uploads, e.g. public-read. Omit on buckets
                         with ACLs disabled (Bucket owner enforced).
+  --keep-audio          Encode the audio track as Opus instead of dropping it.
+                        Audio is dropped by default, which suits silent
+                        background loops but destroys a talking-head video.
   --exclude <glob>      Skip sources matching this glob, matched against the
                         path below <folder> (e.g. "*-v0.mp4", "stills/*").
                         Repeatable.
@@ -175,10 +179,14 @@ function ffmpegArgs(kind, input, output) {
       opts.mode === "lossless"
         ? ["-lossless", "1"]
         : ["-crf", "32", "-b:v", "0", "-pix_fmt", "yuv420p"];
+    // Opus is the standard audio codec for WebM; libvpx has no say in it.
+    const audio = opts["keep-audio"]
+      ? ["-c:a", "libopus", "-b:a", "128k"]
+      : ["-an"];
     return [
       "-y", "-hide_banner", "-loglevel", "error",
       "-i", input,
-      "-an",
+      ...audio,
       "-c:v", "libvpx-vp9",
       ...codec,
       "-row-mt", "1",
