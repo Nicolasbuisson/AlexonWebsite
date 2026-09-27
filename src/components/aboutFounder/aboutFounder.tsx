@@ -38,9 +38,13 @@ export const AboutFounder = () => {
       },
     });
 
-    imageFilterTimeline.to(founderImage, {
-      filter: "blur(8px) brightness(0.6)",
-    });
+    imageFilterTimeline.to(
+      founderImage,
+      {
+        filter: "blur(8px) brightness(0.6)",
+      },
+      "<0.2",
+    );
   }, []);
 
   return (
