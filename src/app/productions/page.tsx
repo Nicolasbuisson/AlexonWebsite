@@ -43,139 +43,139 @@ function Productions() {
         <LogoList
           logos={[
             {
-              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoronaBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoronaBlack.webp",
               alt: "Corona logo",
             },
             {
-              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasonsBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasonsBlack.webp",
               alt: "Four Seasons logo",
             },
             {
-              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLEBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLEBlack.webp",
               alt: "ELLE logo",
             },
             {
-              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummitBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummitBlack.webp",
               alt: "John Summit logo",
             },
             {
-              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversityBlack.png",
+              src: "https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversityBlack.webp",
               alt: "McGill University logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanadaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanadaBlack.webp`,
               alt: "AirCanada logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BelcoreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BelcoreBlack.webp`,
               alt: "Belcore logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNTBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNTBlack.webp`,
               alt: "BUNT logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ChrisLakeBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ChrisLakeBlack.webp`,
               alt: "Chris Lake logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ClaptoneBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ClaptoneBlack.webp`,
               alt: "Claptone logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ElewanaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ElewanaBlack.webp`,
               alt: "Elewana logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/IleSoniqBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/IleSoniqBlack.webp`,
               alt: "Ile Soniq logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/KSHMRBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/KSHMRBlack.webp`,
               alt: "KSHMR logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LequilibreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LequilibreBlack.webp`,
               alt: "L'Équilibre logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LHOFTBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/LHOFTBlack.webp`,
               alt: "LHOFT logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/MonolinkBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/MonolinkBlack.webp`,
               alt: "Monolink logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/NewCityGasBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/NewCityGasBlack.webp`,
               alt: "New City Gas logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotelsBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotelsBlack.webp`,
               alt: "Onomo Hotels logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PatschBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PatschBlack.webp`,
               alt: "Patsch logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PrepinsonBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PrepinsonBlack.webp`,
               alt: "Prepinson logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/St-PierreBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/St-PierreBlack.webp`,
               alt: "St-Pierre logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VacierBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VacierBlack.webp`,
               alt: "Vacier logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VaudeBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VaudeBlack.webp`,
               alt: "Vaude logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/Web3MTLBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/Web3MTLBlack.webp`,
               alt: "Web3MTL logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/XiaomiBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/XiaomiBlack.webp`,
               alt: "Xiaomi logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PonenteBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PonenteBlack.webp`,
               alt: "Ponente logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmegaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmegaBlack.webp`,
               alt: "Parc Omega logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoinbaseBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/CoinbaseBlack.webp`,
               alt: "Coinbase logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AquilaSafarisBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AquilaSafarisBlack.webp`,
               alt: "Aquila Safaris logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PuntoDeVistaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PuntoDeVistaBlack.webp`,
               alt: "Punto de Vista logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ToyotaBlack.webp`,
               alt: "Toyota logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/EmiratesNBD_black.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/EmiratesNBD_black.webp`,
               alt: "Emirates NBD logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISA_black.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISA_black.webp`,
               alt: "Visa logo",
             },
             {
-              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.png`,
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.webp`,
               alt: "Atlantis logo",
             },
           ]}

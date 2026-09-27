@@ -22,7 +22,7 @@ function Home() {
         <HorizontalScroller>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.webp`}
               fill
               alt="Corona logo"
               className="home-horizontal-scroller-logo"
@@ -30,7 +30,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.webp`}
               fill
               alt="Four Seasons logo"
               className="home-horizontal-scroller-logo"
@@ -38,7 +38,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLE.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLE.webp`}
               fill
               alt="ELLE logo"
               className="home-horizontal-scroller-logo"
@@ -46,7 +46,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummit.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummit.webp`}
               fill
               alt="John Summit logo"
               className="home-horizontal-scroller-logo"
@@ -54,7 +54,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.webp`}
               fill
               alt="Air Canada logo"
               className="home-horizontal-scroller-logo"
@@ -62,7 +62,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Xiaomi.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Xiaomi.webp`}
               fill
               alt="Xiaomi logo"
               className="home-horizontal-scroller-logo"
@@ -70,7 +70,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNT.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNT.webp`}
               fill
               alt="BUNT logo"
               className="home-horizontal-scroller-logo"
@@ -78,7 +78,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.webp`}
               fill
               alt="Coinbase logo"
               className="home-horizontal-scroller-logo"
@@ -86,7 +86,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotels.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotels.webp`}
               fill
               alt="Onomo Hotels logo"
               className="home-horizontal-scroller-logo"
@@ -94,7 +94,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Toyota.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Toyota.webp`}
               fill
               alt="Toyota logo"
               className="home-horizontal-scroller-logo"
@@ -102,7 +102,7 @@ function Home() {
           </div>
           <div className="home-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.webp`}
               fill
               alt="Claptone logo"
               className="home-horizontal-scroller-logo"

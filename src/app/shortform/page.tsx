@@ -19,7 +19,7 @@ function ShortForm() {
         <HorizontalScroller fullBleed>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.webp`}
               fill
               alt="Corona logo"
               className="shortform-horizontal-scroller-logo"
@@ -27,7 +27,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.webp`}
               fill
               alt="Four Seasons logo"
               className="shortform-horizontal-scroller-logo"
@@ -35,7 +35,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.webp`}
               fill
               alt="McGill University logo"
               className="shortform-horizontal-scroller-logo"
@@ -43,7 +43,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.webp`}
               fill
               alt="Coinbase logo"
               className="shortform-horizontal-scroller-logo"
@@ -51,7 +51,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.webp`}
               fill
               alt="AirCanada logo"
               className="shortform-horizontal-scroller-logo"
@@ -59,7 +59,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.webp`}
               fill
               alt="Claptone logo"
               className="shortform-horizontal-scroller-logo"
@@ -67,7 +67,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.webp`}
               fill
               alt="Parc Omega logo"
               className="shortform-horizontal-scroller-logo"
@@ -75,7 +75,7 @@ function ShortForm() {
           </div>
           <div className="shortform-horizontal-scroller-logo-wrapper">
             <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.png`}
+              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.webp`}
               fill
               alt="Monolink logo"
               className="shortform-horizontal-scroller-logo"

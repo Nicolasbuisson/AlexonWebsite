@@ -8,7 +8,7 @@
       "videos": ["https://www.youtube.com/embed/mH13Adbu11A"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/visaXEmiratesNBD/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/VisaxEmirates.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISAxEmiratesNBD.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/VISAxEmiratesNBD.webp",
       "services": ["Video Production"],
       "stills": [
         {
@@ -101,7 +101,7 @@
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/fourSeasons/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/FourSeasons.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.webp",
       "services": ["Video Production"],
       "stills": [
         {
@@ -163,7 +163,7 @@
       "videos": ["https://www.youtube.com/embed/WMsyFY5ivG8"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/beautyThatHurts/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/BeautyThatHurts.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BD.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BD.webp",
       "services": ["Passion Project", "Video Production"],
       "stills": [
         {
@@ -268,7 +268,7 @@
       "videos": ["https://youtube.com/embed/ITLSqXL-nGc"],
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/OnomoHotels.jpg",
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/onomoHotels/preview.mp4",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotels.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/OnomoHotels.webp",
       "services": ["Video Production", "Commercial Photography"],
       "stills": [
         {
@@ -445,7 +445,7 @@
       "videos": ["https://www.youtube.com/embed/tnVR1uGiZd0"],
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/InternationalDeMontgolfieres.jpg",
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/internationalDeMongolfieres/preview.mp4",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/InternationalDeMongolfieres.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/InternationalDeMongolfieres.webp",
       "services": ["Video Production", "Concert Videography"],
       "stills": [],
       "photos": [],
@@ -469,7 +469,7 @@
       "videos": ["https://youtube.com/embed/vu9C_KBagII"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/coinbase/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Coinbase.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.webp",
       "services": [
         "Event Videography",
         "Video Production",
@@ -550,7 +550,7 @@
       "videos": ["https://www.youtube.com/embed/EV4SFvjYch8"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/corona/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Corona.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.webp",
       "services": ["Video Production", "Commercial Photography"],
       "stills": [],
       "photos": [
@@ -658,7 +658,7 @@
       "videos": ["https://www.youtube.com/embed/Nq_xYiUh6vI"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/lequilibre/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/L'Equilibre.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Lequilibre.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Lequilibre.webp",
       "services": [
         "Video Production",
         "Commercial Photography",
@@ -789,7 +789,7 @@
       "videos": ["https://youtube.com/embed/bE8Pa9WE_00"],
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/ELLE.jpg",
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/elle/preview.mp4",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLE.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ELLE.webp",
       "services": ["Video Production"],
       "stills": [
         {
@@ -850,11 +850,11 @@
       "route": "elewanacollection",
       "title": "Elewana Collection",
       "client": "Elewana",
-      "description": "We captured the breathtaking beauty of Elewana’s safari lodges and the spirit of African adventure. Our team highlighted the luxury of the accommodations alongside the raw beauty of the wilderness. Our team showcased the emotional connection between guests and nature. Through sweeping landscapes and intimate moments, we brought Elewana’s story to life.",
+      "description": "We captured the breathtaking beauty of Elewana's safari lodges and the spirit of African adventure. Our team highlighted the luxury of the accommodations alongside the raw beauty of the wilderness. Our team showcased the emotional connection between guests and nature. Through sweeping landscapes and intimate moments, we brought Elewana's story to life.",
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/elewana/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/ElewanaCollection.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Elewana.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Elewana.webp",
       "services": [
         "Video Production",
         "Commercial Photography",
@@ -977,7 +977,7 @@
       ],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/harasDePrepinson/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/HarasDePrepinson.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Prepinson.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Prepinson.webp",
       "services": [
         "Video Production",
         "Commercial Photography",
@@ -1101,7 +1101,7 @@
       ],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/maisonPrepinson/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/MaisonPrepinson.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Prepinson.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Prepinson.webp",
       "services": [
         "Video Production",
         "Commercial Photography",
@@ -1210,7 +1210,7 @@
       ],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/lhoft/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/LHOFTBangkok.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/LHOFT.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/LHOFT.webp",
       "services": ["Video Production", "Event Photography"],
       "stills": [
         {
@@ -1391,7 +1391,7 @@
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/claptone/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Claptone.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.webp",
       "services": ["Concert Videography", "Event Photography"],
       "stills": [],
       "photos": [
@@ -1454,7 +1454,7 @@
       "videos": ["https://www.youtube.com/embed/lZCiJBP88Og"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/visionBoard/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/TheVisionBoard.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/AlexonSignature.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/AlexonSignature.webp",
       "services": ["Video Production", "Passion Project"],
       "stills": [
         {
@@ -1557,7 +1557,7 @@
       "videos": ["https://www.youtube.com/embed/4mC7V-_V5Ic"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/willIEverMakeIt/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/WillIEverMakeIt.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/AlexonSignature.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/AlexonSignature.webp",
       "services": ["Video Production", "Passion Project"],
       "stills": [
         {
@@ -1660,7 +1660,7 @@
       "videos": ["https://youtube.com/embed/niQZyYJbeN4"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/parcOmega/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/ParcOmega.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.webp",
       "services": ["Video Production", "Commercial Photography"],
       "stills": [
         {
@@ -1767,7 +1767,7 @@
       "videos": ["https://youtube.com/embed/zSKykcznOT8"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/ponente/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Ponente.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Ponente.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Ponente.webp",
       "services": ["Commercial Photography", "Video Production"],
       "stills": [
         {
@@ -1897,7 +1897,7 @@
       "videos": ["https://youtube.com/embed/3Z5nh0JMM0g"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/mcgillUniversity/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/McGillUniversity.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.webp",
       "services": ["Video Production"],
       "stills": [
         {
@@ -1965,7 +1965,7 @@
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/johnSummit/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/JohnSummit.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummit.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/JohnSummit.webp",
       "services": ["Concert Videography"],
       "stills": [],
       "photos": [],
@@ -1989,7 +1989,7 @@
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/newCityGas/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/NewCityGas.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/NewCityGas.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/NewCityGas.webp",
       "services": ["Concert Videography"],
       "stills": [],
       "photos": [],
@@ -2008,7 +2008,7 @@
       "videos": [],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/bunt/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/BUNT.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNT.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BUNT.webp",
       "services": ["Event Photography", "Concert Videography"],
       "stills": [],
       "photos": [
@@ -2049,7 +2049,7 @@
       "videos": ["https://www.youtube.com/embed/HJH_rg2S1Wg"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/puntoDeVista/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/PuntoDeVista.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/PuntoDeVista.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/PuntoDeVista.webp",
       "services": ["Video Production", "Commercial Photography"],
       "stills": [],
       "photos": [
@@ -2166,7 +2166,7 @@
       "videos": ["https://www.youtube.com/embed/HJH_rg2S1Wg"],
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/preview.mp4",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Beachclub.jpg",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BeachClub.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BeachClub.webp",
       "services": [
         "Event Photography",
         "Concert Videography",
@@ -2250,7 +2250,7 @@
       "videos": ["https://youtube.com/embed/fDJ5i6h7j8o"],
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/9.jpeg",
       "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/preview.mp4",
-      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Atlantis.png",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Atlantis.webp",
       "services": ["Video Production"],
       "stills": [
         {
@@ -2343,7 +2343,262 @@
         { "title": "Model", "name": "Mica Mikela" },
         { "title": "BTS", "name": "Keoni Lachhar" }
       ],
-      "displayOnHomePage": true
+      "displayOnHomePage": false
+    },
+    {
+      "route": "ON",
+      "title": "ON",
+      "client": "ON",
+      "description": "This project centers on the production of a high-impact brand video for On Running, created to launch and announce their new marathon collection across Dubai and the UAE. The film is designed to capture the spirit of endurance, innovation, and performance that defines the brand, while connecting authentically with the region’s growing running community. Set against the dynamic urban landscapes of Dubai, the video blends cinematic storytelling with product-focused visuals. It follows runners of different profiles—from professional athletes to everyday enthusiasts—highlighting the versatility and technical excellence of the new collection in real-world conditions.",
+      "videos": ["https://youtube.com/embed/Am2dv8dSdW8"],
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.jpeg",
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/preview.mp4",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ON.webp",
+      "services": ["Video Production"],
+      "stills": [
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/1.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/2.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/3.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/4.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/5.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/6.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/7.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/8.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/10.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/11.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/12.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/13.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/14.jpeg"
+        }
+      ],
+      "photos": [],
+      "bts": [],
+      "credits": [
+        { "title": "Agency", "name": "Tarqeeeb" },
+        { "title": "Directors", "name": "Alexon & Love Paras" },
+        {
+          "title": "Camera Operators",
+          "name": "Alexon & Love Paras"
+        },
+        { "title": "Drone Operator", "name": "Love paras" },
+        { "title": "Editor", "name": "David Combes" }
+      ],
+      "displayOnHomePage": false
+    },
+    {
+      "route": "asicsburj2burj",
+      "title": "Asics x Burj2Burj",
+      "client": "Asics x Burj2Burj",
+      "description": "This project focuses on the production of a dynamic content suite for ASICS in collaboration with the Burj2Burj Marathon—one of the UAE’s most iconic races, known for its breathtaking route stretching between Dubai’s most recognizable landmarks.\nOur team delivered both the official launch film and the event recap, capturing the full narrative arc of the marathon—from anticipation to achievement. The launch video was crafted to build excitement and elevate the prestige of the race, combining striking visuals of Dubai’s skyline with high-energy running sequences that reflect ASICS’s commitment to performance and community.",
+      "videos": [
+        "https://youtube.com/embed/yIlipImGzRE",
+        "https://youtube.com/embed/p7kWyXpZ_8Q"
+      ],
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/9.jpeg",
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/preview.mp4",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ASICSxBurj2Burj.webp",
+      "services": ["Video Production"],
+      "stills": [
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/1.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/2.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/3.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/4.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/5.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/6.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/7.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/8.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/9.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/10.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/11.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/12.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsBurj2Burj/stills/13.jpeg"
+        }
+      ],
+      "photos": [],
+      "bts": [],
+      "credits": [
+        { "title": "Directors", "name": "Alexon & Love Paras" },
+        {
+          "title": "Camera Operators",
+          "name": "Alexon, Love Paras, Matiss Skujins"
+        },
+        { "title": "Production & BTS", "name": "43Lens Agency" },
+        { "title": "Additionnal Drone & FPV Shots", "name": "Love paras" },
+        { "title": "Editor", "name": "Alexon" }
+      ],
+      "displayOnHomePage": false
+    },
+    {
+      "route": "asicsuaeMarathon",
+      "title": "Asics x UAE Marathons",
+      "client": "Asics x UAE Marathons",
+      "description": "This project captures our fast-paced productions for the 2026 editions of the Dubai Marathon and the Riyadh Marathon — two defining races in the Middle East’s growing running scene.\nCovering full 42km routes across both cities, our approach prioritized agility and speed. Multiple mobile units moved along key points of each course, allowing us to document the race in real time - all the way from the starting line to the finishing line. The production required constant coordination and rapid repositioning to capture decisive moments as they happened.\nThe final films blend scale and storytelling, showcasing each city’s unique backdrop while highlighting the endurance and personal journeys of the runners, resulting in dynamic recaps that reflect the energy and significance of these landmark events.",
+      "videos": [
+        "https://youtube.com/embed/HAd8JgGy-5Q",
+        "https://youtube.com/embed/P2Sp4NmLlLM"
+      ],
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/9.jpeg",
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/preview.mp4",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ASICSxBurj2Burj.webp",
+      "services": ["Video Production"],
+      "stills": [
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/1.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/2.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/3.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/4.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/5.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/6.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/7.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/8.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/9.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/10.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/11.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/12.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/13.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/14.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/15.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/16.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/17.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/18.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/19.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/20.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/21.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/22.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/23.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/24.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/25.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/26.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/27.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/28.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/29.jpeg"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/AsicsUAEMarathon/stills/30.jpeg"
+        }
+      ],
+      "photos": [],
+      "bts": [],
+      "credits": [
+        { "title": "Directors", "name": "Alexon & Love Paras" },
+        {
+          "title": "Camera Operators",
+          "name": "Alexon, Love Paras, Matiss Skujins"
+        },
+        { "title": "Production & BTS", "name": "43Lens Agency" },
+        { "title": "Additionnal Drone & FPV Shots", "name": "Love paras" },
+        { "title": "Editor", "name": "Alexon" }
+      ],
+      "displayOnHomePage": false
     }
   ]
 }
