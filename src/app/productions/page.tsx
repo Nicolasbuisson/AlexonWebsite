@@ -21,6 +21,7 @@ function Productions() {
             poster={
               "https://d128kbp85lo7cj.cloudfront.net/images/ProductionsPoster.webp"
             }
+            preload="auto"
             muted
             autoPlay
             loop

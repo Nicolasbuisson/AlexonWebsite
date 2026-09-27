@@ -30,6 +30,9 @@ export const HomeLoader = (props: IHomeLoaderProps) => {
                 ref={image.overlay ? overlayImgRef : null}
                 src={image.src}
                 alt={image.label}
+                // eager-load + preload in <head>: cards start offscreen, so lazy
+                // loading would delay them until the scroll animation reaches them
+                priority
                 fill
                 objectFit="cover"
               />

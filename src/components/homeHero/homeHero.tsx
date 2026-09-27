@@ -77,7 +77,7 @@ export const HomeHero = () => {
 
       // measure
       const cardH = cards?.[0]!.offsetHeight ?? 0;
-      const gap = 24; // 1.5rem at 16px base
+      const gap = parseFloat(getComputedStyle(column).rowGap ?? "32");
       const totalShift = Math.round((IMAGES.length - 2) * (cardH + gap));
 
       // initial container and column state
@@ -261,8 +261,24 @@ export const HomeHero = () => {
         ">",
       );
 
-      tl.play();
+      // wait for card images to be downloaded + decoded before playing,
+      // capped so a slow connection never blocks the intro indefinitely
+      const MAX_IMAGE_WAIT_MS = 2000;
+      let cancelled = false;
+      const imagesReady = Promise.all(
+        cards
+          .map((card) => card?.querySelector("img"))
+          .map((img) => img?.decode().catch(() => {})),
+      );
+      const timeout = new Promise((resolve) =>
+        setTimeout(resolve, MAX_IMAGE_WAIT_MS),
+      );
+      Promise.race([imagesReady, timeout]).then(() => {
+        if (!cancelled) tl.play();
+      });
+
       return () => {
+        cancelled = true;
         tl.kill();
       };
     }
@@ -286,6 +302,7 @@ export const HomeHero = () => {
               "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.webm"
             }
             poster={overlaySrc}
+            preload="auto"
             muted
             loop
             playsInline
