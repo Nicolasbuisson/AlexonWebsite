@@ -283,7 +283,7 @@ export const HomeHero = () => {
           <video
             ref={videoRef}
             src={
-              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mp4"
+              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.webm"
             }
             poster={overlaySrc}
             muted

@@ -45,6 +45,7 @@ const { values: opts, positionals } = parseArgs({
     force: { type: "boolean", default: false },
     invalidate: { type: "boolean", default: false },
     "distribution-id": { type: "string" },
+    exclude: { type: "string", multiple: true, default: [] },
     "skip-larger": { type: "boolean", default: false },
     "delete-originals": { type: "boolean", default: false },
     help: { type: "boolean", default: false },
@@ -66,6 +67,9 @@ Options:
   --concurrency <n>     Files converted in parallel (default 2).
   --acl <acl>           ACL for uploads, e.g. public-read. Omit on buckets
                         with ACLs disabled (Bucket owner enforced).
+  --exclude <glob>      Skip sources matching this glob, matched against the
+                        path below <folder> (e.g. "*-v0.mp4", "stills/*").
+                        Repeatable.
   --skip-larger         Do not upload an output that is bigger than its source.
   --force               Re-convert even when the target file already exists.
   --invalidate          Invalidate the uploaded paths in CloudFront afterwards.
@@ -327,6 +331,19 @@ async function invalidate(keys) {
 
 // -------------------------------------------------------------------- driver
 
+/** Globs stay deliberately simple: * and ? only, matched case-insensitively. */
+function globToRegExp(glob) {
+  const escaped = glob.replace(/[.+^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`^${escaped.replace(/\*/g, ".*").replace(/\?/g, ".")}$`, "i");
+}
+
+const EXCLUDE = opts.exclude.map(globToRegExp);
+
+function isExcluded(key) {
+  const relative = key.slice(PREFIX.length);
+  return EXCLUDE.some((re) => re.test(relative) || re.test(key));
+}
+
 function classify(key) {
   const ext = path.extname(key).toLowerCase();
   if (VIDEO_EXT.has(ext)) return "video";
@@ -411,12 +428,17 @@ async function main() {
   const existing = new Set(objects.map((o) => o.Key));
   const jobs = [];
   const other = [];
+  const excluded = [];
   let alreadyDone = 0;
 
   for (const obj of objects) {
     const kind = classify(obj.Key);
     if (!kind) {
       if (!/\.(webm|webp)$/i.test(obj.Key)) other.push(obj.Key);
+      continue;
+    }
+    if (isExcluded(obj.Key)) {
+      excluded.push(obj.Key);
       continue;
     }
     const target = targetKey(obj.Key, kind);
@@ -445,8 +467,15 @@ async function main() {
 
   console.log(
     `${objects.length} objects | ${jobs.length} to convert | ` +
-      `${alreadyDone} already converted | ${other.length} other file types\n`
+      `${alreadyDone} already converted | ${excluded.length} excluded | ` +
+      `${other.length} other file types\n`
   );
+
+  if (excluded.length > 0) {
+    console.log(`Excluded by ${opts.exclude.map((g) => `"${g}"`).join(", ")}:`);
+    for (const key of excluded) console.log(`  -  ${key}`);
+    console.log("");
+  }
 
   if (other.length > 0) {
     console.log("Not a convertible type, left untouched:");

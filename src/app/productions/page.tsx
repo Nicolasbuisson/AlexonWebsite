@@ -15,7 +15,12 @@ function Productions() {
       <section className="productions-section-container">
         <div className="productions-video-background">
           <video
-            src={"https://d128kbp85lo7cj.cloudfront.net/videos/Productions.mp4"}
+            src={
+              "https://d128kbp85lo7cj.cloudfront.net/videos/Productions.webm"
+            }
+            poster={
+              "https://d128kbp85lo7cj.cloudfront.net/images/ProductionsPoster.webp"
+            }
             muted
             autoPlay
             loop
