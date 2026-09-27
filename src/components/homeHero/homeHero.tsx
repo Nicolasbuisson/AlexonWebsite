@@ -21,28 +21,28 @@ export const HomeHero = () => {
 
   const IMAGES = [
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis.webp",
       label: "Atlantis",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI.webp",
       label: "DJI",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON.webp",
       label: "ON",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA.webp",
       label: "Pep x VISA",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.webp",
       label: "same image as overlay to be expanded",
       overlay: true,
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields.jpg",
+      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields.webp",
       label: "Alexon in a very chinese time of his life",
     },
   ];
@@ -285,9 +285,7 @@ export const HomeHero = () => {
             src={
               "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.mp4"
             }
-            poster={
-              "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.jpg"
-            }
+            poster={overlaySrc}
             muted
             loop
             playsInline
