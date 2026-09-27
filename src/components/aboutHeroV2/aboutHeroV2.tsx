@@ -59,44 +59,50 @@ export const AboutHeroV2 = () => {
         <div className="about-hero-images-container">
           <div className="about-hero-image-wrapper" ref={image1Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/BaliVilla.jpeg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/BaliVilla.webp"
               fill
               alt="Bali Villa"
+              priority
             />
           </div>
           <div className="about-hero-image-wrapper" ref={image2Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/StereoParc.jpeg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/StereoParc.webp"
               fill
               alt="Stereo Parc"
+              priority
             />
           </div>
           <div className="about-hero-image-wrapper" ref={image3Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/Corona.jpg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/Corona.webp"
               fill
               alt="Corona"
+              priority
             />
           </div>
           <div className="about-hero-image-wrapper" ref={image4Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/DubaiMarathons.jpeg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/DubaiMarathons.webp"
               fill
               alt="Dubai Marathons"
+              priority
             />
           </div>
           <div className="about-hero-image-wrapper" ref={image5Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/DubaiSkyline.jpg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/DubaiSkyline.webp"
               fill
               alt="Dubai Skyline"
+              priority
             />
           </div>
           <div className="about-hero-image-wrapper" ref={image6Ref}>
             <Image
-              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/Atlantis.jpeg"
+              src="https://d128kbp85lo7cj.cloudfront.net/aboutAnimationImages/Atlantis.webp"
               fill
               alt="Atlantis"
+              priority
             />
           </div>
         </div>
