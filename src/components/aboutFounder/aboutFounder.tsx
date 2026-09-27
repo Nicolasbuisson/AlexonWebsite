@@ -48,7 +48,7 @@ export const AboutFounder = () => {
       <div className="about-founder-sticky-container">
         <div className="about-founder-image-wrapper" ref={founderImageRef}>
           <Image
-            src="https://d128kbp85lo7cj.cloudfront.net/images/AlexonHorizontal.jpg"
+            src="https://d128kbp85lo7cj.cloudfront.net/images/AlexonHorizontal.webp"
             fill
             alt="Alexon founder portrait"
           />
