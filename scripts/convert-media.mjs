@@ -47,6 +47,7 @@ const { values: opts, positionals } = parseArgs({
     "distribution-id": { type: "string" },
     exclude: { type: "string", multiple: true, default: [] },
     "keep-audio": { type: "boolean", default: false },
+    "video-crf": { type: "string", default: "32" },
     "skip-larger": { type: "boolean", default: false },
     "delete-originals": { type: "boolean", default: false },
     help: { type: "boolean", default: false },
@@ -68,6 +69,10 @@ Options:
   --concurrency <n>     Files converted in parallel (default 2).
   --acl <acl>           ACL for uploads, e.g. public-read. Omit on buckets
                         with ACLs disabled (Bucket owner enforced).
+  --video-crf <n>       VP9 quality for --mode web, 0-63, lower is better
+                        (default 32). Small, already-efficient previews can
+                        come out BIGGER at 32; 40 suits short muted loops.
+                        Ignored in lossless mode.
   --keep-audio          Encode the audio track as Opus instead of dropping it.
                         Audio is dropped by default, which suits silent
                         background loops but destroys a talking-head video.
@@ -99,6 +104,12 @@ if (!["lossless", "web"].includes(opts.mode)) {
 const BUCKET = opts.bucket ?? process.env.S3_BUCKET;
 const REGION = opts.region ?? process.env.AWS_REGION ?? "us-east-1";
 const CONCURRENCY = Math.max(1, Number.parseInt(opts.concurrency, 10) || 2);
+const VIDEO_CRF = Number.parseInt(opts["video-crf"], 10);
+
+if (!Number.isInteger(VIDEO_CRF) || VIDEO_CRF < 0 || VIDEO_CRF > 63) {
+  console.error(`--video-crf must be an integer 0-63, got "${opts["video-crf"]}".`);
+  process.exit(1);
+}
 
 if (!BUCKET) {
   console.error("No bucket. Set S3_BUCKET in .env or pass --bucket <name>.");
@@ -178,7 +189,7 @@ function ffmpegArgs(kind, input, output) {
     const codec =
       opts.mode === "lossless"
         ? ["-lossless", "1"]
-        : ["-crf", "32", "-b:v", "0", "-pix_fmt", "yuv420p"];
+        : ["-crf", String(VIDEO_CRF), "-b:v", "0", "-pix_fmt", "yuv420p"];
     // Opus is the standard audio codec for WebM; libvpx has no say in it.
     const audio = opts["keep-audio"]
       ? ["-c:a", "libopus", "-b:a", "128k"]
