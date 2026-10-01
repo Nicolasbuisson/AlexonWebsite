@@ -448,6 +448,7 @@ async function main() {
   const jobs = [];
   const other = [];
   const excluded = [];
+  const prune = [];
   let alreadyDone = 0;
 
   for (const obj of objects) {
@@ -463,6 +464,9 @@ async function main() {
     const target = targetKey(obj.Key, kind);
     if (existing.has(target) && !opts.force) {
       alreadyDone++;
+      // Already converted on an earlier run. With --delete-originals there is
+      // nothing to re-encode, but the source still needs removing.
+      if (opts["delete-originals"]) prune.push({ key: obj.Key, size: obj.Size });
       continue;
     }
     jobs.push({ key: obj.Key, target, kind, size: obj.Size, index: jobs.length });
@@ -503,6 +507,25 @@ async function main() {
     console.log("");
   }
 
+  if (prune.length > 0) {
+    const bytes = prune.reduce((sum, p) => sum + p.size, 0);
+    console.log(
+      `${prune.length} source file(s) already converted, ` +
+        `${mb(bytes)} to delete:`
+    );
+    for (const p of prune.slice(0, 5)) console.log(`  -  ${p.key}`);
+    if (prune.length > 5) console.log(`  -  ...and ${prune.length - 5} more`);
+
+    if (opts["dry-run"]) {
+      console.log("  (dry run, nothing deleted)\n");
+    } else {
+      for (const p of prune) {
+        await s3.send(new DeleteObjectCommand({ Bucket: BUCKET, Key: p.key }));
+      }
+      console.log(`  deleted ${prune.length} originals, freed ${mb(bytes)}\n`);
+    }
+  }
+
   if (jobs.length === 0) {
     console.log("Nothing to do.");
     return;
@@ -534,6 +557,9 @@ async function main() {
   const outBytes = results.converted.reduce((sum, r) => sum + r.outSize, 0);
 
   console.log(`\n${results.converted.length} converted and uploaded`);
+  if (opts["delete-originals"] && results.converted.length > 0) {
+    console.log(`  ${results.converted.length} originals deleted after upload`);
+  }
   if (results.converted.length > 0) {
     console.log(
       `  ${mb(inBytes)} of sources -> ${mb(outBytes)} of output ` +
