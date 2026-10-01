@@ -67,12 +67,10 @@ export default async function productionsItem({
       <Navigation transparent></Navigation>
       <section className="productionsItem-section">
         <div
-          className="productionsItem-title-background"
+          className={`productionsItem-title-background${gridImage ? " has-image" : ""}`}
           style={
             gridImage
-              ? {
-                  backgroundImage: `url(${gridImage})`,
-                }
+              ? ({ "--bg-image": `url(${gridImage})` } as React.CSSProperties)
               : {
                   borderImage:
                     "fill 0 linear-gradient(180deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 1) 100%)",
