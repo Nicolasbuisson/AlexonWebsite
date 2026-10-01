@@ -20,8 +20,9 @@ export const FlipLink = (props: FlipLinkProps) => {
       href={nextConfig.basePath + href}
       className="flip-link"
       onClick={onClick}
+      aria-label={label}
     >
-      <div>
+      <div aria-hidden="true">
         {label.split("").map((l, i) => (
           <motion.span
             variants={{
@@ -43,7 +44,7 @@ export const FlipLink = (props: FlipLinkProps) => {
           </motion.span>
         ))}
       </div>
-      <div>
+      <div aria-hidden="true">
         {label.split("").map((l, i) => (
           <motion.span
             variants={{

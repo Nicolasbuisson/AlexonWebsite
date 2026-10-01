@@ -15,7 +15,11 @@ export const Socials = (props: IProps) => {
         flexDirection === "column" ? "flex-column" : ""
       }`}
     >
-      <a href="https://www.instagram.com/alexoonnn/" className="socials-link">
+      <a
+        href="https://www.instagram.com/alexoonnn/"
+        className="socials-link"
+        aria-label="Instagram"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -29,6 +33,7 @@ export const Socials = (props: IProps) => {
       <a
         href="https://www.linkedin.com/company/alexonnn/"
         className="socials-link"
+        aria-label="LinkedIn"
       >
         <svg
           width="24"
@@ -64,6 +69,7 @@ export const Socials = (props: IProps) => {
       <a
         href="https://youtube.com/@alexonn?si=CLzHvXzXp1V9FwXz"
         className="socials-link"
+        aria-label="YouTube"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +81,11 @@ export const Socials = (props: IProps) => {
           <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
         </svg>
       </a>
-      <a href="mailto:contact@alexonmedia.com" className="socials-link">
+      <a
+        href="mailto:contact@alexonmedia.com"
+        className="socials-link"
+        aria-label="Email Alexon"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

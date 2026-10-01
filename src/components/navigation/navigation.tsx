@@ -85,13 +85,21 @@ export const Navigation = (props: NavigationProps) => {
         >
           <img
             src={"https://d128kbp85lo7cj.cloudfront.net/logos/Full-white.png"}
+            alt="Alexon home"
           ></img>
         </Link>
-        <div className="burger-menu" onClick={updateMenu}>
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
-        </div>
+        <button
+          type="button"
+          className="burger-menu"
+          onClick={updateMenu}
+          aria-label={isMenuClicked ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuClicked}
+          aria-controls="menu-container"
+        >
+          <span className={burger_class}></span>
+          <span className={burger_class}></span>
+          <span className={burger_class}></span>
+        </button>
       </nav>
       <div id="menu-container">
         <ul className="menu" id="menu">

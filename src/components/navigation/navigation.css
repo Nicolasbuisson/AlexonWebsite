@@ -99,6 +99,12 @@ nav > * {
   align-items: flex-start;
   gap: 0.5rem;
   cursor: pointer;
+  /* reset default button styles */
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
 }
 
 .burger-bar {
