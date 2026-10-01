@@ -2163,8 +2163,8 @@
       "title": "Beach Club",
       "client": "Beach Club",
       "description": "Every summer Beachclub hosts some of the biggest DJs & artists on its island off of Montreal. Every show is different but every show is special. We got the opportunity to capture both video and photo for Beachclub’s social media accounts. We were tasked with shooting & editing video reels in order to build hype in the moment and share in real time what’s happening on the island. Our reels were edited and posted as the event was ongoing with the video recap being edited overnight and shared online the next morning for all eventgoers to reminisce about their most recent night.",
-      "videos": ["https://www.youtube.com/embed/HJH_rg2S1Wg"],
-      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/preview.mp4",
+      "videos": [],
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/preview.webm",
       "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/Beachclub.webp",
       "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/BeachClub.webp",
       "services": [
@@ -2175,58 +2175,58 @@
       "stills": [],
       "photos": [
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/1.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/1.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/2.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/2.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/3.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/3.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/4.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/4.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/5.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/5.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/6.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/6.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/7.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/7.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/8.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/8.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/9.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/9.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/10.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/10.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/11.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/11.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/12.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/12.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/13.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/13.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/14.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/14.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/15.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/15.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/16.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/16.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/17.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/17.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/18.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/beachClub/photos/18.webp"
         }
       ],
       "bts": [],
@@ -2248,87 +2248,87 @@
       "client": "Atlantis",
       "description": "This project centers on the creation of a visually distinctive brand film for Atlantis The Palm as part of their A World Away campaign. The objective was to present the destination in a way it had never been seen before—blurring the line between fantasy and reality by seamlessly merging the underwater world with the hotel experience.",
       "videos": ["https://youtube.com/embed/fDJ5i6h7j8o"],
-      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/9.jpeg",
-      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/preview.mp4",
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/9.webp",
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/preview.webm",
       "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/Atlantis.webp",
       "services": ["Video Production"],
       "stills": [
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/1.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/1.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/2.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/2.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/3.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/3.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/4.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/4.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/5.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/5.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/6.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/6.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/7.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/7.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/8.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/8.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/9.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/9.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/10.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/stills/10.webp"
         }
       ],
       "photos": [
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/1.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/1.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/2.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/2.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/3.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/3.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/4.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/4.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/5.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/5.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/6.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/6.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/7.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/7.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/8.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/8.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/9.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/9.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/10.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/10.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/11.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/11.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/12.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/12.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/13.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/13.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/14.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/14.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/15.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/atlantisThePalm/photos/15.webp"
         }
       ],
       "bts": [],
@@ -2351,52 +2351,52 @@
       "client": "ON",
       "description": "This project centers on the production of a high-impact brand video for On Running, created to launch and announce their new marathon collection across Dubai and the UAE. The film is designed to capture the spirit of endurance, innovation, and performance that defines the brand, while connecting authentically with the region’s growing running community. Set against the dynamic urban landscapes of Dubai, the video blends cinematic storytelling with product-focused visuals. It follows runners of different profiles—from professional athletes to everyday enthusiasts—highlighting the versatility and technical excellence of the new collection in real-world conditions.",
       "videos": ["https://youtube.com/embed/Am2dv8dSdW8"],
-      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.jpeg",
-      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/preview.mp4",
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.webp",
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/preview.webm",
       "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/ON.webp",
       "services": ["Video Production"],
       "stills": [
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/1.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/1.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/2.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/2.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/3.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/3.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/4.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/4.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/5.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/5.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/6.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/6.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/7.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/7.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/8.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/8.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/9.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/10.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/10.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/11.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/11.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/12.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/12.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/13.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/13.webp"
         },
         {
-          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/14.jpeg"
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/ON/stills/14.webp"
         }
       ],
       "photos": [],
