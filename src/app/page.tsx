@@ -1,6 +1,5 @@
 import "./home.css";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
-import { InstaSection } from "../components/insta/instaSection";
 import { Projects } from "../components/projects/projects";
 import { projects } from "../resources/projects.json";
 import { ArrowPathLink } from "../components/arrowPath/arrowPathLink";
@@ -10,9 +9,6 @@ import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
 import { HomeHero } from "../components/homeHero/homeHero";
-
-// revalidate and rebuild the static page every 15 minutes to obtain fresh instagram data
-export const revalidate = 900;
 
 function Home() {
   return (
@@ -268,7 +264,6 @@ function Home() {
           />
         </div>
       </section>
-      {/* <InstaSection />  */}
     </div>
   );
 }
