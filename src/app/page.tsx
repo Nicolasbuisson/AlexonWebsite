@@ -149,14 +149,14 @@ function Home() {
       </section>
       <section className="home-shortform-section">
         <div className="home-shortform-header">
-          <h4>Short-Form</h4>
+          <h4>Content Systems</h4>
           <h4>03/</h4>
         </div>
         <TagLine>
           <h3>
-            Our <span>done-for-you</span> short-form content packages are
-            engineered for impact - where visual excellence meets brand strategy
-            to drive <span>reach, conversions, and ROI.</span>
+            Our <span>done-for-you</span> content systems and short-form
+            packages are engineered for impact - where visual excellence meets
+            brand strategy to drive <span>reach, conversions, and ROI.</span>
           </h3>
         </TagLine>
         <div className="home-shortform-video-container">
@@ -268,7 +268,7 @@ function Home() {
           />
         </div>
       </section>
-      <InstaSection />
+      {/* <InstaSection />  */}
     </div>
   );
 }
