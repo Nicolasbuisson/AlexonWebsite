@@ -6,8 +6,8 @@ import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
 import { AboutAimItem } from "../../components/aboutAimItem/aboutAimitem";
 import { AboutFounder } from "../../components/aboutFounder/aboutFounder";
 
-// revalidate and rebuild the static page every 15 minutes to obtain fresh instagram data
-export const revalidate = 900;
+// revalidate and rebuild the static page every 1 hour to obtain fresh instagram data
+export const revalidate = 3600;
 
 function AboutPage() {
   return (
