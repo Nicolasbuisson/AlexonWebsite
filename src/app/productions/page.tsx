@@ -178,6 +178,14 @@ function Productions() {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AtlantisBlack.webp`,
               alt: "Atlantis logo",
             },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AsicsBlack.webp`,
+              alt: "Asics logo",
+            },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ONBlack.webp`,
+              alt: "ON logo",
+            },
           ]}
         ></LogoList>
       </section>
