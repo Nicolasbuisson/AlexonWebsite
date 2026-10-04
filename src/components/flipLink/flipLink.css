@@ -21,3 +21,20 @@
   position: absolute;
   inset: 0;
 }
+
+.flip-link .flip-letter {
+  position: relative;
+}
+
+/* The gradient is a static overlay copy of the glyph. Its colour is never
+   animated, so it cannot be overridden by framer-motion's inline `color`;
+   only its opacity is animated to wipe it off and reveal the white letter. */
+.flip-link .flip-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background-color: var(--clr-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
