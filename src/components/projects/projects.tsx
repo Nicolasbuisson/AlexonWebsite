@@ -12,9 +12,12 @@ interface IProps {
 export const Projects = (props: IProps) => {
   const { projects, homePageFilter = false } = props;
   const projectsToRender = useMemo(() => {
+    const visibleProjects = projects.filter(
+      (project) => !project.hideFromProductions,
+    );
     return homePageFilter
-      ? projects.filter((project) => project.displayOnHomePage)
-      : projects;
+      ? visibleProjects.filter((project) => project.displayOnHomePage)
+      : visibleProjects;
   }, []);
 
   useEffect(() => {

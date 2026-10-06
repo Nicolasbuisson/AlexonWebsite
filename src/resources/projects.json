@@ -1757,6 +1757,7 @@
         { "title": "Production Partner", "name": "Papilio Productions" },
         { "title": "Talent", "name": "Keoni Lachhar, Christelle Buisson" }
       ],
+      "hideFromProductions": true,
       "displayOnHomePage": false
     },
     {
@@ -1887,6 +1888,7 @@
         { "title": "Photography", "name": "Alexon" },
         { "title": "Production Assistant", "name": "Maxime Harfouche" }
       ],
+      "hideFromProductions": true,
       "displayOnHomePage": false
     },
     {
@@ -1979,6 +1981,7 @@
         { "title": "Editor", "name": "Christian Santiago" },
         { "title": "Production Assistant", "name": "William Leroux" }
       ],
+      "hideFromProductions": true,
       "displayOnHomePage": false
     },
     {
@@ -1998,6 +2001,7 @@
         { "title": "Camera Operator", "name": "Alexon" },
         { "title": "Editor", "name": "Alexon" }
       ],
+      "hideFromProductions": true,
       "displayOnHomePage": false
     },
     {
@@ -2039,6 +2043,7 @@
         { "title": "Camera Operator", "name": "Alexon" },
         { "title": "Editor", "name": "Alexon" }
       ],
+      "hideFromProductions": true,
       "displayOnHomePage": false
     },
     {

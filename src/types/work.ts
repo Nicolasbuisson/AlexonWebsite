@@ -30,4 +30,5 @@ interface WorkItemProps {
   bts: StillImage[];
   credits: CreditEntry[];
   displayOnHomePage?: boolean;
+  hideFromProductions?: boolean;
 }
