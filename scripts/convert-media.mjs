@@ -182,6 +182,13 @@ if (!FFMPEG && !opts["dry-run"]) {
  * Video: VP9. `-lossless 1` reproduces the decoded source frames bit-exactly.
  * `-an` drops audio entirely, as requested.
  *
+ * Full-range (yuvj420p) sources need their levels remapped to limited range,
+ * not just their pixel format relabelled: `-pix_fmt yuv420p` alone leaves the
+ * source's full-range tag on the VP9 stream, and Chrome's decoder rejects that
+ * with PIPELINE_ERROR_DECODE, so the preview silently never plays. The scale
+ * filter does the remap; `in_range=auto` takes the range from the source, so
+ * already-limited sources pass through untouched.
+ *
  * Images: libwebp. `-lossless 1` is bit-exact and preserves the alpha channel.
  */
 function ffmpegArgs(kind, input, output) {
@@ -189,7 +196,11 @@ function ffmpegArgs(kind, input, output) {
     const codec =
       opts.mode === "lossless"
         ? ["-lossless", "1"]
-        : ["-crf", String(VIDEO_CRF), "-b:v", "0", "-pix_fmt", "yuv420p"];
+        : [
+            "-crf", String(VIDEO_CRF), "-b:v", "0",
+            "-vf", "scale=in_range=auto:out_range=limited,format=yuv420p",
+            "-color_range", "tv",
+          ];
     // Opus is the standard audio codec for WebM; libvpx has no say in it.
     const audio = opts["keep-audio"]
       ? ["-c:a", "libopus", "-b:a", "128k"]

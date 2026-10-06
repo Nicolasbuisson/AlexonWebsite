@@ -23,39 +23,65 @@ export const Projects = (props: IProps) => {
   useEffect(() => {
     // Select all cards
     const cards = document.querySelectorAll(".projects-grid-card");
+    const cleanups: (() => void)[] = [];
 
-    const cardsEventListenerToggle = (
-      addEventListener: boolean = true,
-    ): void => {
-      cards.forEach((card) => {
-        const preview = card.querySelector("video");
-        if (preview) {
-          const playVideo = () => {
-            preview.play();
-          };
+    cards.forEach((card) => {
+      const preview = card.querySelector("video");
+      if (!preview) return;
 
-          const pauseVideo = () => {
-            preview.pause();
-            preview.currentTime = 0;
-          };
-          if (addEventListener) {
-            card.addEventListener("mouseenter", playVideo);
-            card.addEventListener("mouseleave", pauseVideo);
-            card.addEventListener("touchstart", playVideo);
-            card.addEventListener("touchend", pauseVideo);
-          } else {
-            card.removeEventListener("mouseenter", playVideo);
-            card.removeEventListener("mouseleave", pauseVideo);
-            card.removeEventListener("touchstart", playVideo);
-            card.removeEventListener("touchend", pauseVideo);
-          }
+      // play() is async: pausing while it is still pending rejects it with an
+      // AbortError, so hold on to the promise and pause once it has settled
+      let pending: Promise<void> | null = null;
+      let shouldPlay = false;
+
+      // a preview that cannot be decoded otherwise fails completely silently
+      const onError = () =>
+        console.error("preview failed to load", preview.src, preview.error);
+      preview.addEventListener("error", onError);
+
+      const playVideo = () => {
+        shouldPlay = true;
+        pending = preview.play();
+        pending.catch((err: unknown) => {
+          // leaving the card before playback starts aborts it, which is fine;
+          // anything else is a real fault worth seeing
+          if (err instanceof DOMException && err.name === "AbortError") return;
+          console.error("preview failed to play", preview.src, err);
+        });
+      };
+
+      const pauseVideo = () => {
+        shouldPlay = false;
+        const stop = () => {
+          if (shouldPlay) return; // hovered back in while play() was settling
+          preview.pause();
+          preview.currentTime = 0;
+        };
+        if (pending) {
+          pending.then(stop).catch(() => {});
+        } else {
+          stop();
         }
-      });
-    };
+      };
 
-    cardsEventListenerToggle(true); // add event listeners on all cards
+      card.addEventListener("mouseenter", playVideo);
+      card.addEventListener("mouseleave", pauseVideo);
+      card.addEventListener("touchstart", playVideo);
+      card.addEventListener("touchend", pauseVideo);
+
+      // same function references, so these actually detach
+      // adds each card's event listeners cleanup function to array without calling it
+      cleanups.push(() => {
+        card.removeEventListener("mouseenter", playVideo);
+        card.removeEventListener("mouseleave", pauseVideo);
+        card.removeEventListener("touchstart", playVideo);
+        card.removeEventListener("touchend", pauseVideo);
+        preview.removeEventListener("error", onError);
+      });
+    });
+
     return () => {
-      cardsEventListenerToggle(false); // remove event listeners on all cards on unmount
+      cleanups.forEach((cleanup) => cleanup());
     };
   }, []);
 
