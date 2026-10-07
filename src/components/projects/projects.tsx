@@ -21,6 +21,15 @@ export const Projects = (props: IProps) => {
   }, []);
 
   useEffect(() => {
+    // A touch device has no hover, so these previews can never be played there.
+    // Bailing out leaves preload="none" untouched, so the browser never fetches
+    // a video the visitor has no way of watching. "pointer: fine" is included
+    // because some Android browsers wrongly report "hover: hover" on its own.
+    const canHover = window.matchMedia(
+      "(hover: hover) and (pointer: fine)",
+    ).matches;
+    if (!canHover) return;
+
     // Select all cards
     const cards = document.querySelectorAll(".projects-grid-card");
     const cleanups: (() => void)[] = [];
@@ -28,6 +37,10 @@ export const Projects = (props: IProps) => {
     cards.forEach((card) => {
       const preview = card.querySelector("video");
       if (!preview) return;
+
+      // buffer up front so the first hover plays without waiting on the network
+      preview.preload = "auto";
+      preview.load();
 
       // play() is async: pausing while it is still pending rejects it with an
       // AbortError, so hold on to the promise and pause once it has settled
@@ -98,7 +111,10 @@ export const Projects = (props: IProps) => {
             {project.gridVideoPreview ? (
               <video
                 src={project.gridVideoPreview}
-                preload="auto"
+                // starts at "none" so a device that cannot hover only ever
+                // downloads the poster; the effect raises it to "auto" on
+                // hover-capable devices, where playback must be instant
+                preload="none"
                 muted
                 loop
                 playsInline
