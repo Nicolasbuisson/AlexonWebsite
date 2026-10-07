@@ -86,7 +86,8 @@ export const HomeHero = () => {
       gsap.set(overlay, { autoAlpha: 0, zIndex: 0 });
       // initial hero text state - opacity hidden (in css) and slightly lower
       gsap.set(heroText, { y: 100 });
-      // initial nav state - opacity hidden with hideOnMount prop
+      // initial nav state - opacity hidden with hideOnMount prop, parked above the viewport
+      gsap.set(nav, { yPercent: -100 });
       // initial video state - opacity hidden (in css)
 
       // timeline
@@ -238,15 +239,16 @@ export const HomeHero = () => {
         ">",
       ); // parallel with opacity
 
-      // 7. Make nav appear
+      // 7. Slide nav down into its natural position
       tl.to(
-        [nav],
+        nav,
         {
+          yPercent: 0,
           opacity: 1,
-          duration: 0.5,
+          duration: 1.0,
           ease: "power1.inOut",
         },
-        "<0.5", // start 0.5 seconds after heroText animation start
+        "<", // start at same time as heroText animation
       );
 
       // 8. Enable scroll

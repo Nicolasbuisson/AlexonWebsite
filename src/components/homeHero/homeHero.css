@@ -43,7 +43,7 @@ body {
 }
 
 .home-hero-text {
-  --home-pitch-top: 46%;
+  --home-pitch-top: 48%;
   --home-pitch-fs: 1.2rem;
   position: absolute;
   top: var(--home-pitch-top);
