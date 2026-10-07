@@ -42,6 +42,83 @@ body {
   pointer-events: none;
 }
 
+/* viewfinder frame — GSAP controls top/left/width/height */
+.home-hero-frame {
+  --frame-corner-size: 1.25rem;
+  --frame-line-thickness: 1px;
+  --frame-crosshair-size: 0.875rem;
+  position: absolute;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.home-hero-frame-corner {
+  position: absolute;
+  width: var(--frame-corner-size);
+  height: var(--frame-corner-size);
+  border: 0 solid var(--clr-light);
+}
+
+.home-hero-frame-corner.top-left {
+  top: 0;
+  left: 0;
+  border-top-width: var(--frame-line-thickness);
+  border-left-width: var(--frame-line-thickness);
+}
+
+.home-hero-frame-corner.top-right {
+  top: 0;
+  right: 0;
+  border-top-width: var(--frame-line-thickness);
+  border-right-width: var(--frame-line-thickness);
+}
+
+.home-hero-frame-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: var(--frame-line-thickness);
+  border-left-width: var(--frame-line-thickness);
+}
+
+.home-hero-frame-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: var(--frame-line-thickness);
+  border-right-width: var(--frame-line-thickness);
+}
+
+.home-hero-frame-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--frame-crosshair-size);
+  height: var(--frame-crosshair-size);
+  transform: translate(-50%, -50%);
+}
+
+.home-hero-frame-crosshair::before,
+.home-hero-frame-crosshair::after {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-light);
+}
+
+.home-hero-frame-crosshair::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: var(--frame-line-thickness);
+  transform: translateY(-50%);
+}
+
+.home-hero-frame-crosshair::after {
+  top: 0;
+  left: 50%;
+  width: var(--frame-line-thickness);
+  height: 100%;
+  transform: translateX(-50%);
+}
+
 .home-hero-text {
   --home-pitch-top: 48%;
   --home-pitch-fs: 1.2rem;
@@ -79,5 +156,10 @@ body {
   .home-hero-text {
     --home-pitch-top: 44%;
     --home-pitch-fs: 0.8rem;
+  }
+
+  .home-hero-frame {
+    --frame-corner-size: 0.875rem;
+    --frame-crosshair-size: 0.625rem;
   }
 }

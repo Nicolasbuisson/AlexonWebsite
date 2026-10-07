@@ -15,6 +15,8 @@ export const HomeHero = () => {
   const overlayImgRef = useRef<HTMLImageElement>(null);
   const overlayRef = useRef<HTMLImageElement>(null);
 
+  const frameRef = useRef<HTMLDivElement>(null);
+
   const navRef = useRef<HTMLDivElement>(null);
   const heroTextRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -72,6 +74,7 @@ export const HomeHero = () => {
       const video = videoRef.current!;
       const heroText = heroTextRef.current!;
       const nav = navRef.current!;
+      const frame = frameRef.current!;
       const allCardsExceptLast = cards.slice(0, -1);
       const lastCard = cards[cards.length - 1];
 
@@ -80,8 +83,44 @@ export const HomeHero = () => {
       const gap = parseFloat(getComputedStyle(column).rowGap ?? "32");
       const totalShift = Math.round((IMAGES.length - 2) * (cardH + gap));
 
-      // initial container and column state
+      // frame geometry — all coordinates are relative to the hero section,
+      // the same reference box the overlay snap below uses
+      const sectionRect = homeHeroSection.getBoundingClientRect();
+      const overlayCardRect = overlayImg.getBoundingClientRect();
+      // how much larger than a card the frame sits while framing it
+      const framePad = Math.round(Math.max(10, cardH * 0.04));
+      // where the overlay card comes to rest once the column has scrolled
+      const framedRect = {
+        top: overlayCardRect.top - sectionRect.top - totalShift - framePad,
+        left: overlayCardRect.left - sectionRect.left - framePad,
+        width: overlayCardRect.width + 2 * framePad,
+        height: overlayCardRect.height + 2 * framePad,
+      };
+      // final frame box — the overlay's own end box (the full section) grown by
+      // the same amount on every side, so the frame stays concentric with the
+      // overlay the whole way instead of tracking the viewport. It fades out
+      // well before it gets there.
+      const FRAME_EXIT_PAD = 120;
+      const frameExitRect = {
+        top: -FRAME_EXIT_PAD,
+        left: -FRAME_EXIT_PAD,
+        width: sectionRect.width + 2 * FRAME_EXIT_PAD,
+        height: sectionRect.height + 2 * FRAME_EXIT_PAD,
+      };
+
+      // initial container and column state - hidden until the frame opens up
       gsap.set([imageContainer, column], { zIndex: 21 });
+      gsap.set(imageContainer, { opacity: 0 });
+      // initial frame state - small square centred in the viewport
+      const FRAME_START_SIZE = 72;
+      gsap.set(frame, {
+        top: Math.round(
+          window.innerHeight / 2 - sectionRect.top - FRAME_START_SIZE / 2,
+        ),
+        left: Math.round(sectionRect.width / 2 - FRAME_START_SIZE / 2),
+        width: FRAME_START_SIZE,
+        height: FRAME_START_SIZE,
+      });
       // initial overlay state — hidden, low z-index
       gsap.set(overlay, { autoAlpha: 0, zIndex: 0 });
       // initial hero text state - opacity hidden (in css) and slightly lower
@@ -111,14 +150,36 @@ export const HomeHero = () => {
         "<",
       );
 
-      // 1. Scroll all cards up
-      tl.to(cards, {
-        y: -totalShift,
-        duration: 1.7,
-        ease: "power1.inOut",
+      // 1. Open the viewfinder square into a rectangle framing the card column
+      tl.to(frame, {
+        ...framedRect,
+        duration: 0.8,
+        ease: "power2.inOut",
       });
 
-      //2. Snap overlay — kept as .call() because getBoundingClientRect() must be live
+      // 2. Reveal the cards and scroll them up, the overlay card landing
+      // exactly inside the frame
+      tl.to(
+        imageContainer,
+        {
+          opacity: 1,
+          duration: 0.6,
+          ease: "power1.out",
+        },
+        ">-0.15",
+      );
+
+      tl.to(
+        cards,
+        {
+          y: -totalShift,
+          duration: 1.7,
+          ease: "power1.inOut",
+        },
+        "<",
+      );
+
+      //3. Snap overlay — kept as .call() because getBoundingClientRect() must be live
       tl.call(
         () => {
           const rect = overlayImg.getBoundingClientRect();
@@ -139,7 +200,13 @@ export const HomeHero = () => {
         ">",
       );
 
-      // 3. Expand overlay, fade out overlayImg,
+      // 4. Expand overlay and frame, fade out overlayImg,
+      // everything here is pinned to labels rather than "<"/">" so that the
+      // shorter tweens below can never become the reference for what follows
+      const EXPAND_DURATION = 0.8;
+      tl.addLabel("expand");
+      tl.addLabel("expandEnd", `expand+=${EXPAND_DURATION}`);
+
       tl.to(
         overlay,
         {
@@ -147,10 +214,13 @@ export const HomeHero = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          duration: 0.8,
+          duration: EXPAND_DURATION,
           ease: "power1.inOut",
+          // maybe the easing here is weird?
+          // it doesnt look like one fluid motion as it expands...
+          // maybe it's the set that's causing this?
         },
-        ">",
+        "expand",
       );
 
       tl.to(
@@ -160,7 +230,7 @@ export const HomeHero = () => {
           duration: 0.05,
           ease: "power1.in",
         },
-        "<",
+        "expand",
       ); // start at same time as overlay expansion
 
       // make other images scroll out of screen as if pushed by the overlay expansion
@@ -168,10 +238,10 @@ export const HomeHero = () => {
         allCardsExceptLast,
         {
           y: -1.4 * totalShift,
-          duration: 0.8,
+          duration: EXPAND_DURATION,
           ease: "power1.inOut",
         },
-        "<",
+        "expand",
       ); // start at same time as overlay expansion
 
       // push last card down
@@ -179,10 +249,32 @@ export const HomeHero = () => {
         lastCard,
         {
           y: -0.1 * totalShift,
-          duration: 0.8,
+          duration: EXPAND_DURATION,
           ease: "power1.inOut",
         },
-        "<",
+        "expand",
+      ); // start at same time as overlay expansion
+
+      // expand the frame with the overlay, straight out of the viewport
+      tl.to(
+        frame,
+        {
+          ...frameExitRect,
+          duration: EXPAND_DURATION,
+          ease: "power1.inOut",
+        },
+        "expand",
+      ); // start at same time as overlay expansion
+
+      // fade the whole frame out as it goes, crosshair included
+      tl.to(
+        frame,
+        {
+          opacity: 0,
+          duration: 0.3,
+          ease: "power1.in",
+        },
+        "expand",
       ); // start at same time as overlay expansion
 
       //make cards z-index 0 again to make them stay behind
@@ -194,10 +286,10 @@ export const HomeHero = () => {
           });
         },
         [],
-        ">", // once cards finished moving out of frame
+        "expandEnd", // once cards and frame finished moving out of frame
       );
 
-      // 4. Fade overlay out, fade video in
+      // 5. Fade overlay out, fade video in
       tl.to(
         overlay,
         {
@@ -205,7 +297,7 @@ export const HomeHero = () => {
           duration: 0.3,
           ease: "power1.in",
         },
-        ">0.1", // start 0.1 seconds after end of overlay expansion
+        "expandEnd+=0.1", // start 0.1 seconds after end of overlay expansion
       );
 
       tl.to(
@@ -218,7 +310,7 @@ export const HomeHero = () => {
         "<", // start at same time as overlay fade
       );
 
-      // 5. Play video — kept as .call() because .play() is a side effect that needs to be in callback
+      // 6. Play video — kept as .call() because .play() is a side effect that needs to be in callback
       tl.call(
         () => {
           video.play();
@@ -227,7 +319,7 @@ export const HomeHero = () => {
         ">0.2",
       );
 
-      // 6. Fade in/slide heroText
+      // 7. Fade in/slide heroText
       tl.to(
         heroText,
         {
@@ -239,7 +331,7 @@ export const HomeHero = () => {
         ">",
       ); // parallel with opacity
 
-      // 7. Slide nav down into its natural position
+      // 8. Slide nav down into its natural position
       tl.to(
         nav,
         {
@@ -251,7 +343,7 @@ export const HomeHero = () => {
         "<", // start at same time as heroText animation
       );
 
-      // 8. Enable scroll
+      // 9. Enable scroll
       tl.call(
         () => {
           enableScroll();
@@ -320,6 +412,13 @@ export const HomeHero = () => {
               visibility: "hidden", // GSAP autoAlpha controls this
             }}
           />
+          <div ref={frameRef} className="home-hero-frame" aria-hidden="true">
+            <span className="home-hero-frame-corner top-left"></span>
+            <span className="home-hero-frame-corner top-right"></span>
+            <span className="home-hero-frame-corner bottom-left"></span>
+            <span className="home-hero-frame-corner bottom-right"></span>
+            <span className="home-hero-frame-crosshair"></span>
+          </div>
         </div>
         <div ref={heroTextRef} className="home-hero-text">
           <h3 className="home-pitch">
