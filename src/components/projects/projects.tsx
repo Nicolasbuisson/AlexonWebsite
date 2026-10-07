@@ -105,7 +105,6 @@ export const Projects = (props: IProps) => {
             href={`/productions/${project.route}`}
             className="projects-grid-card stacked"
             key={"projects-grid-card-" + project.title}
-            onClick={() => window.scrollTo(0, 0)}
           >
             {project.gridVideoPreview ? (
               <video
