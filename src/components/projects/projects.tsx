@@ -68,7 +68,6 @@ export const Projects = (props: IProps) => {
         const stop = () => {
           if (shouldPlay) return; // hovered back in while play() was settling
           preview.pause();
-          preview.currentTime = 0;
         };
         if (pending) {
           pending.then(stop).catch(() => {});
