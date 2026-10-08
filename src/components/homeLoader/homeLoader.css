@@ -9,7 +9,7 @@
   /* control Z-index from GSAP timeline */
 
   --home-loader-column-gap: 3rem;
-  --home-loader-image-height: 460px;
+  --home-loader-image-height: 320px;
   --home-loader-image-aspect-ratio: 1200/675; /* default 1200 x 675 */
 }
 
@@ -29,19 +29,19 @@
 
 @media (width < 960px) {
   .home-loader-container {
-    --home-loader-image-height: 360px;
+    --home-loader-image-height: 250px;
   }
 }
 
 @media (width < 740px) {
   .home-loader-container {
-    --home-loader-image-height: 240px;
+    --home-loader-image-height: 170px;
   }
 }
 
 @media (width < 500px) {
   .home-loader-container {
-    --home-loader-image-height: 160px;
+    --home-loader-image-height: 120px;
     --home-loader-column-gap: 2rem;
   }
 }

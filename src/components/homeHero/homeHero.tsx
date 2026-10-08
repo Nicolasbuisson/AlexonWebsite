@@ -78,20 +78,26 @@ export const HomeHero = () => {
       const allCardsExceptLast = cards.slice(0, -1);
       const lastCard = cards[cards.length - 1];
 
-      // measure
-      const cardH = cards?.[0]!.offsetHeight ?? 0;
-      const gap = parseFloat(getComputedStyle(column).rowGap ?? "32");
-      const totalShift = Math.round((IMAGES.length - 2) * (cardH + gap));
-
-      // frame geometry — all coordinates are relative to the hero section,
-      // the same reference box the overlay snap below uses
+      // measure — all coordinates are relative to the hero section, the same
+      // reference box the overlay snap below uses. Everything is derived from
+      // where the overlay card actually sits, so card size, gap and image
+      // count can all change without touching the timeline.
       const sectionRect = homeHeroSection.getBoundingClientRect();
       const overlayCardRect = overlayImg.getBoundingClientRect();
+      // the viewport's middle, where the viewfinder opens
+      const viewportMiddle = window.innerHeight / 2 - sectionRect.top;
+      // the column scrolls exactly far enough to bring the overlay card there
+      const framedCardTop = Math.round(
+        viewportMiddle - overlayCardRect.height / 2,
+      );
+      const totalShift = Math.round(
+        overlayCardRect.top - sectionRect.top - framedCardTop,
+      );
       // how much larger than a card the frame sits while framing it
-      const framePad = Math.round(Math.max(10, cardH * 0.04));
+      const framePad = Math.round(Math.max(10, overlayCardRect.height * 0.04));
       // where the overlay card comes to rest once the column has scrolled
       const framedRect = {
-        top: overlayCardRect.top - sectionRect.top - totalShift - framePad,
+        top: framedCardTop - framePad,
         left: overlayCardRect.left - sectionRect.left - framePad,
         width: overlayCardRect.width + 2 * framePad,
         height: overlayCardRect.height + 2 * framePad,
@@ -111,12 +117,11 @@ export const HomeHero = () => {
       // initial container and column state - hidden until the frame opens up
       gsap.set([imageContainer, column], { zIndex: 21 });
       gsap.set(imageContainer, { opacity: 0 });
-      // initial frame state - small square centred in the viewport
+      // initial frame state - small square centred in the viewport, concentric
+      // with the rectangle it opens into
       const FRAME_START_SIZE = 72;
       gsap.set(frame, {
-        top: Math.round(
-          window.innerHeight / 2 - sectionRect.top - FRAME_START_SIZE / 2,
-        ),
+        top: Math.round(viewportMiddle - FRAME_START_SIZE / 2),
         left: Math.round(sectionRect.width / 2 - FRAME_START_SIZE / 2),
         width: FRAME_START_SIZE,
         height: FRAME_START_SIZE,
