@@ -263,6 +263,12 @@ function Home() {
             description="By partnering with us, you’re gaining a team. You will have a dedicated project manager, editor, and videographer who will evolve with you to create seamless, consistent, and high-impact over the long-run."
           />
         </div>
+        <ArrowPathLink
+          url="/shortform"
+          text="See our Packages"
+          className="home-shortform-link"
+          svgClassName="home-shortform-arrow"
+        />
       </section>
     </div>
   );

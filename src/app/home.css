@@ -100,9 +100,13 @@
   margin-block-start: 3rem;
 }
 
+.home-work-arrow {
+  fill: var(--clr-light);
+}
+
 .home-shortform-section {
   padding-block: var(--section-padding-block);
-  padding-inline: calc(var(--section-padding-inline) - 2rem);
+  padding-inline: var(--section-padding-inline);
   background-color: var(--clr-light);
   color: var(--clr-dark);
   width: 100%;
@@ -157,4 +161,12 @@
   .home-shortform-features-container {
     grid-template-columns: 1fr;
   }
+}
+
+.home-shortform-link {
+  margin-block-start: 3rem;
+}
+
+.home-shortform-arrow {
+  fill: var(--clr-dark);
 }

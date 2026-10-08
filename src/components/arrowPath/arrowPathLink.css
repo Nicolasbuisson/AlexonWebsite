@@ -1,24 +1,24 @@
 .arrow-path-link {
-    display: block;
-    text-align: center;
-    width: fit-content;
-    margin-inline: auto;
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .arrow-path-svg {
-    --arrow-dimensions: 32px;
-    width: var(--arrow-dimensions);
-    height: var(--arrow-dimensions);
-    margin-inline: 0.25rem;
-    vertical-align: bottom;
-    transition: all 0.25s ease-in-out;
-    transform: rotate(-45deg);
+  --arrow-dimensions: 32px;
+  width: var(--arrow-dimensions);
+  height: var(--arrow-dimensions);
+  margin-inline: 0.25rem;
+  vertical-align: bottom;
+  transition: all 0.25s ease-in-out;
+  transform: rotate(-45deg);
 }
 
 .arrow-path-link:hover .arrow-path-svg {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .arrow-path-link:hover .arrow-path-svg path {
-    fill: var(--clr-accent);
+  fill: var(--clr-accent);
 }
