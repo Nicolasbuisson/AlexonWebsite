@@ -204,7 +204,16 @@ export const HomeHero = () => {
       // everything here is pinned to labels rather than "<"/">" so that the
       // shorter tweens below can never become the reference for what follows
       const EXPAND_DURATION = 0.8;
+      // back.in(s) is p² * ((s + 1)p - s), so it pulls backwards until its
+      // derivative hits zero at p = 2s / (3(s + 1)) and only then drives
+      // forward. The cards are pushed from exactly that turning point.
+      const BACK_OVERSHOOT = 1.70158; // gsap's own default for back.in
+      const EXPAND_EASE = `back.in(${BACK_OVERSHOOT})`;
+      const backTurn = (2 * BACK_OVERSHOOT) / (3 * (BACK_OVERSHOOT + 1));
+      const cardsPushStart = EXPAND_DURATION * backTurn;
+
       tl.addLabel("expand");
+      tl.addLabel("cardsPush", `expand+=${cardsPushStart}`);
       tl.addLabel("expandEnd", `expand+=${EXPAND_DURATION}`);
 
       tl.to(
@@ -215,10 +224,7 @@ export const HomeHero = () => {
           width: "100%",
           height: "100%",
           duration: EXPAND_DURATION,
-          ease: "power1.inOut",
-          // maybe the easing here is weird?
-          // it doesnt look like one fluid motion as it expands...
-          // maybe it's the set that's causing this?
+          ease: EXPAND_EASE,
         },
         "expand",
       );
@@ -238,22 +244,22 @@ export const HomeHero = () => {
         allCardsExceptLast,
         {
           y: -1.4 * totalShift,
-          duration: EXPAND_DURATION,
-          ease: "power1.inOut",
+          duration: EXPAND_DURATION - cardsPushStart,
+          ease: "power1.in",
         },
-        "expand",
-      ); // start at same time as overlay expansion
+        "cardsPush",
+      ); // start where the expansion turns forward, end with it
 
       // push last card down
       tl.to(
         lastCard,
         {
           y: -0.1 * totalShift,
-          duration: EXPAND_DURATION,
-          ease: "power1.inOut",
+          duration: EXPAND_DURATION - cardsPushStart,
+          ease: "power1.in",
         },
-        "expand",
-      ); // start at same time as overlay expansion
+        "cardsPush",
+      ); // start where the expansion turns forward, end with it
 
       // expand the frame with the overlay, straight out of the viewport
       tl.to(
@@ -261,7 +267,7 @@ export const HomeHero = () => {
         {
           ...frameExitRect,
           duration: EXPAND_DURATION,
-          ease: "power1.inOut",
+          ease: EXPAND_EASE,
         },
         "expand",
       ); // start at same time as overlay expansion
@@ -271,7 +277,7 @@ export const HomeHero = () => {
         frame,
         {
           opacity: 0,
-          duration: 0.3,
+          duration: 0.6,
           ease: "power1.in",
         },
         "expand",
