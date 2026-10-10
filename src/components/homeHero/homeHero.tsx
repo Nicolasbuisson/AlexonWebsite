@@ -90,12 +90,12 @@ export const HomeHero = () => {
       // count can all change without touching the timeline.
       const sectionRect = homeHeroSection.getBoundingClientRect();
       const overlayCardRect = overlayImg.getBoundingClientRect();
-      // the viewport's middle, where the viewfinder opens
-      const viewportMiddle = window.innerHeight / 2 - sectionRect.top;
+      // the hero box's middle, where the viewfinder opens. Not the viewport's:
+      // the overlay expands to fill this box, so framing anywhere else would
+      // make the expansion drift as it goes
+      const heroMiddle = sectionRect.height / 2;
       // the column scrolls exactly far enough to bring the overlay card there
-      const framedCardTop = Math.round(
-        viewportMiddle - overlayCardRect.height / 2,
-      );
+      const framedCardTop = Math.round(heroMiddle - overlayCardRect.height / 2);
       const totalShift = Math.round(
         overlayCardRect.top - sectionRect.top - framedCardTop,
       );
@@ -134,11 +134,11 @@ export const HomeHero = () => {
       // initial container and column state - parked below the viewport
       gsap.set([imageContainer, column], { zIndex: 21 });
       gsap.set(cards, { y: cardsStartY });
-      // initial frame state - small square centred in the viewport, concentric
+      // initial frame state - small square centred on the hero box, concentric
       // with the rectangle it opens into
       const FRAME_START_SIZE = 72;
       gsap.set(frame, {
-        top: Math.round(viewportMiddle - FRAME_START_SIZE / 2),
+        top: Math.round(heroMiddle - FRAME_START_SIZE / 2),
         left: Math.round(sectionRect.width / 2 - FRAME_START_SIZE / 2),
         width: FRAME_START_SIZE,
         height: FRAME_START_SIZE,
