@@ -8,8 +8,10 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-items: center;
-  height: 90vh;
-  height: 90svh;
+  /* the navigation sits above us in the flow, so take exactly what is left of
+     the screen — nav + hero then fills it at every viewport size */
+  height: calc(100vh - var(--menu-height));
+  height: calc(100svh - var(--menu-height));
 }
 
 .home-hero-section > * {
@@ -22,8 +24,8 @@ body {
   background-color: var(--clr-dark);
   /* Used if the image is unavailable */
   width: 100%;
-  height: 90vh;
-  height: 90svh;
+  height: calc(100vh - var(--menu-height));
+  height: calc(100svh - var(--menu-height));
   background-position: center;
   background-size: cover;
 }

@@ -1,6 +1,7 @@
 .home-loader-container {
-  height: 90vh;
-  height: 90svh;
+  /* matches .home-hero-section, the grid cell this shares with the video */
+  height: calc(100vh - var(--menu-height));
+  height: calc(100svh - var(--menu-height));
   width: 100%;
   display: flex;
   flex-direction: column;

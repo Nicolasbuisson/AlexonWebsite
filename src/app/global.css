@@ -28,6 +28,14 @@
   --scroll: 0;
   --section-padding-block: 3rem;
   --section-padding-inline: 6rem;
+
+  --menu-height: 4rem;
+}
+
+@media (width < 550px) {
+  :root {
+    --menu-height: 3.5rem;
+  }
 }
 
 @media (width >= 880px) {
