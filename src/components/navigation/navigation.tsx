@@ -1,10 +1,9 @@
 "use client";
-import { RefObject, useEffect, useState } from "react";
+import { RefObject, useState } from "react";
 import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
 import useScrollPercentage from "../../hooks/useScrollPercentage";
-import Lenis from "lenis";
 import { FlipLink } from "../flipLink/flipLink";
 
 interface NavigationProps {
@@ -27,26 +26,8 @@ export const Navigation = (props: NavigationProps) => {
   } = props;
 
   useScrollPercentage(); // initialize css variable --scroll
-  useEffect(() => {
-    // initialize Lenis smooth scroll
-    const lenis = new Lenis({ smoothWheel: true });
-
-    // the nav is mounted per page, so without this teardown every client-side
-    // navigation would leave another instance and another raf loop running,
-    // all writing the scroll position at once
-    let frame = 0;
-    const raf = (time: number) => {
-      lenis.raf(time);
-      frame = requestAnimationFrame(raf);
-    };
-
-    frame = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      lenis.destroy();
-    };
-  }, []);
+  // lenis is owned by <SmoothScroll /> in the root layout, so it is a single
+  // instance for the session instead of one per page
 
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");

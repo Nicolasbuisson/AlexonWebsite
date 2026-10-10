@@ -4,6 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import "lenis/dist/lenis.css";
 import "./global.css";
 import { Footer } from "../components/footer/footer";
+import { SmoothScroll } from "../components/smoothScroll/smoothScroll";
 
 export const metadata: Metadata = {
   title: "Alexon Media",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${fontGotham.variable} ${fontMadeOuterSans.variable} ${playfair.variable}`}
       >
+        <SmoothScroll />
         {children}
         <Footer />
       </body>
