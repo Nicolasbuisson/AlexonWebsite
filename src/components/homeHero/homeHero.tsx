@@ -78,6 +78,12 @@ export const HomeHero = () => {
       const allCardsExceptLast = cards.slice(0, -1);
       const lastCard = cards[cards.length - 1];
 
+      // drop the css transform that parks the column below the fold for the
+      // first paint, so the rects below read layout positions and not the
+      // parked ones. We are inside useLayoutEffect, so nothing paints between
+      // this and the real start position being set further down.
+      gsap.set(cards, { y: 0 });
+
       // measure — all coordinates are relative to the hero section, the same
       // reference box the overlay snap below uses. Everything is derived from
       // where the overlay card actually sits, so card size, gap and image
@@ -92,6 +98,17 @@ export const HomeHero = () => {
       );
       const totalShift = Math.round(
         overlayCardRect.top - sectionRect.top - framedCardTop,
+      );
+      // the column waits below the viewport, first card's top edge a little
+      // under the bottom edge of the screen, and scrolls up from there
+      const firstCardTop =
+        cards[0]!.getBoundingClientRect().top - sectionRect.top;
+      const CARDS_START_OFFSET = Math.round(overlayCardRect.height * 0.8);
+      const cardsStartY = Math.round(
+        window.innerHeight -
+          sectionRect.top -
+          firstCardTop +
+          CARDS_START_OFFSET,
       );
       // how much larger than a card the frame sits while framing it
       const framePad = Math.round(Math.max(10, overlayCardRect.height * 0.04));
@@ -114,9 +131,9 @@ export const HomeHero = () => {
         height: sectionRect.height + 2 * FRAME_EXIT_PAD,
       };
 
-      // initial container and column state - hidden until the frame opens up
+      // initial container and column state - parked below the viewport
       gsap.set([imageContainer, column], { zIndex: 21 });
-      gsap.set(imageContainer, { opacity: 0 });
+      gsap.set(cards, { y: cardsStartY });
       // initial frame state - small square centred in the viewport, concentric
       // with the rectangle it opens into
       const FRAME_START_SIZE = 72;
@@ -162,18 +179,8 @@ export const HomeHero = () => {
         ease: "power2.inOut",
       });
 
-      // 2. Reveal the cards and scroll them up, the overlay card landing
-      // exactly inside the frame
-      tl.to(
-        imageContainer,
-        {
-          opacity: 1,
-          duration: 0.6,
-          ease: "power1.out",
-        },
-        ">-0.15",
-      );
-
+      // 2. Scroll the cards up from below the viewport, the overlay card
+      // landing exactly inside the frame
       tl.to(
         cards,
         {
@@ -181,7 +188,7 @@ export const HomeHero = () => {
           duration: 1.7,
           ease: "power1.inOut",
         },
-        "<",
+        ">-0.15",
       );
 
       //3. Snap overlay — kept as .call() because getBoundingClientRect() must be live

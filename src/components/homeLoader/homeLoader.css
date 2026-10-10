@@ -25,6 +25,10 @@
   height: var(--home-loader-image-height);
   aspect-ratio: var(--home-loader-image-aspect-ratio);
   border-radius: 3px;
+  /* parks the column below the fold for the server-rendered paint, before the
+     GSAP timeline hydrates and takes the transform over with exact numbers.
+     vh, not svh/dvh, so it stays off screen with the browser chrome hidden */
+  transform: translateY(100vh);
 }
 
 @media (width < 960px) {
