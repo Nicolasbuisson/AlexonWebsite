@@ -83,6 +83,13 @@
   scroll-behavior: smooth;
 }
 
+/* lenis drives the page scroll, so native smooth scrolling must stay off the
+   root — otherwise plain window.scrollTo calls animate behind lenis's back.
+   The class is added by lenis itself while it is mounted. */
+html.lenis {
+  scroll-behavior: auto;
+}
+
 /* element styling */
 a {
   text-decoration: none;

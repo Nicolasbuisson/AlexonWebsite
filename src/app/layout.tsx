@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { fontGotham, fontMadeOuterSans } from "../fonts";
 import { Playfair_Display } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./global.css";
 import { Footer } from "../components/footer/footer";
 

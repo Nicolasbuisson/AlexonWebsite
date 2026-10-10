@@ -156,11 +156,13 @@ export const HomeHero = () => {
 
       const disableScroll = () => {
         document.body.style.overflow = "hidden";
-        document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+        // lenis only checks that the attribute is there, its value is ignored
+        document.body.setAttribute("data-lenis-prevent", "");
       };
       const enableScroll = () => {
         document.body.style.overflow = "auto";
-        document.body.setAttribute("data-lenis-prevent", "false"); // Make sure you pass false as string
+        // removed, not set to "false" — any value at all keeps lenis switched off
+        document.body.removeAttribute("data-lenis-prevent");
       };
 
       // 0. Disable scroll

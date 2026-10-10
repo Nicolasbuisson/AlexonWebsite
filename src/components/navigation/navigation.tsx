@@ -31,12 +31,21 @@ export const Navigation = (props: NavigationProps) => {
     // initialize Lenis smooth scroll
     const lenis = new Lenis({ smoothWheel: true });
 
+    // the nav is mounted per page, so without this teardown every client-side
+    // navigation would leave another instance and another raf loop running,
+    // all writing the scroll position at once
+    let frame = 0;
     const raf = (time: number) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frame = requestAnimationFrame(raf);
     };
 
-    requestAnimationFrame(raf);
+    frame = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      lenis.destroy();
+    };
   }, []);
 
   // to change burger classes
@@ -50,14 +59,16 @@ export const Navigation = (props: NavigationProps) => {
       document.getElementById("menu")!.style.opacity = "100%";
       // disable scrolling immediately, no layout shift thanks to scrollbar-gutter: stable
       document.body.style.overflow = "hidden";
-      document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+      // lenis only checks that the attribute is there, its value is ignored
+      document.body.setAttribute("data-lenis-prevent", "");
     } else {
       setBurgerClass("burger-bar unclicked");
       document.getElementById("menu-container")!.style.right = "-100%";
       document.getElementById("menu")!.style.opacity = "0%";
       // re-enable scrolling
       document.body.style.overflow = "auto";
-      document.body.setAttribute("data-lenis-prevent", "false"); // Make sure you pass false as string
+      // removed, not set to "false" — any value at all keeps lenis switched off
+      document.body.removeAttribute("data-lenis-prevent");
     }
     setIsMenuClicked(!isMenuClicked);
   };
