@@ -1,100 +1,182 @@
 .projects-grid {
-    --grid-column-count: 3;
-    --projects-animation-duration: 500ms;
+  --grid-column-count: 3;
+  --projects-animation-duration: 500ms;
+  /* frame-on-hover knobs. The media shrinks uniformly, so the space it opens
+     is (1 - scale) / 2 of each side — which is more pixels across the long
+     axis of a 16:9 card than down the short one. Inset percentages resolve
+     against the matching axis, so deriving the inset from the scale puts the
+     brackets exactly on the media's corners, and the pixel subtraction then
+     holds them the same distance off the media on all four sides. Set the gap
+     to 0 to have the brackets sit right on the media's edges. */
+  --frame-media-scale: 0.94;
+  --frame-gap: 4px;
+  --frame-inset: calc(
+    100% * (1 - var(--frame-media-scale)) / 2 - var(--frame-gap)
+  );
+  --frame-start-scale: 0.93;
 
-    display: grid;
-    grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
 
-    & a {
-        text-decoration: none;
-    }
+  & a {
+    text-decoration: none;
+  }
 
-    & h4 {
-        width: 100%;
-        text-align: center;
-        opacity: 0;
-        z-index: 2;
-        transition: opacity var(--projects-animation-duration);
-        color: var(--clr-light);
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
+  & h4 {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity var(--projects-animation-duration);
+    color: var(--clr-light);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
 }
 
 .projects-grid-card {
-    border: 1px solid transparent;
-    transition: filter var(--projects-animation-duration);
-    position: relative;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
+  border: 1px solid transparent;
+  transition: filter var(--projects-animation-duration);
+  position: relative;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .projects-grid-card-preview {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* a video defaults to object-fit: contain, which letterboxes the moment the
+     source ratio and the card's box do not match exactly — the thumbnail path
+     already covers, so match it and keep the media edge-to-edge */
+  object-fit: cover;
+  transition: transform var(--projects-animation-duration);
 }
 
 .project-thumbnail {
-    object-fit: cover;
-    transition: filter var(--projects-animation-duration);
+  object-fit: cover;
+  transition:
+    filter var(--projects-animation-duration),
+    transform var(--projects-animation-duration);
+}
+
+/* viewfinder frame, same brackets as the home hero but without the crosshair */
+.projects-grid-card-frame {
+  --frame-corner-size: 1rem;
+  --frame-line-thickness: 1px;
+  position: absolute;
+  inset: var(--frame-inset);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(var(--frame-start-scale));
+  transition:
+    opacity var(--projects-animation-duration),
+    transform var(--projects-animation-duration);
+}
+
+.projects-grid-card-frame-corner {
+  position: absolute;
+  width: var(--frame-corner-size);
+  height: var(--frame-corner-size);
+  border: 0 solid var(--clr-light);
+}
+
+.projects-grid-card-frame-corner.top-left {
+  top: 0;
+  left: 0;
+  border-top-width: var(--frame-line-thickness);
+  border-left-width: var(--frame-line-thickness);
+}
+
+.projects-grid-card-frame-corner.top-right {
+  top: 0;
+  right: 0;
+  border-top-width: var(--frame-line-thickness);
+  border-right-width: var(--frame-line-thickness);
+}
+
+.projects-grid-card-frame-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: var(--frame-line-thickness);
+  border-left-width: var(--frame-line-thickness);
+}
+
+.projects-grid-card-frame-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: var(--frame-line-thickness);
+  border-right-width: var(--frame-line-thickness);
 }
 
 .project-logo {
-    object-fit: contain;
-    place-self: center;
-    max-width: 40%;
-    max-height: 40%;
-    transition: transform var(--projects-animation-duration);
+  object-fit: contain;
+  place-self: center;
+  max-width: 40%;
+  max-height: 40%;
+  transition: transform var(--projects-animation-duration);
 }
 
 /* only include hover effects if not on a mobile device */
 @media (width > 480px) {
-    .projects-grid a {
-        filter: brightness(.75) saturate(.75);
+  .projects-grid a {
+    filter: brightness(0.75) saturate(0.75);
+  }
+
+  .projects-grid a:hover {
+    filter: brightness(1) saturate(1.5);
+
+    & .project-logo {
+      transform: translateY(-1rem);
     }
 
-    .projects-grid a:hover {
-        filter: brightness(1) saturate(1.5);
-
-        & .project-logo {
-            transform: translateY(-1rem);
-        }
-
-        & h4 {
-            opacity: 1;
-        }
+    & h4 {
+      opacity: 1;
     }
+  }
+
+  .projects-grid a.frame-on-hover:hover {
+    & .projects-grid-card-preview,
+    & .project-thumbnail {
+      transform: scale(var(--frame-media-scale));
+    }
+
+    & .projects-grid-card-frame {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .stacked {
-    display: grid;
-    align-items: end;
+  display: grid;
+  align-items: end;
 }
 
 /* all direct children of stacked class stacked on top of each by putting them in same row and column */
-.stacked>* {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 @media (580px < width < 880px) {
-    .projects-grid {
-        --grid-column-count: 2;
-    }
+  .projects-grid {
+    --grid-column-count: 2;
+  }
 }
 
 @media (width <=580px) {
-    .projects-grid {
-        --grid-column-count: 1;
-    }
+  .projects-grid {
+    --grid-column-count: 1;
+  }
 }
 
 @media (width <=480px) {
-    .project-logo {
-        /* place-self is not supported for some reason on IOS Safari */
-        place-self: unset;
-        transform: translate(-50%, -50%);
-    }
+  .project-logo {
+    /* place-self is not supported for some reason on IOS Safari */
+    place-self: unset;
+    transform: translate(-50%, -50%);
+  }
 }

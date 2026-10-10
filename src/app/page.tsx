@@ -135,7 +135,7 @@ function Home() {
             <span>new standard</span> in brand films.
           </h3>
         </TagLine>
-        <Projects projects={projects} homePageFilter />
+        <Projects projects={projects} homePageFilter frameOnHover />
         <ArrowPathLink
           url="/productions"
           text="See our Work"

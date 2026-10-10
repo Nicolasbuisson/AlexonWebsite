@@ -7,10 +7,11 @@ import { useEffect, useMemo } from "react";
 interface IProps {
   projects: WorkItemProps[];
   homePageFilter?: boolean;
+  frameOnHover?: boolean;
 }
 
 export const Projects = (props: IProps) => {
-  const { projects, homePageFilter = false } = props;
+  const { projects, homePageFilter = false, frameOnHover = false } = props;
   const projectsToRender = useMemo(() => {
     const visibleProjects = projects.filter(
       (project) => !project.hideFromProductions,
@@ -103,7 +104,9 @@ export const Projects = (props: IProps) => {
         return (
           <Link
             href={`/productions/${project.route}`}
-            className="projects-grid-card stacked"
+            className={`projects-grid-card stacked${
+              frameOnHover ? " frame-on-hover" : ""
+            }`}
             key={"projects-grid-card-" + project.title}
           >
             {project.gridVideoPreview ? (
@@ -137,6 +140,16 @@ export const Projects = (props: IProps) => {
                 fill
                 style={{ inset: "50%" }}
               />
+            ) : (
+              <></>
+            )}
+            {frameOnHover ? (
+              <span className="projects-grid-card-frame" aria-hidden="true">
+                <span className="projects-grid-card-frame-corner top-left"></span>
+                <span className="projects-grid-card-frame-corner top-right"></span>
+                <span className="projects-grid-card-frame-corner bottom-left"></span>
+                <span className="projects-grid-card-frame-corner bottom-right"></span>
+              </span>
             ) : (
               <></>
             )}
