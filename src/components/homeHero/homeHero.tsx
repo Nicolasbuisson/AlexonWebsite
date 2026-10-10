@@ -350,6 +350,12 @@ export const HomeHero = () => {
           opacity: 1,
           duration: 1.0,
           ease: "power1.inOut",
+          // the transform gsap leaves behind would make the header the
+          // containing block for the burger menu, which is position: fixed,
+          // so drop it once the slide is over
+          onComplete: () => {
+            gsap.set(nav, { clearProps: "transform" });
+          },
         },
         "<", // start at same time as heroText animation
       );
