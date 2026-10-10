@@ -108,8 +108,21 @@ const Word = (props: WordProps) => {
   const characters = children.split("");
   const amount = end - start;
   const step = amount / children.length;
+  // accent words paint their colour as a background clipped to the text, which
+  // leaves the characters inside with a transparent fill — fading those shows
+  // nothing, so the word itself has to carry the fade
+  const isAccentWord = extraClasses !== "";
+  const wordOpacity = useTransform(
+    scrollYProgress,
+    startFromEnd ? [1 - end, 1 - start] : [start, end],
+    startFromEnd ? [1, 0] : [startingOpacity, 1]
+  );
   return (
-    <span key={keyId} className={"hero-word " + extraClasses}>
+    <motion.span
+      key={keyId}
+      className={"hero-word " + extraClasses}
+      style={isAccentWord ? { opacity: wordOpacity } : undefined}
+    >
       {characters.map((character, i) => {
         const characterStart = start + step * i;
         const characterEnd = characterStart + step;
@@ -130,7 +143,7 @@ const Word = (props: WordProps) => {
           </Character>
         );
       })}
-    </span>
+    </motion.span>
   );
 };
 
