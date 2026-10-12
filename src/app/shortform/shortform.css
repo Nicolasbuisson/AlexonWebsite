@@ -5,24 +5,10 @@
 }
 
 .shortform-hero-section {
-  padding-block-end: var(--section-padding-block);
+  /* account for navigation menu height */
+  height: calc(100vh - var(--menu-height));
+  height: calc(100svh - var(--menu-height));
   padding-inline: var(--section-padding-inline);
-}
-
-.shortform-horizontal-scroller-logo-wrapper {
-  position: relative;
-  height: 80px;
-  aspect-ratio: 2;
-}
-
-@media (width < 880px) {
-  .shortform-horizontal-scroller-logo-wrapper {
-    height: 60px;
-  }
-}
-
-.shortform-horizontal-scroller-logo {
-  object-fit: contain;
 }
 
 .shortform-work-section {

@@ -1,11 +1,16 @@
 .shortform-hero {
-  --shortform-hero-pt: 5rem;
-  height: calc(100vh - var(--shortform-hero-pt));
-  height: calc(100svh - var(--shortform-hero-pt));
-  padding-top: var(--shortform-hero-pt);
+  /* fill the section so the free space below is the text's to center in */
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+
+/* auto top and bottom margins take an equal share of the free space, which
+   centers the text in the room the scroller leaves and, by spending the rest of
+   that space above it, drops the scroller onto the bottom edge */
+.shortform-hero-content {
+  margin-block: auto;
 }
 
 .shortform-heading {
@@ -64,7 +69,7 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  color: var(--clr-grey);
+  color: var(--clr-light-grey);
 }
 
 /* keep the later paragraphs out of the width calculation, then let them
@@ -84,6 +89,15 @@
   animation-delay: 0.8s;
 }
 
+.shortform-hero-scroller {
+  /* stretch past the parent's align-items: start, otherwise this sizes to the
+     scroller's max-content width -- the whole un-wrapped row of logos */
+  align-self: stretch;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
 @keyframes slideUp {
   to {
     opacity: 1;
@@ -91,21 +105,46 @@
   }
 }
 
-@media (width >= 880px) {
-  .shortform-hero {
-    --shortform-hero-pt: 4rem;
-    height: calc(100vh - var(--shortform-hero-pt));
-    height: calc(100svh - var(--shortform-hero-pt));
-    padding-top: var(--shortform-hero-pt);
-    padding-bottom: 0;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
+}
+
+.shortform-horizontal-scroller-logo-wrapper {
+  position: relative;
+  height: 80px;
+  aspect-ratio: 2;
+}
+
+.shortform-horizontal-scroller-logo {
+  object-fit: contain;
+}
+
+@media (width < 880px) {
+  .shortform-horizontal-scroller-logo-wrapper {
+    height: 60px;
+  }
+}
+
+@media (width >= 880px) {
   .shortform-title {
     font-size: 6rem;
   }
 }
 
-@media (width >= 1020px) {
-  .shortform-hero {
-    --shortform-hero-pt: 6rem;
+@media (width >= 1560px) {
+  .shortform-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .shortform-title {
+    font-size: 7.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .shortform-hero-text {
+    font-size: 1.25rem;
   }
 }

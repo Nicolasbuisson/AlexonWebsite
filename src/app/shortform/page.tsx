@@ -2,8 +2,6 @@ import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
 import { Statistic } from "../../components/statistic/statistic";
 import { Package } from "../../components/package/package";
-import { HorizontalScroller } from "../../components/horizontalScroller/horizontalScroller";
-import Image from "next/image";
 import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
 import { Accordion } from "../../components/accordion/accordion";
@@ -16,72 +14,6 @@ function ShortForm() {
       <Navigation />
       <section className="shortform-hero-section">
         <ShortFormHero />
-        <HorizontalScroller fullBleed>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Corona.webp`}
-              fill
-              alt="Corona logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/FourSeasons.webp`}
-              fill
-              alt="Four Seasons logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/McGillUniversity.webp`}
-              fill
-              alt="McGill University logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Coinbase.webp`}
-              fill
-              alt="Coinbase logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/AirCanada.webp`}
-              fill
-              alt="AirCanada logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Claptone.webp`}
-              fill
-              alt="Claptone logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/ParcOmega.webp`}
-              fill
-              alt="Parc Omega logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-          <div className="shortform-horizontal-scroller-logo-wrapper">
-            <Image
-              src={`https://d128kbp85lo7cj.cloudfront.net/clientLogos/Monolink.webp`}
-              fill
-              alt="Monolink logo"
-              className="shortform-horizontal-scroller-logo"
-            />
-          </div>
-        </HorizontalScroller>
       </section>
       <ShortFormPainPoints />
       <section className="shortform-work-section">
