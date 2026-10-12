@@ -124,3 +124,63 @@
     gap: 0;
   }
 }
+
+@media (width >= 1560px) and (height >= 880px) {
+  .footer-container {
+    min-height: 100vh;
+    padding-block: calc(var(--section-padding-block) + 4rem);
+  }
+
+  .footer-header-wrapper {
+    font-size: 6rem;
+  }
+
+  .footer-button {
+    --button-background-effect-height: 70px;
+    --button-background-effect-padding-block: 1.25rem;
+    --button-background-effect-padding-inline: 2rem;
+    --button-background-effect-font-size: 1.5rem;
+
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+
+  .footer-items-container {
+    --footer-logo-width: 160px;
+
+    gap: 3rem;
+    padding-top: 3rem;
+    font-size: 1.125rem;
+    /* integer line-height so every row offset stays a whole pixel */
+    line-height: 24px;
+
+    & .footer-navigation-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .footer-socials-container,
+  .footer-contact-container,
+  .footer-navigation-container {
+    gap: 1rem;
+  }
+
+  .footer-socials-container {
+    gap: 0;
+  }
+
+  .footer-link {
+    font-size: 1.125rem;
+    /* integer line-height keeps the 1px ::after underline on a whole device pixel */
+    line-height: 24px;
+  }
+
+  .footer-socials {
+    --icon-size: 56px;
+    --icon-padding: 16px;
+
+    /* cancel the icon's own padding so the row lines up with the title above */
+    margin-left: -16px;
+  }
+}
