@@ -1,12 +1,11 @@
 import "./shortform.css";
 import { Navigation } from "../../components/navigation/navigation";
-import { Statistic } from "../../components/statistic/statistic";
-import { Package } from "../../components/package/package";
 import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
 import { Accordion } from "../../components/accordion/accordion";
 import { faqs } from "../../resources/faq.json";
 import { ShortFormProcess } from "../../components/shortformProcess/shortformProcess";
+import { ShortformGuarantee } from "../../components/shortformGuarantee/shortfromGuarantee";
 
 function ShortForm() {
   return (
@@ -66,7 +65,7 @@ function ShortForm() {
           ></video>
         </div>
       </section>
-      <section className="shortform-results-section">
+      {/* <section className="shortform-results-section">
         <div className="shortform-results-text">
           <h2>
             Results you can see
@@ -123,11 +122,11 @@ function ShortForm() {
             description="After a year"
           />
         </div>
-      </section>
+      </section> */}
       <section className="shortform-process-section">
         <ShortFormProcess />
       </section>
-      <section className="shortform-packages-section" id="shortform-packages">
+      {/* <section className="shortform-packages-section" id="shortform-packages">
         <h3 className="shortform-packages-title">
           Packages optimized for success
         </h3>
@@ -245,7 +244,8 @@ function ShortForm() {
             ]}
           />
         </div>
-      </section>
+      </section> */}
+      <ShortformGuarantee />
       {/* <section className="shortform-work-section">
       unfortunately, not enough video content + degrades performance too much
       to have 12 videos of 10 MB each loading
