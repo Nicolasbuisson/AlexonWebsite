@@ -24,18 +24,9 @@
   height: auto;
 }
 
-/* An SVG <text>, so it paints with fill rather than color, and its font-size
-   is in user units -- 600 of them across the diagram -- which is what keeps it
-   in proportion when the svg is scaled down by max-width. */
-.cycle-diagram-text {
-  fill: var(--clr-accent);
-  font-size: 48px;
-  font-weight: 500;
-}
-
 /* One cell, every card in it: the scroll timeline offsets them from that cell
    to build the carousel, so their resting position has to be the same spot
-   rather than a column of six. Stretching them to the row's height (the
+   rather than a column of five. Stretching them to the row's height (the
    default, and what the tallest card sets) is what makes one slot pitch land
    the same distance for all of them -- and it holds the row still while they
    swap, since the row is sized by the tallest card rather than by whichever

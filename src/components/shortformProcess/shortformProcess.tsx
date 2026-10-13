@@ -34,17 +34,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
  */
 
 /**
- * A step that owns one arrow on the ring. The ring only has room for the five
- * arrows described above, so the geometry lives here rather than on Step.
+ * A step of the process. Every step owns one arrow on the ring, so the list of
+ * steps and the list of arrows are the same list -- which is what puts the
+ * geometry here rather than off to one side.
  */
-type DiagramStep = {
+type Step = {
   id: string;
   /** Human-readable name of the stage, used for the accessible description. */
   label: string;
   /** What the stage involves, in at most two sentences. */
   description: string;
-  /** Present and false on every step that is drawn. See Step. */
-  isNotInDiagram?: false;
   /**
    * Polar angle of the blunt tail edge, in SVG degrees about (300,300) -- so
    * 0 points right and angles grow clockwise on screen. The arrow runs from
@@ -64,20 +63,6 @@ type DiagramStep = {
   /** Places the icon box inside that arrow's head: re-origin, scale, position. */
   iconTransform: string;
 };
-
-/**
- * A step of the process that is not drawn on the ring, so it carries no
- * geometry at all -- the flag is what tells the two apart, and narrows the
- * union everywhere the diagram is built.
- */
-type NonDiagramStep = {
-  id: string;
-  label: string;
-  description: string;
-  isNotInDiagram: true;
-};
-
-type Step = DiagramStep | NonDiagramStep;
 
 /**
  * Every icon is 24x24, so they all share one recipe: centre the box on the
@@ -142,9 +127,9 @@ const STEPS: Step[] = [
   },
   {
     id: "rocket",
-    label: "Publish",
+    label: "Publish & Optimize",
     description:
-      "Each piece goes out on the platforms that suit it, at the times your audience is watching. Nothing sits waiting in a folder.",
+      "We distribute the content at the times your audience is watching. By analyzing what works best, we improve our system with each round.",
     tailAngle: 67,
     arrow:
       "M392.99 519.08C370.63 529.7 346.46 536.86 321.6 540.14C296.74 543.41 271.21 542.8 246.23 538.22C221.25 533.64 196.83 525.1 174.18 512.92C151.53 500.74 130.65 484.91 112.61 466.13L94.97 476.73L105.98 363.04L211.54 406.69L193.45 417.56C203.96 428.36 216.12 437.75 229.48 445.29C242.84 452.82 257.41 458.5 272.61 462.03C287.82 465.56 303.66 466.93 319.51 466.02C335.36 465.11 351.22 461.91 366.42 456.49Z",
@@ -152,33 +137,17 @@ const STEPS: Step[] = [
     icon: "M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09",
     iconTransform: iconTransform(140.89, 421.14),
   },
-  {
-    id: "repeat",
-    label: "Learn & Repeat",
-    description:
-      "We read the numbers on every post and feed what worked into the next cycle. The system gets sharper with each round.",
-    isNotInDiagram: true,
-  },
 ];
-
-/**
- * The steps the ring actually draws, in flow order. Everything below indexes
- * against this list rather than STEPS, so a step flagged isNotInDiagram never
- * claims an arrow, a mask or a slot in the timeline.
- */
-const DIAGRAM_STEPS = STEPS.filter(
-  (step): step is DiagramStep => !step.isNotInDiagram,
-);
 
 /**
  * Every arrow must paint above the one it laps onto, which is a cycle: target
  * over clipboard over camera over film over rocket -- and rocket over target.
- * No flat paint order satisfies all five, so we paint DIAGRAM_STEPS in reverse
- * (rocket first, target last) and then re-stamp rocket's head on top through a
- * wedge clip to close the loop. The wedge only spans rocket's own arrowhead,
- * where the only other geometry is target's tail.
+ * No flat paint order satisfies all five, so we paint STEPS in reverse (rocket
+ * first, target last) and then re-stamp rocket's head on top through a wedge
+ * clip to close the loop. The wedge only spans rocket's own arrowhead, where
+ * the only other geometry is target's tail.
  */
-const PAINT_ORDER = DIAGRAM_STEPS.map((step, index) => ({
+const PAINT_ORDER = STEPS.map((step, index) => ({
   step,
   index,
 })).reverse();
@@ -238,11 +207,6 @@ const ARROW_DRAW = 1;
 
 /** Timeline units the carousel takes to shift by one slot. */
 const CARD_SLIDE = 0.6;
-/**
- * Timeline units a step with no arrow of its own owns -- enough to arrive and
- * be read. Only the trailing "Learn & Repeat" card uses this today.
- */
-const CARD_ONLY_SPAN = 1;
 
 /* --- Card layouts ------------------------------------------------------- */
 
@@ -264,7 +228,7 @@ type CardLayout = {
 /**
  * Slot pitch, in percent of a card's own height. Every card is stretched to
  * the height of the tallest one by the grid, so one percentage lands the same
- * distance for all six. At 110 the 0.7-scaled neighbours clear the centre
+ * distance for all five. At 110 the 0.7-scaled neighbours clear the centre
  * card by about a quarter of its height.
  */
 const CARD_SLOT_OFFSET = 107;
@@ -306,7 +270,7 @@ const CARD_SLIDE_GAP = 32; // 2rem
 /**
  * Narrow screens: one slot, crossed horizontally. There is no width to spare
  * for a neighbour to be legible beside it, so the cards travel single file --
- * the next one in from the left as the current one leaves to the right -- and
+ * the next one in from the right as the current one leaves to the left -- and
  * the limit drops to 1, because one slot off centre is already out of frame.
  *
  * A pitch of a full card width plus the gap is what keeps the two cards in
@@ -318,10 +282,11 @@ const CARD_SLIDE_GAP = 32; // 2rem
 const SLIDING_CARDS: CardLayout = {
   slotLimit: 1,
   state: (slot) => ({
-    // Travel is left to right, so the sign flips: the slot ahead of centre
-    // (+1) waits out to the left, the one behind it (-1) has left to the right.
-    xPercent: -slot * CARD_SLIDE_OFFSET,
-    x: -slot * CARD_SLIDE_GAP,
+    // Travel is right to left, so the slot sign is the direction: the slot
+    // ahead of centre (+1) waits out to the right, the one behind it (-1) has
+    // already left to the left.
+    xPercent: slot * CARD_SLIDE_OFFSET,
+    x: slot * CARD_SLIDE_GAP,
     yPercent: 0,
     y: 0,
     scale: 1,
@@ -380,13 +345,11 @@ const HEADING_FADE = 0.6;
 export const ShortFormProcess = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  // All three are indexed the same as DIAGRAM_STEPS.
+  // All four are indexed the same as STEPS.
   const arrowRefs = useRef<Array<SVGPathElement | null>>([]);
   const revealRefs = useRef<Array<SVGPathElement | null>>([]);
   const iconRefs = useRef<Array<SVGPathElement | null>>([]);
-  // Every step gets a card, drawn or not, so this one is indexed by STEPS.
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const centreLabelRef = useRef<SVGTextElement>(null);
   gsap.registerPlugin(ScrollTrigger);
 
   /**
@@ -430,11 +393,11 @@ export const ShortFormProcess = () => {
 
   useLayoutEffect(() => {
     /**
-     * Only the cards differ between the two layouts -- the arrows, their masks,
-     * the icons and the centre label are the same animation at every width --
-     * so this is one callback reading a condition rather than two timelines
-     * kept in sync by hand. GSAP re-runs it when the query flips, reverting
-     * everything the previous run set on the way.
+     * Only the cards differ between the two layouts -- the arrows, their masks
+     * and the icons are the same animation at every width -- so this is one
+     * callback reading a condition rather than two timelines kept in sync by
+     * hand. GSAP re-runs it when the query flips, reverting everything the
+     * previous run set on the way.
      */
     const mm = gsap.matchMedia(containerRef);
 
@@ -469,15 +432,6 @@ export const ShortFormProcess = () => {
         // the layout for a notional step -1.
         cards.forEach((card, i) => {
           gsap.set(card, cardLayout.state(slot(i + 1)));
-        });
-
-        // The ring's centre label is nothing until the cycle closes. Scaling an
-        // SVG element means the transform attribute, so state the origin rather
-        // than relying on the bounding box GSAP would work one out from.
-        gsap.set(centreLabelRef.current, {
-          opacity: 0,
-          scale: 0,
-          transformOrigin: "50% 50%",
         });
 
         /**
@@ -549,41 +503,15 @@ export const ShortFormProcess = () => {
          * -- appending would stack them end to end instead.
          */
         let stepStart = 0;
-        // Indexes reveals/icons, which only exist for the steps in the diagram.
-        let diagramIndex = 0;
 
-        STEPS.forEach((step, i) => {
+        STEPS.forEach((_, i) => {
           // The carousel shifts as the step begins, so the card being described
           // is on show for as long as its arrow is being drawn.
           showStep(i, stepStart);
 
-          if (step.isNotInDiagram) {
-            // This step is the ring itself rather than any one arrow, so what it
-            // draws is the label in the middle -- growing in on the same beat as
-            // its card takes the centre slot.
-            cycleTimeline.fromTo(
-              centreLabelRef.current,
-              { opacity: 0, scale: 0 },
-              {
-                opacity: 1,
-                scale: 1,
-                duration: CARD_SLIDE,
-                immediateRender: false,
-              },
-              stepStart,
-            );
-
-            // No arrow to keep pace with, so the card is the whole beat. Nothing
-            // follows it, so it stays centred for the rest of the scroll.
-            stepStart += CARD_ONLY_SPAN;
-            return;
-          }
-
-          const d = diagramIndex++;
-
           // The arrow wipes from its tail to its tip...
           cycleTimeline.to(
-            reveals[d],
+            reveals[i],
             { strokeDashoffset: 0, duration: ARROW_DRAW },
             stepStart,
           );
@@ -596,12 +524,12 @@ export const ShortFormProcess = () => {
           // immediateRender is on by default for zero-duration tweens, which
           // would unhide every icon the moment the timeline is built.
           cycleTimeline.set(
-            icons[d],
+            icons[i],
             { visibility: "visible", immediateRender: false },
             iconStart,
           );
           cycleTimeline.to(
-            icons[d],
+            icons[i],
             { strokeDashoffset: 0, duration: ICON_DRAW },
             iconStart,
           );
@@ -634,14 +562,14 @@ export const ShortFormProcess = () => {
           viewBox="0 0 600 600"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label={`process of creation: ${DIAGRAM_STEPS.map((s) => s.label).join(", ")}`}
+          aria-label={`process of creation: ${STEPS.map((s) => s.label).join(", ")}`}
         >
           <defs>
             <clipPath id="cycle-head-clip">
               <path d={CYCLE_CLOSER_CLIP} />
             </clipPath>
 
-            {DIAGRAM_STEPS.map((step, i) => (
+            {STEPS.map((step, i) => (
               <mask
                 key={`reveal-${step.id}`}
                 id={`cycle-reveal-${step.id}`}
@@ -698,7 +626,7 @@ export const ShortFormProcess = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {DIAGRAM_STEPS.map((step, i) => (
+            {STEPS.map((step, i) => (
               <g key={`icon-${step.id}`} transform={step.iconTransform}>
                 <path
                   ref={(el) => {
@@ -711,19 +639,6 @@ export const ShortFormProcess = () => {
               </g>
             ))}
           </g>
-          {/* Placed by its own x/y rather than by CSS: SVG content has no box
-              layout, so position/top/left do nothing in here. In exchange the
-              label lives in user units and scales with the ring. */}
-          <text
-            ref={centreLabelRef}
-            className="cycle-diagram-text"
-            x={CENTER}
-            y={CENTER}
-            textAnchor="middle"
-            dominantBaseline="central"
-          >
-            Repeat
-          </text>
         </svg>
         <div className="shortform-process-cards-container">
           {STEPS.map((step, i) => (
