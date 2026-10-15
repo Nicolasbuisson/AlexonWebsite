@@ -1,26 +1,25 @@
 .production-item-service:not(.production-item-service:last-child) {
-    margin-inline-end: 4px;
+  margin-inline-end: 4px;
 }
 
 .production-item-service-link {
-    display: inline-block;
-    width: fit-content;
-    margin-bottom: 0.25rem;
-    transform-origin: center;
+  display: inline-block;
+  width: fit-content;
+  transform-origin: center;
 }
 
 .production-item-service-link::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1px;
-    width: 0%;
-    background-color: var(--clr-dark);
-    transition: 300ms ease-in-out;
-    left: 50%
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 0%;
+  background-color: var(--clr-dark);
+  transition: 300ms ease-in-out;
+  left: 50%;
 }
 
 .production-item-service-link:hover::after {
-    left: 0%;
-    width: 100%;
+  left: 0%;
+  width: 100%;
 }

@@ -1,4 +1,5 @@
 import "./productionsItem.css";
+import Image from "next/image";
 import { Navigation } from "../../../components/navigation/navigation";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
@@ -68,18 +69,23 @@ export default async function productionsItem({
       <section className="productionsItem-section">
         <div
           className={`productionsItem-title-background${gridImage ? " has-image" : ""}`}
-          style={
-            gridImage
-              ? ({ "--bg-image": `url(${gridImage})` } as React.CSSProperties)
-              : {
-                  borderImage:
-                    "fill 0 linear-gradient(180deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 1) 100%)",
-                  color: "var(--clr-dark)",
-                  paddingTop: "5%",
-                }
-          }
         >
-          <h2>{title}</h2>
+          {gridImage ? (
+            <Image
+              src={gridImage}
+              alt=""
+              className="productionsItem-title-image"
+              fill
+              sizes="100vw"
+              priority
+            />
+          ) : (
+            <></>
+          )}
+          {/* the gradient lives here so the image filter doesn't affect the title */}
+          <div className="productionsItem-title-overlay">
+            <h2>{title}</h2>
+          </div>
         </div>
 
         <div className="video-container">
@@ -96,11 +102,13 @@ export default async function productionsItem({
             );
           })}
           <div className="video-details">
-            <h4>
-              Client: <span>{client}</span>
-            </h4>
-            <p>{description}</p>
-            <h4>Services:</h4>
+            <p className="video-details-label">Client:</p>
+            <p className="video-details-client">{client}</p>
+            <p className="video-details-label video-details-description">
+              Description:
+            </p>
+            <p className="video-details-description">{description}</p>
+            <p className="video-details-label">Services:</p>
             <ProductionItemServices services={services} />
           </div>
         </div>

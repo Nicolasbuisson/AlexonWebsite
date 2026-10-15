@@ -3,23 +3,28 @@
   color: var(--clr-dark);
   --video-height: 80vh;
   --video-height: 80svh;
-  ---video-details-grid-columns: 1fr 3fr;
-}
-
-@media (width <=580px) {
-  .productionsItem-container {
-    ---video-details-grid-columns: 1fr;
-  }
+  ---video-details-grid-columns: 0.8fr 3fr;
 }
 
 .productionsItem-title-background {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-image: fill 0 linear-gradient(#0000, #000);
-  padding-top: 15%;
   margin-bottom: 2rem;
-  color: var(--clr-light);
+}
+
+/* sits behind the overlay so the brightness filter doesn't affect the title */
+.productionsItem-title-image {
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.productionsItem-title-overlay {
+  border-image: fill 0
+    linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 1) 100%);
+  padding-top: 5%;
+  color: var(--clr-dark);
 
   h2 {
     inset: 0;
@@ -29,21 +34,10 @@
   }
 }
 
-/* image lives on a pseudo-element so the blur/brightness filter doesn't affect the title */
-.productionsItem-title-background.has-image {
-  border-image: none;
-
-  &::before {
-    content: "";
-    position: absolute;
-    /* bleed past the edges so the blur doesn't fade the borders */
-    inset: -4px;
-    z-index: -1;
-    background:
-      linear-gradient(#0000, #000),
-      var(--bg-image) center / cover no-repeat;
-    filter: brightness(0.6);
-  }
+.has-image .productionsItem-title-overlay {
+  border-image: fill 0 linear-gradient(#0000, #000);
+  padding-top: 15%;
+  color: var(--clr-light);
 }
 
 .video-container {
@@ -64,20 +58,22 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: var(---video-details-grid-columns);
+  /* the one-line rows (client, services) read better centred against their label */
+  align-items: center;
 
-  h4 {
-    font-weight: 700;
-
-    h4 {
-      font-weight: 400;
-      display: inline-block;
-    }
+  .video-details-label {
+    color: var(--clr-dark-grey);
   }
 
-  p {
-    margin-top: 0.45rem;
-    line-height: 1.3;
+  /* the description runs long, so its row hangs from the top instead */
+  .video-details-description {
+    align-self: start;
   }
+}
+
+.video-details-client {
+  font-size: var(--fs-h4);
+  font-weight: 500;
 }
 
 .productions-item-details-section {
