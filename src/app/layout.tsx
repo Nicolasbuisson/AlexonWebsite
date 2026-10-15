@@ -6,8 +6,14 @@ import "./global.css";
 import { Footer } from "../components/footer/footer";
 import { SmoothScroll } from "../components/smoothScroll/smoothScroll";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://alexonmedia.com";
+
 export const metadata: Metadata = {
-  title: "Alexon Media",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Alexon Media | Social-First Video Production Agency",
+    template: "%s | Alexon Media",
+  },
   description:
     "Alexon Media is a pioneering creative and production house offering commercials, branded, and short form content to your favorite brands worldwide",
 };

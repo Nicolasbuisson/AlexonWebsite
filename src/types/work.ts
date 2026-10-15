@@ -20,6 +20,8 @@ interface WorkItemProps {
   title: string;
   client: string;
   description: string;
+  // short, SEO-length (<160 chars) version of description used for meta tags
+  metaDescription: string;
   videos: string[];
   gridVideoPreview?: string;
   gridImage?: string;

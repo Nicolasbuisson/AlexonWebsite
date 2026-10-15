@@ -1,9 +1,16 @@
 import "./productions.css";
+import type { Metadata } from "next";
 import { Navigation } from "../../components/navigation/navigation";
 import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
 import projectsJSON from "../../resources/projects.json";
 import { PageLoader } from "../../components/pageLoader/pageLoader";
+
+export const metadata: Metadata = {
+  title: "Our Productions — Brand Films & Commercials",
+  description:
+    "Explore our portfolio of brand films, commercials and campaigns for Visa, Four Seasons, Coinbase, Corona, ELLE, ASICS, On Running and more.",
+};
 
 function Productions() {
   const { projects } = projectsJSON;

@@ -29,8 +29,8 @@ export async function generateMetadata({
     (project: WorkItemProps) => project.route === productionsRoute,
   )!;
   return {
-    title: `Alexon Media - ${productionItem.title}`,
-    description: productionItem.description,
+    title: productionItem.title,
+    description: productionItem.metaDescription,
     keywords: ["video production", "Alexon Media"],
   };
 }

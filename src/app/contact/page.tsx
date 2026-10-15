@@ -1,7 +1,13 @@
-"use client";
 import "./contact.css";
-import { InlineWidget } from "react-calendly";
+import type { Metadata } from "next";
 import { Navigation } from "../../components/navigation/navigation";
+import { CalendlyWidget } from "../../components/calendlyWidget/calendlyWidget";
+
+export const metadata: Metadata = {
+  title: "Contact Us — Book a Free Consultation",
+  description:
+    "Book a free consultation with Alexon Media to scope your next brand film or short-form content system. Pick a time that works and let's talk.",
+};
 
 function Contact() {
   return (
@@ -10,10 +16,7 @@ function Contact() {
       <section className="contact-section">
         <h2>book a free consultation</h2>
         <div className="calendly-container">
-          <InlineWidget
-            url="https://calendly.com/contact-alexonmedia/freeconsultation"
-            styles={{ height: "100%", width: "100%" }}
-          />
+          <CalendlyWidget url="https://calendly.com/contact-alexonmedia/freeconsultation" />
         </div>
       </section>
     </div>

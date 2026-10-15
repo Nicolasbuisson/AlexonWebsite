@@ -1,4 +1,5 @@
 import "./shortform.css";
+import type { Metadata } from "next";
 import { Navigation } from "../../components/navigation/navigation";
 import { ShortFormHero } from "../../components/shortformHero/shortformHero";
 import { ShortFormPainPoints } from "../../components/shortformPainPoints/shortformPainPoints";
@@ -6,6 +7,12 @@ import { Accordion } from "../../components/accordion/accordion";
 import { faqs } from "../../resources/faq.json";
 import { ShortFormProcess } from "../../components/shortformProcess/shortformProcess";
 import { ShortformGuarantee } from "../../components/shortformGuarantee/shortfromGuarantee";
+
+export const metadata: Metadata = {
+  title: "Short-Form Content Systems & Packages",
+  description:
+    "Done-for-you short-form video packages: strategy, filming, editing and distribution handled by a dedicated creative team built to drive reach and ROI.",
+};
 
 function ShortForm() {
   return (

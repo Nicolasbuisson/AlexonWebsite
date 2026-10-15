@@ -1,4 +1,5 @@
 import "./home.css";
+import type { Metadata } from "next";
 import { HeroParagraph } from "../components/heroParapgraph/heroParagraph";
 import { Projects } from "../components/projects/projects";
 import { projects } from "../resources/projects.json";
@@ -9,6 +10,12 @@ import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
 import { HomeHero } from "../components/homeHero/homeHero";
+
+export const metadata: Metadata = {
+  title: { absolute: "Alexon Media | Social-First Video Production Agency" },
+  description:
+    "A social-first video production agency crafting cinematic brand films and high-performing short-form content for brands worldwide.",
+};
 
 function Home() {
   return (

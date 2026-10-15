@@ -1,10 +1,17 @@
 import "./about.css";
+import type { Metadata } from "next";
 import { InstaSection } from "../../components/insta/instaSection";
 import { Navigation } from "../../components/navigation/navigation";
 import { AboutHeroV2 } from "../../components/aboutHeroV2/aboutHeroV2";
 import { HeroParagraph } from "../../components/heroParapgraph/heroParagraph";
 import { AboutAimItem } from "../../components/aboutAimItem/aboutAimitem";
 import { AboutFounder } from "../../components/aboutFounder/aboutFounder";
+
+export const metadata: Metadata = {
+  title: "About Us — The Non-Agency Production Team",
+  description:
+    "Meet Alexon Media: a nimble non-agency team blending strategic thinking with cinematic storytelling to make premium brand content hassle-free.",
+};
 
 // revalidate and rebuild the static page every 1 hour to obtain fresh instagram data
 export const revalidate = 3600;
