@@ -24,19 +24,20 @@
   height: auto;
 }
 
-/* One cell, every card in it: the scroll timeline offsets them from that cell
-   to build the carousel, so their resting position has to be the same spot
-   rather than a column of five. Stretching them to the row's height (the
-   default, and what the tallest card sets) is what makes one slot pitch land
-   the same distance for all of them -- and it holds the row still while they
-   swap, since the row is sized by the tallest card rather than by whichever
-   one is on show. */
+/* One cell, every card in it: both layouts offset the cards from that cell by
+   transform -- a stack on wide screens, a carousel on narrow ones -- so their
+   resting position has to be the same spot rather than a column of five.
+   Stretching them to the row's height (the default, and what the tallest card
+   sets) is what keeps the stack's steps even, since a card that sized itself
+   to its own text would show a different amount of the one beneath it. */
 .shortform-process-cards-container {
   display: grid;
   align-content: center;
   justify-items: center;
 }
 
+/* Opaque, because the stack relies on each card hiding the body of the one it
+   lands on. --card-background is a gradient, so there is nothing behind it. */
 .shortform-process-card {
   grid-area: 1 / 1;
   width: 100%;

@@ -211,48 +211,82 @@ const CARD_SLIDE = 0.6;
 /* --- Card layouts ------------------------------------------------------- */
 
 /**
- * The cards ride a carousel of slots numbered by their offset from the step
- * being drawn: 0 is the slot on show, -1 the step just finished, +1 the one
- * coming next. Every step shifts each card one slot closer to 0 and on out the
- * far side. A layout decides how far from 0 a card can still be seen and what
- * each slot looks like; a card past that limit is parked in the last slot with
- * nothing showing, so it holds still until its turn comes round.
+ * Wide screens: a stack that only ever grows. Every card shares one grid cell,
+ * waits off the bottom of the screen, and rises into place as its own arrow is
+ * drawn -- landing CARD_STACK_OFFSET lower than the card before it, so each one
+ * covers the body of the last while leaving its title on show. Nothing is ever
+ * moved again once it lands, and nothing leaves, so by the end the reader has
+ * the whole process in front of them as a deck of titles under the step they
+ * are on.
+ *
+ * Paint order is the DOM order the cards are rendered in: a transformed element
+ * paints as a positioned one, so the later card in the markup is the one on
+ * top. That is the order we want, which is why no z-index is set here.
+ *
+ * Scrub runs this backwards as well, which is what drops a card back off the
+ * bottom on the way up.
+ */
+
+/** How much of the card underneath stays visible. Enough for its title. */
+const CARD_STACK_OFFSET = 48;
+/**
+ * How far the last card lands below the first, and so how much taller the
+ * finished stack is than any one card in it. Derived rather than typed out, so
+ * the stack stays centred if the offset or the number of steps changes.
+ */
+const CARD_STACK_DEPTH = (STEPS.length - 1) * CARD_STACK_OFFSET;
+/**
+ * Timeline units a card takes to rise. Tied to the arrow it belongs to, so the
+ * card lands on the beat its arrow finishes filling.
+ */
+const CARD_RISE = ARROW_DRAW;
+/**
+ * How far below its resting place a card waits. The pin holds the stack around
+ * the middle of the window, so half a viewport already clears the bottom of
+ * the screen -- and it asks the card to cover half the ground in the one
+ * arrow-draw it has to get there, which is the difference between rising and
+ * being flung. Function-based so it re-resolves when the ScrollTrigger
+ * refreshes on a resize -- see invalidateOnRefresh.
+ */
+const cardEntryTravel = () => window.innerHeight * 0.5;
+
+/**
+ * Every property either layout touches is stated in both, so switching between
+ * them leaves nothing behind from the other one -- the stack never moves
+ * sideways or scales, but it has to say so.
+ */
+const stackCardState = (index: number, shown: boolean): gsap.TweenVars => ({
+  xPercent: 0,
+  x: 0,
+  yPercent: 0,
+  /**
+   * The grid has one row to centre, one card tall, but the stack grows
+   * downward out of it: centring that row hangs the finished deck half the
+   * depth too low, and starting it at the top leaves it the same distance too
+   * high. Lifting every card by half the depth centres the stack as a whole,
+   * which is the midpoint between the two.
+   */
+  y: shown
+    ? index * CARD_STACK_OFFSET - CARD_STACK_DEPTH / 2
+    : cardEntryTravel,
+  scale: 1,
+  opacity: shown ? 1 : 0,
+});
+
+/**
+ * Narrow screens keep the carousel, because there is no room for a column of
+ * five beside a diagram that has already dropped below it. The cards ride a
+ * line of slots numbered by their offset from the step being drawn: 0 is the
+ * slot on show, -1 the step just finished, +1 the one coming next. Every step
+ * shifts each card one slot closer to 0 and on out the far side; a card past
+ * the limit is parked in the last slot with nothing showing, so it holds still
+ * until its turn comes round.
  */
 type CardLayout = {
   /** Slots either side of 0. A card beyond it is clamped into the last one. */
   slotLimit: number;
   /** Where a card sits, and how it looks, in a given slot. */
   state: (slot: number) => gsap.TweenVars;
-};
-
-/**
- * Slot pitch, in percent of a card's own height. Every card is stretched to
- * the height of the tallest one by the grid, so one percentage lands the same
- * distance for all five. At 110 the 0.7-scaled neighbours clear the centre
- * card by about a quarter of its height.
- */
-const CARD_SLOT_OFFSET = 107;
-/** Scale and opacity of the neighbours, either side of the centre slot. */
-const CARD_RESTING_SCALE = 0.65;
-const CARD_NEIGHBOUR_OPACITY = 0.5;
-
-/**
- * Wide screens: a vertical stack deep enough to show the step on show flanked
- * by the one before and the one after, so a card walks +2 -> +1 -> 0 -> -1 ->
- * -2 across the scroll and the neighbours give it context.
- */
-const STACKED_CARDS: CardLayout = {
-  slotLimit: 2,
-  // Every property either layout touches is stated in both, so switching
-  // between them leaves nothing behind from the other one.
-  state: (slot) => ({
-    xPercent: 0,
-    x: 0,
-    yPercent: slot * CARD_SLOT_OFFSET,
-    y: 0,
-    scale: slot === 0 ? 1 : CARD_RESTING_SCALE,
-    opacity: slot === 0 ? 1 : Math.abs(slot) === 1 ? CARD_NEIGHBOUR_OPACITY : 0,
-  }),
 };
 
 /** Slot pitch for the sliding layout, in percent of a card's own width. */
@@ -325,11 +359,24 @@ const cardSlot = (layout: CardLayout, offset: number) =>
   Math.max(-layout.slotLimit, Math.min(layout.slotLimit, offset));
 
 /**
+ * Timeline units the finished cycle holds before the pin lets go. Every step
+ * spans ARROW_DRAW - ICON_LEAD + ICON_DRAW, so at five steps this is half a
+ * step's worth of stillness on the end, with the ring closed and the whole
+ * deck of cards up.
+ */
+const CYCLE_HOLD = 0.6;
+
+/**
  * Pixels of scroll the whole five-step cycle is spread over. Tied to the pin
  * rather than to the container's height, so pacing is a number we pick instead
  * of a side effect of how tall the heading happens to wrap.
+ *
+ * The scrub maps the timeline's whole length onto this distance, so the hold
+ * is paid for out of it unless the distance grows to match: five steps of 1.2
+ * plus CYCLE_HOLD is 6.6 units, at the ~333px per unit the cycle was already
+ * being read at.
  */
-const SCROLL_DISTANCE = 2000;
+const SCROLL_DISTANCE = 2200;
 const PIN_TOP_OFFSET = 32; // 2rem
 const PIN_TOP_OFFSET_NARROW = 0;
 
@@ -407,13 +454,12 @@ export const ShortFormProcess = () => {
       { isWide: WIDE_LAYOUT, isNarrow: NARROW_LAYOUT, isNarrowPin: NARROW_PIN },
       (context) => {
         const isWide = Boolean(context.conditions?.isWide);
-        const cardLayout = isWide ? STACKED_CARDS : SLIDING_CARDS;
         // Its own breakpoint, so this one is not isWide.
         const pinTopOffset = context.conditions?.isNarrowPin
           ? PIN_TOP_OFFSET_NARROW
           : PIN_TOP_OFFSET;
         /** Clamped slot for a card `offset` steps from the one being drawn. */
-        const slot = (offset: number) => cardSlot(cardLayout, offset);
+        const slot = (offset: number) => cardSlot(SLIDING_CARDS, offset);
 
         const reveals = revealRefs.current.filter(Boolean);
         const icons = iconRefs.current.filter(Boolean);
@@ -427,12 +473,19 @@ export const ShortFormProcess = () => {
           strokeDashoffset: pathLength,
         });
 
-        // The carousel opens one slot short of the first step, so the first card
-        // arrives as the first arrow draws rather than starting in place. That is
-        // the layout for a notional step -1.
-        cards.forEach((card, i) => {
-          gsap.set(card, cardLayout.state(slot(i + 1)));
-        });
+        if (isWide) {
+          // The whole stack waits off the bottom of the screen.
+          cards.forEach((card, i) => {
+            gsap.set(card, stackCardState(i, false));
+          });
+        } else {
+          // The carousel opens one slot short of the first step, so the first
+          // card arrives as the first arrow draws rather than starting in
+          // place. That is the layout for a notional step -1.
+          cards.forEach((card, i) => {
+            gsap.set(card, SLIDING_CARDS.state(slot(i + 1)));
+          });
+        }
 
         /**
          * ...except that a parked dashoffset does not reliably hide a path made
@@ -465,9 +518,11 @@ export const ShortFormProcess = () => {
         });
 
         /**
-         * Shifts every card one slot along, so step `active` lands in the slot on
-         * show and the step before it leaves. Which way they travel and what they
-         * look like getting there is the layout's business, not this function's.
+         * Brings step `active`'s card in, which means something different in
+         * each layout: on wide screens that one card rises onto the stack and
+         * every card already there is left exactly where it landed, while on
+         * narrow ones the whole carousel shifts a slot so the card before it
+         * leaves.
          *
          * Both ends of every move are stated explicitly. A plain .to() would
          * record its start value the first time it renders, and a scrub can jump
@@ -477,6 +532,20 @@ export const ShortFormProcess = () => {
          * otherwise each fromTo would stamp its from-state at build time.
          */
         const showStep = (active: number, at: number) => {
+          if (isWide) {
+            cycleTimeline.fromTo(
+              cards[active],
+              stackCardState(active, false),
+              {
+                ...stackCardState(active, true),
+                duration: CARD_RISE,
+                immediateRender: false,
+              },
+              at,
+            );
+            return;
+          }
+
           cards.forEach((card, i) => {
             const from = slot(i - active + 1); // its slot on the step before
             const to = slot(i - active);
@@ -485,9 +554,9 @@ export const ShortFormProcess = () => {
 
             cycleTimeline.fromTo(
               card,
-              cardLayout.state(from),
+              SLIDING_CARDS.state(from),
               {
-                ...cardLayout.state(to),
+                ...SLIDING_CARDS.state(to),
                 duration: CARD_SLIDE,
                 immediateRender: false,
               },
@@ -538,11 +607,12 @@ export const ShortFormProcess = () => {
           stepStart = iconStart + ICON_DRAW;
         });
 
-        // A timeline is only as long as its children, and the last card slides
-        // into place well before the beat it owns is up. This empty tween claims
-        // the rest of that beat, so the final card holds still for a moment
-        // instead of the pin releasing the instant it lands.
-        cycleTimeline.to({}, { duration: 0 }, stepStart);
+        // A timeline is only as long as its children, so without this it would
+        // end on the frame the last icon finishes and the pin would release
+        // from under a diagram the reader has not had a moment to look at.
+        // Tweening nothing is how a timeline is told to hold: there is no
+        // property involved, only length.
+        cycleTimeline.to({}, { duration: CYCLE_HOLD }, stepStart);
       },
     );
 
