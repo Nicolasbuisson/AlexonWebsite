@@ -5,8 +5,7 @@ import "lenis/dist/lenis.css";
 import "./global.css";
 import { Footer } from "../components/footer/footer";
 import { SmoothScroll } from "../components/smoothScroll/smoothScroll";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://alexonmedia.com";
+import { siteUrl } from "../config/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
