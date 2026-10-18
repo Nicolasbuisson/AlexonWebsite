@@ -14,37 +14,47 @@ export const AboutFounder = () => {
   useLayoutEffect(() => {
     const founderImage = founderImageRef.current;
 
-    const imageWidthTimeline = gsap.timeline({
-      defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
-      scrollTrigger: {
-        trigger: founderSectionRef.current,
-        start: "top bottom-=100px",
-        end: "top center",
-        scrub: 1,
-      },
+    // a context owns both timelines and both of their scrollTriggers, so the
+    // cleanup below can revert the lot. without it the triggers outlive the
+    // component — react strict mode runs this effect twice in dev, and a
+    // client-side navigation away leaves them attached to detached nodes — and
+    // a second pair scrubbing the same image fights the first over width and
+    // filter
+    const ctx = gsap.context(() => {
+      const imageWidthTimeline = gsap.timeline({
+        defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
+        scrollTrigger: {
+          trigger: founderSectionRef.current,
+          start: "top bottom-=100px",
+          end: "top center",
+          scrub: 1,
+        },
+      });
+
+      imageWidthTimeline.to(founderImage, {
+        width: "100%",
+      });
+
+      const imageFilterTimeline = gsap.timeline({
+        defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
+        scrollTrigger: {
+          trigger: founderTextRef.current,
+          start: "top bottom-=100px",
+          end: "top center",
+          scrub: 1,
+        },
+      });
+
+      imageFilterTimeline.to(
+        founderImage,
+        {
+          filter: "blur(8px) brightness(0.6)",
+        },
+        "<0.2",
+      );
     });
 
-    imageWidthTimeline.to(founderImage, {
-      width: "100%",
-    });
-
-    const imageFilterTimeline = gsap.timeline({
-      defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
-      scrollTrigger: {
-        trigger: founderTextRef.current,
-        start: "top bottom-=100px",
-        end: "top center",
-        scrub: 1,
-      },
-    });
-
-    imageFilterTimeline.to(
-      founderImage,
-      {
-        filter: "blur(8px) brightness(0.6)",
-      },
-      "<0.2",
-    );
+    return () => ctx.revert();
   }, []);
 
   return (

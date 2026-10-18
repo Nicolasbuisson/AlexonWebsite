@@ -42,7 +42,7 @@ function Productions() {
           </h2>
         </div>
         <div className="productions-projects-wrapper">
-          <Projects projects={projects}></Projects>
+          <Projects projects={projects} frameOnHover></Projects>
         </div>
       </section>
       <section className="productions-clients-section">

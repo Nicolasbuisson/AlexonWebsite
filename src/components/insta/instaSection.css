@@ -1,6 +1,6 @@
 .insta-section {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     padding-block: var(--section-padding-block);
     padding-inline: var(--section-padding-inline);
     display: flex;

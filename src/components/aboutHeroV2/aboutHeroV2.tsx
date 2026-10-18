@@ -18,7 +18,16 @@ export const AboutHeroV2 = () => {
 
   const dimensions = useWindowSize();
 
+  // rebuild only when the breakpoint flips, not on every resize tick. depending
+  // on the raw dimensions would tear the timeline down mid-scroll on mobile,
+  // where the address bar collapsing counts as a resize
+  const isWide = dimensions.width >= 550;
+  const hasMeasured = dimensions.width > 0;
+
   useLayoutEffect(() => {
+    // useWindowSize reports 0 until its own mount effect runs
+    if (!hasMeasured) return;
+
     const image1 = image1Ref.current;
     const image2 = image2Ref.current;
     const image3 = image3Ref.current;
@@ -26,32 +35,40 @@ export const AboutHeroV2 = () => {
     const image5 = image5Ref.current;
     const image6 = image6Ref.current;
 
-    const tl = gsap.timeline({
-      defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
-      scrollTrigger: {
-        trigger: "#trigger-container", // the tall scroll container
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1,
-      },
+    // a context owns every tween and scrollTrigger created inside it, so the
+    // cleanup below can revert them all. killing the timeline on its own would
+    // leave its scrollTrigger attached, and a second one scrubbing the same
+    // images fights the first for z and opacity
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        defaults: { ease: "none" }, // linear so scrub maps 1-to-1 with scroll
+        scrollTrigger: {
+          trigger: "#trigger-container", // the tall scroll container
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+
+      // duration of each animation is determined by scrollTrigger
+      // it divides it up equally between all of them. But can determine coefficient with duration param.
+      // if want to increase timeline's total duration, increase container height for more scroll room
+      const perspectiveShift = isWide ? 1500 : 600;
+
+      tl.to(image1, { z: perspectiveShift - 100, duration: 1 });
+      tl.to(image2, { z: perspectiveShift - 300, duration: 1 }, "<50%"); // start at same time as previous animation reaches 50% completion
+      tl.to(image3, { opacity: 1, duration: 0.5 }, "<50%");
+      tl.to(image3, { z: perspectiveShift, duration: 1 }, "<50%");
+      tl.to(image4, { opacity: 1, duration: 0.5 }, "<50%");
+      tl.to(image4, { z: perspectiveShift, duration: 1 }, "<50%");
+      tl.to(image5, { opacity: 1, duration: 0.5 }, "<50%");
+      tl.to(image5, { z: perspectiveShift - 200, duration: 1 }, "<50%");
+      tl.to(image6, { opacity: 1, duration: 0.5 }, "<50%");
+      tl.to(image6, { z: perspectiveShift - 100, duration: 1 }, "<50%");
     });
 
-    // duration of each animation is determined by scrollTrigger
-    // it divides it up equally between all of them. But can determine coefficient with duration param.
-    // if want to increase timeline's total duration, increase container height for more scroll room
-    const perspectiveShift = dimensions.width >= 550 ? 1500 : 600;
-
-    tl.to(image1, { z: perspectiveShift - 100, duration: 1 });
-    tl.to(image2, { z: perspectiveShift - 300, duration: 1 }, "<50%"); // start at same time as previous animation reaches 50% completion
-    tl.to(image3, { opacity: 1, duration: 0.5 }, "<50%");
-    tl.to(image3, { z: perspectiveShift, duration: 1 }, "<50%");
-    tl.to(image4, { opacity: 1, duration: 0.5 }, "<50%");
-    tl.to(image4, { z: perspectiveShift, duration: 1 }, "<50%");
-    tl.to(image5, { opacity: 1, duration: 0.5 }, "<50%");
-    tl.to(image5, { z: perspectiveShift - 200, duration: 1 }, "<50%");
-    tl.to(image6, { opacity: 1, duration: 0.5 }, "<50%");
-    tl.to(image6, { z: perspectiveShift - 100, duration: 1 }, "<50%");
-  }, [dimensions]);
+    return () => ctx.revert();
+  }, [isWide, hasMeasured]);
 
   return (
     <section className="about-hero-container" id="trigger-container">

@@ -36,7 +36,8 @@ export const Insta = (props: InstaProps) => {
       {instaItems.map((item) => {
         return (
           <InstaItem
-            key={item.mediaURL}
+            // media urls expire and are absent for albums, permalinks are stable
+            key={item.permaLink}
             permaLink={item.permaLink}
             mediaURL={item.mediaURL}
             mediaType={item.mediaType}
