@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   description:
     "Alexon Media is a pioneering creative and production house offering commercials, branded, and short form content to your favorite brands worldwide",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const playfair = Playfair_Display({
