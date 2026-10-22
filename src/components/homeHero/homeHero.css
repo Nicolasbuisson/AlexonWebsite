@@ -128,6 +128,13 @@ body {
   top: var(--home-pitch-top);
   color: var(--clr-light);
   text-align: center;
+  /* centre explicitly rather than leaning on the section's justify-items.
+     Blink applies that alignment to an out-of-flow grid child's static
+     position, WebKit does not, so safari parked this at the left edge.
+     margin-inline: auto only centres an absolute box once both inset-inline
+     edges are pinned, hence the pair below. */
+  inset-inline: 0;
+  width: fit-content;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
