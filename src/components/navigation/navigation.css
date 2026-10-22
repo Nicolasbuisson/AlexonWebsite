@@ -67,9 +67,12 @@ nav > * {
 }
 
 .logo-scroll {
+  /* --vh, not 1vh: it is the same height useScrollPercentage divided by, so
+     the travel stays in step with --scroll even when the ios url bar
+     retracting changes the layout viewport out from under us */
   transform: translateY(
     calc(
-      1vh * var(--logo-starting-translateY) - 1vh *
+      var(--vh) * var(--logo-starting-translateY) - var(--vh) *
         min(var(--scroll), var(--logo-starting-translateY))
     )
   );

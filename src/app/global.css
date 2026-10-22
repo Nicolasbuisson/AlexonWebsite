@@ -25,7 +25,10 @@
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* both are owned by useScrollPercentage once it mounts. These are the
+     first-paint values, before any script has run */
   --scroll: 0;
+  --vh: 1vh;
   --section-padding-block: 3rem;
   --section-padding-inline: 6rem;
 
