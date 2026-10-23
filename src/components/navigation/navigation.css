@@ -8,6 +8,19 @@
   --max-logo-height: 6.5;
   --max-logo-difference: 4;
   --logo-starting-translateY: 35;
+  /* 0 at the top of the page, 1 once the logo has landed in the bar. The hook
+     clamps --scroll at 0, so this needs no lower bound of its own */
+  --logo-progress: calc(
+    min(var(--scroll), var(--logo-starting-translateY)) /
+      var(--logo-starting-translateY)
+  );
+  /* the logo is laid out at --max-logo-height and only ever scaled down, so
+     its raster always holds at least as many pixels as the screen shows.
+     Scaling a bitmap up is what would have gone soft. */
+  --logo-rest-scale: calc(
+    (var(--max-logo-height) - var(--max-logo-difference)) /
+      var(--max-logo-height)
+  );
 
   background-color: var(--clr-dark);
   height: var(--menu-height);
@@ -31,18 +44,9 @@ nav {
 }
 
 .nav-scroll {
-  /* background starts transparent and becomes opacity 1 when --scroll reaches 33.3vh */
-  background-color: rgb(
-    0,
-    0,
-    0,
-    calc(
-      (
-        min(var(--scroll), var(--logo-starting-translateY)) /
-          var(--logo-starting-translateY)
-      )
-    )
-  );
+  /* background starts transparent and reaches opacity 1 just as the logo
+     finishes landing, since both run off the same progress */
+  background-color: rgb(0, 0, 0, var(--logo-progress));
 }
 
 nav > * {
@@ -66,31 +70,33 @@ nav > * {
   height: 100%;
 }
 
+/*
+  The logo used to shrink by animating its own height, which re-ran layout —
+  and re-solved the nav's grid tracks, since the middle 1fr column takes its
+  minimum from the logo's width — on every scroll frame. It now holds one
+  fixed size and rides translate/scale, which stay on the compositor.
+
+  Laid out big and scaled down rather than laid out small and scaled up: a
+  bitmap magnified past its raster goes soft, shrunk below it does not.
+*/
 .logo-scroll {
+  /* overrides .nav-logo's resting height; scale takes it back down to that */
+  height: calc(var(--max-logo-height) * 1rem);
+  /* separate properties, not one transform: by spec translate applies before
+     scale, so the travel below is never multiplied by the scale. Inside a
+     single transform that would depend on the order the functions happen to
+     be written in. */
   /* --vh, not 1vh: it is the same height useScrollPercentage divided by, so
      the travel stays in step with --scroll even when the ios url bar
      retracting changes the layout viewport out from under us */
-  transform: translateY(
+  translate: 0
     calc(
-      var(--vh) * var(--logo-starting-translateY) - var(--vh) *
-        min(var(--scroll), var(--logo-starting-translateY))
-    )
-  );
-  height: min(
-    1rem *
-      calc(
-        var(--max-logo-height) -
-          (
-            min(var(--scroll), var(--logo-starting-translateY)) *
-              (var(--max-logo-difference) / var(--logo-starting-translateY))
-          )
-      ),
-    1rem * var(--max-logo-height)
-  );
-  /*
-    (oldVal - oldMin) * newRange / oldRange + newMin
-    Start at max size then decrease linearly as we scroll, pick the minimal value between the 2
-    */
+      var(--vh) * var(--logo-starting-translateY) * (1 - var(--logo-progress))
+    );
+  scale: calc(1 - (1 - var(--logo-rest-scale)) * var(--logo-progress));
+  /* safe to promote here precisely because the logo only ever scales down:
+     a raster cached at scale 1 is already the largest it needs to be */
+  will-change: translate, scale;
 }
 
 .burger-menu {
