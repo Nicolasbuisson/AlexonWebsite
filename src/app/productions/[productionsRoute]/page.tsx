@@ -1,5 +1,6 @@
 import "./productionsItem.css";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { Navigation } from "../../../components/navigation/navigation";
 import projectsJSON from "../../../resources/projects.json";
 import type { Metadata } from "next";
@@ -10,6 +11,10 @@ import { ProductionItemServices } from "../../../components/productionItemServic
 interface productionsStaticParams {
   productionsRoute: string;
 }
+
+// every production is known at build time, so anything outside
+// generateStaticParams is a bad URL and should 404 rather than be rendered
+export const dynamicParams = false;
 
 export async function generateStaticParams(): Promise<
   productionsStaticParams[]
@@ -28,7 +33,10 @@ export async function generateMetadata({
   const { productionsRoute } = await params;
   const productionItem = projectsJSON.projects.find(
     (project: WorkItemProps) => project.route === productionsRoute,
-  )!;
+  );
+  if (!productionItem) {
+    notFound();
+  }
   return {
     title: productionItem.title,
     description: productionItem.metaDescription,
@@ -44,11 +52,9 @@ export default async function productionsItem({
   const { productionsRoute } = await params;
   const productionItem = projectsJSON.projects.find(
     (project: WorkItemProps) => project.route === productionsRoute,
-  )!;
+  );
   if (!productionItem) {
-    return (
-      <div>{`Error 404: content for page productions/${productionsRoute} not found`}</div>
-    );
+    notFound();
   }
   const {
     title,
