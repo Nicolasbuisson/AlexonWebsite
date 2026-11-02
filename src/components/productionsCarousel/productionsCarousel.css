@@ -2,6 +2,12 @@
     --production-carousel-animation-duration: 500ms;
 }
 
+/* set on the static container (not the translated mover) to hide sub-pixel seams
+   that let the white page background show through, including while sliding */
+.carousel-container:has(> .production-carousel) {
+    background-color: var(--clr-dark);
+}
+
 /* hover effect */
 .production-carousel:hover>.production-carousel-card {
     filter: brightness(.5) saturate(.75);
