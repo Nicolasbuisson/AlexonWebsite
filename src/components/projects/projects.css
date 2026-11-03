@@ -30,6 +30,7 @@
     transition: opacity var(--projects-animation-duration);
     color: var(--clr-light);
     margin-bottom: 1rem;
+    padding-inline: 0.75rem;
     font-weight: 600;
   }
 }

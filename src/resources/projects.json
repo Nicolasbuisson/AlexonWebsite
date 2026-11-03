@@ -1,6 +1,99 @@
 {
   "projects": [
     {
+      "route": "pumaxalhilal",
+      "title": "Puma x Al-Hilal - Glory Runs in Our Veins",
+      "client": "Puma x Al-Hilal",
+      "description": "For the club’s 69th Anniversary, Al-Hilal and Puma team up to create a special edition journey reminiscent of the club’s golden 1990s. “Glory Runs in Our Veins”: a story of legacy, connecting generations through creative direction, production design and visual storytelling.",
+      "metaDescription": "A special-edition film for Al-Hilal's 69th anniversary with Puma, celebrating the club's golden 1990s and connecting generations of fans.",
+      "videos": ["https://www.youtube.com/embed/Ax823QbW0Pg"],
+      "gridVideoPreview": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/preview.webm",
+      "gridImage": "https://d128kbp85lo7cj.cloudfront.net/posters/PumaxAl-Hilal.webp",
+      "logoImage": "https://d128kbp85lo7cj.cloudfront.net/clientLogos/PumaxAl-Hilal.webp",
+      "services": ["Video Production"],
+      "stills": [
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/1.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/2.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/3.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/4.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/5.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/6.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/7.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/8.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/9.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/10.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/11.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/12.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/13.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/14.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/15.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/16.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/17.webp"
+        },
+        {
+          "imageUrl": "https://d128kbp85lo7cj.cloudfront.net/productions/pumaXAl-Hilal/stills/18.webp"
+        }
+      ],
+      "photos": [],
+      "bts": [],
+      "credits": [
+        { "title": "Agency", "name": "43Lens Agency" },
+        { "title": "Creative Direction & Director", "name": "Love Paras" },
+        {
+          "title": "Co-Director, Camera Operator & Editor",
+          "name": "Alexandre Buisson"
+        },
+        {
+          "title": "Photography and Post Production Photo",
+          "name": "Naim Chidiac"
+        },
+        {
+          "title": "On-Ground Crew/Lighting & Set Build",
+          "name": "MH Studios"
+        },
+        { "title": "Producers", "name": "Mansour Hilton" },
+        { "title": "Styling & MUA", "name": "Najat Elhussien" },
+        { "title": "Original Music & Composition", "name": "Jetro" },
+        { "title": "VFX", "name": "Dima Tendy" },
+        { "title": "CGI", "name": "Love Paras" },
+        { "title": "VO", "name": "MH Studios" }
+      ],
+      "displayOnHomePage": true
+    },
+    {
       "route": "visaxemiratesnbd",
       "title": "Visa x Emirates NBD - Play it like Pep",
       "client": "Visa x Emirates NBD",
@@ -546,7 +639,7 @@
         { "title": "Photographer", "name": "Xavier Barriault" },
         { "title": "Camera Operators", "name": "Keoni Lachhar" }
       ],
-      "displayOnHomePage": true
+      "displayOnHomePage": false
     },
     {
       "route": "corona",
