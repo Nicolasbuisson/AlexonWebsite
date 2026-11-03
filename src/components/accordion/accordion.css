@@ -60,6 +60,9 @@
   height: 2px;
   background: currentcolor;
   transition: transform var(--accordion-animation-duration);
+  /* keep the bars on their own layer at rest too, so the subpixel bar isn't
+     drawn crisply mid-animation and then re-rasterized blurrier when it ends */
+  will-change: transform;
 }
 
 .accordion-x::after {

@@ -1,20 +1,32 @@
 {
     "faqs" : [
         {
-            "title": "What services does Alexon Media offer?",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit praesentium rem reiciendis quibusdam sequi temporibus nobis in! Itaque iste et iusto sed cum consequatur. Ad, dolor? Dolor error consequuntur sint iure nostrum?"
+            "title": "Who is this for?",
+            "content": "Founders, coaches, consultants and experts who know they should be posting but don’t have the time or the team to do it well. If you want bespoke content that builds authority and brings in clients, not just views, this is for you."
         },
         {
-            "title": "How does Alexon Media approach content creation?",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit praesentium rem reiciendis quibusdam sequi temporibus nobis in! Itaque iste et iusto sed cum consequatur. Ad, dolor? Dolor error consequuntur sint iure nostrum?"
+            "title": "What is the minimum commitment?",
+            "content": "Our short-form packages start with a 3-month minimum. Brands take time to build so that's the minimum that it will take to find your voice, test what works and start seeing real traction. After that, you’re month to month."
         },
         {
-            "title": "What is the expected return on investement of content creation?",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit praesentium rem reiciendis quibusdam sequi temporibus nobis in! Itaque iste et iusto sed cum consequatur. Ad, dolor? Dolor error consequuntur sint iure nostrum?"
+            "title": "Is this limited to short-form content?",
+            "content": "No. Short-form is at the core of what we do, but we create whatever works best for your audience, industry and goals, whether that’s long-form YouTube, paid ads or a mix of formats. We’ll map out the right approach together on an initial discovery call."
         },
         {
-            "title": "What is Alexon Media's standard business procedures?",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit praesentium rem reiciendis quibusdam sequi temporibus nobis in! Itaque iste et iusto sed cum consequatur. Ad, dolor? Dolor error consequuntur sint iure nostrum?"
+            "title": "Where are you based, and do you travel for shoots?",
+            "content": "We’re based in Dubai and work with clients worldwide. We travel for shoots regularly, and travel costs are included in your proposal upfront, so there are no surprises."
+        },
+        {
+            "title": "How much does this cost?",
+            "content": "We don’t have fixed rates or set packages. Every client gets a tailor-made plan built around their goals, their schedule and how much content they need. Book a call and we’ll put together a proposal designed specifically for you."
+        },
+        {
+            "title": "Do I need to be on camera?",
+            "content": "For personal brand content, yes. People buy from people, and nothing builds trust faster than your face. We’ll make the process as easy as possible and make sure you come across at your best."
+        },
+        {
+            "title": "I’m not comfortable on camera. Can you still make me look natural?",
+            "content": "Yes. We’ve worked with every type of personality, from total naturals to people who’d never filmed before, and we adapt our workflow to how you’re most comfortable. Whether that means prompts instead of scripts, an interview-style setup or more direction on set, we’ll find the approach that gets the best out of you and your brand."
         }
     ]
 }
