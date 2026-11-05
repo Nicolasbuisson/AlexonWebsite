@@ -44,9 +44,12 @@
   }
 }
 
-@media (width < 500px) {
+/* matches MOBILE_MEDIA_QUERY in responsiveImage.tsx, where the cards switch to
+   the portrait 620 x 1102 "-mobile" images */
+@media (width <= 620px) {
   .home-loader-container {
-    --home-loader-image-height: 120px;
+    --home-loader-image-height: 320px;
+    --home-loader-image-aspect-ratio: 620/1102;
     --home-loader-column-gap: 2rem;
   }
 }

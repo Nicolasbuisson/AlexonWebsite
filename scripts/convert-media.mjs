@@ -49,6 +49,7 @@ const { values: opts, positionals } = parseArgs({
     "keep-audio": { type: "boolean", default: false },
     "video-crf": { type: "string", default: "32" },
     "skip-larger": { type: "boolean", default: false },
+    "lossy-png": { type: "boolean", default: false },
     "delete-originals": { type: "boolean", default: false },
     help: { type: "boolean", default: false },
   },
@@ -79,6 +80,9 @@ Options:
   --exclude <glob>      Skip sources matching this glob, matched against the
                         path below <folder> (e.g. "*-v0.mp4", "stills/*").
                         Repeatable.
+  --lossy-png           With --mode web, encode PNG as lossy WebP too, like JPEG.
+                        For photos saved as PNG; leave it off for logos, which
+                        stay sharper lossless.
   --skip-larger         Do not upload an output that is bigger than its source.
   --force               Re-convert even when the target file already exists.
   --invalidate          Invalidate the uploaded paths in CloudFront afterwards.
@@ -98,6 +102,11 @@ if (opts.help || positionals.length === 0) {
 
 if (!["lossless", "web"].includes(opts.mode)) {
   console.error(`Unknown --mode "${opts.mode}". Expected "lossless" or "web".`);
+  process.exit(1);
+}
+
+if (opts["lossy-png"] && opts.mode !== "web") {
+  console.error("--lossy-png only applies with --mode web.");
   process.exit(1);
 }
 
@@ -218,11 +227,12 @@ function ffmpegArgs(kind, input, output) {
     ];
   }
 
-  // PNG is lossless in both modes: lossless WebP already beats PNG comfortably,
-  // so there is nothing to gain from throwing pixels away.
+  // PNG is lossless by default: lossless WebP already beats PNG comfortably and
+  // keeps logo edges sharp. Photos saved as PNG are the exception, where lossless
+  // WebP stays ~6x bigger than lossy, hence --lossy-png.
   const isPng = input.toLowerCase().endsWith(".png");
   const quality =
-    opts.mode === "lossless" || isPng
+    opts.mode === "lossless" || (isPng && !opts["lossy-png"])
       ? ["-lossless", "1", "-compression_level", "6"]
       : ["-lossless", "0", "-quality", "82"];
   return [

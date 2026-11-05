@@ -1,14 +1,19 @@
 "use client";
 import "./homeLoader.css";
 import { RefObject } from "react";
-import Image from "next/image";
+import { ResponsiveImage } from "../responsiveImage/responsiveImage";
 
 interface IHomeLoaderProps {
   containerRef: RefObject<HTMLDivElement>;
   columnRef: RefObject<HTMLDivElement>;
   cardsRef: RefObject<(HTMLDivElement | null)[]>;
   overlayImgRef: RefObject<HTMLImageElement>;
-  images: { src: string; label: string; overlay?: boolean }[];
+  images: {
+    desktopSrc: string;
+    mobileSrc: string;
+    label: string;
+    overlay?: boolean;
+  }[];
 }
 
 export const HomeLoader = (props: IHomeLoaderProps) => {
@@ -26,15 +31,17 @@ export const HomeLoader = (props: IHomeLoaderProps) => {
               }}
               className="home-loader-image-wrapper"
             >
-              <Image
+              <ResponsiveImage
                 ref={image.overlay ? overlayImgRef : null}
-                src={image.src}
+                desktopSrc={image.desktopSrc}
+                mobileSrc={image.mobileSrc}
                 alt={image.label}
-                // eager-load + preload in <head>: cards start offscreen, so lazy
-                // loading would delay them until the scroll animation reaches them
+                // eager-load: cards start offscreen, so lazy loading would
+                // delay them until the scroll animation reaches them
                 priority
+                fetchPriority="high"
                 fill
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
               />
             </div>
           );

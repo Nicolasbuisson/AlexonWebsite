@@ -5,7 +5,10 @@ import { Navigation } from "../navigation/navigation";
 import { HomeLoader } from "../homeLoader/homeLoader";
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Image from "next/image";
+import {
+  MOBILE_MEDIA_QUERY,
+  ResponsiveImage,
+} from "../responsiveImage/responsiveImage";
 
 export const HomeHero = () => {
   const homeHeroSectionRef = useRef<HTMLDivElement>(null);
@@ -23,34 +26,52 @@ export const HomeHero = () => {
 
   const IMAGES = [
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/Atlantis-mobile.webp",
       label: "Atlantis",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/DJI-mobile.webp",
       label: "DJI",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/ON-mobile.webp",
       label: "ON",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/PepxVISA-mobile.webp",
       label: "Pep x VISA",
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/VisualizerFrame-mobile.webp",
       label: "same image as overlay to be expanded",
       overlay: true,
     },
     {
-      src: "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields.webp",
+      desktopSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields.webp",
+      mobileSrc:
+        "https://d128kbp85lo7cj.cloudfront.net/homeAnimationImages/RiceFields-mobile.webp",
       label: "Alexon in a very chinese time of his life",
     },
   ];
 
-  const overlaySrc =
-    IMAGES.find((image) => image.overlay)?.src ?? IMAGES[IMAGES.length - 1].src;
+  const overlayImage =
+    IMAGES.find((image) => image.overlay) ?? IMAGES[IMAGES.length - 1];
 
   // or use the useGSAP hook
   useLayoutEffect(() => {
@@ -182,12 +203,14 @@ export const HomeHero = () => {
       });
 
       // 2. Scroll the cards up from below the viewport, the overlay card
-      // landing exactly inside the frame
+      // landing exactly inside the frame. The portrait mobile cards are taller,
+      // so the column travels further and gets more time to do it
+      const isMobile = window.matchMedia(MOBILE_MEDIA_QUERY).matches;
       tl.to(
         cards,
         {
           y: -totalShift,
-          duration: 1.7,
+          duration: isMobile ? 2.4 : 1.7,
           ease: "power1.inOut",
         },
         ">-0.15",
@@ -209,6 +232,9 @@ export const HomeHero = () => {
             width: rect.width,
             height: rect.height,
           });
+          // the card has loaded by now, so this reuses whichever file the
+          // browser picked (desktop or mobile) and matches the video's crop
+          video.poster = overlayImg.currentSrc;
         },
         [],
         ">",
@@ -416,20 +442,24 @@ export const HomeHero = () => {
           images={IMAGES}
         />
         <div className="home-hero-bg">
-          <video
-            ref={videoRef}
-            src={
-              "https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.webm"
-            }
-            poster={overlaySrc}
-            preload="auto"
-            muted
-            loop
-            playsInline
-          ></video>
-          <Image
+          {/* no poster here: it can't follow a media query, so it is set from
+              whichever overlay image the browser picked when the overlay snaps */}
+          <video ref={videoRef} preload="auto" muted loop playsInline>
+            {/* the first matching source wins, so mobile goes first */}
+            <source
+              media={MOBILE_MEDIA_QUERY}
+              src="https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1-mobile.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://d128kbp85lo7cj.cloudfront.net/videos/VisualizerAlexonMedia-v1.webm"
+              type="video/webm"
+            />
+          </video>
+          <ResponsiveImage
             ref={overlayRef}
-            src={overlaySrc}
+            desktopSrc={overlayImage.desktopSrc}
+            mobileSrc={overlayImage.mobileSrc}
             width={1920}
             height={1080}
             alt="fullscreen overlay"

@@ -15,8 +15,12 @@ npm run convert-media -- <folder> --mode web --video-crf 40 --skip-larger
 
 - The script defaults to `--mode lossless`. Do not use it: re-encoding an
   already-lossy MP4 or JPEG losslessly makes the output bigger, not smaller.
-- `web` mode encodes JPEG as lossy WebP (quality 82). PNG stays lossless in
-  both modes, so client logos are fine with the same command.
+- `web` mode encodes JPEG as lossy WebP (quality 82). PNG stays lossless by
+  default, which is right for client logos.
+- For photos saved as PNG (e.g. `homeAnimationImages/`), add `--lossy-png`.
+  Without it the WebP comes out about 6x bigger (810 KB vs 124 KB for
+  `DJI-mobile.png`). Don't convert to JPG first, because the second lossy pass
+  costs quality for almost no size gain.
 - CRF 40 suits the short, muted grid-preview loops. Audio is dropped by default,
   so pass `--keep-audio` if a video needs sound.
 - `--skip-larger` stops an output that's bigger than its source from being uploaded.
