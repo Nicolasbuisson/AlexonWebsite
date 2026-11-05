@@ -208,6 +208,14 @@ function Productions() {
               src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/ONBlack.webp`,
               alt: "ON logo",
             },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/AlHilalBlack.webp`,
+              alt: "Al Hilal logo",
+            },
+            {
+              src: `https://d128kbp85lo7cj.cloudfront.net/clientLogos/PumaBlack.webp`,
+              alt: "Puma logo",
+            },
           ]}
         ></LogoList>
       </section>
