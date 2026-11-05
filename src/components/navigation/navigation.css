@@ -2,9 +2,14 @@
   /* --menu-height lives on :root so the home hero can size itself against it */
   --bar-height: 0.25rem;
   --bar-width: 2rem;
-  --burger-bar-translateX: 0.325em;
-  --burger-bar-first-translateY: 0.65em;
-  --burger-bar-third-translateY: 0.775em;
+  --bar-gap: 0.5rem;
+  /* distance from one bar to the next. Keep it a multiple of 4px: then it
+     lands on whole device pixels at 1.25x, 1.5x, 1.75x, 2.25x... scaling, so
+     all three bars round to the same thickness. At 10px the middle bar sat
+     half a device pixel off the outer two and rendered thinner */
+  --bar-pitch: calc(var(--bar-height) + var(--bar-gap));
+  /* thickens the X so the diagonals don't read lighter than the flat bars */
+  --clicked-bar-scale: 1;
   --max-logo-height: 6.5;
   --max-logo-difference: 4;
   --logo-starting-translateY: 35;
@@ -106,7 +111,7 @@ nav > * {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: var(--bar-gap);
   cursor: pointer;
   /* reset default button styles */
   background: none;
@@ -152,9 +157,13 @@ nav > * {
 
 /*----- animations----*/
 /* clicked */
+/* translateY comes first so it moves the bar in screen space, not along the
+   rotated axis: one pitch puts each outer bar's centre exactly on the middle
+   bar's, whatever the pitch is. Thickening goes through scaleY rather than
+   height so the layout, and with it the pitch, never changes */
 .burger-bar.clicked:nth-child(1) {
-  transform: rotate(45deg)
-    translate(var(--burger-bar-translateX), var(--burger-bar-first-translateY));
+  transform: translateY(var(--bar-pitch)) rotate(45deg)
+    scaleY(var(--clicked-bar-scale));
   transition: ease-out 0.5s;
 }
 
@@ -164,17 +173,16 @@ nav > * {
 }
 
 .burger-bar.clicked:nth-child(3) {
-  transform: rotate(135deg)
-    translate(
-      calc(-1 * var(--burger-bar-translateX)),
-      var(--burger-bar-third-translateY)
-    );
+  transform: translateY(calc(-1 * var(--bar-pitch))) rotate(135deg)
+    scaleY(var(--clicked-bar-scale));
   transition: ease-out 0.5s;
 }
 
 /* unclicked */
+/* same function list as the clicked state, so each one interpolates on its
+   own and the 135deg spin is kept instead of collapsing into a matrix blend */
 .burger-bar.unclicked {
-  transform: rotate(0) translate(0);
+  transform: translateY(0) rotate(0) scaleY(1);
   transition: ease-out 0.5s;
 }
 
@@ -211,14 +219,10 @@ nav > * {
     --max-logo-difference: 0.5;
     --bar-height: 0.125rem;
     --bar-width: 2rem;
-    --burger-bar-translateX: 0.175em;
-    --burger-bar-first-translateY: 0.65em;
-    --burger-bar-third-translateY: 0.775em;
-  }
-
-  .burger-bar.clicked:nth-child(1),
-  .burger-bar.clicked:nth-child(3) {
-    height: 0.175rem;
+    /* 2px + 6px = 8px pitch, which also lands on whole device pixels at 2.625x */
+    --bar-gap: 0.375rem;
+    /* 2px -> 2.8px */
+    --clicked-bar-scale: 1.4;
   }
 }
 
