@@ -16,7 +16,17 @@
   position: relative;
 }
 
+/* to match mobile video and poster breakpoint */
+@media (width <= 620px) {
+  .productions-video-background {
+    height: 72vh;
+    height: 72svh;
+  }
+}
+
 .productions-video-background > video {
+  /* positioned so it paints over the absolutely positioned poster picture */
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;

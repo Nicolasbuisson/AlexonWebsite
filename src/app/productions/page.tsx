@@ -5,6 +5,10 @@ import { Projects } from "../../components/projects/projects";
 import { LogoList } from "../../components/logoList/logoList";
 import projectsJSON from "../../resources/projects.json";
 import { PageLoader } from "../../components/pageLoader/pageLoader";
+import {
+  MOBILE_MEDIA_QUERY,
+  ResponsiveImage,
+} from "../../components/responsiveImage/responsiveImage";
 
 export const metadata: Metadata = {
   title: "Our Productions — Brand Films & Commercials",
@@ -21,19 +25,30 @@ function Productions() {
       <Navigation showIcons></Navigation>
       <section className="productions-section-container">
         <div className="productions-video-background">
-          <video
-            src={
-              "https://d128kbp85lo7cj.cloudfront.net/videos/Productions.webm"
-            }
-            poster={
-              "https://d128kbp85lo7cj.cloudfront.net/images/ProductionsPoster.webp"
-            }
-            preload="auto"
-            muted
-            autoPlay
-            loop
-            playsInline
-          ></video>
+          {/* stands in for the video's poster, which can't follow a media
+              query. The video has no poster, so it stays transparent and lets
+              this show through until its first frame covers it */}
+          <ResponsiveImage
+            desktopSrc="https://d128kbp85lo7cj.cloudfront.net/images/ProductionsPoster.webp"
+            mobileSrc="https://d128kbp85lo7cj.cloudfront.net/images/ProductionsPoster-mobile.webp"
+            alt=""
+            priority
+            fetchPriority="high"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+          <video preload="auto" muted autoPlay loop playsInline>
+            {/* the first matching source wins, so mobile goes first */}
+            <source
+              media={MOBILE_MEDIA_QUERY}
+              src="https://d128kbp85lo7cj.cloudfront.net/videos/Productions-mobile.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://d128kbp85lo7cj.cloudfront.net/videos/Productions.webm"
+              type="video/webm"
+            />
+          </video>
           <h2 className="productions-title">
             Crafting <span className="productions-title-reg">Stories</span>
             <p>
