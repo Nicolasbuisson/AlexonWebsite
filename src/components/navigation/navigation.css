@@ -14,7 +14,8 @@
   --max-logo-difference: 4;
   --logo-starting-translateY: 35;
   /* 0 at the top of the page, 1 once the logo has landed in the bar. The hook
-     clamps --scroll at 0, so this needs no lower bound of its own */
+     clamps --scroll at 0, so this needs no lower bound of its own. Only read
+     by the fallback for browsers without scroll-driven animations */
   --logo-progress: calc(
     min(var(--scroll), var(--logo-starting-translateY)) /
       var(--logo-starting-translateY)
@@ -46,12 +47,6 @@ nav {
   padding: 1rem;
   position: absolute;
   z-index: 98;
-}
-
-.nav-scroll {
-  /* background starts transparent and reaches opacity 1 just as the logo
-     finishes landing, since both run off the same progress */
-  background-color: rgb(0, 0, 0, var(--logo-progress));
 }
 
 nav > * {
@@ -87,21 +82,57 @@ nav > * {
 .logo-scroll {
   /* overrides .nav-logo's resting height; scale takes it back down to that */
   height: calc(var(--max-logo-height) * 1rem);
-  /* separate properties, not one transform: by spec translate applies before
-     scale, so the travel below is never multiplied by the scale. Inside a
-     single transform that would depend on the order the functions happen to
-     be written in. */
-  /* --vh, not 1vh: it is the same height useScrollPercentage divided by, so
-     the travel stays in step with --scroll even when the ios url bar
-     retracting changes the layout viewport out from under us */
-  translate: 0
-    calc(
-      var(--vh) * var(--logo-starting-translateY) * (1 - var(--logo-progress))
-    );
-  scale: calc(1 - (1 - var(--logo-rest-scale)) * var(--logo-progress));
-  /* safe to promote here precisely because the logo only ever scales down:
-     a raster cached at scale 1 is already the largest it needs to be */
-  will-change: translate, scale;
+}
+
+/*
+  The logo travels 1px per 1px of scroll, so it has to look glued to the page.
+  On mobile the page scrolls on the compositor, and anything JS writes per
+  scroll event lands at least a frame behind it, which is the jitter. A scroll
+  timeline is read on the compositor too, so the two move in the same frame.
+  It also follows lenis on desktop, since lenis writes the real scroll position.
+
+  Separate translate/scale properties, not one transform: by spec translate
+  applies before scale, so the travel is never multiplied by the scale. Inside
+  a single transform that would depend on the order the functions happen to
+  be written in.
+*/
+@supports (animation-timeline: scroll()) {
+  .logo-scroll {
+    animation: logo-land linear both;
+    /* after the shorthand, which resets the timeline to auto */
+    animation-timeline: scroll(root);
+    /* plain vh on both the range and the travel: the same unit on both sides
+       means the ios url bar retracting cannot pull them out of step */
+    animation-range: 0 calc(var(--logo-starting-translateY) * 1vh);
+  }
+}
+
+@keyframes logo-land {
+  from {
+    translate: 0 calc(var(--logo-starting-translateY) * 1vh);
+    scale: 1;
+  }
+  to {
+    translate: 0 0;
+    scale: var(--logo-rest-scale);
+  }
+}
+
+/* fallback: useScrollPercentage writes --scroll on the header each frame */
+@supports not (animation-timeline: scroll()) {
+  .logo-scroll {
+    /* --vh, not 1vh: it is the same height useScrollPercentage divided by, so
+       the travel stays in step with --scroll even when the ios url bar
+       retracting changes the layout viewport out from under us */
+    translate: 0
+      calc(
+        var(--vh) * var(--logo-starting-translateY) * (1 - var(--logo-progress))
+      );
+    scale: calc(1 - (1 - var(--logo-rest-scale)) * var(--logo-progress));
+    /* safe to promote here precisely because the logo only ever scales down:
+       a raster cached at scale 1 is already the largest it needs to be */
+    will-change: translate, scale;
+  }
 }
 
 .burger-menu {

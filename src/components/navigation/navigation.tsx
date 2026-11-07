@@ -1,5 +1,5 @@
 "use client";
-import { RefObject, useState } from "react";
+import { RefObject, useRef, useState } from "react";
 import Link from "next/link";
 import "./navigation.css";
 import { Socials } from "../socials/socials";
@@ -25,7 +25,11 @@ export const Navigation = (props: NavigationProps) => {
     hideOnMount = false,
   } = props;
 
-  useScrollPercentage(); // initialize css variable --scroll
+  // the header carries --scroll / --vh, so it needs a ref even when the
+  // parent does not pass one in
+  const ownRef = useRef<HTMLDivElement>(null);
+  const headerRef = ref ?? ownRef;
+  useScrollPercentage(headerRef);
   // lenis is owned by <SmoothScroll /> in the root layout, so it is a single
   // instance for the session instead of one per page
 
@@ -54,14 +58,9 @@ export const Navigation = (props: NavigationProps) => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const navClasses: string = [
-    transparent ? "transparent" : "",
-    titleScroll ? "nav-scroll" : "",
-  ].join(" ");
-
   return (
     <header
-      ref={ref}
+      ref={headerRef}
       className={
         sticky
           ? "navigation-container sticky-navigation-container"
@@ -69,7 +68,7 @@ export const Navigation = (props: NavigationProps) => {
       }
       style={hideOnMount ? { opacity: 0 } : {}}
     >
-      <nav className={navClasses}>
+      <nav className={transparent ? "transparent" : ""}>
         {showIcons ? <Socials className="nav-socials"></Socials> : <></>}
         <Link
           href="/"

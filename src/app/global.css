@@ -25,8 +25,8 @@
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* both are owned by useScrollPercentage once it mounts. These are the
-     first-paint values, before any script has run */
+  /* first-paint values. Once it mounts, useScrollPercentage writes its own
+     on the element it is given, which then shadow these */
   --scroll: 0;
   --vh: 1vh;
   --section-padding-block: 3rem;
