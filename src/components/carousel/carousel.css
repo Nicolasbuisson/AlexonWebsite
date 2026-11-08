@@ -1,67 +1,80 @@
 .carousel-container {
-    --carousel-offset: 0;
-    --carousel-item-width: clamp(var(--carousel-item-width-min, 100px), 14vw + 2rem, var(--carousel-item-width-max, 312px));
-    --carousel-items-per-page: 5;
-    --carousel-svg-height: 24px;
+  --carousel-offset: 0;
+  --carousel-item-width: clamp(
+    var(--carousel-item-width-min, 100px),
+    14vw + 2rem,
+    var(--carousel-item-width-max, 312px)
+  );
+  --carousel-items-per-page: 5;
+  --carousel-svg-height: 24px;
 
-    width: calc(var(--carousel-items-per-page) * var(--carousel-item-width));
-    overflow: hidden;
-    position: relative;
+  width: calc(var(--carousel-items-per-page) * var(--carousel-item-width));
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-mover {
-    display: flex;
-    flex-direction: row;
-    transition: transform 400ms ease-in-out;
-    transform: translate(calc(var(--carousel-offset) * -100%), 0);
+  display: flex;
+  flex-direction: row;
+  transition: transform 400ms ease-in-out;
+  transform: translate(calc(var(--carousel-offset) * -100%), 0);
 }
 
 .dynamic-carousel-container {
-    width: 100%;
+  width: 100%;
 }
 
-.dynamic-carousel-mover>* {
-    width: calc(100% / var(--carousel-items-per-page));
+.dynamic-carousel-mover > * {
+  width: calc(100% / var(--carousel-items-per-page));
 }
 
-.carousel-container>button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--clr-dark);
-    cursor: pointer;
-    z-index: 4;
+.carousel-container > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* translucent background only, so the arrow itself stays fully opaque */
+  background-color: rgb(0 0 0 / 0.55);
+  cursor: pointer;
+  z-index: 4;
 }
 
 .carousel-previous-button {
-    left: 0;
-    border-radius: 0px 20px 20px 0px;
-    padding: 4px 8px 2px 0px;
+  left: 0;
+  border-radius: 0px 20px 20px 0px;
+  padding: 8px 8px 6px 0px;
 }
 
 .carousel-next-button {
-    right: 0;
-    border-radius: 20px 0px 0px 20px;
-    padding: 4px 0px 2px 8px;
+  right: 0;
+  border-radius: 20px 0px 0px 20px;
+  padding: 8px 0px 6px 8px;
 }
 
-.carousel-previous-button>svg,
-.carousel-next-button>svg {
-    height: var(--carousel-svg-height);
-    padding: 0px;
+.carousel-previous-button > svg,
+.carousel-next-button > svg {
+  height: var(--carousel-svg-height);
+  padding: 0px;
+  transition: fill 200ms ease-out;
+}
+
+/* mouse only, so the blue doesn't stick after a tap on touch screens */
+@media (hover: hover) {
+  .carousel-container > button:hover > svg {
+    fill: var(--clr-accent);
+  }
 }
 
 /* mobile needs bigger buttons */
 @media (width < 440px) {
-    .carousel-container {
-        --carousel-svg-height: 20px;
-    }
+  .carousel-container {
+    --carousel-svg-height: 20px;
+  }
 
-    .carousel-previous-button {
-        padding: 8px 12px 6px 0px;
-    }
+  .carousel-previous-button {
+    padding: 12px 12px 10px 0px;
+  }
 
-    .carousel-next-button {
-        padding: 8px 0px 6px 12px;
-    }
+  .carousel-next-button {
+    padding: 12px 0px 10px 12px;
+  }
 }
