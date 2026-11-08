@@ -1,0 +1,21 @@
+/* staggered item reveal - the per-item transition-delay is set inline */
+.about-aim-text .about-aim-item-wrapper {
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 500ms var(--ease),
+    transform 500ms var(--ease);
+}
+
+.about-aim-text.about-aim-visible .about-aim-item-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-aim-text .about-aim-item-wrapper {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -69,7 +69,10 @@ export const AboutFounder = () => {
         </div>
       </div>
       <div className="about-founder-grid-container" ref={founderTextRef}>
-        <h3>Founder</h3>
+        <h3>
+          <span className="about-section-number">03/</span>
+          Founder
+        </h3>
         <div className="about-founder-text-container">
           <h4>Alexandre Buisson</h4>
           <p>

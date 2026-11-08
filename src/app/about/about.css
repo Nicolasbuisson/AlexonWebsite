@@ -21,6 +21,22 @@
   font-family: var(--ff-secondary);
 }
 
+.about-philosophy-section h3,
+.about-aim-section h3,
+.about-founder-grid-container h3 {
+  position: relative;
+}
+
+.about-section-number {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-block-end: 0.25rem;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+}
+
 .about-philosophy-paragraph {
   font-size: var(--fs-h4);
   text-align: left;
