@@ -150,3 +150,28 @@ body::-webkit-scrollbar-thumb {
 video {
   pointer-events: none;
 }
+
+/* accent text */
+.hero-paragraph-italic {
+  font-family: var(--ff-playfair-display);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.text-accent-linear-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--clr-accent-gradient-start),
+    var(--clr-accent) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent-solid {
+  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

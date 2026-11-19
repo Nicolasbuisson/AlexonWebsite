@@ -10,6 +10,8 @@ import { TagLine } from "../components/tagLine/tagLine";
 import { Feature } from "../components/feature/feature";
 import { AboutCollage } from "../components/aboutCollage/aboutCollage";
 import { HomeHero } from "../components/homeHero/homeHero";
+import { Testimonials } from "../components/testimonials/testimonials";
+import { testimonials } from "../resources/testimonials.json";
 
 export const metadata: Metadata = {
   title: { absolute: "Alexon Media | Social-First Video Production Agency" },
@@ -277,6 +279,7 @@ function Home() {
           svgClassName="home-shortform-arrow"
         />
       </section>
+      <Testimonials testimonials={testimonials} />
     </div>
   );
 }

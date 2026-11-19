@@ -64,12 +64,26 @@ export const ShortformGuarantee = () => {
       </div>
       <h2>Our Promise to you</h2>
       <p>
-        We intentionally work with a small number of select clients so that we
-        give them each our full attention. That's why every partnership starts
-        with a discovery call. If we don't think we can make you win, we'll tell
-        you on the call so neither of us wastes time. But if we're a fit, you
-        get our whole team, our full system, and our full support to make you
-        win.
+        We intentionally work with a small number of{" "}
+        <span className="hero-paragraph-italic text-accent-linear-gradient">
+          select clients
+        </span>{" "}
+        so that we give them each our{" "}
+        <span className="hero-paragraph-italic text-accent-linear-gradient">
+          full attention
+        </span>
+        . That's why every{" "}
+        <span className="hero-paragraph-italic text-accent-linear-gradient">
+          partnership
+        </span>{" "}
+        starts with a discovery call. If we don't think we can make you win,
+        we'll tell you on the call so neither of us wastes time. But if we're a
+        fit, you get our whole team, our full system, and our full support to
+        make{" "}
+        <span className="hero-paragraph-italic text-accent-linear-gradient">
+          you win
+        </span>
+        .
       </p>
     </section>
   );

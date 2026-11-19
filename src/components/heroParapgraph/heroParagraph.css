@@ -1,6 +1,11 @@
 .hero-word {
     margin-right: 12px;
     font-size: inherit;
+}
+
+/* global.css loads first, so an unscoped inherit here would override the
+   accent weight set by .hero-paragraph-italic */
+.hero-word:not(.hero-paragraph-italic) {
     font-weight: inherit;
 }
 
@@ -13,24 +18,4 @@
 
 .bold {
     font-weight: 700;
-}
-
-.hero-paragraph-italic {
-    font-family: var(--ff-playfair-display);
-    font-style: italic;
-    font-weight: 600;
-}
-
-.text-accent-linear-gradient {
-    background: linear-gradient(90deg, var(--clr-accent-gradient-start), var(--clr-accent) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text-accent-solid {
-    background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }

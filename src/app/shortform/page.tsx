@@ -7,6 +7,8 @@ import { Accordion } from "../../components/accordion/accordion";
 import { faqs } from "../../resources/faq.json";
 import { ShortFormProcess } from "../../components/shortformProcess/shortformProcess";
 import { ShortformGuarantee } from "../../components/shortformGuarantee/shortfromGuarantee";
+import { Testimonials } from "../../components/testimonials/testimonials";
+import { testimonials } from "../../resources/testimonials.json";
 
 export const metadata: Metadata = {
   title: "Short-Form Content Systems & Packages",
@@ -253,6 +255,7 @@ function ShortForm() {
         </div>
       </section> */}
       <ShortformGuarantee />
+      <Testimonials testimonials={testimonials} />
       {/* <section className="shortform-work-section">
       unfortunately, not enough video content + degrades performance too much
       to have 12 videos of 10 MB each loading
