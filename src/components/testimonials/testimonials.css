@@ -46,11 +46,12 @@
 
 .testimonial-avatar {
   flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   border: 1px solid var(--clr-light);
   border-radius: 50%;
   background: var(--clr-light);
+  object-fit: cover;
 }
 
 .testimonial-person-text {
