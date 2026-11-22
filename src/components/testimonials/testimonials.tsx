@@ -1,11 +1,13 @@
 import Image from "next/image";
+import { CardBorderTracer } from "../cardBorderTracer/cardBorderTracer";
 import "./testimonials.css";
 
 const Testimonial = (props: TestimonialProps) => {
   const { quote, name, job, image } = props;
 
   return (
-    <figure className="testimonial">
+    <figure className="testimonial card-border-effect">
+      <CardBorderTracer size="4px" />
       <figcaption className="testimonial-person">
         <Image
           className="testimonial-avatar"

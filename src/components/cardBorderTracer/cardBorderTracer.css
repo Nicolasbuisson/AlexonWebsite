@@ -1,0 +1,93 @@
+/* Card hover border effect: a single segment travelling along the card's border.
+   The card sets --card-border-size and --card-border-radius to match its own
+   border, so the track lines up with it. */
+.card-border-effect {
+  position: relative;
+}
+
+/* The track is what the tracer actually follows: offset-path reads the
+   containing block's box, not the tracer's own, so the tracer needs a
+   containing block that sits where we want the path.
+   An absolutely positioned child is laid out against the card's PADDING box
+   (the inner edge of the border), so a negative inset of half the border size
+   pushes the track out to the middle of the border. The radius shrinks by the
+   same amount, since the card's radius is measured at the outer edge. */
+.card-border-track {
+  /* declared here rather than on the tracer so the component's `size` prop,
+     set inline on the track, is what the tracers inherit */
+  --tracer-size: 0.5rem;
+
+  position: absolute;
+  inset: calc(var(--card-border-size) / -2);
+  border-radius: calc(var(--card-border-radius) - var(--card-border-size) / 2);
+  pointer-events: none;
+}
+
+.card-border-tracer {
+  --tracer-color: var(--clr-accent);
+  /* set per dot from the component: position in the chain, and how opaque it is */
+  --i: 0;
+  --tracer-opacity: 1;
+  /* how far each dot trails the one ahead of it, expressed as a slice of the
+     animation. Bigger step = longer, looser segment */
+  --tracer-step: 0.02s;
+  /* kept low because every dot in the chain stacks its own glow */
+  --tracer-glow-opacity: 35%;
+
+  position: absolute;
+  width: var(--tracer-size);
+  height: var(--tracer-size);
+  /* square bodies butt up against each other, so the chain reads as one
+     continuous band rather than a string of beads */
+  border-radius: 0;
+  background-color: var(--tracer-color);
+  box-shadow: 0 0 0.25rem 0.0325rem
+    color-mix(
+      in srgb,
+      var(--tracer-color) var(--tracer-glow-opacity),
+      transparent
+    );
+
+  offset-path: border-box;
+  offset-distance: 0%;
+  offset-rotate: auto;
+  opacity: 0;
+  /* fade out on hover end. Applies only when leaving the hover state, since a
+     transition is taken from the state being entered */
+  transition: opacity 1000ms;
+
+  /* every dot runs the same animation; the negative delay is what strings them
+     out along the path, each one a fixed slice ahead of the previous.
+     The animation is always applied and only paused outside of hover: removing
+     it would snap every dot back to the start of the path before it could fade */
+  animation-name: borderTrace;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-delay: calc(var(--i) * var(--tracer-step) * -1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+/* only the two ends are round, giving the segment rounded caps */
+.card-border-tracer:first-child,
+.card-border-tracer:last-child {
+  border-radius: 50%;
+}
+
+.card-border-effect:hover .card-border-tracer {
+  opacity: var(--tracer-opacity);
+  /* appear instantly on hover */
+  transition-duration: 0ms;
+  animation-play-state: running;
+}
+
+@keyframes borderTrace {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}

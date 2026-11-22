@@ -1,6 +1,8 @@
 .package-container {
   --package-width: 100%;
   --package-border-size: 0.25rem;
+  --card-border-size: var(--package-border-size);
+  --card-border-radius: 24px;
 
   width: var(--package-width);
   padding: 1rem;
@@ -117,24 +119,26 @@
   }
 }
 
-/* Package hover border effect */
+/* Package hover border effect: the current one is the shared CardBorderTracer
+   (see cardBorderTracer.css) */
+
+/* Old approach, kept for reference: swap the card's `card-border-effect` class
+   for `package-card-border-effect-conic` to switch back to the rotating conic
+   gradient border */
 @property --rotate-angle {
   syntax: "<angle>";
   initial-value: 90deg;
   inherits: true;
 }
 
-.package-card-border-effect {
+.package-card-border-effect-conic {
   --rotate-angle: 0deg;
   --c1: var(--clr-accent);
   --c2: var(--clr-light);
 
   position: relative;
-  border-radius: 24px;
 }
 
-/* Old approach, kept for reference: add the `package-card-border-effect-conic`
-   class to the card to switch back to the rotating conic gradient border */
 .package-card-border-effect-conic:hover::before {
   content: "";
   position: absolute;
@@ -174,77 +178,5 @@
 
   100% {
     --rotate-angle: 360deg;
-  }
-}
-
-/* New approach: a single element travelling along the card's border box */
-
-/* The track is what the tracer actually follows: offset-path reads the
-   containing block's box, not the tracer's own, so the tracer needs a
-   containing block that sits where we want the path.
-   An absolutely positioned child is laid out against the card's PADDING box
-   (the inner edge of the border), so a negative inset of half the border size
-   pushes the track out to the middle of the border. The radius shrinks by the
-   same amount, since the card's 24px radius is measured at the outer edge. */
-.package-card-border-track {
-  position: absolute;
-  inset: calc(var(--package-border-size) / -2);
-  border-radius: calc(24px - var(--package-border-size) / 2);
-  pointer-events: none;
-}
-
-.package-card-border-tracer {
-  --tracer-size: 0.5rem;
-  /* set per dot from the component: position in the chain, and how opaque it is */
-  --i: 0;
-  --tracer-opacity: 1;
-  /* how far each dot trails the one ahead of it, expressed as a slice of the
-     animation. Bigger step = longer, looser segment */
-  --tracer-step: 0.02s;
-  /* kept low because every dot in the chain stacks its own glow */
-  --tracer-glow-opacity: 35%;
-
-  position: absolute;
-  width: var(--tracer-size);
-  height: var(--tracer-size);
-  /* square bodies butt up against each other, so the chain reads as one
-     continuous band rather than a string of beads */
-  border-radius: 0;
-  background-color: var(--c1);
-  box-shadow: 0 0 0.25rem 0.0325rem
-    color-mix(in srgb, var(--c1) var(--tracer-glow-opacity), transparent);
-
-  offset-path: border-box;
-  offset-distance: 0%;
-  offset-rotate: auto;
-  opacity: 0;
-}
-
-/* only the two ends are round, giving the segment rounded caps */
-.package-card-border-tracer:first-child,
-.package-card-border-tracer:last-child {
-  border-radius: 50%;
-}
-
-.package-card-border-effect:hover .package-card-border-tracer {
-  opacity: var(--tracer-opacity);
-
-  /* every dot runs the same animation; the negative delay is what strings them
-     out along the path, each one a fixed slice ahead of the previous */
-  animation-name: borderTrace;
-  animation-duration: 12s;
-  animation-timing-function: linear;
-  animation-delay: calc(var(--i) * var(--tracer-step) * -1);
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
-
-@keyframes borderTrace {
-  0% {
-    offset-distance: 0%;
-  }
-
-  100% {
-    offset-distance: 100%;
   }
 }
