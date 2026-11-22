@@ -9,6 +9,7 @@ import { ShortFormProcess } from "../../components/shortformProcess/shortformPro
 import { ShortformGuarantee } from "../../components/shortformGuarantee/shortfromGuarantee";
 import { Testimonials } from "../../components/testimonials/testimonials";
 import { testimonials } from "../../resources/testimonials.json";
+import { Statistic } from "../../components/statistic/statistic";
 
 export const metadata: Metadata = {
   title: "Short-Form Content Systems & Packages",
@@ -74,64 +75,44 @@ function ShortForm() {
           ></video>
         </div>
       </section>
-      {/* <section className="shortform-results-section">
+      <section className="shortform-results-section">
         <div className="shortform-results-text">
           <h2>
             Results you can see
             <br />
             and Measure
           </h2>
-          <p className="grey">
+          <p className="light-grey">
             Capture attention, tell your story, and drive results with our
             short-form video packages.
           </p>
-          <p className="grey">
+          <p className="light-grey">
             Designed for virality and engagement, our videos make your brand
             stand out in the scroll and ultimately boost your revenues.
           </p>
         </div>
         <div className="stats-container">
           <Statistic
-            title="ROI"
+            title="Leads"
             statNumber={1}
             statString="#"
             statStringBeforeNumber
-            description="Highest ROI of any marketing strategy"
+            description="Traffic source"
           />
           <Statistic
-            title="Reach"
-            statNumber={8}
-            statString="x"
-            statStringBeforeNumber
-            description="After 3 months"
+            title="Expertise"
+            statNumber={2000}
+            statString="+"
+            description="videos created"
           />
           <Statistic
-            title="Cost Savings"
-            statNumber={11000}
-            statString="$"
-            statStringBeforeNumber
-            description="Saved anually on marketing expenses"
-          />
-          <Statistic
-            title="Brand Perception"
-            statNumber={93}
-            statString="%"
-            description="Increase in likelihood of purchase"
-          />
-          <Statistic
-            title="Conversion Rate"
-            statNumber={29}
-            statString="%"
-            description=" Increase after investing in your brand presence"
-          />
-          <Statistic
-            title="Follower Growth"
-            statNumber={59}
-            statString="%"
-            description="After a year"
+            title="Attention"
+            statNumber={370}
+            statString="M+"
+            description="organic views generated"
           />
         </div>
-      </section> */}
+      </section>
       <section className="shortform-process-section">
         <ShortFormProcess />
       </section>
